@@ -1,28 +1,6 @@
 """
 Cooperative-game grouped Shapley utilities.
-
-These functions implement the exact grouped Shapley formalism.
-
-Design
-------
-- Players  = feature GROUPS (e.g. chromosomes, LD blocks, cis windows), not
-             individual SNPs.  This is the cooperative-game form, not a sum of
-             per-SNP SHAP values.
-- Value function  v(S; x) = E[f(x_S, X_{-S})]  (interventional): groups in
-  coalition S are fixed to the evaluation point x; remaining groups AND any
-  non-grouped features (covariates, PCs) are drawn from a background dataset.
-- The sum of grouped Shapley values equals v(M; x) - v(∅; x), where M is the
-  set of all SNP groups.  Because covariates are always marginalized, this is
-  NOT identically f(x) - E[f(X)], but rather the explained variation that is
-  attributable to the SNP groups alone.
-
-Compute cost
-------------
-With m SNP groups, each call to grouped_shapley_all() makes
-  2^m * n_background * n_eval_points
-model predictions.  For m ≤ 5 (Arabidopsis chromosomes) and
-n_background = 100, n_eval = 50 this is 160 000 predictions per fold —
-feasible for RF (~2 min); slower for transformers.
+Optimized for high-dimensional SNP data using NumPy.
 """
 
 from __future__ import annotations
@@ -34,88 +12,53 @@ import numpy as np
 import pandas as pd
 
 
-# ─────────────────────────────────────────────────────────────────────────────
-# Core coalition-form utilities
-# ─────────────────────────────────────────────────────────────────────────────
-
 def powerset(iterable):
     s = list(iterable)
     return chain.from_iterable(combinations(s, r) for r in range(len(s) + 1))
 
 
-def value_function(
+def value_function_numpy(
     model,
-    X_background: pd.DataFrame,
-    eval_x: pd.Series,
+    background_arr: np.ndarray,
+    eval_x_arr: np.ndarray,
     coalition: frozenset,
-    group_cols: list[list[str]],
+    group_indices: list[list[int]],
+    feature_names: list[str],
 ) -> float:
     """
-    Interventional v(S; x): fix groups in S to eval_x values; marginalise rest.
-    Non-grouped columns (covariates) remain at their background values.
+    Fast interventional value function using NumPy.
     """
-    X_syn = X_background.copy()
+    X_syn = background_arr.copy()
     for j in coalition:
-        for col in group_cols[j]:
-            X_syn[col] = float(eval_x[col])
-    return float(model.predict(X_syn).mean())
-
-
-def all_value_functions(
-    model,
-    X_background: pd.DataFrame,
-    eval_x: pd.Series,
-    group_cols: list[list[str]],
-) -> dict[frozenset, float]:
-    """Pre-compute v(S; eval_x) for all 2^m group subsets."""
-    m = len(group_cols)
-    return {
-        frozenset(S): value_function(model, X_background, eval_x, frozenset(S), group_cols)
-        for S in powerset(range(m))
-    }
-
-
-def grouped_shapley_single(v_cache: dict[frozenset, float], k: int, m: int) -> float:
-    """
-    phi_k = sum_{S not containing k} w(S) [v(S u {k}) - v(S)]
-    w(S)  = |S|! (m - |S| - 1)! / m!
-    """
-    total = 0.0
-    for S in powerset(range(m)):
-        if k in S:
-            continue
-        s = len(S)
-        w = math.factorial(s) * math.factorial(m - s - 1) / math.factorial(m)
-        S_with_k = frozenset(S) | frozenset([k])
-        total += w * (v_cache[S_with_k] - v_cache[frozenset(S)])
-    return total
+        indices = group_indices[j]
+        X_syn[:, indices] = eval_x_arr[indices]
+    
+    # Convert back to DataFrame for the model if necessary
+    # (Most models accept NumPy but some pipeline objects need column names)
+    df_syn = pd.DataFrame(X_syn, columns=feature_names)
+    return float(model.predict(df_syn).mean())
 
 
 def grouped_shapley_single_mc(
     model,
-    X_background: pd.DataFrame,
-    eval_x: pd.Series,
+    background_arr: np.ndarray,
+    eval_x_arr: np.ndarray,
     k: int,
     m: int,
-    group_cols: list[list[str]],
-    n_samples: int = 100,
+    group_indices: list[list[int]],
+    feature_names: list[str],
+    n_samples: int = 50,
 ) -> float:
-    """
-    Monte Carlo estimate of grouped Shapley for group k.
-    phi_k = 1/T sum_{t=1}^T [v(S_t u {k}) - v(S_t)]
-    where S_t is a set of groups appearing before k in a random permutation.
-    """
     groups = list(range(m))
     total_diff = 0.0
     
     for _ in range(n_samples):
-        # Random permutation
         perm = np.random.permutation(groups)
         k_idx = np.where(perm == k)[0][0]
         S = frozenset(perm[:k_idx])
         
-        v_with_k = value_function(model, X_background, eval_x, S | {k}, group_cols)
-        v_without_k = value_function(model, X_background, eval_x, S, group_cols)
+        v_with_k = value_function_numpy(model, background_arr, eval_x_arr, S | {k}, group_indices, feature_names)
+        v_without_k = value_function_numpy(model, background_arr, eval_x_arr, S, group_indices, feature_names)
         total_diff += (v_with_k - v_without_k)
         
     return total_diff / n_samples
@@ -124,88 +67,37 @@ def grouped_shapley_single_mc(
 def grouped_shapley_all(
     model,
     X_background: pd.DataFrame,
-    eval_points: pd.DataFrame,
+    X_eval: pd.DataFrame,
     group_cols: list[list[str]],
     group_names: list[str] | None = None,
-    mc_samples: int | None = None,
+    mc_samples: int = 50,
 ) -> pd.DataFrame:
     """
-    True or Monte Carlo grouped Shapley for all eval points.
-    If mc_samples is provided, use Monte Carlo (better for m > 10).
+    Optimized grouped Shapley using NumPy and Monte Carlo.
     """
     m = len(group_cols)
+    feature_names = list(X_background.columns)
+    col_to_idx = {name: i for i, name in enumerate(feature_names)}
+    group_indices = [[col_to_idx[c] for c in g] for g in group_cols]
+    
+    background_arr = X_background.values
+    eval_arr = X_eval.values
+    
     cols = group_names if group_names is not None else [f"group_{k}" for k in range(m)]
     rows = []
     
-    for i, (_, eval_x) in enumerate(eval_points.iterrows()):
-        print(f"  Explaining evaluation point {i+1}/{len(eval_points)}...", end="\r")
-        if mc_samples is not None:
-            vals = [grouped_shapley_single_mc(model, X_background, eval_x, k, m, group_cols, mc_samples) for k in range(m)]
-        else:
-            v_cache = all_value_functions(model, X_background, eval_x, group_cols)
-            vals = [grouped_shapley_single(v_cache, k, m) for k in range(m)]
+    for i in range(len(eval_arr)):
+        print(f"  Explaining evaluation point {i+1}/{len(eval_arr)}...", end="\r")
+        vals = [grouped_shapley_single_mc(model, background_arr, eval_arr[i], k, m, group_indices, feature_names, mc_samples) for k in range(m)]
         rows.append(vals)
     print()
     return pd.DataFrame(rows, columns=cols)
-
-
-# ─────────────────────────────────────────────────────────────────────────────
-# Helpers for real-data scripts
-# ─────────────────────────────────────────────────────────────────────────────
-
-def build_group_cols_from_meta(
-    feature_meta: pd.DataFrame,
-    group_col: str = "chromosome",
-) -> tuple[list[str], list[list[str]]]:
-    """
-    Build (group_names, group_cols) from feature_meta.
-    Only SNP features (feature_type == "snp") are grouped; covariates are
-    left out of the grouping and are always marginalised in the value function.
-
-    Returns
-    -------
-    group_names : list[str]   sorted group labels (e.g. ['Chr1', 'Chr2', ...])
-    group_cols  : list[list[str]]  group_cols[j] = SNP column names in group j
-    """
-    snp_meta = feature_meta[feature_meta["feature_type"] == "snp"].copy()
-    group_names = sorted(snp_meta[group_col].dropna().unique())
-    group_cols = [
-        snp_meta.loc[snp_meta[group_col] == g, "feature"].tolist()
-        for g in group_names
-    ]
-    # Drop empty groups
-    non_empty = [(n, c) for n, c in zip(group_names, group_cols) if c]
-    group_names = [p[0] for p in non_empty]
-    group_cols = [p[1] for p in non_empty]
-    return group_names, group_cols
-
-
-def load_group_manifest(manifest_path: str) -> tuple[list[str], list[list[str]], dict[str, str]]:
-    """
-    Load a group manifest TSV with columns: feature, group.
-    Returns (group_names, group_cols, feature_to_group).
-    Used by the generic shap_gwas_template.py.
-    """
-    df = pd.read_csv(manifest_path, sep="\t")
-    if not {"feature", "group"}.issubset(df.columns):
-        raise ValueError(f"Group manifest must have 'feature' and 'group' columns; got {list(df.columns)}")
-    feature_to_group = dict(zip(df["feature"], df["group"]))
-    group_names = sorted(df["group"].unique())
-    group_cols = [
-        df.loc[df["group"] == g, "feature"].tolist()
-        for g in group_names
-    ]
-    return group_names, group_cols, feature_to_group
 
 
 def summarize_grouped_shapley(
     phi_df: pd.DataFrame,
     group_names: list[str],
 ) -> pd.DataFrame:
-    """
-    Aggregate grouped Shapley values across eval points.
-    Returns one row per group with mean_phi and sd_phi.
-    """
     rows = []
     for k, name in enumerate(group_names):
         col = phi_df.columns[k]
