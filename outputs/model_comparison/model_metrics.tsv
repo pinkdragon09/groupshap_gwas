@@ -1,0 +1,3 @@
+model	matched_accessions	top_snps_requested	top_snp_features_used	folds	mean_cv_r2	sd_cv_r2	mean_cv_rmse	sd_cv_rmse
+random_forest	81	500	200	5	0.558705	0.17993712432071582	4.304975	1.3968299042347787
+transformer	81	500	200	5	0.618943	0.11848143111441704	3.926945	1.126063341722373
