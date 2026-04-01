@@ -91,24 +91,61 @@ def grouped_shapley_single(v_cache: dict[frozenset, float], k: int, m: int) -> f
     return total
 
 
+def grouped_shapley_single_mc(
+    model,
+    X_background: pd.DataFrame,
+    eval_x: pd.Series,
+    k: int,
+    m: int,
+    group_cols: list[list[str]],
+    n_samples: int = 100,
+) -> float:
+    """
+    Monte Carlo estimate of grouped Shapley for group k.
+    phi_k = 1/T sum_{t=1}^T [v(S_t u {k}) - v(S_t)]
+    where S_t is a set of groups appearing before k in a random permutation.
+    """
+    groups = list(range(m))
+    total_diff = 0.0
+    
+    for _ in range(n_samples):
+        # Random permutation
+        perm = np.random.permutation(groups)
+        k_idx = np.where(perm == k)[0][0]
+        S = frozenset(perm[:k_idx])
+        
+        v_with_k = value_function(model, X_background, eval_x, S | {k}, group_cols)
+        v_without_k = value_function(model, X_background, eval_x, S, group_cols)
+        total_diff += (v_with_k - v_without_k)
+        
+    return total_diff / n_samples
+
+
 def grouped_shapley_all(
     model,
     X_background: pd.DataFrame,
     eval_points: pd.DataFrame,
     group_cols: list[list[str]],
     group_names: list[str] | None = None,
+    mc_samples: int | None = None,
 ) -> pd.DataFrame:
     """
-    True cooperative-game grouped Shapley for all eval points.
-    Returns DataFrame of shape (n_eval, m) with one column per group.
-    model.predict() must accept a pd.DataFrame and return a 1-D array.
+    True or Monte Carlo grouped Shapley for all eval points.
+    If mc_samples is provided, use Monte Carlo (better for m > 10).
     """
     m = len(group_cols)
     cols = group_names if group_names is not None else [f"group_{k}" for k in range(m)]
     rows = []
-    for _, eval_x in eval_points.iterrows():
-        v_cache = all_value_functions(model, X_background, eval_x, group_cols)
-        rows.append([grouped_shapley_single(v_cache, k, m) for k in range(m)])
+    
+    for i, (_, eval_x) in enumerate(eval_points.iterrows()):
+        print(f"  Explaining evaluation point {i+1}/{len(eval_points)}...", end="\r")
+        if mc_samples is not None:
+            vals = [grouped_shapley_single_mc(model, X_background, eval_x, k, m, group_cols, mc_samples) for k in range(m)]
+        else:
+            v_cache = all_value_functions(model, X_background, eval_x, group_cols)
+            vals = [grouped_shapley_single(v_cache, k, m) for k in range(m)]
+        rows.append(vals)
+    print()
     return pd.DataFrame(rows, columns=cols)
 
 
