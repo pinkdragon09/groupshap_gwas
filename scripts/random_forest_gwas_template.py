@@ -43,6 +43,8 @@ from grouped_shap_utils import (
     grouped_shapley_all,
     summarize_grouped_shapley,
 )
+from ld_grouping import group_by_ld_correlation, group_by_plink_blocks
+from snp_selection import load_neutral_snp_indices, load_top_snp_indices
 
 
 PHENO_ZIP = Path("data/arapheno/bulk/database.zip")
@@ -63,7 +65,15 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--baseline-hits", default=str(BASELINE_HITS))
     parser.add_argument("--study-values-file", default=DEFAULT_STUDY_VALUES_FILE)
     parser.add_argument("--phenotype-col", default=DEFAULT_PHENOTYPE_COL)
+    parser.add_argument(
+        "--snp-selection-mode",
+        default="linear_hits",
+        choices=["linear_hits", "neutral_variance"],
+        help="How to select the SNP panel before model fitting.",
+    )
     parser.add_argument("--top-snps", type=int, default=500)
+    parser.add_argument("--neutral-step", type=int, default=10000)
+    parser.add_argument("--neutral-min-mac", type=int, default=2)
     parser.add_argument("--n-pcs", type=int, default=3)
     parser.add_argument("--folds", type=int, default=5)
     parser.add_argument("--n-estimators", type=int, default=500)
@@ -80,12 +90,26 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--group-by",
         default="chromosome",
-        choices=["chromosome", "none"],
+        choices=["chromosome", "ld_correlation", "ld_blocks", "none"],
         help=(
             "Grouping scheme for cooperative-game grouped Shapley. "
             "'chromosome' groups SNPs by chromosome (Arabidopsis: 5 groups). "
+            "'ld_correlation' uses agglomerative clustering on r² (--ld-r2-threshold). "
+            "'ld_blocks' uses contiguous D' blocks (--ld-dprime-threshold). "
             "'none' skips grouped Shapley and outputs per-SNP SHAP only."
         ),
+    )
+    parser.add_argument(
+        "--ld-r2-threshold",
+        type=float,
+        default=0.5,
+        help="r² threshold for ld_correlation grouping (agglomerative clustering).",
+    )
+    parser.add_argument(
+        "--ld-dprime-threshold",
+        type=float,
+        default=0.9,
+        help="D' threshold for ld_blocks grouping (contiguous blocks).",
     )
     parser.add_argument(
         "--n-background-grouped",
@@ -128,14 +152,6 @@ def load_phenotype(pheno_zip: Path, study_values_file: str, phenotype_col: str) 
     return y_by_acc
 
 
-def load_top_snp_indices(baseline_hits: Path, top_snps: int) -> list[int]:
-    hits = pd.read_csv(baseline_hits, sep="\t")
-    if "snp_index" not in hits.columns:
-        raise SystemExit(f"Baseline hit table missing snp_index column: {baseline_hits}")
-    hits = hits.sort_values("p_value", ascending=True)
-    return hits["snp_index"].astype(int).head(top_snps).tolist()
-
-
 def compute_pcs(kinship_h5: Path, common_accs: list[str], n_pcs: int) -> np.ndarray:
     with h5py.File(kinship_h5, "r") as f:
         kinship = f["kinship"][:]
@@ -146,7 +162,9 @@ def compute_pcs(kinship_h5: Path, common_accs: list[str], n_pcs: int) -> np.ndar
     sub_k = kinship[np.ix_(ix, ix)]
     eigvals, eigvecs = np.linalg.eigh(sub_k)
     pcs = eigvecs[:, -n_pcs:]
-    pcs = (pcs - pcs.mean(axis=0)) / pcs.std(axis=0)
+    pc_std = pcs.std(axis=0)
+    pc_std[pc_std < 1e-8] = 1.0
+    pcs = (pcs - pcs.mean(axis=0)) / pc_std
     return pcs
 
 
@@ -165,13 +183,23 @@ def chromosome_for_index(idx: int, labels: list[str], bounds: np.ndarray) -> str
 
 def load_arabidopsis_matrix(args: argparse.Namespace) -> tuple[pd.DataFrame, pd.Series, pd.DataFrame]:
     y_by_acc = load_phenotype(Path(args.pheno_zip), args.study_values_file, args.phenotype_col)
-    snp_indices = load_top_snp_indices(Path(args.baseline_hits), args.top_snps)
-    sorted_snp_indices = sorted(snp_indices)
 
     with h5py.File(args.geno_h5, "r") as f:
         geno_accs = [x.decode() if isinstance(x, bytes) else str(x) for x in f["accessions"][:]]
+        geno_acc_index = {acc: i for i, acc in enumerate(geno_accs)}
         common_accs = [acc for acc in geno_accs if acc in y_by_acc]
-        geno_ix = np.asarray([geno_accs.index(acc) for acc in common_accs], dtype=int)
+        geno_ix = np.asarray([geno_acc_index[acc] for acc in common_accs], dtype=int)
+        if args.snp_selection_mode == "linear_hits":
+            snp_indices = load_top_snp_indices(Path(args.baseline_hits), args.top_snps)
+        else:
+            snp_indices = load_neutral_snp_indices(
+                Path(args.geno_h5),
+                geno_ix,
+                args.top_snps,
+                min_mac=args.neutral_min_mac,
+                step=args.neutral_step,
+            )
+        sorted_snp_indices = sorted(snp_indices)
         positions = f["positions"][sorted_snp_indices]
         snps = f["snps"][sorted_snp_indices][:, geno_ix].astype(float)
         labels, bounds = chromosome_labels_and_bounds(f)
@@ -237,9 +265,20 @@ def run_cv(
 
     # Build group structure once (same for all folds)
     if args.group_by != "none":
-        group_names, group_cols_list = build_group_cols_from_meta(
-            feature_meta, group_col=args.group_by
-        )
+        if args.group_by == "chromosome":
+            group_names, group_cols_list = build_group_cols_from_meta(
+                feature_meta, group_col="chromosome"
+            )
+        elif args.group_by == "ld_correlation":
+            snp_cols = feature_meta.loc[feature_meta["feature_type"] == "snp", "feature"].tolist()
+            group_names, group_cols_list = group_by_ld_correlation(
+                X[snp_cols], r2_threshold=args.ld_r2_threshold
+            )
+        elif args.group_by == "ld_blocks":
+            snp_cols = feature_meta.loc[feature_meta["feature_type"] == "snp", "feature"].tolist()
+            group_names, group_cols_list = group_by_plink_blocks(
+                X[snp_cols], d_prime_threshold=args.ld_dprime_threshold
+            )
 
     for fold_idx, (train_idx, test_idx) in enumerate(kf.split(X), start=1):
         X_train = X.iloc[train_idx]
@@ -275,8 +314,8 @@ def run_cv(
         shap_tables.append(fold_importance)
 
         # ── Cooperative-game grouped Shapley ─────────────────────────────────
-        # Players = chromosome groups.  Value function v(S; x) marginalises
-        # non-coalition groups (AND covariates) over background samples.
+        # Players = feature groups (chromosome / LD correlation / LD blocks).
+        # Value function v(S; x) marginalises non-coalition groups over background.
         # This matches the group-additive estimand.
         if args.group_by != "none":
             rng = np.random.RandomState(args.random_state + fold_idx)
@@ -337,8 +376,11 @@ def write_outputs(
     summary_lines = [
         f"study_values_file: {args.study_values_file}",
         f"phenotype_col: {args.phenotype_col}",
+        f"snp_selection_mode: {args.snp_selection_mode}",
         f"matched_accessions: {len(y)}",
         f"top_snps: {args.top_snps}",
+        f"neutral_step: {args.neutral_step}",
+        f"neutral_min_mac: {args.neutral_min_mac}",
         f"n_pcs: {args.n_pcs}",
         f"folds: {args.folds}",
         f"n_estimators: {args.n_estimators}",
@@ -369,9 +411,11 @@ def main() -> None:
     print(f"Mean CV R2: {metrics_df['r2'].mean():.4f}")
     print(f"Top per-SNP feature: {shap_summary.iloc[0]['feature']}")
     if not grouped_df.empty:
-        group_names = [c for c in grouped_df.columns if c != "fold"]
-        summary_grp = summarize_grouped_shapley(grouped_df.drop(columns=["fold"]), group_names)
-        print(f"Top chromosome group: {summary_grp.iloc[0]['group']}")
+        # Read back the already-written summary rather than recomputing
+        grp_summary_path = outdir / "grouped_shapley_ranking.tsv"
+        if grp_summary_path.exists():
+            top_grp = pd.read_csv(grp_summary_path, sep="\t").iloc[0]["group"]
+            print(f"Top chromosome group: {top_grp}")
 
 
 if __name__ == "__main__":

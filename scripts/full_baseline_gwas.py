@@ -9,10 +9,22 @@ Method:
 - chunked scan to keep memory bounded
 
 This is a practical baseline, not a full mixed-model GWAS.
+
+Usage examples:
+  # Original study 27 (Mean TRL):
+  python3 scripts/full_baseline_gwas.py
+
+  # Study 1 FT10 (flowering time):
+  python3 scripts/full_baseline_gwas.py \
+      --study-values-file 1/study_1_values.csv \
+      --phenotype-col FT10 \
+      --outdir outputs/full_baseline_gwas_ft10 \
+      --output-prefix study1_ft10
 """
 
 from __future__ import annotations
 
+import argparse
 import csv
 import io
 import math
@@ -28,29 +40,51 @@ from scipy.stats import t as student_t
 PHENO_ZIP = Path("data/arapheno/bulk/database.zip")
 GENO_H5 = Path("data/1001genomes/genotypes/1001_SNP_MATRIX/imputed_snps_binary.hdf5")
 KINSHIP_H5 = Path("data/1001genomes/genotypes/1001_SNP_MATRIX/kinship_ibs_mac5.hdf5")
-OUTDIR = Path("outputs/full_baseline_gwas")
 
-STUDY_VALUES_FILE = "27/study_27_values.csv"
-PHENOTYPE_COL = "Mean(TRL) C"
+DEFAULT_STUDY_VALUES_FILE = "27/study_27_values.csv"
+DEFAULT_PHENOTYPE_COL = "Mean(TRL) C"
+DEFAULT_OUTDIR = Path("outputs/full_baseline_gwas")
+DEFAULT_OUTPUT_PREFIX = "study27_mean_trl"
+
 N_PCS = 3
 CHUNK_SIZE = 10000
 TOP_K = 200
 MIN_MINOR_ALLELE_COUNT = 2
+MANHATTAN_P_THRESHOLD = 0.01   # save all SNPs with p < this for Manhattan plots
 
 
-def load_phenotype() -> tuple[dict[str, float], int]:
-    with zipfile.ZipFile(PHENO_ZIP) as zf:
-        rows = list(csv.DictReader(io.StringIO(zf.read(STUDY_VALUES_FILE).decode("utf-8"))))
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description="Linear GWAS baseline for AraPheno traits")
+    parser.add_argument("--pheno-zip", default=str(PHENO_ZIP))
+    parser.add_argument("--geno-h5", default=str(GENO_H5))
+    parser.add_argument("--kinship-h5", default=str(KINSHIP_H5))
+    parser.add_argument("--study-values-file", default=DEFAULT_STUDY_VALUES_FILE,
+                        help="Path inside the AraPheno zip, e.g. '1/study_1_values.csv'")
+    parser.add_argument("--phenotype-col", default=DEFAULT_PHENOTYPE_COL,
+                        help="Column name in the values CSV, e.g. 'FT10'")
+    parser.add_argument("--outdir", default=str(DEFAULT_OUTDIR))
+    parser.add_argument("--output-prefix", default=DEFAULT_OUTPUT_PREFIX,
+                        help="Prefix for output files, e.g. 'study1_ft10'")
+    parser.add_argument("--n-pcs", type=int, default=N_PCS)
+    parser.add_argument("--top-k", type=int, default=TOP_K,
+                        help="Number of top hits to save in the ranked hits TSV")
+    parser.add_argument("--manhattan-p-threshold", type=float, default=MANHATTAN_P_THRESHOLD,
+                        help="Save all SNPs with p below this threshold for Manhattan plots")
+    return parser.parse_args()
+
+
+def load_phenotype(pheno_zip: Path, study_values_file: str, phenotype_col: str) -> tuple[dict[str, float], int]:
+    with zipfile.ZipFile(pheno_zip) as zf:
+        rows = list(csv.DictReader(io.StringIO(zf.read(study_values_file).decode("utf-8"))))
 
     y_by_acc: dict[str, float] = {}
     n_all = 0
     for row in rows:
-        value = row[PHENOTYPE_COL].strip()
-        acc = row["accession_id"].strip()
+        value = row.get(phenotype_col, "").strip()
+        acc = row.get("accession_id", "").strip()
         if not acc or not value:
             continue
         n_all += 1
-        # The study table may contain replicate rows; keep the observed value.
         y_by_acc[acc] = float(value)
     return y_by_acc, n_all
 
@@ -71,8 +105,8 @@ def annotate_chromosome(idx_start: int, idx_end: int, labels: list[str], bounds:
     return chroms
 
 
-def compute_pcs(common_accs: list[str], geno_accs: list[str]) -> np.ndarray:
-    with h5py.File(KINSHIP_H5, "r") as f:
+def compute_pcs(kinship_h5: Path, common_accs: list[str], n_pcs: int) -> np.ndarray:
+    with h5py.File(kinship_h5, "r") as f:
         kinship = f["kinship"][:]
         kin_accs = [x.decode() if isinstance(x, bytes) else str(x) for x in f["accessions"][:]]
 
@@ -80,7 +114,7 @@ def compute_pcs(common_accs: list[str], geno_accs: list[str]) -> np.ndarray:
     ix = np.asarray([kin_index[acc] for acc in common_accs], dtype=int)
     sub_k = kinship[np.ix_(ix, ix)]
     eigvals, eigvecs = np.linalg.eigh(sub_k)
-    pcs = eigvecs[:, -N_PCS:]
+    pcs = eigvecs[:, -n_pcs:]
     pcs = (pcs - pcs.mean(axis=0)) / pcs.std(axis=0)
     return pcs
 
@@ -95,24 +129,30 @@ def build_covariates(y: np.ndarray, pcs: np.ndarray) -> tuple[np.ndarray, np.nda
     return X, xtx_inv, y_res, y_res_ss
 
 
-def scan_full_matrix() -> tuple[dict[str, float], list[dict[str, float]]]:
-    y_by_acc, n_all_rows = load_phenotype()
+def scan_full_matrix(args: argparse.Namespace) -> tuple[dict, list[dict], list[dict]]:
+    pheno_zip = Path(args.pheno_zip)
+    geno_h5 = Path(args.geno_h5)
+    kinship_h5 = Path(args.kinship_h5)
 
-    with h5py.File(GENO_H5, "r") as f:
+    y_by_acc, n_all_rows = load_phenotype(pheno_zip, args.study_values_file, args.phenotype_col)
+
+    with h5py.File(geno_h5, "r") as f:
         geno_accs = [x.decode() if isinstance(x, bytes) else str(x) for x in f["accessions"][:]]
+        geno_acc_index = {acc: i for i, acc in enumerate(geno_accs)}
         common_accs = [acc for acc in geno_accs if acc in y_by_acc]
-        geno_ix = np.asarray([geno_accs.index(acc) for acc in common_accs], dtype=int)
+        geno_ix = np.asarray([geno_acc_index[acc] for acc in common_accs], dtype=int)
         y = np.asarray([y_by_acc[acc] for acc in common_accs], dtype=float)
         labels, bounds = chrom_labels_and_bounds(f)
         positions_ds = f["positions"]
         snps_ds = f["snps"]
 
-        pcs = compute_pcs(common_accs, geno_accs)
+        pcs = compute_pcs(kinship_h5, common_accs, args.n_pcs)
         X, xtx_inv, y_res, y_res_ss = build_covariates(y, pcs)
         n = len(y)
         df = n - X.shape[1] - 1
 
-        top_hits: list[dict[str, float]] = []
+        top_hits: list[dict] = []
+        manhattan_rows: list[dict] = []
         tested_snps = 0
         kept_snps = 0
         start_time = time.time()
@@ -123,7 +163,6 @@ def scan_full_matrix() -> tuple[dict[str, float], list[dict[str, float]]]:
             positions = positions_ds[chunk_start:chunk_end]
             chroms = annotate_chromosome(chunk_start, chunk_end, labels, bounds)
 
-            # Residualize the chunk against intercept + PCs.
             xg = X.T @ G.T
             g_res = G - (X @ (xtx_inv @ xg)).T
             g_ss = np.sum(g_res * g_res, axis=1)
@@ -161,35 +200,52 @@ def scan_full_matrix() -> tuple[dict[str, float], list[dict[str, float]]]:
                     "minor_allele_count": int(minor_allele_count[local_i]),
                 }
                 top_hits.append(row)
+                if float(pval) < args.manhattan_p_threshold:
+                    manhattan_rows.append(row)
 
-            top_hits.sort(key=lambda row: row["p_value"])
-            if len(top_hits) > TOP_K:
-                top_hits = top_hits[:TOP_K]
+            top_hits.sort(key=lambda r: r["p_value"])
+            if len(top_hits) > args.top_k:
+                top_hits = top_hits[:args.top_k]
 
         elapsed = time.time() - start_time
         summary = {
+            "study_values_file": args.study_values_file,
+            "phenotype_col": args.phenotype_col,
             "phenotype_rows_with_values": n_all_rows,
             "matched_accessions": len(common_accs),
-            "pcs_used": N_PCS,
+            "pcs_used": args.n_pcs,
             "tested_snps_total": tested_snps,
             "tested_snps_after_filters": kept_snps,
+            "manhattan_snps_saved": len(manhattan_rows),
             "scan_seconds": round(elapsed, 2),
             "trait_mean": float(y.mean()),
             "trait_sd": float(y.std()),
         }
-        return summary, top_hits
+        return summary, top_hits, manhattan_rows
 
 
-def write_outputs(summary: dict[str, float], top_hits: list[dict[str, float]]) -> None:
-    OUTDIR.mkdir(parents=True, exist_ok=True)
+def write_outputs(args: argparse.Namespace, summary: dict, top_hits: list[dict], manhattan_rows: list[dict]) -> None:
+    outdir = Path(args.outdir)
+    outdir.mkdir(parents=True, exist_ok=True)
 
-    top_path = OUTDIR / "study27_mean_trl_top_hits.tsv"
+    if not top_hits:
+        raise SystemExit("No SNPs passed the MAC/variance filter — top_hits is empty.")
+
+    prefix = args.output_prefix
+    top_path = outdir / f"{prefix}_top_hits.tsv"
     with top_path.open("w", newline="") as fh:
         writer = csv.DictWriter(fh, fieldnames=list(top_hits[0].keys()), delimiter="\t")
         writer.writeheader()
         writer.writerows(top_hits)
 
-    summary_path = OUTDIR / "summary.txt"
+    if manhattan_rows:
+        manhattan_path = outdir / f"{prefix}_manhattan_data.tsv"
+        with manhattan_path.open("w", newline="") as fh:
+            writer = csv.DictWriter(fh, fieldnames=list(manhattan_rows[0].keys()), delimiter="\t")
+            writer.writeheader()
+            writer.writerows(manhattan_rows)
+
+    summary_path = outdir / "summary.txt"
     with summary_path.open("w") as fh:
         for key, value in summary.items():
             fh.write(f"{key}: {value}\n")
@@ -197,11 +253,12 @@ def write_outputs(summary: dict[str, float], top_hits: list[dict[str, float]]) -
 
 
 def main() -> None:
-    summary, top_hits = scan_full_matrix()
-    write_outputs(summary, top_hits)
+    args = parse_args()
+    summary, top_hits, manhattan_rows = scan_full_matrix(args)
+    write_outputs(args, summary, top_hits, manhattan_rows)
     print(summary)
     print(top_hits[0])
-    print(OUTDIR / "study27_mean_trl_top_hits.tsv")
+    print(Path(args.outdir) / f"{args.output_prefix}_top_hits.tsv")
 
 
 if __name__ == "__main__":

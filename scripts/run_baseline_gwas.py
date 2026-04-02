@@ -28,7 +28,7 @@ for snp in snp_cols:
         'POS': int(snp.split('_')[1]),
         'BETA': slope,
         'P': p_value,
-        'NEG_LOG10_P': -np.log10(p_value) if p_value > 0 else 0
+        'NEG_LOG10_P': -np.log10(p_value) if p_value > 0 else 300.0
     })
 
 results_df = pd.DataFrame(results).sort_values('P')

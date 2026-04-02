@@ -195,7 +195,7 @@ def run_cv(
             {
                 "fold": fold_idx,
                 "r2": r2_score(y_test, pred),
-                "rmse": mean_squared_error(y_test, pred, squared=False),
+                "rmse": float(np.sqrt(mean_squared_error(y_test, pred))),
             }
         )
 
@@ -259,12 +259,18 @@ def main() -> None:
     group_cols_list = None
     if args.group_manifest:
         group_names, group_cols_list, _ = load_group_manifest(args.group_manifest)
-        # Keep only groups whose columns are present in X
-        group_names, group_cols_list = zip(
-            *[(n, c) for n, c in zip(group_names, group_cols_list) if all(col in X.columns for col in c)]
-        ) if group_names else ([], [])
-        group_names = list(group_names)
-        group_cols_list = list(group_cols_list)
+        # Keep only groups whose columns are all present in X
+        pairs = [
+            (n, c) for n, c in zip(group_names, group_cols_list)
+            if c and all(col in X.columns for col in c)
+        ]
+        if pairs:
+            group_names, group_cols_list = zip(*pairs)
+            group_names = list(group_names)
+            group_cols_list = list(group_cols_list)
+        else:
+            group_names = None
+            group_cols_list = None
 
     metrics_df, shap_df, grouped_df = run_cv(
         X,

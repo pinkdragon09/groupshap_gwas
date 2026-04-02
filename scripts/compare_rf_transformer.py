@@ -67,11 +67,22 @@ def read_summary(summary_path: Path) -> dict[str, str]:
 
 
 def load_model_run(run_dir: Path, label: str) -> tuple[dict[str, str], pd.DataFrame, pd.DataFrame]:
+    # Expected global_shap_ranking.tsv columns (written by rf/transformer templates):
+    #   feature, feature_type, snp_index, chromosome, position, mean_abs_shap, sd_abs_shap, n_folds
+    # NOTE: shap_gwas_template.py writes a subset of columns and is NOT compatible here.
     summary = read_summary(run_dir / "summary.txt")
     metrics = pd.read_csv(run_dir / "cv_metrics.tsv", sep="\t")
     ranking = pd.read_csv(run_dir / "global_shap_ranking.tsv", sep="\t")
+    required = {"feature_type", "snp_index", "mean_abs_shap"}
+    missing = required - set(ranking.columns)
+    if missing:
+        raise ValueError(
+            f"global_shap_ranking.tsv in {run_dir} is missing required columns: {missing}. "
+            "Only outputs from random_forest_gwas_template.py or transformer_mamba_gwas_template.py are supported."
+        )
     ranking = ranking[ranking["feature_type"] == "snp"].copy()
     ranking["snp_index"] = ranking["snp_index"].astype(int)
+    ranking = ranking.sort_values("mean_abs_shap", ascending=False).reset_index(drop=True)
     ranking[f"{label}_rank"] = np.arange(1, len(ranking) + 1)
     return summary, metrics, ranking
 
@@ -92,7 +103,10 @@ def load_gene_annotation(gff_path: Path) -> pd.DataFrame:
         for line in handle:
             if line.startswith("#"):
                 continue
-            chrom, _source, feature, start, end, _score, strand, _phase, attrs = line.rstrip().split("\t")
+            fields = line.rstrip().split("\t")
+            if len(fields) != 9:
+                continue
+            chrom, _source, feature, start, end, _score, strand, _phase, attrs = fields
             if feature != "gene":
                 continue
             parsed = parse_gff_attributes(attrs)
@@ -259,7 +273,8 @@ def build_side_by_side_top10(
     )
 
     rows: list[dict[str, object]] = []
-    for idx in range(10):
+    n_side = min(10, len(rf_top), len(tr_top))
+    for idx in range(n_side):
         rf_row = rf_top.iloc[idx]
         tr_row = tr_top.iloc[idx]
         rows.append(
@@ -302,7 +317,7 @@ def build_published_results_comparison(
                 "source": "This work: random forest",
                 "trait_context": "AraPheno study 27, Mean(TRL) C root-length trait",
                 "sample_size": int(rf_summary["matched_accessions"]),
-                "analysis_type": "RandomForestRegressor on 200 prefiltered SNPs plus 3 PCs",
+                "analysis_type": f"RandomForestRegressor on {int(rf_summary['feature_count_snps'])} prefiltered SNPs plus 3 PCs",
                 "reported_metric": "5-fold cross-validated predictive R2 / RMSE",
                 "reported_value": f"R2 = {float(rf_summary['mean_cv_r2']):.3f}; RMSE = {float(rf_summary['mean_cv_rmse']):.3f}",
                 "published_loci_summary": "Top RF loci cluster at Chr3:9.07 Mb, Chr3:18.77 Mb, Chr1:21.85 Mb, and Chr5:16.90 Mb.",
@@ -312,7 +327,7 @@ def build_published_results_comparison(
                 "source": "This work: transformer",
                 "trait_context": "AraPheno study 27, Mean(TRL) C root-length trait",
                 "sample_size": int(tr_summary["matched_accessions"]),
-                "analysis_type": "Transformer regressor on 200 prefiltered SNPs plus 3 PCs",
+                "analysis_type": f"Transformer regressor on {int(tr_summary['feature_count_snps'])} prefiltered SNPs plus 3 PCs",
                 "reported_metric": "5-fold cross-validated predictive R2 / RMSE",
                 "reported_value": f"R2 = {float(tr_summary['mean_cv_r2']):.3f}; RMSE = {float(tr_summary['mean_cv_rmse']):.3f}",
                 "published_loci_summary": "Top transformer loci include Chr4:5828682, Chr5:6831693, and Chr3:20.72 Mb.",
@@ -397,6 +412,11 @@ def format_summary_md(model_metrics: pd.DataFrame, rank_table: pd.DataFrame) -> 
     lines = [
         "# RF vs Transformer Comparison",
         "",
+        "> **Comparison scope**: both nonlinear models were trained on SNPs",
+        "> pre-filtered from the linear-GWAS top-hit table. This comparison",
+        "> measures **re-ranking within linear candidate SNPs**, not independent",
+        "> discovery. Rank statistics are more interpretable than raw overlap counts.",
+        "",
         "## Predictive Metrics",
         "",
         "| Model | Mean CV R2 | SD CV R2 | Mean CV RMSE | SD CV RMSE | SNP Features Used |",
@@ -404,7 +424,7 @@ def format_summary_md(model_metrics: pd.DataFrame, rank_table: pd.DataFrame) -> 
         f"| Random forest | {rf['mean_cv_r2']:.6f} | {rf['sd_cv_r2']:.6f} | {rf['mean_cv_rmse']:.6f} | {rf['sd_cv_rmse']:.6f} | {int(rf['top_snp_features_used'])} |",
         f"| Transformer | {tr['mean_cv_r2']:.6f} | {tr['sd_cv_r2']:.6f} | {tr['mean_cv_rmse']:.6f} | {tr['sd_cv_rmse']:.6f} | {int(tr['top_snp_features_used'])} |",
         "",
-        "## Rank Comparison Against Linear Baseline",
+        "## Rank Comparison (Re-ranking Within Linear Candidate SNPs)",
         "",
         f"- Shared prefiltered SNPs: `{len(rank_table)}`",
         f"- Random forest vs linear Spearman rank correlation: `{spearman_rf:.4f}`",
