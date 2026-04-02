@@ -50,6 +50,7 @@ from grouped_shap_utils import (
     grouped_shapley_all,
     summarize_grouped_shapley,
 )
+from snp_selection import load_neutral_snp_indices, load_top_snp_indices
 
 
 PHENO_ZIP = Path("data/arapheno/bulk/database.zip")
@@ -71,7 +72,15 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--study-values-file", default=DEFAULT_STUDY_VALUES_FILE)
     parser.add_argument("--phenotype-col", default=DEFAULT_PHENOTYPE_COL)
     parser.add_argument("--model", choices=["cnn", "transformer", "mamba"], default="transformer")
+    parser.add_argument(
+        "--snp-selection-mode",
+        default="linear_hits",
+        choices=["linear_hits", "neutral_variance"],
+        help="How to select the SNP panel before model fitting.",
+    )
     parser.add_argument("--top-snps", type=int, default=500)
+    parser.add_argument("--neutral-step", type=int, default=10000)
+    parser.add_argument("--neutral-min-mac", type=int, default=2)
     parser.add_argument("--n-pcs", type=int, default=3)
     parser.add_argument("--folds", type=int, default=5)
     parser.add_argument("--epochs", type=int, default=80)
@@ -149,12 +158,6 @@ def load_phenotype(pheno_zip: Path, study_values_file: str, phenotype_col: str) 
     return y_by_acc
 
 
-def load_top_snp_indices(baseline_hits: Path, top_snps: int) -> list[int]:
-    hits = pd.read_csv(baseline_hits, sep="\t")
-    hits = hits.sort_values("p_value", ascending=True)
-    return hits["snp_index"].astype(int).head(top_snps).tolist()
-
-
 def compute_pcs(kinship_h5: Path, common_accs: list[str], n_pcs: int) -> np.ndarray:
     with h5py.File(kinship_h5, "r") as f:
         kinship = f["kinship"][:]
@@ -165,7 +168,9 @@ def compute_pcs(kinship_h5: Path, common_accs: list[str], n_pcs: int) -> np.ndar
     sub_k = kinship[np.ix_(ix, ix)]
     eigvals, eigvecs = np.linalg.eigh(sub_k)
     pcs = eigvecs[:, -n_pcs:]
-    pcs = (pcs - pcs.mean(axis=0)) / pcs.std(axis=0)
+    pc_std = pcs.std(axis=0)
+    pc_std[pc_std < 1e-8] = 1.0
+    pcs = (pcs - pcs.mean(axis=0)) / pc_std
     return pcs
 
 
@@ -184,13 +189,23 @@ def chromosome_for_index(idx: int, labels: list[str], bounds: np.ndarray) -> str
 
 def load_arabidopsis_matrix(args: argparse.Namespace) -> tuple[pd.DataFrame, pd.Series, pd.DataFrame, int]:
     y_by_acc = load_phenotype(Path(args.pheno_zip), args.study_values_file, args.phenotype_col)
-    snp_indices = load_top_snp_indices(Path(args.baseline_hits), args.top_snps)
-    sorted_snp_indices = sorted(snp_indices)
 
     with h5py.File(args.geno_h5, "r") as f:
         geno_accs = [x.decode() if isinstance(x, bytes) else str(x) for x in f["accessions"][:]]
+        geno_acc_index = {acc: i for i, acc in enumerate(geno_accs)}
         common_accs = [acc for acc in geno_accs if acc in y_by_acc]
-        geno_ix = np.asarray([geno_accs.index(acc) for acc in common_accs], dtype=int)
+        geno_ix = np.asarray([geno_acc_index[acc] for acc in common_accs], dtype=int)
+        if args.snp_selection_mode == "linear_hits":
+            snp_indices = load_top_snp_indices(Path(args.baseline_hits), args.top_snps)
+        else:
+            snp_indices = load_neutral_snp_indices(
+                Path(args.geno_h5),
+                geno_ix,
+                args.top_snps,
+                min_mac=args.neutral_min_mac,
+                step=args.neutral_step,
+            )
+        sorted_snp_indices = sorted(snp_indices)
         positions = f["positions"][sorted_snp_indices]
         snps = f["snps"][sorted_snp_indices][:, geno_ix].astype(np.float32)
         labels, bounds = chromosome_labels_and_bounds(f)
@@ -543,6 +558,13 @@ def run_cv(
         y_train = y_np[train_idx]
         y_test = y_np[test_idx]
 
+        # Shuffle within the fold before splitting off validation so that
+        # position-correlated population structure doesn't bias early stopping.
+        inner_rng = np.random.RandomState(args.random_state + fold_idx)
+        perm = inner_rng.permutation(len(X_train))
+        X_train = X_train[perm]
+        y_train = y_train[perm]
+
         val_size = max(1, int(round(0.2 * len(X_train))))
         X_val = X_train[:val_size]
         y_val = y_train[:val_size]
@@ -592,6 +614,11 @@ def run_cv(
         # compute_shap_values().  Not the grouped-Shapley estimand.
         background = X_fit_scaled[: min(32, len(X_fit_scaled))]
         shap_values = compute_shap_values(model, background, X_test_scaled)
+        if shap_values.shape[1] != len(feature_meta):
+            raise ValueError(
+                f"Fold {fold_idx}: shap_values has {shap_values.shape[1]} features "
+                f"but feature_meta has {len(feature_meta)} rows — shapes must match."
+            )
         fold_importance = feature_meta.copy()
         fold_importance["mean_abs_shap"] = np.abs(shap_values).mean(axis=0)
         fold_importance["fold"] = fold_idx
@@ -676,8 +703,11 @@ def write_outputs(
         f"study_values_file: {args.study_values_file}",
         f"phenotype_col: {args.phenotype_col}",
         f"model: {args.model}",
+        f"snp_selection_mode: {args.snp_selection_mode}",
         f"matched_accessions: {len(y)}",
         f"top_snps: {args.top_snps}",
+        f"neutral_step: {args.neutral_step}",
+        f"neutral_min_mac: {args.neutral_min_mac}",
         f"n_pcs: {args.n_pcs}",
         f"folds: {args.folds}",
         f"epochs: {args.epochs}",
