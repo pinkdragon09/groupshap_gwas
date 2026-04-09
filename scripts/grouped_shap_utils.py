@@ -257,3 +257,178 @@ def build_group_cols_from_meta(
         return [], []
     group_names, group_cols = zip(*pairs)
     return list(group_names), list(group_cols)
+
+
+# ---------------------------------------------------------------------------
+# Gene-window grouping
+# ---------------------------------------------------------------------------
+
+def assign_snps_to_gene_windows(
+    snp_meta: pd.DataFrame,
+    gene_df: pd.DataFrame,
+    window_bp: int = 50_000,
+    snp_chrom_col: str = "chromosome",
+    snp_pos_col: str = "position",
+    snp_feature_col: str = "feature",
+    gene_chrom_col: str = "chrom",
+    gene_start_col: str = "start",
+    gene_end_col: str = "end",
+    gene_id_col: str = "gene_id",
+    multi_gene: bool = False,
+) -> pd.DataFrame:
+    """
+    Assign each SNP to the gene whose body (± window_bp) it falls within.
+
+    Parameters
+    ----------
+    snp_meta        : DataFrame with columns for SNP feature name, chromosome, position.
+                      Must also have a 'feature_type' column; only rows where
+                      feature_type == 'snp' are processed.
+    gene_df         : DataFrame with columns for chromosome, TSS/start, TES/end, gene_id.
+    window_bp       : Window added symmetrically around each gene body (default 50 kb).
+    snp_*_col       : Column names in snp_meta.
+    gene_*_col      : Column names in gene_df.
+    multi_gene      : If True, a SNP overlapping multiple gene windows is assigned to
+                      all of them (one row per gene).  If False (default), each SNP is
+                      assigned only to the closest gene centre within range; SNPs outside
+                      all windows receive group label 'intergenic_<chrom>_<pos>'.
+
+    Returns
+    -------
+    DataFrame with columns ['feature', 'group'] — the manifest expected by
+    load_group_manifest() and build_group_cols_from_meta().
+    """
+    snp_only = snp_meta[snp_meta["feature_type"] == "snp"].copy()
+    snp_only = snp_only[[snp_feature_col, snp_chrom_col, snp_pos_col]].rename(
+        columns={snp_feature_col: "feature", snp_chrom_col: "chrom", snp_pos_col: "pos"}
+    )
+    snp_only["pos"] = snp_only["pos"].astype(int)
+
+    gene_df = gene_df.copy()
+    gene_df[gene_start_col] = gene_df[gene_start_col].astype(int)
+    gene_df[gene_end_col] = gene_df[gene_end_col].astype(int)
+    gene_df["window_start"] = gene_df[gene_start_col] - window_bp
+    gene_df["window_end"] = gene_df[gene_end_col] + window_bp
+    gene_df["gene_centre"] = (gene_df[gene_start_col] + gene_df[gene_end_col]) // 2
+
+    records: list[dict] = []
+    for chrom, snp_group in snp_only.groupby("chrom"):
+        genes_on_chrom = gene_df[gene_df[gene_chrom_col] == chrom]
+        for _, snp_row in snp_group.iterrows():
+            pos = int(snp_row["pos"])
+            overlapping = genes_on_chrom[
+                (genes_on_chrom["window_start"] <= pos) &
+                (genes_on_chrom["window_end"] >= pos)
+            ]
+            if overlapping.empty:
+                group_label = f"intergenic_{chrom}_{pos}"
+                records.append({"feature": snp_row["feature"], "group": group_label})
+            elif multi_gene:
+                for _, gr in overlapping.iterrows():
+                    records.append({"feature": snp_row["feature"], "group": gr[gene_id_col]})
+            else:
+                # nearest gene centre
+                dist = (overlapping["gene_centre"] - pos).abs()
+                nearest = overlapping.loc[dist.idxmin(), gene_id_col]
+                records.append({"feature": snp_row["feature"], "group": nearest})
+
+    return pd.DataFrame(records, columns=["feature", "group"])
+
+
+def build_gene_window_groups(
+    snp_meta: pd.DataFrame,
+    gene_df: pd.DataFrame,
+    window_bp: int = 50_000,
+    **kwargs,
+) -> tuple[list[str], list[list[str]]]:
+    """
+    Convenience wrapper: returns (group_names, group_cols) using gene-window grouping.
+
+    Parameters are forwarded to assign_snps_to_gene_windows().
+    Compatible with grouped_shapley_all() and grouped_interaction_all().
+    """
+    manifest = assign_snps_to_gene_windows(snp_meta, gene_df, window_bp=window_bp, **kwargs)
+    group_names = sorted(manifest["group"].unique().tolist())
+    group_cols = [
+        manifest.loc[manifest["group"] == g, "feature"].tolist()
+        for g in group_names
+    ]
+    pairs = [(n, c) for n, c in zip(group_names, group_cols) if c]
+    if not pairs:
+        return [], []
+    group_names_out, group_cols_out = zip(*pairs)
+    return list(group_names_out), list(group_cols_out)
+
+
+# ---------------------------------------------------------------------------
+# Physical LD-block grouping (fixed-window proxy)
+# ---------------------------------------------------------------------------
+
+def build_ld_block_groups(
+    snp_meta: pd.DataFrame,
+    block_size_bp: int = 200_000,
+    chrom_col: str = "chromosome",
+    pos_col: str = "position",
+    feature_col: str = "feature",
+) -> tuple[list[str], list[list[str]]]:
+    """
+    Partition SNPs into fixed-size physical blocks as a proxy for LD blocks.
+
+    Each block is labelled '<chrom>_block<block_index>' where block_index = position // block_size_bp.
+    This is a practical stand-in when a precomputed LD block map (e.g. from PLINK --blocks) is not
+    available; replace with load_group_manifest() once a proper block map exists.
+
+    Parameters
+    ----------
+    snp_meta      : DataFrame with feature_type, chromosome, position, and feature columns.
+    block_size_bp : Physical block size in base pairs (default 200 kb).
+    chrom_col     : Column name for chromosome in snp_meta.
+    pos_col       : Column name for position in snp_meta.
+    feature_col   : Column name for SNP feature name in snp_meta.
+
+    Returns
+    -------
+    (group_names, group_cols) compatible with grouped_shapley_all().
+    """
+    snp_only = snp_meta[snp_meta["feature_type"] == "snp"].copy()
+    snp_only["_block"] = (
+        snp_only[chrom_col].astype(str)
+        + "_block"
+        + (snp_only[pos_col].astype(int) // block_size_bp).astype(str)
+    )
+    group_names = sorted(snp_only["_block"].unique().tolist())
+    group_cols = [
+        snp_only.loc[snp_only["_block"] == g, feature_col].tolist()
+        for g in group_names
+    ]
+    pairs = [(n, c) for n, c in zip(group_names, group_cols) if c]
+    if not pairs:
+        return [], []
+    group_names_out, group_cols_out = zip(*pairs)
+    return list(group_names_out), list(group_cols_out)
+
+
+def build_cis_window_groups(
+    snp_meta: pd.DataFrame,
+    window_bp: int = 200_000,
+    chrom_col: str = "chromosome",
+    pos_col: str = "position",
+    feature_col: str = "feature",
+) -> tuple[list[str], list[list[str]]]:
+    """
+    Sliding cis-window grouping centred on evenly spaced anchors.
+
+    Partitions the genome into non-overlapping windows of width window_bp,
+    labelling each window '<chrom>_cis<anchor_kb>kb' where anchor_kb is the
+    window start in kilobases.  This is coarser than gene-window grouping but
+    avoids requiring a gene annotation file.
+
+    Delegates to build_ld_block_groups() with block_size_bp=window_bp.
+    """
+    return build_ld_block_groups(
+        snp_meta,
+        block_size_bp=window_bp,
+        chrom_col=chrom_col,
+        pos_col=pos_col,
+        feature_col=feature_col,
+    )
