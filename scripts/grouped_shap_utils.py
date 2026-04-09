@@ -428,6 +428,197 @@ def build_ld_block_groups(
     return list(group_names_out), list(group_cols_out)
 
 
+# ---------------------------------------------------------------------------
+# Conditional Permutation Importance (CPI)
+# ---------------------------------------------------------------------------
+
+def conditional_permutation_importance(
+    model,
+    X: pd.DataFrame,
+    y: pd.Series,
+    group_cols: list[list[str]],
+    group_names: list[str],
+    n_repeats: int = 20,
+    random_state: int = 42,
+) -> pd.DataFrame:
+    """
+    Conditional Permutation Importance (CPI) for grouped features.
+
+    For each group, permute only that group's columns (leaving all others fixed)
+    and measure the drop in R².  Repeating n_repeats times gives a stable
+    mean and standard deviation.
+
+    Parameters
+    ----------
+    model        : fitted sklearn-compatible regressor with predict()
+    X            : feature matrix (DataFrame)
+    y            : target (Series or array-like)
+    group_cols   : list of lists of column names per group
+    group_names  : labels matching group_cols
+    n_repeats    : number of permutation repetitions per group
+    random_state : RNG seed
+
+    Returns
+    -------
+    DataFrame with columns: group, mean_importance, sd_importance
+    sorted descending by mean_importance.
+    """
+    from sklearn.metrics import r2_score as _r2_score
+
+    rng = np.random.RandomState(random_state)
+    y_arr = np.asarray(y)
+    baseline_r2 = _r2_score(y_arr, model.predict(X))
+
+    records = []
+    for name, cols in zip(group_names, group_cols):
+        if not cols:
+            continue
+        drops = []
+        for _ in range(n_repeats):
+            X_perm = X.copy()
+            perm_idx = rng.permutation(len(X))
+            X_perm[cols] = X[cols].values[perm_idx]
+            perm_r2 = _r2_score(y_arr, model.predict(X_perm))
+            drops.append(baseline_r2 - perm_r2)
+        records.append(
+            {
+                "group": name,
+                "mean_importance": float(np.mean(drops)),
+                "sd_importance": float(np.std(drops)),
+            }
+        )
+
+    return (
+        pd.DataFrame(records)
+        .sort_values("mean_importance", ascending=False)
+        .reset_index(drop=True)
+    )
+
+
+# ---------------------------------------------------------------------------
+# Accumulated Local Effects (ALE)
+# ---------------------------------------------------------------------------
+
+def ale_effect(
+    model,
+    X: pd.DataFrame,
+    feature_col: str,
+    n_bins: int = 20,
+) -> pd.DataFrame:
+    """
+    Accumulated Local Effects (ALE) for a single feature.
+
+    Standard first-order binning estimator:
+      1. Partition the feature's range into n_bins quantile bins.
+      2. For each bin, replace the feature values for in-bin observations
+         with the bin's lower/upper edges and compute the local prediction
+         difference.
+      3. Accumulate those local effects and centre (subtract the weighted mean).
+
+    Parameters
+    ----------
+    model       : fitted sklearn-compatible regressor with predict()
+    X           : feature matrix (DataFrame)
+    feature_col : name of the feature column to explain
+    n_bins      : number of quantile bins
+
+    Returns
+    -------
+    DataFrame with columns:
+      bin_lower   – left edge of each bin
+      bin_upper   – right edge of each bin
+      bin_center  – midpoint (for plotting)
+      ale         – centred accumulated local effect
+      n_obs       – number of observations in the bin
+    """
+    feat = X[feature_col].values.astype(float)
+    unique_vals = np.unique(feat[~np.isnan(feat)])
+
+    # For discrete features (few unique values), use each unique value as its
+    # own "bin" boundary and compute ALE at each transition.  For continuous
+    # features, fall back to quantile binning.
+    if len(unique_vals) <= n_bins:
+        # Discrete / near-discrete: breakpoints are the unique values themselves.
+        # For each adjacent pair (u_{j-1}, u_j), the local neighbourhood is
+        # observations whose feature value is u_j (following Apley & Zhu 2020, §3.2).
+        # Special case: single unique value → zero effect everywhere.
+        if len(unique_vals) < 2:
+            return pd.DataFrame(
+                {"bin_lower": unique_vals, "bin_upper": unique_vals,
+                 "bin_center": unique_vals, "ale": np.zeros(len(unique_vals)),
+                 "n_obs": [len(feat)]}
+            )
+        quantiles = unique_vals
+    else:
+        quantiles = np.unique(np.nanpercentile(feat, np.linspace(0, 100, n_bins + 1)))
+
+    n_intervals = len(quantiles) - 1
+    local_effects = np.zeros(n_intervals)
+    bin_counts = np.zeros(n_intervals, dtype=int)
+
+    for i in range(n_intervals):
+        lo, hi = quantiles[i], quantiles[i + 1]
+        # For discrete features: use observations at the upper breakpoint as
+        # the local neighbourhood (Apley & Zhu discrete ALE).
+        # For continuous features: any observation within [lo, hi].
+        if len(unique_vals) <= n_bins:
+            mask = feat == hi
+        elif i == 0:
+            mask = (feat >= lo) & (feat <= hi)
+        else:
+            mask = (feat > lo) & (feat <= hi)
+        n_in_bin = int(mask.sum())
+        if n_in_bin == 0:
+            # Fall back to using all observations when bin is empty
+            mask = (feat >= lo) & (feat <= hi)
+            n_in_bin = int(mask.sum())
+        if n_in_bin == 0:
+            continue
+        X_lo = X[mask].copy()
+        X_hi = X[mask].copy()
+        X_lo[feature_col] = lo
+        X_hi[feature_col] = hi
+        local_effects[i] = float((model.predict(X_hi) - model.predict(X_lo)).mean())
+        bin_counts[i] = n_in_bin
+
+    # ALE is defined at the K+1 quantile boundaries, with anchor ALE[0] = 0.
+    # ALE[k] = ALE[k-1] + local_effect[k-1]  (accumulated from the left)
+    ale_at_boundaries = np.concatenate([[0.0], np.cumsum(local_effects)])
+
+    # Centre: c = (1/n) * Σ_i ALE(x_i) over all observations.
+    # For each observation with feature value x_i, ALE(x_i) = ale_at_boundaries[k]
+    # where k = the boundary index that x_i maps to.
+    #
+    # Continuous features: x_i in bin k → maps to upper boundary k+1.
+    #   Boundary 0 (anchor) has no observations; boundary k>0 gets bin_counts[k-1].
+    #
+    # Discrete features: x_i == quantile[k] → maps exactly to boundary k.
+    #   Boundary 0 is the first unique value; it gets its own observation count.
+    if len(unique_vals) <= n_bins:
+        # Discrete: count observations at each unique value
+        boundary_weights = np.array(
+            [(feat == q).sum() for q in quantiles], dtype=float
+        )
+    else:
+        # Continuous: observations map to the upper boundary of their bin
+        boundary_weights = np.concatenate([[0.0], bin_counts.astype(float)])
+
+    total_obs = boundary_weights.sum()
+    if total_obs > 0:
+        ale_mean = float(np.dot(boundary_weights, ale_at_boundaries)) / total_obs
+    else:
+        ale_mean = 0.0
+    ale_centred = ale_at_boundaries - ale_mean
+
+    return pd.DataFrame(
+        {
+            "x": quantiles,
+            "ale": ale_centred,
+            "n_obs": boundary_weights.astype(int),
+        }
+    )
+
+
 def build_cis_window_groups(
     snp_meta: pd.DataFrame,
     window_bp: int = 200_000,
