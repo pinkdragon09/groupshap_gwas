@@ -2,22 +2,22 @@
 """
 Phase 6 simulation study: recovery and stability figures.
 
-Regimes:
+Scenarios:
     1 — Additive sparse
     3 — Pairwise epistasis
     5 — LD proxy-causal
 
-For each regime two figures are produced:
+For each scenario two figures are produced:
     recovery — how well grouped Shapley recovers causal signal vs. noise / LD / interaction strength
     stability — consistency of attributed scores across random seeds
 
 Outputs saved to outputs/phase6/:
-    regime1_recovery.png / .csv
-    regime1_stability.png / .csv
-    regime3_recovery.png / .csv
-    regime3_stability.png / .csv
-    regime5_recovery.png / .csv
-    regime5_stability.png / .csv
+    scenario1_recovery.png / .csv
+    scenario1_stability.png / .csv
+    scenario3_recovery.png / .csv
+    scenario3_stability.png / .csv
+    scenario5_recovery.png / .csv
+    scenario5_stability.png / .csv
     phase6_simulation_summary.csv
 """
 
@@ -151,16 +151,16 @@ def compute_interaction_scores(model, X: pd.DataFrame, group_cols: list[list[str
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# Regime 1 — Additive Sparse
+# Scenario 1 — Additive Sparse
 # ─────────────────────────────────────────────────────────────────────────────
 
-def _regime1_oracle(Xd: pd.DataFrame) -> np.ndarray:
+def _scenario1_oracle(Xd: pd.DataFrame) -> np.ndarray:
     g0 = Xd[[f"G0_S{s}" for s in range(SNPS_PER_GROUP)]].sum(axis=1).values.astype(float)
     g1 = Xd[[f"G1_S{s}" for s in range(SNPS_PER_GROUP)]].sum(axis=1).values.astype(float)
     return 2.0 * g0 + 1.5 * g1   # G2, G3 are structural nulls
 
 
-def run_regime1_recovery() -> pd.DataFrame:
+def run_scenario1_recovery() -> pd.DataFrame:
     """
     Recovery: vary noise sigma.
     Compare grouped Shapley SNR (causal/null) vs. linear GWAS SNR.
@@ -176,7 +176,7 @@ def run_regime1_recovery() -> pd.DataFrame:
     for sigma in sigmas:
         np.random.seed(42)
         X = generate_independent_genotypes(N_TRAIN, group_cols)
-        model = OracleModel(_regime1_oracle)
+        model = OracleModel(_scenario1_oracle)
         y = model.predict(X) + np.random.normal(0, float(sigma), N_TRAIN)
 
         # Linear GWAS: |corr(y, G_k_sum)|
@@ -194,7 +194,7 @@ def run_regime1_recovery() -> pd.DataFrame:
         rows.append({"sigma": float(sigma), "linear_snr": lin_snr, "shap_snr": shap_snr})
 
     df = pd.DataFrame(rows)
-    df.to_csv(OUTDIR / "regime1_recovery.csv", index=False)
+    df.to_csv(OUTDIR / "scenario1_recovery.csv", index=False)
 
     fig, ax = plt.subplots(figsize=FIGSIZE)
     ax.plot(df["sigma"], df["linear_snr"], "o-", color="#d62728", label="Linear GWAS SNR")
@@ -202,17 +202,17 @@ def run_regime1_recovery() -> pd.DataFrame:
     ax.axhline(1.0, ls="--", color="gray", lw=0.8, label="SNR = 1 (no signal)")
     ax.set_xlabel("Noise σ")
     ax.set_ylabel("Signal-to-Null Ratio")
-    ax.set_title("Regime 1 — Additive Sparse: Recovery vs. Noise Level")
+    ax.set_title("Scenario 1 — Additive Sparse: Recovery vs. Noise Level")
     ax.legend()
     ax.set_yscale("log")
     fig.tight_layout()
-    fig.savefig(OUTDIR / "regime1_recovery.png", dpi=150)
+    fig.savefig(OUTDIR / "scenario1_recovery.png", dpi=150)
     plt.close(fig)
-    print(f"  Regime 1 recovery saved  (σ ∈ [{sigmas[0]}, {sigmas[-1]}])")
+    print(f"  Scenario 1 recovery saved  (σ ∈ [{sigmas[0]}, {sigmas[-1]}])")
     return df
 
 
-def run_regime1_stability() -> pd.DataFrame:
+def run_scenario1_stability() -> pd.DataFrame:
     """
     Stability: fix sigma=0.5, sweep N_STABILITY_SEEDS seeds.
     Boxplot of mean |φ_k| per group: causal (G0, G1) vs. null (G2, G3).
@@ -224,13 +224,13 @@ def run_regime1_stability() -> pd.DataFrame:
     for seed in range(N_STABILITY_SEEDS):
         np.random.seed(seed)
         X = generate_independent_genotypes(N_TRAIN, group_cols)
-        model = OracleModel(_regime1_oracle)
+        model = OracleModel(_scenario1_oracle)
         phi = compute_phi_scores(model, X, group_cols, seed=seed)
         for k in range(m):
             phi_records[f"G{k}"].append(float(phi[k]))
 
     df = pd.DataFrame(phi_records)
-    df.to_csv(OUTDIR / "regime1_stability.csv", index=False)
+    df.to_csv(OUTDIR / "scenario1_stability.csv", index=False)
 
     fig, ax = plt.subplots(figsize=FIGSIZE)
     colors = ["#1f77b4", "#1f77b4", "#aec7e8", "#aec7e8"]
@@ -240,19 +240,19 @@ def run_regime1_stability() -> pd.DataFrame:
         patch.set_facecolor(color)
     ax.set_xticklabels(labels, rotation=12)
     ax.set_ylabel("Mean |φ_k|")
-    ax.set_title(f"Regime 1 — Additive Sparse: Stability (σ=0.5, {N_STABILITY_SEEDS} seeds)")
+    ax.set_title(f"Scenario 1 — Additive Sparse: Stability (σ=0.5, {N_STABILITY_SEEDS} seeds)")
     fig.tight_layout()
-    fig.savefig(OUTDIR / "regime1_stability.png", dpi=150)
+    fig.savefig(OUTDIR / "scenario1_stability.png", dpi=150)
     plt.close(fig)
-    print(f"  Regime 1 stability saved ({N_STABILITY_SEEDS} seeds)")
+    print(f"  Scenario 1 stability saved ({N_STABILITY_SEEDS} seeds)")
     return df
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# Regime 3 — Pairwise Epistasis
+# Scenario 3 — Pairwise Epistasis
 # ─────────────────────────────────────────────────────────────────────────────
 
-def _regime3_oracle_factory(mu0: float, mu1: float, b: float):
+def _scenario3_oracle_factory(mu0: float, mu1: float, b: float):
     def _fn(Xd: pd.DataFrame) -> np.ndarray:
         g0 = Xd[[f"G0_S{s}" for s in range(SNPS_PER_GROUP)]].sum(axis=1).values.astype(float)
         g1 = Xd[[f"G1_S{s}" for s in range(SNPS_PER_GROUP)]].sum(axis=1).values.astype(float)
@@ -261,7 +261,7 @@ def _regime3_oracle_factory(mu0: float, mu1: float, b: float):
     return _fn
 
 
-def run_regime3_recovery() -> pd.DataFrame:
+def run_scenario3_recovery() -> pd.DataFrame:
     """
     Recovery: vary interaction strength b_{01}.
     Track I_{01} (true epistatic pair) vs. max null-pair interaction.
@@ -276,30 +276,30 @@ def run_regime3_recovery() -> pd.DataFrame:
         X = generate_independent_genotypes(N_TRAIN, group_cols)
         mu0 = float(X[[f"G0_S{s}" for s in range(SNPS_PER_GROUP)]].sum(axis=1).mean())
         mu1 = float(X[[f"G1_S{s}" for s in range(SNPS_PER_GROUP)]].sum(axis=1).mean())
-        model = OracleModel(_regime3_oracle_factory(mu0, mu1, float(b)))
+        model = OracleModel(_scenario3_oracle_factory(mu0, mu1, float(b)))
         pairs = compute_interaction_scores(model, X, group_cols, seed=0)
         I01 = pairs[(0, 1)]
         null_max = max(pairs[(0, 2)], pairs[(1, 2)], pairs[(0, 3)], pairs[(1, 3)], pairs[(2, 3)])
         rows.append({"b_01": float(b), "I_01": I01, "null_max": null_max})
 
     df = pd.DataFrame(rows)
-    df.to_csv(OUTDIR / "regime3_recovery.csv", index=False)
+    df.to_csv(OUTDIR / "scenario3_recovery.csv", index=False)
 
     fig, ax = plt.subplots(figsize=FIGSIZE)
     ax.plot(df["b_01"], df["I_01"],    "s-", color="#2ca02c", label="|I₀₁| (epistatic pair)")
     ax.plot(df["b_01"], df["null_max"],"^--", color="#d62728", label="max|I_null| (non-epistatic pairs)")
     ax.set_xlabel("Interaction strength b₀₁")
     ax.set_ylabel("Grouped Shapley Interaction Index")
-    ax.set_title("Regime 3 — Pairwise Epistasis: Recovery")
+    ax.set_title("Scenario 3 — Pairwise Epistasis: Recovery")
     ax.legend()
     fig.tight_layout()
-    fig.savefig(OUTDIR / "regime3_recovery.png", dpi=150)
+    fig.savefig(OUTDIR / "scenario3_recovery.png", dpi=150)
     plt.close(fig)
-    print(f"  Regime 3 recovery saved  (b ∈ [{b_values[0]}, {b_values[-1]}])")
+    print(f"  Scenario 3 recovery saved  (b ∈ [{b_values[0]}, {b_values[-1]}])")
     return df
 
 
-def run_regime3_stability() -> pd.DataFrame:
+def run_scenario3_stability() -> pd.DataFrame:
     """
     Stability: fix b=0.3, sweep N_STABILITY_SEEDS seeds.
     Boxplot of I_{01} (epistatic pair) vs. I_{02}, I_{12} (null pairs).
@@ -313,14 +313,14 @@ def run_regime3_stability() -> pd.DataFrame:
         X = generate_independent_genotypes(N_TRAIN, group_cols)
         mu0 = float(X[[f"G0_S{s}" for s in range(SNPS_PER_GROUP)]].sum(axis=1).mean())
         mu1 = float(X[[f"G1_S{s}" for s in range(SNPS_PER_GROUP)]].sum(axis=1).mean())
-        model = OracleModel(_regime3_oracle_factory(mu0, mu1, b))
+        model = OracleModel(_scenario3_oracle_factory(mu0, mu1, b))
         pairs = compute_interaction_scores(model, X, group_cols, seed=seed)
         I01_list.append(pairs[(0, 1)])
         I02_list.append(pairs[(0, 2)])
         I12_list.append(pairs[(1, 2)])
 
     df = pd.DataFrame({"I_01": I01_list, "I_02": I02_list, "I_12": I12_list})
-    df.to_csv(OUTDIR / "regime3_stability.csv", index=False)
+    df.to_csv(OUTDIR / "scenario3_stability.csv", index=False)
 
     fig, ax = plt.subplots(figsize=FIGSIZE)
     bp = ax.boxplot([df["I_01"].values, df["I_02"].values, df["I_12"].values],
@@ -329,16 +329,16 @@ def run_regime3_stability() -> pd.DataFrame:
         patch.set_facecolor(color)
     ax.set_xticklabels(["I₀₁ (epistatic)", "I₀₂ (null)", "I₁₂ (null)"])
     ax.set_ylabel("Grouped Shapley Interaction Index")
-    ax.set_title(f"Regime 3 — Pairwise Epistasis: Stability (b=0.3, {N_STABILITY_SEEDS} seeds)")
+    ax.set_title(f"Scenario 3 — Pairwise Epistasis: Stability (b=0.3, {N_STABILITY_SEEDS} seeds)")
     fig.tight_layout()
-    fig.savefig(OUTDIR / "regime3_stability.png", dpi=150)
+    fig.savefig(OUTDIR / "scenario3_stability.png", dpi=150)
     plt.close(fig)
-    print(f"  Regime 3 stability saved ({N_STABILITY_SEEDS} seeds)")
+    print(f"  Scenario 3 stability saved ({N_STABILITY_SEEDS} seeds)")
     return df
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# Regime 5 — LD Proxy-Causal
+# Scenario 5 — LD Proxy-Causal
 # ─────────────────────────────────────────────────────────────────────────────
 
 def _make_ld_dataframe(n: int, rho: float, seed: int) -> pd.DataFrame:
@@ -365,11 +365,11 @@ _GRP_LD = [[f"G0_S{s}" for s in range(SNPS_PER_GROUP)],
 _BETA_TRUE = 10.0
 
 
-def _regime5_oracle(Xd: pd.DataFrame) -> np.ndarray:
+def _scenario5_oracle(Xd: pd.DataFrame) -> np.ndarray:
     return _BETA_TRUE * Xd[[f"G0_S{s}" for s in range(SNPS_PER_GROUP)]].mean(axis=1).values
 
 
-def run_regime5_recovery() -> pd.DataFrame:
+def run_scenario5_recovery() -> pd.DataFrame:
     """
     Recovery: vary LD correlation rho.
     - Linear smearing: |β_proxy_marginal| / |β_causal_marginal|
@@ -390,14 +390,14 @@ def run_regime5_recovery() -> pd.DataFrame:
         beta_proxy  = LinearRegression().fit(g1_mean.reshape(-1, 1), y).coef_[0]
         smear = abs(beta_proxy) / max(abs(beta_causal), 1e-9)
 
-        model_ld = OracleModel(_regime5_oracle)
+        model_ld = OracleModel(_scenario5_oracle)
         phi = compute_phi_scores(model_ld, X_ld, _GRP_LD, seed=0)
         phi_frac = float(phi[0]) / max(float(phi[0]) + float(phi[1]), 1e-9)
 
         rows.append({"rho": float(rho), "linear_smear": smear, "phi_causal_frac": phi_frac})
 
     df = pd.DataFrame(rows)
-    df.to_csv(OUTDIR / "regime5_recovery.csv", index=False)
+    df.to_csv(OUTDIR / "scenario5_recovery.csv", index=False)
 
     fig, ax1 = plt.subplots(figsize=FIGSIZE)
     ax2 = ax1.twinx()
@@ -411,16 +411,16 @@ def run_regime5_recovery() -> pd.DataFrame:
     ax1.tick_params(axis="y", labelcolor="#d62728")
     ax2.tick_params(axis="y", labelcolor="#1f77b4")
     ax2.set_ylim(0, 1.05)
-    ax1.set_title("Regime 5 — LD Proxy-Causal: Recovery vs. LD Correlation")
+    ax1.set_title("Scenario 5 — LD Proxy-Causal: Recovery vs. LD Correlation")
     ax1.legend(handles=[l1, l2], loc="upper left", fontsize=8)
     fig.tight_layout()
-    fig.savefig(OUTDIR / "regime5_recovery.png", dpi=150)
+    fig.savefig(OUTDIR / "scenario5_recovery.png", dpi=150)
     plt.close(fig)
-    print(f"  Regime 5 recovery saved  (ρ ∈ [{rhos[0]}, {rhos[-1]}])")
+    print(f"  Scenario 5 recovery saved  (ρ ∈ [{rhos[0]}, {rhos[-1]}])")
     return df
 
 
-def run_regime5_stability() -> pd.DataFrame:
+def run_scenario5_stability() -> pd.DataFrame:
     """
     Stability: fix rho=0.8, sweep N_STABILITY_SEEDS seeds.
     Boxplot of φ_causal / (φ_causal + φ_proxy).
@@ -430,12 +430,12 @@ def run_regime5_stability() -> pd.DataFrame:
 
     for seed in range(N_STABILITY_SEEDS):
         X_ld = _make_ld_dataframe(N_TRAIN, rho, seed=seed)
-        model_ld = OracleModel(_regime5_oracle)
+        model_ld = OracleModel(_scenario5_oracle)
         phi = compute_phi_scores(model_ld, X_ld, _GRP_LD, seed=seed)
         phi_frac_list.append(float(phi[0]) / max(float(phi[0]) + float(phi[1]), 1e-9))
 
     df = pd.DataFrame({"phi_causal_frac": phi_frac_list})
-    df.to_csv(OUTDIR / "regime5_stability.csv", index=False)
+    df.to_csv(OUTDIR / "scenario5_stability.csv", index=False)
 
     fig, ax = plt.subplots(figsize=FIGSIZE)
     bp = ax.boxplot([df["phi_causal_frac"].values], patch_artist=True, widths=0.4)
@@ -446,12 +446,12 @@ def run_regime5_stability() -> pd.DataFrame:
     ax.set_xticklabels(["φ_causal / (φ_causal + φ_proxy)"])
     ax.set_ylabel("Fraction")
     ax.set_ylim(0, 1.1)
-    ax.set_title(f"Regime 5 — LD Proxy-Causal: Stability (ρ=0.8, {N_STABILITY_SEEDS} seeds)")
+    ax.set_title(f"Scenario 5 — LD Proxy-Causal: Stability (ρ=0.8, {N_STABILITY_SEEDS} seeds)")
     ax.legend()
     fig.tight_layout()
-    fig.savefig(OUTDIR / "regime5_stability.png", dpi=150)
+    fig.savefig(OUTDIR / "scenario5_stability.png", dpi=150)
     plt.close(fig)
-    print(f"  Regime 5 stability saved ({N_STABILITY_SEEDS} seeds)")
+    print(f"  Scenario 5 stability saved ({N_STABILITY_SEEDS} seeds)")
     return df
 
 
@@ -466,11 +466,11 @@ def main() -> None:
 
     summary_rows = []
 
-    print("\nRegime 1: Additive Sparse")
-    df1r = run_regime1_recovery()
-    df1s = run_regime1_stability()
+    print("\nScenario 1: Additive Sparse")
+    df1r = run_scenario1_recovery()
+    df1s = run_scenario1_stability()
     summary_rows.append({
-        "regime": 1,
+        "scenario": 1,
         "name": "additive_sparse",
         "shap_snr_min": float(df1r["shap_snr"].min()),
         "shap_snr_max": float(df1r["shap_snr"].max()),
@@ -478,11 +478,11 @@ def main() -> None:
         "phi_null_mean":   float(df1s[["G2", "G3"]].values.mean()),
     })
 
-    print("\nRegime 3: Pairwise Epistasis")
-    df3r = run_regime3_recovery()
-    df3s = run_regime3_stability()
+    print("\nScenario 3: Pairwise Epistasis")
+    df3r = run_scenario3_recovery()
+    df3s = run_scenario3_stability()
     summary_rows.append({
-        "regime": 3,
+        "scenario": 3,
         "name": "pairwise_epistasis",
         "I01_max": float(df3r["I_01"].max()),
         "null_max_max": float(df3r["null_max"].max()),
@@ -490,13 +490,13 @@ def main() -> None:
         "stability_null_mean": float(df3s[["I_02", "I_12"]].values.mean()),
     })
 
-    print("\nRegime 5: LD Proxy-Causal")
-    df5r = run_regime5_recovery()
-    df5s = run_regime5_stability()
+    print("\nScenario 5: LD Proxy-Causal")
+    df5r = run_scenario5_recovery()
+    df5s = run_scenario5_stability()
     rho08_row = df5r[df5r["rho"].round(2) == 0.8]
     phi_frac_rho08 = float(rho08_row["phi_causal_frac"].values[0]) if len(rho08_row) else float("nan")
     summary_rows.append({
-        "regime": 5,
+        "scenario": 5,
         "name": "ld_proxy_causal",
         "phi_causal_frac_at_rho08": phi_frac_rho08,
         "stability_phi_frac_mean":  float(df5s["phi_causal_frac"].mean()),
