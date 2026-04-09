@@ -10,6 +10,7 @@ from itertools import chain, combinations
 
 import numpy as np
 import pandas as pd
+from joblib import Parallel, delayed
 
 
 def powerset(iterable):
@@ -109,6 +110,24 @@ def grouped_shapley_interaction_single_mc(
     return total_delta / n_samples
 
 
+def _explain_one_point(
+    model,
+    background_arr: np.ndarray,
+    eval_row: np.ndarray,
+    m: int,
+    group_indices: list[list[int]],
+    feature_names: list[str],
+    mc_samples: int,
+) -> list[float]:
+    """Compute grouped Shapley values for a single eval point (parallelisable unit)."""
+    return [
+        grouped_shapley_single_mc(
+            model, background_arr, eval_row, k, m, group_indices, feature_names, mc_samples
+        )
+        for k in range(m)
+    ]
+
+
 def grouped_shapley_all(
     model,
     X_background: pd.DataFrame,
@@ -116,10 +135,13 @@ def grouped_shapley_all(
     group_cols: list[list[str]],
     group_names: list[str] | None = None,
     mc_samples: int = 50,
+    n_jobs: int = -1,
 ) -> pd.DataFrame:
     """
     Compute grouped Shapley values for all eval points via Monte Carlo.
     Returns DataFrame of shape (n_eval, m_groups).
+
+    n_jobs: number of parallel workers (passed to joblib). -1 uses all cores.
     """
     m = len(group_cols)
     feature_names = list(X_background.columns)
@@ -130,17 +152,13 @@ def grouped_shapley_all(
     eval_arr = X_eval.values
 
     cols = group_names if group_names is not None else [f"group_{k}" for k in range(m)]
-    rows = []
-    for i in range(len(eval_arr)):
-        print(f"  Explaining evaluation point {i+1}/{len(eval_arr)}...", end="\r")
-        vals = [
-            grouped_shapley_single_mc(
-                model, background_arr, eval_arr[i], k, m, group_indices, feature_names, mc_samples
-            )
-            for k in range(m)
-        ]
-        rows.append(vals)
-    print()
+
+    rows = Parallel(n_jobs=n_jobs, prefer="threads")(
+        delayed(_explain_one_point)(
+            model, background_arr, eval_arr[i], m, group_indices, feature_names, mc_samples
+        )
+        for i in range(len(eval_arr))
+    )
     return pd.DataFrame(rows, columns=cols)
 
 
@@ -151,10 +169,13 @@ def grouped_interaction_all(
     group_cols: list[list[str]],
     group_names: list[str],
     mc_samples: int = 50,
+    n_jobs: int = -1,
 ) -> pd.DataFrame:
     """
     Compute all pairwise Shapley Interaction Index values between groups.
     Returns DataFrame sorted by mean_abs_interaction.
+
+    n_jobs: number of parallel workers (passed to joblib). -1 uses all cores.
     """
     m = len(group_cols)
     feature_names = list(X_background.columns)
@@ -164,23 +185,22 @@ def grouped_interaction_all(
     background_arr = X_background.values
     eval_arr = X_eval.values
 
-    results = []
-    for j in range(m):
-        for k in range(j + 1, m):
-            print(f"  Calculating interaction between {group_names[j]} and {group_names[k]}...")
-            pair_interactions = [
-                grouped_shapley_interaction_single_mc(
-                    model, background_arr, eval_arr[i], j, k, m, group_indices, feature_names, mc_samples
-                )
-                for i in range(len(eval_arr))
-            ]
-            results.append({
-                "group_j":            group_names[j],
-                "group_k":            group_names[k],
-                "mean_interaction":     float(np.mean(pair_interactions)),
-                "mean_abs_interaction": float(np.mean(np.abs(pair_interactions))),
-                "sd_interaction":       float(np.std(pair_interactions)),
-            })
+    def _pair_interactions(j: int, k: int) -> dict:
+        vals = Parallel(n_jobs=n_jobs, prefer="threads")(
+            delayed(grouped_shapley_interaction_single_mc)(
+                model, background_arr, eval_arr[i], j, k, m, group_indices, feature_names, mc_samples
+            )
+            for i in range(len(eval_arr))
+        )
+        return {
+            "group_j":            group_names[j],
+            "group_k":            group_names[k],
+            "mean_interaction":     float(np.mean(vals)),
+            "mean_abs_interaction": float(np.mean(np.abs(vals))),
+            "sd_interaction":       float(np.std(vals)),
+        }
+
+    results = [_pair_interactions(j, k) for j in range(m) for k in range(j + 1, m)]
     return pd.DataFrame(results).sort_values("mean_abs_interaction", ascending=False)
 
 
