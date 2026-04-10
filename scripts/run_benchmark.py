@@ -55,11 +55,11 @@ os.makedirs(_OUTPUT_DIR, exist_ok=True)
 class BenchmarkConfig:
     scenario: int           # 1–7
     n: int                  # number of samples
-    p: int = 1000           # total SNPs
-    B: int = 50             # number of LD blocks
+    p: int = 200            # total SNPs (10 blocks × 20 SNPs each)
+    B: int = 10             # number of LD blocks (reduced from 50 for runtime)
     rho: float = 0.0        # within-block AR(1) correlation
     h2: float = 0.5         # heritability
-    n_reps: int = 200       # number of Monte Carlo replicates
+    n_reps: int = 100       # number of Monte Carlo replicates
     methods: list = field(default_factory=lambda: ["linear_gwas", "grouped_shapley", "cpi"])
 
 
@@ -142,9 +142,9 @@ def _score_grouped_shapley(
     X_df: pd.DataFrame,
     block_ids: list[list[int]],
     rep: int,
-    n_background: int = 50,
-    n_eval: int = 20,
-    mc_samples: int = 30,
+    n_background: int = 30,
+    n_eval: int = 10,
+    mc_samples: int = 20,
 ) -> np.ndarray:
     """
     Score each block with mean |phi_k| from grouped Shapley.
@@ -297,6 +297,7 @@ def _run_one_rep(
             for metric, value in metrics.items():
                 rows.append({**base, "method": method, "metric": metric, "value": value})
 
+
         return rows
 
     except Exception as exc:
@@ -310,11 +311,11 @@ def _run_one_rep(
 # Experiment runner
 # ---------------------------------------------------------------------------
 
-def run_experiment(config: BenchmarkConfig) -> pd.DataFrame:
+def run_experiment(config: BenchmarkConfig, t_start: float | None = None) -> pd.DataFrame:
     """
     Run all replicates in parallel and return tidy results DataFrame.
     """
-    all_rows_nested = Parallel(n_jobs=-1, prefer="threads")(
+    all_rows_nested = Parallel(n_jobs=-1, prefer="processes")(
         delayed(_run_one_rep)(config, rep)
         for rep in range(config.n_reps)
     )
@@ -331,7 +332,9 @@ def run_experiment(config: BenchmarkConfig) -> pd.DataFrame:
 def _run_and_save(config: BenchmarkConfig, out_path: str, label: str) -> bool:
     """Run experiment, append to existing TSV if present, return success."""
     t0 = time.time()
-    print(f"  Running {label} ...")
+    print(f"\n  >> START {label}  "
+          f"[n={config.n} p={config.p} B={config.B} rho={config.rho} "
+          f"h2={config.h2} n_reps={config.n_reps}]", flush=True)
     try:
         df = run_experiment(config)
         if df.empty:
@@ -343,17 +346,30 @@ def _run_and_save(config: BenchmarkConfig, out_path: str, label: str) -> bool:
             df = pd.concat([existing, df], ignore_index=True)
         df.to_csv(out_path, sep="\t", index=False)
         elapsed = time.time() - t0
-        print(f"  DONE {label} in {elapsed:.1f}s → {out_path}")
+
+        # Per-method power summary
+        summary_rows = []
+        for method in df["method"].unique():
+            sub = df[(df["method"] == method) & (df["metric"] == "power_at_k")]
+            if not sub.empty:
+                summary_rows.append(f"{method}={sub['value'].mean():.2f}")
+        summary_str = "  power@k: " + ", ".join(summary_rows) if summary_rows else ""
+        print(f"  << DONE  {label}  {elapsed:.1f}s  rows={len(df)}  {summary_str}", flush=True)
         return True
     except Exception as exc:
         elapsed = time.time() - t0
-        print(f"  ERROR {label} after {elapsed:.1f}s: {exc}")
+        print(f"  ERROR {label} after {elapsed:.1f}s: {exc}", flush=True)
         traceback.print_exc()
         return False
 
 
 def main():
     t_global = time.time()
+    print("=" * 70)
+    print("  run_benchmark.py — XAI-GWAS simulation benchmark")
+    print(f"  Started: {time.strftime('%Y-%m-%d %H:%M:%S')}")
+    print(f"  Config defaults: p=200, B=10, n_reps=100")
+    print("=" * 70, flush=True)
 
     # -----------------------------------------------------------------------
     # Priority 1: Scenario 4 — LD tag-SNP confounding
@@ -361,7 +377,7 @@ def main():
     print("\n=== Priority 1: Scenario 4 (LD Confounding) ===")
     out4 = os.path.join(_OUTPUT_DIR, "scenario4_localization.tsv")
     for rho in [0.0, 0.3, 0.6, 0.8, 0.95]:
-        cfg = BenchmarkConfig(scenario=4, n=500, rho=rho, h2=0.5, n_reps=200)
+        cfg = BenchmarkConfig(scenario=4, n=500, rho=rho, h2=0.5, n_reps=100)
         label = f"Scenario4 rho={rho}"
         _run_and_save(cfg, out4, label)
 
@@ -373,7 +389,7 @@ def main():
     for n in [200, 500, 1000]:
         for rho in [0.0, 0.6, 0.95]:
             for h2 in [0.3, 0.5]:
-                cfg = BenchmarkConfig(scenario=1, n=n, rho=rho, h2=h2, n_reps=200)
+                cfg = BenchmarkConfig(scenario=1, n=n, rho=rho, h2=h2, n_reps=100)
                 label = f"Scenario1 N={n} rho={rho} h2={h2}"
                 _run_and_save(cfg, out1, label)
 
@@ -383,7 +399,7 @@ def main():
     print("\n=== Priority 3: Scenario 3 (Pairwise Epistasis) ===")
     out3 = os.path.join(_OUTPUT_DIR, "scenario3_interaction_recovery.tsv")
     for rho in [0.0, 0.6]:
-        cfg = BenchmarkConfig(scenario=3, n=500, rho=rho, h2=0.5, n_reps=200)
+        cfg = BenchmarkConfig(scenario=3, n=500, rho=rho, h2=0.5, n_reps=100)
         label = f"Scenario3 rho={rho}"
         _run_and_save(cfg, out3, label)
 
@@ -393,7 +409,7 @@ def main():
     print("\n=== Priority 4: Scenario 5 (Mixed) ===")
     out5 = os.path.join(_OUTPUT_DIR, "scenario5_phantom_heritability.tsv")
     for rho in [0.0, 0.6]:
-        cfg = BenchmarkConfig(scenario=5, n=500, rho=rho, h2=0.5, n_reps=200)
+        cfg = BenchmarkConfig(scenario=5, n=500, rho=rho, h2=0.5, n_reps=100)
         label = f"Scenario5 rho={rho}"
         _run_and_save(cfg, out5, label)
 
