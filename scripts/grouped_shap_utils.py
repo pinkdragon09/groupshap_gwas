@@ -206,18 +206,50 @@ def grouped_interaction_all(
 
 def summarize_grouped_shapley(
     phi_df: pd.DataFrame,
-    group_names: list[str],
+    group_names: list[str] | None = None,
 ) -> pd.DataFrame:
+    """
+    Column-name-driven, NaN-aware summary of grouped Shapley values.
+
+    - Iterates by actual column name in ``phi_df`` (not by position).
+    - Ignores NaNs so that cross-fold concatenated frames with fold-specific
+      group columns are aggregated correctly: each group's statistics reflect
+      only the rows where that group was actually evaluated.
+    - The ``group_names`` argument is accepted for backwards compatibility but
+      is ignored when ``phi_df`` has named columns; it is only used as a
+      positional fallback when the frame's columns are unnamed/integer.
+
+    **Caveat for dynamic groupings (LD/PLINK):** if the same group label
+    refers to different SNP sets across folds (e.g. ``ld_cluster_0`` computed
+    on different training subsamples), averaging the column across folds is
+    *not* semantically valid. Callers should use per-fold summaries in that
+    case; this helper will still return a numerical summary but the caller
+    is responsible for interpreting it.
+    """
+    # Drop any non-numeric helper columns (e.g. 'fold')
+    numeric_df = phi_df.select_dtypes(include=[np.number])
+    if "fold" in numeric_df.columns:
+        numeric_df = numeric_df.drop(columns=["fold"])
+
+    cols = list(numeric_df.columns)
+    if group_names is not None and all(isinstance(c, (int, np.integer)) for c in cols):
+        # Fallback: unnamed integer columns, use positional group_names
+        rename = {c: group_names[i] for i, c in enumerate(cols) if i < len(group_names)}
+        numeric_df = numeric_df.rename(columns=rename)
+        cols = list(numeric_df.columns)
+
     rows = []
-    for k, name in enumerate(group_names):
-        col = phi_df.columns[k]
-        vals = phi_df[col].values
+    for col in cols:
+        vals = numeric_df[col].to_numpy(dtype=float)
+        finite = vals[np.isfinite(vals)]
+        if finite.size == 0:
+            continue
         rows.append({
-            "group":         name,
-            "mean_phi":      float(np.mean(vals)),
-            "mean_abs_phi":  float(np.mean(np.abs(vals))),
-            "sd_abs_phi":    float(np.std(np.abs(vals))),
-            "n_eval_points": len(vals),
+            "group":         col,
+            "mean_phi":      float(np.mean(finite)),
+            "mean_abs_phi":  float(np.mean(np.abs(finite))),
+            "sd_abs_phi":    float(np.std(np.abs(finite))),
+            "n_eval_points": int(finite.size),
         })
     return pd.DataFrame(rows).sort_values("mean_abs_phi", ascending=False)
 
