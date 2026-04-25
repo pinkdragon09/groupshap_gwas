@@ -1,21 +1,23 @@
 #!/usr/bin/env python3
 """
-FT10 Nonlinear ML Pipeline — Grouped Shapley vs. GWAS.
+FT* Nonlinear ML Pipeline — Grouped Shapley vs. GWAS.
 
-Phenotype: FT10 (flowering time at 10°C), AraPheno Study 1, ~135 accessions.
+Default phenotype: FT10 (flowering time at 10°C), AraPheno Study 1, ~135
+accessions. Use --phenotype to switch (e.g. FT16, FT22).
+
 Known causal loci: FLC (AT5G10140, Chr5:3,173,132) and FRI (AT4G00650, Chr4:270,148).
 
 Pipeline:
-  1. Load FT10 phenotype from AraPheno bulk zip.
+  1. Load phenotype from AraPheno bulk zip.
   2. Align with 1001 Genomes HDF5 genotypes; add kinship-derived PCs.
-  3. Load top-200 GWAS hits (pre-computed in outputs/full_baseline_gwas_ft10/).
+  3. Load top-200 GWAS hits (pre-computed by ``full_baseline_gwas.py``).
   4. Extract SNP genotype matrix for those 200 positions.
   5. Train RandomForestRegressor (200 trees, 5-fold CV, random_state=42).
   6. Compute per-SNP TreeSHAP importance (mean |shap| across folds).
   7. Build gene-window grouping (Araport11 GFF, ±25 kb per gene).
   8. Compute grouped Shapley (MC, small eval set) at gene-window level.
   9. Run CPI at gene-window level.
- 10. Save all outputs to outputs/ft10/.
+ 10. Save all outputs to --outdir (default: outputs/ft10/).
  11. Check whether FLC / FRI appear in the feature panel or top rankings.
  12. Compute Spearman ρ between GWAS and RF-SHAP rankings.
  13. Write summary.md.
@@ -23,6 +25,7 @@ Pipeline:
 
 from __future__ import annotations
 
+import argparse
 import csv
 import gzip
 import io
@@ -61,6 +64,8 @@ PHENO_ZIP  = Path("data/arapheno/bulk/database.zip")
 GENO_H5    = Path("data/1001genomes/genotypes/1001_SNP_MATRIX/imputed_snps_binary.hdf5")
 KINSHIP_H5 = Path("data/1001genomes/genotypes/1001_SNP_MATRIX/kinship_ibs_mac5.hdf5")
 GFF_GZ     = Path("data/reference/Araport11_GFF3_genes_transposons.Mar92021.gff.gz")
+
+# Defaults for FT10. Override via --phenotype / --outdir / --gwas-hits.
 GWAS_HITS  = Path("outputs/full_baseline_gwas_ft10/study1_ft10_top_hits.tsv")
 OUTDIR     = Path("outputs/ft10")
 
@@ -261,14 +266,33 @@ def run_grouped_shap(
     return summary_df, cpi_df
 
 
+def parse_cli() -> argparse.Namespace:
+    p = argparse.ArgumentParser(description="Nonlinear ML pipeline for an AraPheno flowering-time trait")
+    p.add_argument("--phenotype", default=PHENOTYPE_COL,
+                   help=f"Phenotype column in study_1_values.csv (default: {PHENOTYPE_COL})")
+    p.add_argument("--outdir", default=str(OUTDIR),
+                   help=f"Output directory (default: {OUTDIR})")
+    p.add_argument("--gwas-hits", default=str(GWAS_HITS),
+                   help=f"GWAS top-hits TSV (default: {GWAS_HITS})")
+    p.add_argument("--study-values-file", default=STUDY_VALUES_FILE,
+                   help=f"Path inside the AraPheno zip (default: {STUDY_VALUES_FILE})")
+    return p.parse_args()
+
+
 def main() -> None:
-    OUTDIR.mkdir(parents=True, exist_ok=True)
+    args = parse_cli()
+    phenotype_col = args.phenotype
+    out_dir = Path(args.outdir)
+    gwas_hits_path = Path(args.gwas_hits)
+    study_values_file = args.study_values_file
+
+    out_dir.mkdir(parents=True, exist_ok=True)
     t0 = time.time()
 
     # ── 1. Phenotype ──────────────────────────────────────────────────────────
-    print("Loading FT10 phenotype …")
-    y_by_acc = load_phenotype(PHENO_ZIP, STUDY_VALUES_FILE, PHENOTYPE_COL)
-    print(f"  {len(y_by_acc)} accessions with FT10 values")
+    print(f"Loading {phenotype_col} phenotype …")
+    y_by_acc = load_phenotype(PHENO_ZIP, study_values_file, phenotype_col)
+    print(f"  {len(y_by_acc)} accessions with {phenotype_col} values")
 
     # ── 2. Genotype alignment ─────────────────────────────────────────────────
     print("Aligning with 1001 Genomes HDF5 …")
@@ -278,7 +302,7 @@ def main() -> None:
     geno_acc_idx = {acc: i for i, acc in enumerate(geno_accs)}
     acc_ix = np.array([geno_acc_idx[acc] for acc in common_accs], dtype=int)
     y = np.array([y_by_acc[acc] for acc in common_accs], dtype=float)
-    print(f"  Matched {len(common_accs)} accessions  mean FT10={y.mean():.1f} sd={y.std():.1f}")
+    print(f"  Matched {len(common_accs)} accessions  mean {phenotype_col}={y.mean():.1f} sd={y.std():.1f}")
 
     # ── 3. Kinship PCs ────────────────────────────────────────────────────────
     print("Computing kinship PCs …")
@@ -286,7 +310,7 @@ def main() -> None:
 
     # ── 4. Top-200 GWAS SNPs ──────────────────────────────────────────────────
     print("Loading top-200 GWAS SNPs …")
-    gwas_df = load_top_gwas_snps(GWAS_HITS, TOP_SNPS)
+    gwas_df = load_top_gwas_snps(gwas_hits_path, TOP_SNPS)
     print(f"  {len(gwas_df)} SNPs from {gwas_df['chromosome'].nunique()} chromosomes")
 
     # ── 5. Extract SNP genotype matrix ────────────────────────────────────────
@@ -418,25 +442,25 @@ def main() -> None:
     print("\nSaving outputs …")
 
     # CV metrics
-    pd.DataFrame(cv_metrics).to_csv(OUTDIR / "cv_metrics.tsv", sep="\t", index=False)
+    pd.DataFrame(cv_metrics).to_csv(out_dir / "cv_metrics.tsv", sep="\t", index=False)
 
     # Per-SNP SHAP
-    snp_meta2.to_csv(OUTDIR / "per_snp_shap.tsv", sep="\t", index=False)
+    snp_meta2.to_csv(out_dir / "per_snp_shap.tsv", sep="\t", index=False)
 
     # Gene-window Shapley summary
-    grp_shap_summary.to_csv(OUTDIR / "gene_window_shapley.tsv", sep="\t", index=False)
+    grp_shap_summary.to_csv(out_dir / "gene_window_shapley.tsv", sep="\t", index=False)
 
     # CPI
-    cpi_df.to_csv(OUTDIR / "gene_window_cpi.tsv", sep="\t", index=False)
+    cpi_df.to_csv(out_dir / "gene_window_cpi.tsv", sep="\t", index=False)
 
     # Gene-window manifest
-    manifest.to_csv(OUTDIR / "gene_window_manifest.tsv", sep="\t", index=False)
+    manifest.to_csv(out_dir / "gene_window_manifest.tsv", sep="\t", index=False)
 
     # Top-10 tables
-    top10_gwas.to_csv(OUTDIR / "top10_gwas.tsv", sep="\t", index=False)
-    top10_shap.to_csv(OUTDIR / "top10_shap.tsv", sep="\t", index=False)
-    top10_gw.to_csv(OUTDIR / "top10_gene_window.tsv", sep="\t", index=False)
-    top10_cpi.to_csv(OUTDIR / "top10_cpi.tsv", sep="\t", index=False)
+    top10_gwas.to_csv(out_dir / "top10_gwas.tsv", sep="\t", index=False)
+    top10_shap.to_csv(out_dir / "top10_shap.tsv", sep="\t", index=False)
+    top10_gw.to_csv(out_dir / "top10_gene_window.tsv", sep="\t", index=False)
+    top10_cpi.to_csv(out_dir / "top10_cpi.tsv", sep="\t", index=False)
 
     elapsed = round(time.time() - t0, 1)
 
@@ -460,12 +484,12 @@ def main() -> None:
         return f"rank {r}, value {v:.4f}"
 
     summary_lines = [
-        "# FT10 Nonlinear ML Pipeline — Summary",
+        f"# {phenotype_col} Nonlinear ML Pipeline — Summary",
         "",
         "## Experimental setup",
-        f"- Phenotype: FT10 (AraPheno Study 1)",
+        f"- Phenotype: {phenotype_col} (AraPheno Study 1)",
         f"- N accessions matched: {len(common_accs)}",
-        f"- Feature panel: top-{TOP_SNPS} GWAS SNPs (from {GWAS_HITS.name})",
+        f"- Feature panel: top-{TOP_SNPS} GWAS SNPs (from {gwas_hits_path.name})",
         f"- Model: RandomForestRegressor ({N_TREES} trees, {N_FOLDS}-fold CV, random_state={RANDOM_STATE})",
         f"- Grouping: gene-window ±{GENE_WINDOW_BP//1000}kb (Araport11)",
         "",
@@ -614,9 +638,9 @@ def main() -> None:
     ]
 
     summary_text = "\n".join(summary_lines) + "\n"
-    (OUTDIR / "summary.md").write_text(summary_text)
+    (out_dir / "summary.md").write_text(summary_text)
     print(summary_text)
-    print(f"\n✓  All outputs written to {OUTDIR}/")
+    print(f"\n✓  All outputs written to {out_dir}/")
     print(f"   Total elapsed: {elapsed:.0f}s")
 
 
