@@ -53,16 +53,21 @@ def grouped_shapley_single_mc(
     group_indices: list[list[int]],
     feature_names: list[str],
     n_samples: int = 50,
+    rng: np.random.Generator | np.random.RandomState | None = None,
 ) -> float:
     """
     Monte Carlo estimate of grouped Shapley φ_k.
     Samples random permutations of all m groups; S = groups appearing before k.
     This reproduces the Shapley weight |S|!(m-|S|-1)!/m! exactly in expectation.
+
+    rng: a seeded RNG for deterministic output. If None, uses the global
+    numpy RNG (legacy non-deterministic behavior).
     """
     groups = list(range(m))
     total_diff = 0.0
+    permute = rng.permutation if rng is not None else np.random.permutation
     for _ in range(n_samples):
-        perm = np.random.permutation(groups)
+        perm = permute(groups)
         k_idx = int(np.where(perm == k)[0][0])
         S = frozenset(perm[:k_idx])
         v_with_k = value_function_numpy(model, background_arr, eval_x_arr, S | {k}, group_indices, feature_names)
@@ -81,6 +86,7 @@ def grouped_shapley_interaction_single_mc(
     group_indices: list[list[int]],
     feature_names: list[str],
     n_samples: int = 100,
+    rng: np.random.Generator | np.random.RandomState | None = None,
 ) -> float:
     """
     Unbiased Monte Carlo estimate of the Shapley Interaction Index I_{jk}.
@@ -92,13 +98,20 @@ def grouped_shapley_interaction_single_mc(
       Draw s uniformly from {0,...,m-2}  →  P(size=s) = 1/(m-1)
       Draw a random permutation of M\\{j,k} and take its first s elements as S.
       Then P(specific S of size s) = s!(m-2-s)!/((m-1)(m-2)!) = s!(m-s-2)!/(m-1)! = w(s,m).
+
+    rng: a seeded RNG for deterministic output. If None, uses the global
+    numpy RNG (legacy non-deterministic behavior).
     """
     rest = [g for g in range(m) if g not in (j, k)]
+    permute = rng.permutation if rng is not None else np.random.permutation
+    randint = rng.integers if isinstance(rng, np.random.Generator) else (
+        rng.randint if rng is not None else np.random.randint
+    )
     total_delta = 0.0
     for _ in range(n_samples):
         if rest:
-            perm = np.random.permutation(rest)
-            s_size = np.random.randint(0, len(rest) + 1)   # uniform over {0,...,m-2}
+            perm = permute(rest)
+            s_size = randint(0, len(rest) + 1)   # uniform over {0,...,m-2}
             S = frozenset(perm[:s_size])
         else:
             S = frozenset()
@@ -118,11 +131,12 @@ def _explain_one_point(
     group_indices: list[list[int]],
     feature_names: list[str],
     mc_samples: int,
+    rng: np.random.Generator | np.random.RandomState | None = None,
 ) -> list[float]:
     """Compute grouped Shapley values for a single eval point (parallelisable unit)."""
     return [
         grouped_shapley_single_mc(
-            model, background_arr, eval_row, k, m, group_indices, feature_names, mc_samples
+            model, background_arr, eval_row, k, m, group_indices, feature_names, mc_samples, rng=rng
         )
         for k in range(m)
     ]
@@ -136,12 +150,17 @@ def grouped_shapley_all(
     group_names: list[str] | None = None,
     mc_samples: int = 50,
     n_jobs: int = -1,
+    random_state: int | None = None,
 ) -> pd.DataFrame:
     """
     Compute grouped Shapley values for all eval points via Monte Carlo.
     Returns DataFrame of shape (n_eval, m_groups).
 
     n_jobs: number of parallel workers (passed to joblib). -1 uses all cores.
+    random_state: if set, seeds a deterministic RNG per eval point
+      (seed_i = random_state + i). If None, uses the global numpy RNG
+      (legacy non-deterministic behavior). Determinism is only guaranteed
+      with n_jobs=1; with threads, scheduling order can still affect ties.
     """
     m = len(group_cols)
     feature_names = list(X_background.columns)
@@ -153,9 +172,14 @@ def grouped_shapley_all(
 
     cols = group_names if group_names is not None else [f"group_{k}" for k in range(m)]
 
+    if random_state is None:
+        rngs = [None] * len(eval_arr)
+    else:
+        rngs = [np.random.default_rng(random_state + i) for i in range(len(eval_arr))]
+
     rows = Parallel(n_jobs=n_jobs, prefer="threads")(
         delayed(_explain_one_point)(
-            model, background_arr, eval_arr[i], m, group_indices, feature_names, mc_samples
+            model, background_arr, eval_arr[i], m, group_indices, feature_names, mc_samples, rng=rngs[i]
         )
         for i in range(len(eval_arr))
     )
@@ -170,12 +194,15 @@ def grouped_interaction_all(
     group_names: list[str],
     mc_samples: int = 50,
     n_jobs: int = -1,
+    random_state: int | None = None,
 ) -> pd.DataFrame:
     """
     Compute all pairwise Shapley Interaction Index values between groups.
     Returns DataFrame sorted by mean_abs_interaction.
 
     n_jobs: number of parallel workers (passed to joblib). -1 uses all cores.
+    random_state: if set, seeds a deterministic RNG per (pair, eval-point).
+      If None, uses the global numpy RNG (legacy non-deterministic behavior).
     """
     m = len(group_cols)
     feature_names = list(X_background.columns)
@@ -186,9 +213,14 @@ def grouped_interaction_all(
     eval_arr = X_eval.values
 
     def _pair_interactions(j: int, k: int) -> dict:
+        if random_state is None:
+            rngs = [None] * len(eval_arr)
+        else:
+            base = random_state + (j * m + k) * len(eval_arr)
+            rngs = [np.random.default_rng(base + i) for i in range(len(eval_arr))]
         vals = Parallel(n_jobs=n_jobs, prefer="threads")(
             delayed(grouped_shapley_interaction_single_mc)(
-                model, background_arr, eval_arr[i], j, k, m, group_indices, feature_names, mc_samples
+                model, background_arr, eval_arr[i], j, k, m, group_indices, feature_names, mc_samples, rng=rngs[i]
             )
             for i in range(len(eval_arr))
         )
