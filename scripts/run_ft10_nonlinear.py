@@ -246,6 +246,7 @@ def run_grouped_shap(
     phi_df = grouped_shapley_all(
         model_full, X_bg, X_ev, group_cols, group_names,
         mc_samples=MC_SAMPLES, n_jobs=1,  # serial: faster than threads due to pandas GIL overhead
+        random_state=random_state,
     )
     summary_df = summarize_grouped_shapley(phi_df, group_names)
 
