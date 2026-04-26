@@ -1,0 +1,17 @@
+phenotype,config,hidden,grid,k,recall,tp,n_gt_in_panel
+Neomycin,marginal_product,—,—,10,0.1666666666666666,2,12
+Neomycin,marginal_product,—,—,25,0.4166666666666667,5,12
+Neomycin,marginal_product,—,—,50,0.4166666666666667,5,12
+Neomycin,marginal_product,—,—,100,0.5833333333333334,7,12
+Neomycin,rf_shapley,—,—,10,0.0,0,12
+Neomycin,rf_shapley,—,—,25,0.0,0,12
+Neomycin,rf_shapley,—,—,50,0.0,0,12
+Neomycin,rf_shapley,—,—,100,0.1666666666666666,2,12
+Lactate,marginal_product,—,—,10,0.3333333333333333,4,12
+Lactate,marginal_product,—,—,25,0.3333333333333333,4,12
+Lactate,marginal_product,—,—,50,0.3333333333333333,4,12
+Lactate,marginal_product,—,—,100,0.3333333333333333,4,12
+Lactate,rf_shapley,—,—,10,0.0,0,12
+Lactate,rf_shapley,—,—,25,0.0,0,12
+Lactate,rf_shapley,—,—,50,0.1666666666666666,2,12
+Lactate,rf_shapley,—,—,100,0.1666666666666666,2,12
