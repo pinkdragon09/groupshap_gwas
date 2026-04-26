@@ -1,0 +1,30 @@
+=== ablation cell: phen=Neomycin hidden=16 grid=5 k=3 ===
+  config: {'hidden': 16, 'grid': 5, 'k': 3, 'epochs': 200, 'patience': 25, 'lr': 0.001, 'batch_size': 64, 'seed': 42, 'phenotype': 'Neomycin'}
+  out_dir: outputs/yeast_bloom_kan/ablation/Neomycin/h16_g5
+=== Loading Neomycin ===
+  X_panel: (1005, 97), y: (1005,), panel cols: 97
+=== 5-fold CV ===
+scripts/yeast_bloom_kan_train.py:108: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  epoch_loss += float(loss) * len(idx)
+  fold 0: R²=0.6221
+  fold 1: R²=0.6318
+  fold 2: R²=0.6320
+  fold 3: R²=0.6480
+  fold 4: R²=0.6111
+  CV R^2: mean=0.6290  sd=0.0122  (1246.9s)
+=== Final fit on full panel ===
+  best val MSE = 12.1526 at epoch 48/74; fit took 348.6s
+  in-sample R^2: 0.7647
+=== Pairwise interaction sweep ===
+[KAN pairwise] 97 markers -> 4656 pairs, n_bg=15, n_eval=15, mc=30
+[KAN pairwise] done in 2587.2s (555.7 ms/pair)
+  pairwise sweep done in 2587.2s (4656 pairs)
+  top 5 by |I_jk|:
+                marker_j                 marker_k  mean_abs_interaction  mean_interaction
+8583962_chr13_261178_G_A 10093240_chr15_61694_A_G              0.263154         -0.021363
+8583962_chr13_261178_G_A  194469_chr01_194469_C_T              0.246558          0.071237
+8583962_chr13_261178_G_A 5643011_chr09_250482_T_G              0.212789         -0.051039
+8583962_chr13_261178_G_A 3282355_chr05_390433_C_T              0.210829         -0.050734
+8583962_chr13_261178_G_A 9623528_chr14_376315_C_T              0.200681          0.098755
+=== ablation cell done ===

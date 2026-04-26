@@ -1,0 +1,18 @@
+{
+  "n_gt_pairs": 12,
+  "affine_median_abs_I": 1.1900620984957774e-08,
+  "standard_over_affine_ratio_median": 40247.84696242411,
+  "verdict": "MIXED",
+  "phenotype": "Lactate",
+  "config": {
+    "hidden": 8,
+    "grid": 5,
+    "k": 3,
+    "epochs": 200,
+    "patience": 25,
+    "lr": 0.001,
+    "batch_size": 64,
+    "seed": 42,
+    "model": "AffinePhiKAN (Option A: KANLayer inner + nn.Linear outer)"
+  }
+}

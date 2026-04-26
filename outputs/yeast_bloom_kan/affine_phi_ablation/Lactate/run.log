@@ -1,0 +1,36 @@
+=== Affine-Phi KAN ablation: Lactate ===
+  X_panel=(973, 98)  y=(973,)  panel_cols=98
+=== 5-fold CV ===
+scripts/yeast_bloom_kan_train.py:108: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  epoch_loss += float(loss) * len(idx)
+  fold 0: R^2=0.5173
+  fold 1: R^2=0.6503
+  fold 2: R^2=0.5747
+  fold 3: R^2=0.5787
+  fold 4: R^2=0.5319
+  CV R^2: mean=0.5706  sd=0.0464
+=== Final fit ===
+  best val MSE = 0.7191 at epoch 29/55; fit took 1.4s
+  in-sample R^2 = 0.6591
+=== GT-pair |I| diagnostic ===
+[affine-Phi] computing |I| on 12 GT pairs (n_bg=15, n_eval=15, n_samples=30)...
+  pair 1/12: |I|_aff=8.827e-09  |I|_std=1.385e-03  ratio=1.57e+05
+  pair 2/12: |I|_aff=1.283e-08  |I|_std=6.662e-04  ratio=5.19e+04
+  pair 3/12: |I|_aff=1.827e-08  |I|_std=1.010e-02  ratio=5.53e+05
+  pair 4/12: |I|_aff=9.348e-09  |I|_std=1.911e-04  ratio=2.04e+04
+  pair 5/12: |I|_aff=9.336e-09  |I|_std=3.720e-04  ratio=3.98e+04
+  pair 6/12: |I|_aff=8.105e-09  |I|_std=3.294e-04  ratio=4.06e+04
+  pair 7/12: |I|_aff=1.259e-08  |I|_std=5.011e-04  ratio=3.98e+04
+  pair 8/12: |I|_aff=1.145e-08  |I|_std=1.080e-02  ratio=9.43e+05
+  pair 9/12: |I|_aff=1.182e-08  |I|_std=1.489e-04  ratio=1.26e+04
+  pair 10/12: |I|_aff=1.483e-08  |I|_std=1.948e-04  ratio=1.31e+04
+  pair 11/12: |I|_aff=1.198e-08  |I|_std=4.058e-04  ratio=3.39e+04
+  pair 12/12: |I|_aff=1.403e-08  |I|_std=4.256e-03  ratio=3.03e+05
+  diagnostic done in 3.9s
+
+=== VERDICT: Lactate ===
+  affine median |I|:                1.190e-08
+  standard/affine ratio median:     4.025e+04
+  verdict:                          MIXED
+  (PASS: |I|<=1e-10 AND ratio>=1e8;  FAIL: |I|>=1e-3;  else MIXED)
