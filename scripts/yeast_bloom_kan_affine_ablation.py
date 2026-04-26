@@ -94,10 +94,11 @@ class AffinePhiKAN(nn.Module):
                  k: int = 3, seed: int = 42):
         super().__init__()
         torch.manual_seed(seed)
-        # KANLayer signature varies by pykan version; the constructor is
-        # tolerant of (in_dim, out_dim, num, k) by keyword.
+        # pykan 0.2.8 KANLayer.__init__ does not accept `seed`; the
+        # torch.manual_seed(seed) above seeds the RNG used for KANLayer
+        # parameter init, matching baseline determinism.
         self.inner = KANLayer(
-            in_dim=n_features, out_dim=hidden, num=grid, k=k, seed=seed,
+            in_dim=n_features, out_dim=hidden, num=grid, k=k,
         )
         self.outer = nn.Linear(hidden, 1, bias=True)
 

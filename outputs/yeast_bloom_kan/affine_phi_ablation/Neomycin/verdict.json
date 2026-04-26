@@ -1,0 +1,18 @@
+{
+  "n_gt_pairs": 12,
+  "affine_median_abs_I": 6.595523036797186e-08,
+  "standard_over_affine_ratio_median": 1131341.623921901,
+  "verdict": "MIXED",
+  "phenotype": "Neomycin",
+  "config": {
+    "hidden": 8,
+    "grid": 5,
+    "k": 3,
+    "epochs": 200,
+    "patience": 25,
+    "lr": 0.001,
+    "batch_size": 64,
+    "seed": 42,
+    "model": "AffinePhiKAN (Option A: KANLayer inner + nn.Linear outer)"
+  }
+}

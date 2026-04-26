@@ -1,0 +1,36 @@
+=== Affine-Phi KAN ablation: Neomycin ===
+  X_panel=(1005, 97)  y=(1005,)  panel_cols=97
+=== 5-fold CV ===
+scripts/yeast_bloom_kan_train.py:108: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  epoch_loss += float(loss) * len(idx)
+  fold 0: R^2=0.5642
+  fold 1: R^2=0.6209
+  fold 2: R^2=0.6133
+  fold 3: R^2=0.6007
+  fold 4: R^2=0.5960
+  CV R^2: mean=0.5990  sd=0.0195
+=== Final fit ===
+  best val MSE = 13.9837 at epoch 94/120; fit took 3.3s
+  in-sample R^2 = 0.6856
+=== GT-pair |I| diagnostic ===
+[affine-Phi] computing |I| on 12 GT pairs (n_bg=15, n_eval=15, n_samples=30)...
+  pair 1/12: |I|_aff=7.690e-08  |I|_std=2.122e-01  ratio=2.76e+06
+  pair 2/12: |I|_aff=5.491e-08  |I|_std=2.686e-01  ratio=4.89e+06
+  pair 3/12: |I|_aff=4.133e-08  |I|_std=2.162e-01  ratio=5.23e+06
+  pair 4/12: |I|_aff=7.730e-08  |I|_std=4.068e-03  ratio=5.26e+04
+  pair 5/12: |I|_aff=4.571e-08  |I|_std=1.223e-01  ratio=2.67e+06
+  pair 6/12: |I|_aff=5.094e-08  |I|_std=5.058e-02  ratio=9.93e+05
+  pair 7/12: |I|_aff=6.581e-08  |I|_std=4.611e-02  ratio=7.01e+05
+  pair 8/12: |I|_aff=6.610e-08  |I|_std=8.393e-02  ratio=1.27e+06
+  pair 9/12: |I|_aff=5.208e-08  |I|_std=4.802e-03  ratio=9.22e+04
+  pair 10/12: |I|_aff=6.978e-08  |I|_std=1.706e-01  ratio=2.44e+06
+  pair 11/12: |I|_aff=9.133e-08  |I|_std=1.217e-02  ratio=1.33e+05
+  pair 12/12: |I|_aff=6.853e-08  |I|_std=5.672e-03  ratio=8.28e+04
+  diagnostic done in 3.7s
+
+=== VERDICT: Neomycin ===
+  affine median |I|:                6.596e-08
+  standard/affine ratio median:     1.131e+06
+  verdict:                          MIXED
+  (PASS: |I|<=1e-10 AND ratio>=1e8;  FAIL: |I|>=1e-3;  else MIXED)
