@@ -1,0 +1,30 @@
+=== ablation cell: phen=Lactate hidden=8 grid=3 k=3 ===
+  config: {'hidden': 8, 'grid': 3, 'k': 3, 'epochs': 200, 'patience': 25, 'lr': 0.001, 'batch_size': 64, 'seed': 42, 'phenotype': 'Lactate'}
+  out_dir: outputs/yeast_bloom_kan/ablation/Lactate/h8_g3
+=== Loading Lactate ===
+  X_panel: (973, 98), y: (973,), panel cols: 98
+=== 5-fold CV ===
+scripts/yeast_bloom_kan_train.py:108: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  epoch_loss += float(loss) * len(idx)
+  fold 0: R²=0.5167
+  fold 1: R²=0.6604
+  fold 2: R²=0.5656
+  fold 3: R²=0.5829
+  fold 4: R²=0.4962
+  CV R^2: mean=0.5644  sd=0.0574  (616.2s)
+=== Final fit on full panel ===
+  best val MSE = 0.7210 at epoch 29/55; fit took 123.2s
+  in-sample R^2: 0.6672
+=== Pairwise interaction sweep ===
+[KAN pairwise] 98 markers -> 4753 pairs, n_bg=15, n_eval=15, mc=30
+[KAN pairwise] done in 1429.2s (300.7 ms/pair)
+  pairwise sweep done in 1429.2s (4753 pairs)
+  top 5 by |I_jk|:
+                 marker_j                   marker_k  mean_abs_interaction  mean_interaction
+10200698_chr15_169152_A_G   9623528_chr14_376315_C_T              0.017019          0.009137
+10200698_chr15_169152_A_G   8007547_chr12_762938_T_C              0.015297          0.007067
+10200698_chr15_169152_A_G  10405919_chr15_374373_G_A              0.009937         -0.002052
+10200698_chr15_169152_A_G   7373698_chr12_129089_C_T              0.009928          0.003833
+10200698_chr15_169152_A_G 11054971_chr15_1023425_T_C              0.009406         -0.000025
+=== ablation cell done ===
