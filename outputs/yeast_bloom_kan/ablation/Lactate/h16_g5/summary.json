@@ -1,0 +1,23 @@
+{
+  "phenotype": "Lactate",
+  "config": {
+    "hidden": 16,
+    "grid": 5,
+    "k": 3,
+    "epochs": 200,
+    "patience": 25,
+    "lr": 0.001,
+    "batch_size": 64,
+    "seed": 42,
+    "phenotype": "Lactate"
+  },
+  "cv_mean_r2": 0.5611483335494996,
+  "cv_sd_r2": 0.0631796569856013,
+  "cv_seconds": 1015.0131025314331,
+  "in_sample_r2": 0.6844755411148071,
+  "fit_seconds": 235.48303866386414,
+  "interaction_seconds": 2664.6768147945404,
+  "n_pairs": 4753,
+  "max_abs_I": 0.027298653684556484,
+  "median_abs_I": 0.0003920063668677661
+}

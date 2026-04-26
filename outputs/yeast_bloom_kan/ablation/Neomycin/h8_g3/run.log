@@ -1,0 +1,9 @@
+=== ablation cell: phen=Neomycin hidden=8 grid=3 k=3 ===
+  config: {'hidden': 8, 'grid': 3, 'k': 3, 'epochs': 200, 'patience': 25, 'lr': 0.001, 'batch_size': 64, 'seed': 42, 'phenotype': 'Neomycin'}
+  out_dir: outputs/yeast_bloom_kan/ablation/Neomycin/h8_g3
+=== Loading Neomycin ===
+  X_panel: (1005, 97), y: (1005,), panel cols: 97
+=== 5-fold CV ===
+scripts/yeast_bloom_kan_train.py:108: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  epoch_loss += float(loss) * len(idx)

@@ -1,0 +1,23 @@
+{
+  "phenotype": "Neomycin",
+  "config": {
+    "hidden": 16,
+    "grid": 5,
+    "k": 3,
+    "epochs": 200,
+    "patience": 25,
+    "lr": 0.001,
+    "batch_size": 64,
+    "seed": 42,
+    "phenotype": "Neomycin"
+  },
+  "cv_mean_r2": 0.6289978742599487,
+  "cv_sd_r2": 0.012215133443443273,
+  "cv_seconds": 1246.8648002147675,
+  "in_sample_r2": 0.7646545171737671,
+  "fit_seconds": 348.5918855667114,
+  "interaction_seconds": 2587.1743841171265,
+  "n_pairs": 4656,
+  "max_abs_I": 0.26315390368302666,
+  "median_abs_I": 0.0023677362708743504
+}
