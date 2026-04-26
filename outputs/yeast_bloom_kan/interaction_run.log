@@ -1,0 +1,50 @@
+=== Neomycin: KAN pairwise interaction sweep ===
+  panel cols=97, pairs=4656
+  bg=15, eval=15, mc=30
+[KAN pairwise] 97 markers -> 4656 pairs, n_bg=15, n_eval=15, mc=30
+[KAN pairwise] done in 1567.4s (336.6 ms/pair)
+  saved -> outputs/yeast_bloom_kan/Neomycin/pairwise_interactions.csv (4656 rows)
+  top 10 by |I_jk|:
+                marker_j                  marker_k  mean_abs_interaction  mean_interaction
+8583962_chr13_261178_G_A  10093240_chr15_61694_A_G              0.341404         -0.046258
+8583962_chr13_261178_G_A   194469_chr01_194469_C_T              0.268599          0.073179
+8583962_chr13_261178_G_A  5643011_chr09_250482_T_G              0.216168         -0.023151
+8583962_chr13_261178_G_A  9623528_chr14_376315_C_T              0.212151          0.098212
+8583962_chr13_261178_G_A  3583966_chr06_115175_G_A              0.186430          0.027967
+8583962_chr13_261178_G_A   6642941_chr11_64786_T_C              0.170571          0.073610
+8583962_chr13_261178_G_A  3282355_chr05_390433_C_T              0.169032         -0.035667
+8583962_chr13_261178_G_A 10225457_chr15_193911_C_T              0.155866          0.010181
+8583962_chr13_261178_G_A  7904380_chr12_659771_C_T              0.129292          0.006863
+8583962_chr13_261178_G_A  6465891_chr10_633477_T_C              0.123727         -0.091156
+=== Lactate: KAN pairwise interaction sweep ===
+  panel cols=98, pairs=4753
+  bg=15, eval=15, mc=30
+[KAN pairwise] 98 markers -> 4753 pairs, n_bg=15, n_eval=15, mc=30
+[KAN pairwise] done in 1555.1s (327.2 ms/pair)
+  saved -> outputs/yeast_bloom_kan/Lactate/pairwise_interactions.csv (4753 rows)
+  top 10 by |I_jk|:
+                 marker_j                   marker_k  mean_abs_interaction  mean_interaction
+10200698_chr15_169152_A_G   9623528_chr14_376315_C_T              0.016624          0.008349
+10200698_chr15_169152_A_G 11054971_chr15_1023425_T_C              0.014084         -0.002238
+ 9623528_chr14_376315_C_T 11054971_chr15_1023425_T_C              0.011831          0.005278
+10200698_chr15_169152_A_G  10405919_chr15_374373_G_A              0.010800          0.002965
+10200698_chr15_169152_A_G   8007547_chr12_762938_T_C              0.010101          0.004917
+10200698_chr15_169152_A_G    731692_chr02_501484_A_G              0.009547         -0.002596
+10200698_chr15_169152_A_G      39145_chr01_39145_G_A              0.009052         -0.000438
+ 9623528_chr14_376315_C_T    731692_chr02_501484_A_G              0.008137          0.002147
+10200698_chr15_169152_A_G   7373698_chr12_129089_C_T              0.007852          0.001329
+ 9623528_chr14_376315_C_T  10405919_chr15_374373_G_A              0.007709         -0.000977
+[
+  {
+    "phenotype": "Neomycin",
+    "n_pairs": 4656,
+    "max_abs_I": 0.3414038379987081,
+    "median_abs_I": 0.0032961459054301184
+  },
+  {
+    "phenotype": "Lactate",
+    "n_pairs": 4753,
+    "max_abs_I": 0.01662425052296991,
+    "median_abs_I": 0.00032342494208326876
+  }
+]
