@@ -1,0 +1,13 @@
+k,method,recall,precision,n_predicted,n_ground_truth_in_panel,tp
+10,shapley_interaction_rf,0.0,0.0,10,12,0
+10,marginal_product_baseline,0.1666666666666666,0.2,10,12,2
+25,shapley_interaction_rf,0.0,0.0,25,12,0
+25,marginal_product_baseline,0.4166666666666667,0.2,25,12,5
+50,shapley_interaction_rf,0.0,0.0,50,12,0
+50,marginal_product_baseline,0.4166666666666667,0.1,50,12,5
+100,shapley_interaction_rf,0.1666666666666666,0.02,100,12,2
+100,marginal_product_baseline,0.5833333333333334,0.07,100,12,7
+10,shapley_interaction_kan,0.3333333333333333,0.4,10,12,4
+25,shapley_interaction_kan,0.5,0.24,25,12,6
+50,shapley_interaction_kan,0.5,0.12,50,12,6
+100,shapley_interaction_kan,0.6666666666666666,0.08,100,12,8

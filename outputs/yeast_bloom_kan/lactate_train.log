@@ -1,0 +1,15 @@
+=== Loading Lactate ===
+  X_panel: (973, 98), y: (973,), panel cols: 98
+=== 5-fold CV ===
+scripts/yeast_bloom_kan_train.py:108: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  epoch_loss += float(loss) * len(idx)
+  fold 0: R²=0.5038
+  fold 1: R²=0.6700
+  fold 2: R²=0.5475
+  fold 3: R²=0.5802
+  fold 4: R²=0.4941
+  CV R^2: mean=0.5591  sd=0.0635
+=== Final fit on full panel ===
+  best val MSE = 0.7379 at epoch 25/51; fit took 121.2s
+  full-set R^2 (in-sample): 0.6820
