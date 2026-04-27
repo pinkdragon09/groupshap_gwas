@@ -1,0 +1,15 @@
+{
+  "Neomycin": {
+    "median_I_oracle": 6.866455256234378e-07,
+    "median_I_affine": 6.595523036797188e-08,
+    "median_floor_ratio": 0.08780210685329429,
+    "verdict": "FLOOR"
+  },
+  "Lactate": {
+    "median_I_oracle": 6.357828979730584e-07,
+    "median_I_affine": 1.1900620984957774e-08,
+    "median_floor_ratio": 0.018835316970080195,
+    "verdict": "FLOOR"
+  },
+  "combined_verdict": "FLOOR"
+}
