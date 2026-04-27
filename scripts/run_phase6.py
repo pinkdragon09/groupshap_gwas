@@ -19,6 +19,15 @@ Outputs saved to outputs/phase6/:
     scenario5_recovery.png / .csv
     scenario5_stability.png / .csv
     phase6_simulation_summary.csv
+
+NOTE: This script uses OracleModel wrappers (the data-generating function
+passed directly to the explainer) and is retained as the algorithm-verification
+baseline — it confirms the estimator recovers exact signal when the model is
+known. It is not the source of the fitted-model results.
+
+For the fitted-model results (outputs/phase6/*_fitted.*), see run_phase6_fitted_rf.py,
+which trains a RandomForestRegressor on the simulated data and computes
+Shapley values on that fitted model.
 """
 
 from __future__ import annotations
