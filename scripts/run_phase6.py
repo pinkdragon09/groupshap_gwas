@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+# =============================================================================
+# ORACLE / ALGORITHM-VERIFICATION BASELINE
+# For fitted-model results use run_phase6_fitted_rf.py (fitted RandomForest model).
+# =============================================================================
 """
 Phase 6 simulation study: recovery and stability figures.
 
@@ -470,8 +474,9 @@ def run_scenario5_stability() -> pd.DataFrame:
 
 def main() -> None:
     OUTDIR.mkdir(parents=True, exist_ok=True)
-    print("Phase 6 simulation study")
-    print("=" * 50)
+    print("Phase 6 simulation study — ORACLE BASELINE (algorithm verification only)")
+    print("For fitted-model results run: python scripts/run_phase6_fitted_rf.py")
+    print("=" * 70)
 
     summary_rows = []
 
