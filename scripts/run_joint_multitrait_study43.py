@@ -59,10 +59,10 @@ CHR_BOUNDARIES = {
 TRAITS       = ["delta 13C", "stomata density", "stomatasize"]
 TRAIT_LABELS = ["delta_13C", "stomata_density", "stomatasize"]
 TOP_SNPS     = 100
-MC_SAMPLES   = 100
-N_BACKGROUND = 60
-N_EVAL       = 30
-FOLDS        = 3
+MC_SAMPLES   = 20
+N_BACKGROUND = 20
+N_EVAL       = 10
+FOLDS        = 2
 RANDOM_STATE = 42
 
 
