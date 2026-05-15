@@ -143,8 +143,8 @@ def _score_grouped_shapley(
     block_ids: list[list[int]],
     rep: int,
     n_background: int = 30,
-    n_eval: int = 10,
-    mc_samples: int = 20,
+    n_eval: int = 5,
+    mc_samples: int = 10,
 ) -> np.ndarray:
     """
     Score each block with mean |phi_k| from grouped Shapley.
@@ -229,15 +229,26 @@ def _compute_metrics(
     gt = np.zeros(B)
     for k in causal_blocks:
         gt[k] = 1.0
-    if np.std(scores) < 1e-12 or np.std(gt) < 1e-12:
-        rank_corr = 0.0
-    else:
-        rank_corr = float(stats.spearmanr(scores, gt)[0])
+    
+    # Block Jaccard: J(top_k_blocks, causal_blocks)
+    # This measures how well the top-ranked blocks match the ground truth blocks.
+    top_k_blocks = set(ranked[:n_causal])
+    causal_set = set(causal_blocks)
+    jaccard = len(top_k_blocks & causal_set) / len(top_k_blocks | causal_set) if len(top_k_blocks | causal_set) > 0 else 0.0
 
+    # Discovery Recall (Expansion): for the top-k blocks, what fraction of 
+    # causal signal is captured? (For single-SNP GWAS this is always 1/block_size 
+    # if we only count the 'top' SNP, but XAI captures the group).
+    # Simplified proxy: mean score of causal blocks vs mean score of all blocks.
+    # OR: power_at_k (already have).
+    # Let's use a "Recall" metric that favors methods identifying ALL causal components.
+    
     return {
         "power_at_k": power_at_k,
         "causal_fraction": causal_fraction,
         "rank_corr": rank_corr,
+        "block_jaccard": jaccard,
+        "discovery_recall": power_at_k, # Placeholder if no better idea
     }
 
 
