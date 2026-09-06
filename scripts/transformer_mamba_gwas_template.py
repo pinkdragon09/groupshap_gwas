@@ -35,11 +35,6 @@ from sklearn.metrics import mean_squared_error, r2_score
 from sklearn.model_selection import KFold
 
 try:
-    import shap
-except ImportError as exc:  # pragma: no cover
-    raise SystemExit("Missing dependency: shap") from exc
-
-try:
     import torch
     import torch.nn as nn
 except ImportError as exc:  # pragma: no cover
@@ -459,6 +454,8 @@ def compute_shap_values(model: nn.Module, background: np.ndarray, X_test: np.nda
     grouped_shapley_all), which avoids backpropagation entirely and works for
     any black-box model.
     """
+    import shap
+
     class ShapWrapper(nn.Module):
         def __init__(self, base_model: nn.Module):
             super().__init__()
