@@ -1,0 +1,14 @@
+{
+  "metrics_rows": 50,
+  "n_accessions": 81,
+  "models": [
+    "random_forest",
+    "transformer",
+    "kan"
+  ],
+  "seeds": [
+    42,
+    43,
+    44
+  ]
+}
