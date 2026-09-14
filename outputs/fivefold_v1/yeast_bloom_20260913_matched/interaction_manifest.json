@@ -1,0 +1,18 @@
+{
+  "parent_fingerprint": "ab5c5ce6183c331ddc01deff9203b9841e7737f3374324c800577d5c63415d0c",
+  "source_sha256": "c0699079d2c661508ce9939602fb20f14f45e6ddfccba6b7685650fb6b0afe8a",
+  "protocol": {
+    "seed_model": 42,
+    "evaluation": 20,
+    "background": 10,
+    "mc": 10,
+    "interaction_seed": 4042,
+    "ks": [
+      10,
+      25,
+      50,
+      100
+    ]
+  },
+  "fingerprint": "699e14fd0fbdf11d557ad52bfa07e7416438f4d882a0b5e8889cb1a81314cf2c"
+}

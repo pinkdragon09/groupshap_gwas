@@ -1,0 +1,65 @@
+{
+  "config": {
+    "schema_version": 1,
+    "study": "Bloom2013_Neomycin_Lactate",
+    "traits": [
+      "Neomycin",
+      "Lactate"
+    ],
+    "split_seed": 42,
+    "validation_fraction": 0.2,
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "min_maf": 0.05,
+    "max_markers": 100,
+    "prune_bp": 100000,
+    "mapping_distance_bp": 10000,
+    "rf_trees": 200,
+    "epochs": 200,
+    "patience": 25,
+    "background": 10,
+    "evaluation": 20,
+    "interaction_mc": 10,
+    "background_seed": 2042,
+    "evaluation_seed": 3042,
+    "interaction_seed": 4042,
+    "threads": 4,
+    "selection": "training marginal Pearson test, MAF>=.05; descending r2/global-index ties; greedy same-chromosome 100kb pruning",
+    "kan": {
+      "width": "[fold panel size,8,1]",
+      "grid": 5,
+      "k": 3,
+      "lr": 0.001,
+      "batch": 64,
+      "target_standardized": true
+    },
+    "interaction_models": "seed 42 outer RF/KAN; same held-out samples, training backgrounds and coalitions"
+  },
+  "inputs": {
+    "data/yeast-byxrm/raw/BYxRM_GenoData.txt": "b1bd3528c9e4c9d9d5a0371ca2b96d0a68cb0e944233661b6acdc510d54f878c",
+    "data/yeast-byxrm/raw/BYxRM_PhenoData.txt": "f2147bdabf1c2009e0e5c21584fd74184a267ad306fb6522a51bc81b24497f3b",
+    "data/yeast-byxrm/processed/Bloom2015_SuppData4_QTLxQTL_interactions.csv": "c422133ed6eb0e591a914e3481eec1bbb2c792b2a6cc03312170401000bebc5c"
+  },
+  "source": {
+    "scripts/run_yeast_fivefold.py": "fdf4867abdf8f453d7b343a26f8bc795043b8636e414ce5a8231a91bfee8ee30",
+    "scripts/yeast_fivefold_common.py": "9e1b0f947b697c7dfefe0a37962b211f1658043ea497fdfe761c63a460c88607",
+    "scripts/fivefold_common.py": "9dc7b21408daa03fa05fe222be5ab1a0346e92c8a39019fc360e0f538c1bd77a",
+    "scripts/load_yeast_bloom.py": "8ca19ebbcf5214a1947ef4df51288a49baae90f658957a35f467eb88904c41ea"
+  },
+  "versions": {
+    "numpy": "1.26.4",
+    "pandas": "3.0.2",
+    "scipy": "1.17.1",
+    "torch": "2.11.0+cpu",
+    "scikit-learn": "1.8.0",
+    "pykan": "0.2.8",
+    "joblib": "1.5.3"
+  },
+  "python": "3.12.3",
+  "fingerprint": "ab5c5ce6183c331ddc01deff9203b9841e7737f3374324c800577d5c63415d0c",
+  "repository_commit": "bdfbf48f5e8473704367f76343f7c5a4733b458a",
+  "started_at": "2026-09-14T00:02:50-0400"
+}

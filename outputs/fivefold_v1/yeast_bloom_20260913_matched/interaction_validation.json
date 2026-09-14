@@ -1,0 +1,248 @@
+{
+  "passed": true,
+  "checked_rankings": 20,
+  "canonical_mapping_checked": true,
+  "fast_kan_full_panel_prediction_checked": true,
+  "top_pair_recomputed": [
+    {
+      "trait": "Neomycin",
+      "fold": 1,
+      "family": "rf",
+      "receipt": "parallel",
+      "verified_pair": [
+        1,
+        10
+      ],
+      "pairs": 4656,
+      "max_error": 3.2959746043559335e-17
+    },
+    {
+      "trait": "Neomycin",
+      "fold": 1,
+      "family": "kan",
+      "receipt": "serial",
+      "verified_pair": [
+        0,
+        2
+      ],
+      "pairs": 4656,
+      "max_error": 5.0306980803327406e-17
+    },
+    {
+      "trait": "Neomycin",
+      "fold": 2,
+      "family": "rf",
+      "receipt": "parallel",
+      "verified_pair": [
+        0,
+        12
+      ],
+      "pairs": 4465,
+      "max_error": 3.0357660829594124e-17
+    },
+    {
+      "trait": "Neomycin",
+      "fold": 2,
+      "family": "kan",
+      "receipt": "serial",
+      "verified_pair": [
+        0,
+        10
+      ],
+      "pairs": 4465,
+      "max_error": 6.245004513516506e-17
+    },
+    {
+      "trait": "Neomycin",
+      "fold": 3,
+      "family": "rf",
+      "receipt": "parallel",
+      "verified_pair": [
+        1,
+        4
+      ],
+      "pairs": 4278,
+      "max_error": 5.724587470723463e-17
+    },
+    {
+      "trait": "Neomycin",
+      "fold": 3,
+      "family": "kan",
+      "receipt": "serial",
+      "verified_pair": [
+        0,
+        5
+      ],
+      "pairs": 4278,
+      "max_error": 6.245004513516506e-17
+    },
+    {
+      "trait": "Neomycin",
+      "fold": 4,
+      "family": "rf",
+      "receipt": "parallel",
+      "verified_pair": [
+        0,
+        5
+      ],
+      "pairs": 4656,
+      "max_error": 4.5102810375396984e-17
+    },
+    {
+      "trait": "Neomycin",
+      "fold": 4,
+      "family": "kan",
+      "receipt": "serial",
+      "verified_pair": [
+        0,
+        3
+      ],
+      "pairs": 4656,
+      "max_error": 6.245004513516506e-17
+    },
+    {
+      "trait": "Neomycin",
+      "fold": 5,
+      "family": "rf",
+      "receipt": "parallel",
+      "verified_pair": [
+        0,
+        10
+      ],
+      "pairs": 4753,
+      "max_error": 6.418476861114186e-17
+    },
+    {
+      "trait": "Neomycin",
+      "fold": 5,
+      "family": "kan",
+      "receipt": "serial",
+      "verified_pair": [
+        0,
+        7
+      ],
+      "pairs": 4753,
+      "max_error": 3.469446951953614e-17
+    },
+    {
+      "trait": "Lactate",
+      "fold": 1,
+      "family": "rf",
+      "receipt": "parallel",
+      "verified_pair": [
+        0,
+        2
+      ],
+      "pairs": 4656,
+      "max_error": 3.122502256758253e-17
+    },
+    {
+      "trait": "Lactate",
+      "fold": 1,
+      "family": "kan",
+      "receipt": "serial",
+      "verified_pair": [
+        0,
+        2
+      ],
+      "pairs": 4656,
+      "max_error": 3.122502256758253e-17
+    },
+    {
+      "trait": "Lactate",
+      "fold": 2,
+      "family": "rf",
+      "receipt": "parallel",
+      "verified_pair": [
+        0,
+        3
+      ],
+      "pairs": 4371,
+      "max_error": 1.5612511283791264e-17
+    },
+    {
+      "trait": "Lactate",
+      "fold": 2,
+      "family": "kan",
+      "receipt": "serial",
+      "verified_pair": [
+        0,
+        1
+      ],
+      "pairs": 4371,
+      "max_error": 9.020562075079397e-17
+    },
+    {
+      "trait": "Lactate",
+      "fold": 3,
+      "family": "rf",
+      "receipt": "parallel",
+      "verified_pair": [
+        0,
+        3
+      ],
+      "pairs": 4465,
+      "max_error": 8.543513119185775e-17
+    },
+    {
+      "trait": "Lactate",
+      "fold": 3,
+      "family": "kan",
+      "receipt": "serial",
+      "verified_pair": [
+        0,
+        3
+      ],
+      "pairs": 4465,
+      "max_error": 9.71445146547012e-17
+    },
+    {
+      "trait": "Lactate",
+      "fold": 4,
+      "family": "rf",
+      "receipt": "parallel",
+      "verified_pair": [
+        0,
+        5
+      ],
+      "pairs": 4371,
+      "max_error": 6.938893903907228e-17
+    },
+    {
+      "trait": "Lactate",
+      "fold": 4,
+      "family": "kan",
+      "receipt": "serial",
+      "verified_pair": [
+        0,
+        3
+      ],
+      "pairs": 4371,
+      "max_error": 8.066464163292153e-17
+    },
+    {
+      "trait": "Lactate",
+      "fold": 5,
+      "family": "rf",
+      "receipt": "parallel",
+      "verified_pair": [
+        0,
+        6
+      ],
+      "pairs": 4560,
+      "max_error": 9.367506770274758e-17
+    },
+    {
+      "trait": "Lactate",
+      "fold": 5,
+      "family": "kan",
+      "receipt": "serial",
+      "verified_pair": [
+        0,
+        1
+      ],
+      "pairs": 4560,
+      "max_error": 6.82505267579625e-17
+    }
+  ]
+}
