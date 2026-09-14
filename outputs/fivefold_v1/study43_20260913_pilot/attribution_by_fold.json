@@ -1,0 +1,2402 @@
+[
+  {
+    "fold": 1,
+    "family": "separate_rf",
+    "trait": "delta_13C",
+    "group": "chr1",
+    "mean_abs": 0.11158299353827555,
+    "signed_mean": 0.009209091887784144
+  },
+  {
+    "fold": 1,
+    "family": "separate_rf",
+    "trait": "delta_13C",
+    "group": "chr2",
+    "mean_abs": 0.1401609807913379,
+    "signed_mean": 0.05011240251922137
+  },
+  {
+    "fold": 1,
+    "family": "separate_rf",
+    "trait": "delta_13C",
+    "group": "chr3",
+    "mean_abs": 0.04957962712779949,
+    "signed_mean": 0.028545032504858788
+  },
+  {
+    "fold": 1,
+    "family": "separate_rf",
+    "trait": "delta_13C",
+    "group": "chr4",
+    "mean_abs": 0.07092830321322152,
+    "signed_mean": 0.04095799859572068
+  },
+  {
+    "fold": 1,
+    "family": "separate_rf",
+    "trait": "delta_13C",
+    "group": "chr5",
+    "mean_abs": 0.12967870318725888,
+    "signed_mean": 0.0582468343215476
+  },
+  {
+    "fold": 1,
+    "family": "separate_rf",
+    "trait": "stomata_density",
+    "group": "chr1",
+    "mean_abs": 0.900065985157431,
+    "signed_mean": 0.6237132196823735
+  },
+  {
+    "fold": 1,
+    "family": "separate_rf",
+    "trait": "stomata_density",
+    "group": "chr2",
+    "mean_abs": 1.49594950907546,
+    "signed_mean": 0.7950983172614365
+  },
+  {
+    "fold": 1,
+    "family": "separate_rf",
+    "trait": "stomata_density",
+    "group": "chr3",
+    "mean_abs": 1.2137385661855569,
+    "signed_mean": 0.23000510659030568
+  },
+  {
+    "fold": 1,
+    "family": "separate_rf",
+    "trait": "stomata_density",
+    "group": "chr4",
+    "mean_abs": 0.9083968795678393,
+    "signed_mean": 0.5038510214249821
+  },
+  {
+    "fold": 1,
+    "family": "separate_rf",
+    "trait": "stomata_density",
+    "group": "chr5",
+    "mean_abs": 4.034747889049186,
+    "signed_mean": 2.47677113484738
+  },
+  {
+    "fold": 1,
+    "family": "separate_rf",
+    "trait": "stomatasize",
+    "group": "chr1",
+    "mean_abs": 0.4706464096103543,
+    "signed_mean": -0.01586460379103339
+  },
+  {
+    "fold": 1,
+    "family": "separate_rf",
+    "trait": "stomatasize",
+    "group": "chr2",
+    "mean_abs": 0.3813873514812989,
+    "signed_mean": -0.08976659636659699
+  },
+  {
+    "fold": 1,
+    "family": "separate_rf",
+    "trait": "stomatasize",
+    "group": "chr3",
+    "mean_abs": 1.2785324781536282,
+    "signed_mean": -0.5666076855983124
+  },
+  {
+    "fold": 1,
+    "family": "separate_rf",
+    "trait": "stomatasize",
+    "group": "chr4",
+    "mean_abs": 0.19866738260691907,
+    "signed_mean": -0.028378037320667206
+  },
+  {
+    "fold": 1,
+    "family": "separate_rf",
+    "trait": "stomatasize",
+    "group": "chr5",
+    "mean_abs": 1.5943560620858996,
+    "signed_mean": -0.622733985461913
+  },
+  {
+    "fold": 1,
+    "family": "separate_rf",
+    "trait": "signed_joint",
+    "group": "chr1",
+    "mean_abs": 0.04773009729409663,
+    "signed_mean": 0.011705741466076239
+  },
+  {
+    "fold": 1,
+    "family": "separate_rf",
+    "trait": "signed_joint",
+    "group": "chr2",
+    "mean_abs": 0.035992764568827655,
+    "signed_mean": 0.02245449491479592
+  },
+  {
+    "fold": 1,
+    "family": "separate_rf",
+    "trait": "signed_joint",
+    "group": "chr3",
+    "mean_abs": 0.05667481396868763,
+    "signed_mean": -0.015997636899693905
+  },
+  {
+    "fold": 1,
+    "family": "separate_rf",
+    "trait": "signed_joint",
+    "group": "chr4",
+    "mean_abs": 0.026191541550449258,
+    "signed_mean": 0.018250191089006183
+  },
+  {
+    "fold": 1,
+    "family": "separate_rf",
+    "trait": "signed_joint",
+    "group": "chr5",
+    "mean_abs": 0.04146217193709748,
+    "signed_mean": 0.025229554444214958
+  },
+  {
+    "fold": 1,
+    "family": "joint_rf",
+    "trait": "delta_13C",
+    "group": "chr1",
+    "mean_abs": 0.07690301327319714,
+    "signed_mean": 0.0013072838137139031
+  },
+  {
+    "fold": 1,
+    "family": "joint_rf",
+    "trait": "delta_13C",
+    "group": "chr2",
+    "mean_abs": 0.08443460210318882,
+    "signed_mean": 0.02728122974979886
+  },
+  {
+    "fold": 1,
+    "family": "joint_rf",
+    "trait": "delta_13C",
+    "group": "chr3",
+    "mean_abs": 0.0642403641245663,
+    "signed_mean": 0.02610002069010474
+  },
+  {
+    "fold": 1,
+    "family": "joint_rf",
+    "trait": "delta_13C",
+    "group": "chr4",
+    "mean_abs": 0.04797559009009471,
+    "signed_mean": 0.023247815192221983
+  },
+  {
+    "fold": 1,
+    "family": "joint_rf",
+    "trait": "delta_13C",
+    "group": "chr5",
+    "mean_abs": 0.11050611919000687,
+    "signed_mean": 0.061133400599870366
+  },
+  {
+    "fold": 1,
+    "family": "joint_rf",
+    "trait": "stomata_density",
+    "group": "chr1",
+    "mean_abs": 0.9535378964976807,
+    "signed_mean": 0.6108251157360273
+  },
+  {
+    "fold": 1,
+    "family": "joint_rf",
+    "trait": "stomata_density",
+    "group": "chr2",
+    "mean_abs": 1.0045989033618319,
+    "signed_mean": 0.5820218016325576
+  },
+  {
+    "fold": 1,
+    "family": "joint_rf",
+    "trait": "stomata_density",
+    "group": "chr3",
+    "mean_abs": 0.8375584809959749,
+    "signed_mean": 0.2765786969180917
+  },
+  {
+    "fold": 1,
+    "family": "joint_rf",
+    "trait": "stomata_density",
+    "group": "chr4",
+    "mean_abs": 0.6693256262523484,
+    "signed_mean": 0.31823936629654187
+  },
+  {
+    "fold": 1,
+    "family": "joint_rf",
+    "trait": "stomata_density",
+    "group": "chr5",
+    "mean_abs": 4.033977942615066,
+    "signed_mean": 2.0803341687852765
+  },
+  {
+    "fold": 1,
+    "family": "joint_rf",
+    "trait": "stomatasize",
+    "group": "chr1",
+    "mean_abs": 0.4118806996814229,
+    "signed_mean": -0.07833144444163705
+  },
+  {
+    "fold": 1,
+    "family": "joint_rf",
+    "trait": "stomatasize",
+    "group": "chr2",
+    "mean_abs": 0.2968832866356139,
+    "signed_mean": -0.15645615503178484
+  },
+  {
+    "fold": 1,
+    "family": "joint_rf",
+    "trait": "stomatasize",
+    "group": "chr3",
+    "mean_abs": 0.907128383283583,
+    "signed_mean": -0.4079080826300331
+  },
+  {
+    "fold": 1,
+    "family": "joint_rf",
+    "trait": "stomatasize",
+    "group": "chr4",
+    "mean_abs": 0.17610631621497905,
+    "signed_mean": -0.060598044126649084
+  },
+  {
+    "fold": 1,
+    "family": "joint_rf",
+    "trait": "stomatasize",
+    "group": "chr5",
+    "mean_abs": 1.5722724937590145,
+    "signed_mean": -0.7053045855121253
+  },
+  {
+    "fold": 1,
+    "family": "joint_rf",
+    "trait": "signed_joint",
+    "group": "chr1",
+    "mean_abs": 0.030307227222162534,
+    "signed_mean": 0.006187375091694983
+  },
+  {
+    "fold": 1,
+    "family": "joint_rf",
+    "trait": "signed_joint",
+    "group": "chr2",
+    "mean_abs": 0.02003220426916854,
+    "signed_mean": 0.009308598817141711
+  },
+  {
+    "fold": 1,
+    "family": "joint_rf",
+    "trait": "signed_joint",
+    "group": "chr3",
+    "mean_abs": 0.026569021381753388,
+    "signed_mean": -0.008180221296507511
+  },
+  {
+    "fold": 1,
+    "family": "joint_rf",
+    "trait": "signed_joint",
+    "group": "chr4",
+    "mean_abs": 0.01609917167046738,
+    "signed_mean": 0.008687933989196475
+  },
+  {
+    "fold": 1,
+    "family": "joint_rf",
+    "trait": "signed_joint",
+    "group": "chr5",
+    "mean_abs": 0.024721913695362547,
+    "signed_mean": 0.015739881039833266
+  },
+  {
+    "fold": 1,
+    "family": "kan",
+    "trait": "delta_13C",
+    "group": "chr1",
+    "mean_abs": 0.16654681426613532,
+    "signed_mean": 0.00247544691270914
+  },
+  {
+    "fold": 1,
+    "family": "kan",
+    "trait": "delta_13C",
+    "group": "chr2",
+    "mean_abs": 0.2428912372893676,
+    "signed_mean": 0.08779163944237059
+  },
+  {
+    "fold": 1,
+    "family": "kan",
+    "trait": "delta_13C",
+    "group": "chr3",
+    "mean_abs": 0.09187332049231504,
+    "signed_mean": -0.02103585009910021
+  },
+  {
+    "fold": 1,
+    "family": "kan",
+    "trait": "delta_13C",
+    "group": "chr4",
+    "mean_abs": 0.19458283031631207,
+    "signed_mean": 0.09768334408089245
+  },
+  {
+    "fold": 1,
+    "family": "kan",
+    "trait": "delta_13C",
+    "group": "chr5",
+    "mean_abs": 0.2256326491637698,
+    "signed_mean": 0.06297708916251717
+  },
+  {
+    "fold": 1,
+    "family": "kan",
+    "trait": "stomata_density",
+    "group": "chr1",
+    "mean_abs": 0.9158637097617198,
+    "signed_mean": 0.4548077148752305
+  },
+  {
+    "fold": 1,
+    "family": "kan",
+    "trait": "stomata_density",
+    "group": "chr2",
+    "mean_abs": 0.5841391002296554,
+    "signed_mean": 0.19317017828644437
+  },
+  {
+    "fold": 1,
+    "family": "kan",
+    "trait": "stomata_density",
+    "group": "chr3",
+    "mean_abs": 0.6037841142318177,
+    "signed_mean": -0.03580672667176193
+  },
+  {
+    "fold": 1,
+    "family": "kan",
+    "trait": "stomata_density",
+    "group": "chr4",
+    "mean_abs": 0.4035867187780158,
+    "signed_mean": -0.011087989746905329
+  },
+  {
+    "fold": 1,
+    "family": "kan",
+    "trait": "stomata_density",
+    "group": "chr5",
+    "mean_abs": 0.7673992097528592,
+    "signed_mean": 0.31965654168968627
+  },
+  {
+    "fold": 1,
+    "family": "kan",
+    "trait": "stomatasize",
+    "group": "chr1",
+    "mean_abs": 1.360457085570064,
+    "signed_mean": -0.14343326576866391
+  },
+  {
+    "fold": 1,
+    "family": "kan",
+    "trait": "stomatasize",
+    "group": "chr2",
+    "mean_abs": 1.6478724203047406,
+    "signed_mean": -0.7150365434374495
+  },
+  {
+    "fold": 1,
+    "family": "kan",
+    "trait": "stomatasize",
+    "group": "chr3",
+    "mean_abs": 2.0059948374029744,
+    "signed_mean": -0.9338090679730332
+  },
+  {
+    "fold": 1,
+    "family": "kan",
+    "trait": "stomatasize",
+    "group": "chr4",
+    "mean_abs": 1.1477962016305103,
+    "signed_mean": -0.06896873844907615
+  },
+  {
+    "fold": 1,
+    "family": "kan",
+    "trait": "stomatasize",
+    "group": "chr5",
+    "mean_abs": 2.0827700890774214,
+    "signed_mean": -0.718729057149005
+  },
+  {
+    "fold": 1,
+    "family": "kan",
+    "trait": "signed_joint",
+    "group": "chr1",
+    "mean_abs": 0.08215873628423352,
+    "signed_mean": 0.0008637409498472277
+  },
+  {
+    "fold": 1,
+    "family": "kan",
+    "trait": "signed_joint",
+    "group": "chr2",
+    "mean_abs": 0.07220980920517243,
+    "signed_mean": -0.00696259043855931
+  },
+  {
+    "fold": 1,
+    "family": "kan",
+    "trait": "signed_joint",
+    "group": "chr3",
+    "mean_abs": 0.10229348719601104,
+    "signed_mean": -0.05233299831733704
+  },
+  {
+    "fold": 1,
+    "family": "kan",
+    "trait": "signed_joint",
+    "group": "chr4",
+    "mean_abs": 0.07507208359311683,
+    "signed_mean": 0.02429559401640405
+  },
+  {
+    "fold": 1,
+    "family": "kan",
+    "trait": "signed_joint",
+    "group": "chr5",
+    "mean_abs": 0.09592893045287784,
+    "signed_mean": -0.012219551698815946
+  },
+  {
+    "fold": 2,
+    "family": "separate_rf",
+    "trait": "delta_13C",
+    "group": "chr1",
+    "mean_abs": 0.17953288838556059,
+    "signed_mean": 0.07149046023488716
+  },
+  {
+    "fold": 2,
+    "family": "separate_rf",
+    "trait": "delta_13C",
+    "group": "chr2",
+    "mean_abs": 0.10346342420331543,
+    "signed_mean": 0.028077378985252373
+  },
+  {
+    "fold": 2,
+    "family": "separate_rf",
+    "trait": "delta_13C",
+    "group": "chr3",
+    "mean_abs": 0.06610453971016123,
+    "signed_mean": -0.0009593152693515292
+  },
+  {
+    "fold": 2,
+    "family": "separate_rf",
+    "trait": "delta_13C",
+    "group": "chr4",
+    "mean_abs": 0.0745432093940943,
+    "signed_mean": 0.004307770408907353
+  },
+  {
+    "fold": 2,
+    "family": "separate_rf",
+    "trait": "delta_13C",
+    "group": "chr5",
+    "mean_abs": 0.0680175167623936,
+    "signed_mean": 0.009469578657114931
+  },
+  {
+    "fold": 2,
+    "family": "separate_rf",
+    "trait": "stomata_density",
+    "group": "chr1",
+    "mean_abs": 1.1043805326171183,
+    "signed_mean": -0.5008916822204599
+  },
+  {
+    "fold": 2,
+    "family": "separate_rf",
+    "trait": "stomata_density",
+    "group": "chr2",
+    "mean_abs": 1.1191827107921013,
+    "signed_mean": 0.47674432039919523
+  },
+  {
+    "fold": 2,
+    "family": "separate_rf",
+    "trait": "stomata_density",
+    "group": "chr3",
+    "mean_abs": 1.6519162343687623,
+    "signed_mean": 0.5456590905254124
+  },
+  {
+    "fold": 2,
+    "family": "separate_rf",
+    "trait": "stomata_density",
+    "group": "chr4",
+    "mean_abs": 1.429023582761263,
+    "signed_mean": 0.0218418421401269
+  },
+  {
+    "fold": 2,
+    "family": "separate_rf",
+    "trait": "stomata_density",
+    "group": "chr5",
+    "mean_abs": 2.8870158164911452,
+    "signed_mean": 0.7962486221536476
+  },
+  {
+    "fold": 2,
+    "family": "separate_rf",
+    "trait": "stomatasize",
+    "group": "chr1",
+    "mean_abs": 0.3237808971241333,
+    "signed_mean": -0.04837771349614056
+  },
+  {
+    "fold": 2,
+    "family": "separate_rf",
+    "trait": "stomatasize",
+    "group": "chr2",
+    "mean_abs": 0.5764513925503845,
+    "signed_mean": -0.3846600034121973
+  },
+  {
+    "fold": 2,
+    "family": "separate_rf",
+    "trait": "stomatasize",
+    "group": "chr3",
+    "mean_abs": 0.20441788258812946,
+    "signed_mean": -0.06901549929385688
+  },
+  {
+    "fold": 2,
+    "family": "separate_rf",
+    "trait": "stomatasize",
+    "group": "chr4",
+    "mean_abs": 0.3259377481746312,
+    "signed_mean": -0.015218791707435767
+  },
+  {
+    "fold": 2,
+    "family": "separate_rf",
+    "trait": "stomatasize",
+    "group": "chr5",
+    "mean_abs": 0.8043190658844233,
+    "signed_mean": -0.48713419566123156
+  },
+  {
+    "fold": 2,
+    "family": "separate_rf",
+    "trait": "signed_joint",
+    "group": "chr1",
+    "mean_abs": 0.05109484806491306,
+    "signed_mean": 0.009378194128031562
+  },
+  {
+    "fold": 2,
+    "family": "separate_rf",
+    "trait": "signed_joint",
+    "group": "chr2",
+    "mean_abs": 0.03269830142037055,
+    "signed_mean": -0.0035854032594069257
+  },
+  {
+    "fold": 2,
+    "family": "separate_rf",
+    "trait": "signed_joint",
+    "group": "chr3",
+    "mean_abs": 0.023728800903836098,
+    "signed_mean": 0.004867345963599272
+  },
+  {
+    "fold": 2,
+    "family": "separate_rf",
+    "trait": "signed_joint",
+    "group": "chr4",
+    "mean_abs": 0.03040653291942466,
+    "signed_mean": 0.0007765965238395857
+  },
+  {
+    "fold": 2,
+    "family": "separate_rf",
+    "trait": "signed_joint",
+    "group": "chr5",
+    "mean_abs": 0.039897260862180636,
+    "signed_mean": -0.008667766482711932
+  },
+  {
+    "fold": 2,
+    "family": "joint_rf",
+    "trait": "delta_13C",
+    "group": "chr1",
+    "mean_abs": 0.11255944601338953,
+    "signed_mean": 0.03279643260846541
+  },
+  {
+    "fold": 2,
+    "family": "joint_rf",
+    "trait": "delta_13C",
+    "group": "chr2",
+    "mean_abs": 0.08045604715791264,
+    "signed_mean": 0.034706822260541025
+  },
+  {
+    "fold": 2,
+    "family": "joint_rf",
+    "trait": "delta_13C",
+    "group": "chr3",
+    "mean_abs": 0.061256078419480026,
+    "signed_mean": -0.00034228801982037126
+  },
+  {
+    "fold": 2,
+    "family": "joint_rf",
+    "trait": "delta_13C",
+    "group": "chr4",
+    "mean_abs": 0.06305693355873392,
+    "signed_mean": 0.01048101251190381
+  },
+  {
+    "fold": 2,
+    "family": "joint_rf",
+    "trait": "delta_13C",
+    "group": "chr5",
+    "mean_abs": 0.07683481497835462,
+    "signed_mean": 0.019863850833858346
+  },
+  {
+    "fold": 2,
+    "family": "joint_rf",
+    "trait": "stomata_density",
+    "group": "chr1",
+    "mean_abs": 0.9143701632659504,
+    "signed_mean": -0.23048627557482793
+  },
+  {
+    "fold": 2,
+    "family": "joint_rf",
+    "trait": "stomata_density",
+    "group": "chr2",
+    "mean_abs": 0.8707343379258857,
+    "signed_mean": 0.34920098223170287
+  },
+  {
+    "fold": 2,
+    "family": "joint_rf",
+    "trait": "stomata_density",
+    "group": "chr3",
+    "mean_abs": 1.1230574312268278,
+    "signed_mean": 0.218140593558785
+  },
+  {
+    "fold": 2,
+    "family": "joint_rf",
+    "trait": "stomata_density",
+    "group": "chr4",
+    "mean_abs": 1.1651272453875452,
+    "signed_mean": 0.0259660852848399
+  },
+  {
+    "fold": 2,
+    "family": "joint_rf",
+    "trait": "stomata_density",
+    "group": "chr5",
+    "mean_abs": 2.6096108653968235,
+    "signed_mean": 0.9798907669337272
+  },
+  {
+    "fold": 2,
+    "family": "joint_rf",
+    "trait": "stomatasize",
+    "group": "chr1",
+    "mean_abs": 0.29138015134703094,
+    "signed_mean": -0.0660824771546283
+  },
+  {
+    "fold": 2,
+    "family": "joint_rf",
+    "trait": "stomatasize",
+    "group": "chr2",
+    "mean_abs": 0.42864567005172954,
+    "signed_mean": -0.28465310004029437
+  },
+  {
+    "fold": 2,
+    "family": "joint_rf",
+    "trait": "stomatasize",
+    "group": "chr3",
+    "mean_abs": 0.18977668147519663,
+    "signed_mean": -0.08363628455271158
+  },
+  {
+    "fold": 2,
+    "family": "joint_rf",
+    "trait": "stomatasize",
+    "group": "chr4",
+    "mean_abs": 0.27357733448511085,
+    "signed_mean": 0.0075264645956745506
+  },
+  {
+    "fold": 2,
+    "family": "joint_rf",
+    "trait": "stomatasize",
+    "group": "chr5",
+    "mean_abs": 0.7667130917987586,
+    "signed_mean": -0.4382159994367032
+  },
+  {
+    "fold": 2,
+    "family": "joint_rf",
+    "trait": "signed_joint",
+    "group": "chr1",
+    "mean_abs": 0.03225530068079369,
+    "signed_mean": 0.002163422067993395
+  },
+  {
+    "fold": 2,
+    "family": "joint_rf",
+    "trait": "signed_joint",
+    "group": "chr2",
+    "mean_abs": 0.018201833367173112,
+    "signed_mean": 0.0010910213077390334
+  },
+  {
+    "fold": 2,
+    "family": "joint_rf",
+    "trait": "signed_joint",
+    "group": "chr3",
+    "mean_abs": 0.018263450902209915,
+    "signed_mean": -0.0007602861894745271
+  },
+  {
+    "fold": 2,
+    "family": "joint_rf",
+    "trait": "signed_joint",
+    "group": "chr4",
+    "mean_abs": 0.01965452597668554,
+    "signed_mean": 0.0036276169390081024
+  },
+  {
+    "fold": 2,
+    "family": "joint_rf",
+    "trait": "signed_joint",
+    "group": "chr5",
+    "mean_abs": 0.026858378283327912,
+    "signed_mean": -0.0006078818500133904
+  },
+  {
+    "fold": 2,
+    "family": "kan",
+    "trait": "delta_13C",
+    "group": "chr1",
+    "mean_abs": 0.20874705347941025,
+    "signed_mean": 0.05737169610831621
+  },
+  {
+    "fold": 2,
+    "family": "kan",
+    "trait": "delta_13C",
+    "group": "chr2",
+    "mean_abs": 0.19090213489662536,
+    "signed_mean": -0.0063855334823320386
+  },
+  {
+    "fold": 2,
+    "family": "kan",
+    "trait": "delta_13C",
+    "group": "chr3",
+    "mean_abs": 0.1063360263145587,
+    "signed_mean": -0.03235489186765411
+  },
+  {
+    "fold": 2,
+    "family": "kan",
+    "trait": "delta_13C",
+    "group": "chr4",
+    "mean_abs": 0.09158925416489824,
+    "signed_mean": 0.0067959960527175164
+  },
+  {
+    "fold": 2,
+    "family": "kan",
+    "trait": "delta_13C",
+    "group": "chr5",
+    "mean_abs": 0.13099966496294885,
+    "signed_mean": 0.0014760666803608133
+  },
+  {
+    "fold": 2,
+    "family": "kan",
+    "trait": "stomata_density",
+    "group": "chr1",
+    "mean_abs": 0.7235772237574449,
+    "signed_mean": -0.016122509546356197
+  },
+  {
+    "fold": 2,
+    "family": "kan",
+    "trait": "stomata_density",
+    "group": "chr2",
+    "mean_abs": 1.1757789217930248,
+    "signed_mean": 0.5150599291127063
+  },
+  {
+    "fold": 2,
+    "family": "kan",
+    "trait": "stomata_density",
+    "group": "chr3",
+    "mean_abs": 1.4699982830505949,
+    "signed_mean": 0.20450608344298968
+  },
+  {
+    "fold": 2,
+    "family": "kan",
+    "trait": "stomata_density",
+    "group": "chr4",
+    "mean_abs": 1.4323369633312653,
+    "signed_mean": 0.056731033648193
+  },
+  {
+    "fold": 2,
+    "family": "kan",
+    "trait": "stomata_density",
+    "group": "chr5",
+    "mean_abs": 1.3102494232775779,
+    "signed_mean": -0.18573379344974106
+  },
+  {
+    "fold": 2,
+    "family": "kan",
+    "trait": "stomatasize",
+    "group": "chr1",
+    "mean_abs": 0.20388291999671151,
+    "signed_mean": 0.04010797777388627
+  },
+  {
+    "fold": 2,
+    "family": "kan",
+    "trait": "stomatasize",
+    "group": "chr2",
+    "mean_abs": 0.21869397323162043,
+    "signed_mean": -0.09032041511626743
+  },
+  {
+    "fold": 2,
+    "family": "kan",
+    "trait": "stomatasize",
+    "group": "chr3",
+    "mean_abs": 0.20120927899382093,
+    "signed_mean": -0.054728945619029135
+  },
+  {
+    "fold": 2,
+    "family": "kan",
+    "trait": "stomatasize",
+    "group": "chr4",
+    "mean_abs": 0.28055362250911875,
+    "signed_mean": 0.04053474839163354
+  },
+  {
+    "fold": 2,
+    "family": "kan",
+    "trait": "stomatasize",
+    "group": "chr5",
+    "mean_abs": 0.21897758163986095,
+    "signed_mean": -0.08253585150054032
+  },
+  {
+    "fold": 2,
+    "family": "kan",
+    "trait": "signed_joint",
+    "group": "chr1",
+    "mean_abs": 0.06377160467896621,
+    "signed_mean": 0.017346124960455577
+  },
+  {
+    "fold": 2,
+    "family": "kan",
+    "trait": "signed_joint",
+    "group": "chr2",
+    "mean_abs": 0.0695778963409442,
+    "signed_mean": 0.001878747044816324
+  },
+  {
+    "fold": 2,
+    "family": "kan",
+    "trait": "signed_joint",
+    "group": "chr3",
+    "mean_abs": 0.021137067985892148,
+    "signed_mean": -0.00830403324778292
+  },
+  {
+    "fold": 2,
+    "family": "kan",
+    "trait": "signed_joint",
+    "group": "chr4",
+    "mean_abs": 0.020274132183763657,
+    "signed_mean": 0.004700539467169157
+  },
+  {
+    "fold": 2,
+    "family": "kan",
+    "trait": "signed_joint",
+    "group": "chr5",
+    "mean_abs": 0.052169401996812394,
+    "signed_mean": -0.00648390787488929
+  },
+  {
+    "fold": 3,
+    "family": "separate_rf",
+    "trait": "delta_13C",
+    "group": "chr1",
+    "mean_abs": 0.08811313383881006,
+    "signed_mean": 0.04277920066859647
+  },
+  {
+    "fold": 3,
+    "family": "separate_rf",
+    "trait": "delta_13C",
+    "group": "chr2",
+    "mean_abs": 0.22619918060575817,
+    "signed_mean": 0.04621229082618214
+  },
+  {
+    "fold": 3,
+    "family": "separate_rf",
+    "trait": "delta_13C",
+    "group": "chr3",
+    "mean_abs": 0.06061139168759903,
+    "signed_mean": 0.0020500100758878126
+  },
+  {
+    "fold": 3,
+    "family": "separate_rf",
+    "trait": "delta_13C",
+    "group": "chr4",
+    "mean_abs": 0.09235808112020866,
+    "signed_mean": -0.0033311250647400986
+  },
+  {
+    "fold": 3,
+    "family": "separate_rf",
+    "trait": "delta_13C",
+    "group": "chr5",
+    "mean_abs": 0.08114468400779164,
+    "signed_mean": 0.05226523720535713
+  },
+  {
+    "fold": 3,
+    "family": "separate_rf",
+    "trait": "stomata_density",
+    "group": "chr1",
+    "mean_abs": 0.9895908331204187,
+    "signed_mean": 0.20138044210582282
+  },
+  {
+    "fold": 3,
+    "family": "separate_rf",
+    "trait": "stomata_density",
+    "group": "chr2",
+    "mean_abs": 1.394148994924065,
+    "signed_mean": -0.3064003474733803
+  },
+  {
+    "fold": 3,
+    "family": "separate_rf",
+    "trait": "stomata_density",
+    "group": "chr3",
+    "mean_abs": 1.6638875139777165,
+    "signed_mean": 0.3202950209563833
+  },
+  {
+    "fold": 3,
+    "family": "separate_rf",
+    "trait": "stomata_density",
+    "group": "chr4",
+    "mean_abs": 0.7678123969436328,
+    "signed_mean": -0.2526525162059213
+  },
+  {
+    "fold": 3,
+    "family": "separate_rf",
+    "trait": "stomata_density",
+    "group": "chr5",
+    "mean_abs": 1.6747598995122093,
+    "signed_mean": -0.46957333381856164
+  },
+  {
+    "fold": 3,
+    "family": "separate_rf",
+    "trait": "stomatasize",
+    "group": "chr1",
+    "mean_abs": 0.47770878101990666,
+    "signed_mean": -0.21236057779178386
+  },
+  {
+    "fold": 3,
+    "family": "separate_rf",
+    "trait": "stomatasize",
+    "group": "chr2",
+    "mean_abs": 0.2770439149571745,
+    "signed_mean": 0.030764853321686207
+  },
+  {
+    "fold": 3,
+    "family": "separate_rf",
+    "trait": "stomatasize",
+    "group": "chr3",
+    "mean_abs": 1.0983264221078988,
+    "signed_mean": 0.08179406774464867
+  },
+  {
+    "fold": 3,
+    "family": "separate_rf",
+    "trait": "stomatasize",
+    "group": "chr4",
+    "mean_abs": 0.3022330746406658,
+    "signed_mean": 0.15016841080158116
+  },
+  {
+    "fold": 3,
+    "family": "separate_rf",
+    "trait": "stomatasize",
+    "group": "chr5",
+    "mean_abs": 0.35181619221630744,
+    "signed_mean": 0.13072604255502154
+  },
+  {
+    "fold": 3,
+    "family": "separate_rf",
+    "trait": "signed_joint",
+    "group": "chr1",
+    "mean_abs": 0.025475575836436642,
+    "signed_mean": 0.005203547480330976
+  },
+  {
+    "fold": 3,
+    "family": "separate_rf",
+    "trait": "signed_joint",
+    "group": "chr2",
+    "mean_abs": 0.07215385202956857,
+    "signed_mean": 0.009814113953438232
+  },
+  {
+    "fold": 3,
+    "family": "separate_rf",
+    "trait": "signed_joint",
+    "group": "chr3",
+    "mean_abs": 0.037952393148875024,
+    "signed_mean": 0.009831787630023757
+  },
+  {
+    "fold": 3,
+    "family": "separate_rf",
+    "trait": "signed_joint",
+    "group": "chr4",
+    "mean_abs": 0.025612571788417235,
+    "signed_mean": 0.0022736074215245193
+  },
+  {
+    "fold": 3,
+    "family": "separate_rf",
+    "trait": "signed_joint",
+    "group": "chr5",
+    "mean_abs": 0.03971867476352949,
+    "signed_mean": 0.013791642065355422
+  },
+  {
+    "fold": 3,
+    "family": "joint_rf",
+    "trait": "delta_13C",
+    "group": "chr1",
+    "mean_abs": 0.09246072074052196,
+    "signed_mean": 0.04999885062967537
+  },
+  {
+    "fold": 3,
+    "family": "joint_rf",
+    "trait": "delta_13C",
+    "group": "chr2",
+    "mean_abs": 0.18435315003034003,
+    "signed_mean": 0.015805510185249297
+  },
+  {
+    "fold": 3,
+    "family": "joint_rf",
+    "trait": "delta_13C",
+    "group": "chr3",
+    "mean_abs": 0.06289255498230056,
+    "signed_mean": -0.005728169315118422
+  },
+  {
+    "fold": 3,
+    "family": "joint_rf",
+    "trait": "delta_13C",
+    "group": "chr4",
+    "mean_abs": 0.06302695280759309,
+    "signed_mean": -0.0065640383258747425
+  },
+  {
+    "fold": 3,
+    "family": "joint_rf",
+    "trait": "delta_13C",
+    "group": "chr5",
+    "mean_abs": 0.06604118444477207,
+    "signed_mean": 0.04336247686650629
+  },
+  {
+    "fold": 3,
+    "family": "joint_rf",
+    "trait": "stomata_density",
+    "group": "chr1",
+    "mean_abs": 1.1371475582939736,
+    "signed_mean": 0.26360837838851436
+  },
+  {
+    "fold": 3,
+    "family": "joint_rf",
+    "trait": "stomata_density",
+    "group": "chr2",
+    "mean_abs": 1.551452278146212,
+    "signed_mean": -0.15967060677500983
+  },
+  {
+    "fold": 3,
+    "family": "joint_rf",
+    "trait": "stomata_density",
+    "group": "chr3",
+    "mean_abs": 1.2464415056356075,
+    "signed_mean": 0.15324374286556522
+  },
+  {
+    "fold": 3,
+    "family": "joint_rf",
+    "trait": "stomata_density",
+    "group": "chr4",
+    "mean_abs": 0.6103427270161698,
+    "signed_mean": -0.35990504256310285
+  },
+  {
+    "fold": 3,
+    "family": "joint_rf",
+    "trait": "stomata_density",
+    "group": "chr5",
+    "mean_abs": 1.2205342483453938,
+    "signed_mean": -0.42828345172978816
+  },
+  {
+    "fold": 3,
+    "family": "joint_rf",
+    "trait": "stomatasize",
+    "group": "chr1",
+    "mean_abs": 0.4693026266364634,
+    "signed_mean": -0.1238105966300961
+  },
+  {
+    "fold": 3,
+    "family": "joint_rf",
+    "trait": "stomatasize",
+    "group": "chr2",
+    "mean_abs": 0.42795549441180397,
+    "signed_mean": 0.03177717287491434
+  },
+  {
+    "fold": 3,
+    "family": "joint_rf",
+    "trait": "stomatasize",
+    "group": "chr3",
+    "mean_abs": 0.7487732176075493,
+    "signed_mean": 0.09807532351512713
+  },
+  {
+    "fold": 3,
+    "family": "joint_rf",
+    "trait": "stomatasize",
+    "group": "chr4",
+    "mean_abs": 0.2230338953857121,
+    "signed_mean": 0.13910049370548616
+  },
+  {
+    "fold": 3,
+    "family": "joint_rf",
+    "trait": "stomatasize",
+    "group": "chr5",
+    "mean_abs": 0.30965042039621277,
+    "signed_mean": 0.07856461730703122
+  },
+  {
+    "fold": 3,
+    "family": "joint_rf",
+    "trait": "signed_joint",
+    "group": "chr1",
+    "mean_abs": 0.02354318005155018,
+    "signed_mean": 0.012639897999625557
+  },
+  {
+    "fold": 3,
+    "family": "joint_rf",
+    "trait": "signed_joint",
+    "group": "chr2",
+    "mean_abs": 0.0572271285830425,
+    "signed_mean": 0.0035019859738678293
+  },
+  {
+    "fold": 3,
+    "family": "joint_rf",
+    "trait": "signed_joint",
+    "group": "chr3",
+    "mean_abs": 0.01691240818807149,
+    "signed_mean": 0.005660409673891466
+  },
+  {
+    "fold": 3,
+    "family": "joint_rf",
+    "trait": "signed_joint",
+    "group": "chr4",
+    "mean_abs": 0.01596704427663042,
+    "signed_mean": -0.0009521535004972779
+  },
+  {
+    "fold": 3,
+    "family": "joint_rf",
+    "trait": "signed_joint",
+    "group": "chr5",
+    "mean_abs": 0.021126122782712812,
+    "signed_mean": 0.00934505295159889
+  },
+  {
+    "fold": 3,
+    "family": "kan",
+    "trait": "delta_13C",
+    "group": "chr1",
+    "mean_abs": 0.1037110791830649,
+    "signed_mean": 0.015263493142128872
+  },
+  {
+    "fold": 3,
+    "family": "kan",
+    "trait": "delta_13C",
+    "group": "chr2",
+    "mean_abs": 0.1936531608360164,
+    "signed_mean": 0.023932312740363365
+  },
+  {
+    "fold": 3,
+    "family": "kan",
+    "trait": "delta_13C",
+    "group": "chr3",
+    "mean_abs": 0.11921552498243809,
+    "signed_mean": -0.021179490866036023
+  },
+  {
+    "fold": 3,
+    "family": "kan",
+    "trait": "delta_13C",
+    "group": "chr4",
+    "mean_abs": 0.1500093494965249,
+    "signed_mean": 0.03318138455672314
+  },
+  {
+    "fold": 3,
+    "family": "kan",
+    "trait": "delta_13C",
+    "group": "chr5",
+    "mean_abs": 0.0944688439413132,
+    "signed_mean": 0.015544521762767287
+  },
+  {
+    "fold": 3,
+    "family": "kan",
+    "trait": "stomata_density",
+    "group": "chr1",
+    "mean_abs": 0.36264475117263434,
+    "signed_mean": 0.2087060728310994
+  },
+  {
+    "fold": 3,
+    "family": "kan",
+    "trait": "stomata_density",
+    "group": "chr2",
+    "mean_abs": 0.40903750619806445,
+    "signed_mean": -0.02794710464602503
+  },
+  {
+    "fold": 3,
+    "family": "kan",
+    "trait": "stomata_density",
+    "group": "chr3",
+    "mean_abs": 0.43935799464177866,
+    "signed_mean": 0.047704840692697516
+  },
+  {
+    "fold": 3,
+    "family": "kan",
+    "trait": "stomata_density",
+    "group": "chr4",
+    "mean_abs": 0.7225688304800534,
+    "signed_mean": -0.3589612193621197
+  },
+  {
+    "fold": 3,
+    "family": "kan",
+    "trait": "stomata_density",
+    "group": "chr5",
+    "mean_abs": 0.45011214198642047,
+    "signed_mean": -0.005478215181972467
+  },
+  {
+    "fold": 3,
+    "family": "kan",
+    "trait": "stomatasize",
+    "group": "chr1",
+    "mean_abs": 0.2959970805192206,
+    "signed_mean": 0.004862021364818649
+  },
+  {
+    "fold": 3,
+    "family": "kan",
+    "trait": "stomatasize",
+    "group": "chr2",
+    "mean_abs": 0.13959026749601183,
+    "signed_mean": -0.05473484659483503
+  },
+  {
+    "fold": 3,
+    "family": "kan",
+    "trait": "stomatasize",
+    "group": "chr3",
+    "mean_abs": 0.5048764085898533,
+    "signed_mean": -0.013671287644623956
+  },
+  {
+    "fold": 3,
+    "family": "kan",
+    "trait": "stomatasize",
+    "group": "chr4",
+    "mean_abs": 0.29935141714399144,
+    "signed_mean": -0.09589521394152727
+  },
+  {
+    "fold": 3,
+    "family": "kan",
+    "trait": "stomatasize",
+    "group": "chr5",
+    "mean_abs": 0.23448456850891145,
+    "signed_mean": 0.044899207204094176
+  },
+  {
+    "fold": 3,
+    "family": "kan",
+    "trait": "signed_joint",
+    "group": "chr1",
+    "mean_abs": 0.02651906396921356,
+    "signed_mean": 0.008044297295148188
+  },
+  {
+    "fold": 3,
+    "family": "kan",
+    "trait": "signed_joint",
+    "group": "chr2",
+    "mean_abs": 0.05371078052344195,
+    "signed_mean": 0.0037543842560291353
+  },
+  {
+    "fold": 3,
+    "family": "kan",
+    "trait": "signed_joint",
+    "group": "chr3",
+    "mean_abs": 0.02991732431428565,
+    "signed_mean": -0.005991546293104214
+  },
+  {
+    "fold": 3,
+    "family": "kan",
+    "trait": "signed_joint",
+    "group": "chr4",
+    "mean_abs": 0.04053907044804972,
+    "signed_mean": -0.0010061828185893985
+  },
+  {
+    "fold": 3,
+    "family": "kan",
+    "trait": "signed_joint",
+    "group": "chr5",
+    "mean_abs": 0.03415481937766997,
+    "signed_mean": 0.006588801784526506
+  },
+  {
+    "fold": 4,
+    "family": "separate_rf",
+    "trait": "delta_13C",
+    "group": "chr1",
+    "mean_abs": 0.143072057028749,
+    "signed_mean": -0.07853124222548648
+  },
+  {
+    "fold": 4,
+    "family": "separate_rf",
+    "trait": "delta_13C",
+    "group": "chr2",
+    "mean_abs": 0.1326803863572552,
+    "signed_mean": -0.05114211804449182
+  },
+  {
+    "fold": 4,
+    "family": "separate_rf",
+    "trait": "delta_13C",
+    "group": "chr3",
+    "mean_abs": 0.07698445862252769,
+    "signed_mean": -0.03408517986351844
+  },
+  {
+    "fold": 4,
+    "family": "separate_rf",
+    "trait": "delta_13C",
+    "group": "chr4",
+    "mean_abs": 0.06660564548457495,
+    "signed_mean": 0.009180953159988922
+  },
+  {
+    "fold": 4,
+    "family": "separate_rf",
+    "trait": "delta_13C",
+    "group": "chr5",
+    "mean_abs": 0.08600328269621085,
+    "signed_mean": -0.021930235345293453
+  },
+  {
+    "fold": 4,
+    "family": "separate_rf",
+    "trait": "stomata_density",
+    "group": "chr1",
+    "mean_abs": 1.2170701537075634,
+    "signed_mean": -0.8782127889916693
+  },
+  {
+    "fold": 4,
+    "family": "separate_rf",
+    "trait": "stomata_density",
+    "group": "chr2",
+    "mean_abs": 2.062907841369716,
+    "signed_mean": -1.1889464378485073
+  },
+  {
+    "fold": 4,
+    "family": "separate_rf",
+    "trait": "stomata_density",
+    "group": "chr3",
+    "mean_abs": 3.936675376655993,
+    "signed_mean": -2.8832644001647183
+  },
+  {
+    "fold": 4,
+    "family": "separate_rf",
+    "trait": "stomata_density",
+    "group": "chr4",
+    "mean_abs": 1.334367893201157,
+    "signed_mean": -0.7943137138020899
+  },
+  {
+    "fold": 4,
+    "family": "separate_rf",
+    "trait": "stomata_density",
+    "group": "chr5",
+    "mean_abs": 1.7404185541241992,
+    "signed_mean": -1.0642979609024577
+  },
+  {
+    "fold": 4,
+    "family": "separate_rf",
+    "trait": "stomatasize",
+    "group": "chr1",
+    "mean_abs": 0.296248324361431,
+    "signed_mean": 0.11949989911746624
+  },
+  {
+    "fold": 4,
+    "family": "separate_rf",
+    "trait": "stomatasize",
+    "group": "chr2",
+    "mean_abs": 0.5616579442673639,
+    "signed_mean": 0.25365175081860314
+  },
+  {
+    "fold": 4,
+    "family": "separate_rf",
+    "trait": "stomatasize",
+    "group": "chr3",
+    "mean_abs": 1.1044842635433472,
+    "signed_mean": 0.7693893565210941
+  },
+  {
+    "fold": 4,
+    "family": "separate_rf",
+    "trait": "stomatasize",
+    "group": "chr4",
+    "mean_abs": 0.4301748113562316,
+    "signed_mean": 0.23152384542010396
+  },
+  {
+    "fold": 4,
+    "family": "separate_rf",
+    "trait": "stomatasize",
+    "group": "chr5",
+    "mean_abs": 0.7449599351778744,
+    "signed_mean": 0.5150270119487765
+  },
+  {
+    "fold": 4,
+    "family": "separate_rf",
+    "trait": "signed_joint",
+    "group": "chr1",
+    "mean_abs": 0.04191291829253565,
+    "signed_mean": -0.029677207137701486
+  },
+  {
+    "fold": 4,
+    "family": "separate_rf",
+    "trait": "signed_joint",
+    "group": "chr2",
+    "mean_abs": 0.039563870159111975,
+    "signed_mean": -0.020336102966248888
+  },
+  {
+    "fold": 4,
+    "family": "separate_rf",
+    "trait": "signed_joint",
+    "group": "chr3",
+    "mean_abs": 0.04364263589947067,
+    "signed_mean": -0.01675260417744187
+  },
+  {
+    "fold": 4,
+    "family": "separate_rf",
+    "trait": "signed_joint",
+    "group": "chr4",
+    "mean_abs": 0.025358817407828794,
+    "signed_mean": 0.001507127392618507
+  },
+  {
+    "fold": 4,
+    "family": "separate_rf",
+    "trait": "signed_joint",
+    "group": "chr5",
+    "mean_abs": 0.03256688164463187,
+    "signed_mean": 0.0025263574824729833
+  },
+  {
+    "fold": 4,
+    "family": "joint_rf",
+    "trait": "delta_13C",
+    "group": "chr1",
+    "mean_abs": 0.10541046625431874,
+    "signed_mean": -0.05961108581928192
+  },
+  {
+    "fold": 4,
+    "family": "joint_rf",
+    "trait": "delta_13C",
+    "group": "chr2",
+    "mean_abs": 0.10594024670139643,
+    "signed_mean": -0.034156826160781896
+  },
+  {
+    "fold": 4,
+    "family": "joint_rf",
+    "trait": "delta_13C",
+    "group": "chr3",
+    "mean_abs": 0.08539007359932788,
+    "signed_mean": -0.045504998680845635
+  },
+  {
+    "fold": 4,
+    "family": "joint_rf",
+    "trait": "delta_13C",
+    "group": "chr4",
+    "mean_abs": 0.042579967006272736,
+    "signed_mean": -0.0014920112856358764
+  },
+  {
+    "fold": 4,
+    "family": "joint_rf",
+    "trait": "delta_13C",
+    "group": "chr5",
+    "mean_abs": 0.07039359910842055,
+    "signed_mean": -0.0066760650126027965
+  },
+  {
+    "fold": 4,
+    "family": "joint_rf",
+    "trait": "stomata_density",
+    "group": "chr1",
+    "mean_abs": 1.049278583314552,
+    "signed_mean": -0.7572034947197823
+  },
+  {
+    "fold": 4,
+    "family": "joint_rf",
+    "trait": "stomata_density",
+    "group": "chr2",
+    "mean_abs": 1.7406347057029334,
+    "signed_mean": -0.8945817981543533
+  },
+  {
+    "fold": 4,
+    "family": "joint_rf",
+    "trait": "stomata_density",
+    "group": "chr3",
+    "mean_abs": 3.182856645187273,
+    "signed_mean": -2.4815550511287996
+  },
+  {
+    "fold": 4,
+    "family": "joint_rf",
+    "trait": "stomata_density",
+    "group": "chr4",
+    "mean_abs": 1.1175578203869359,
+    "signed_mean": -0.7404879427512525
+  },
+  {
+    "fold": 4,
+    "family": "joint_rf",
+    "trait": "stomata_density",
+    "group": "chr5",
+    "mean_abs": 1.5085558502672436,
+    "signed_mean": -1.014912835534084
+  },
+  {
+    "fold": 4,
+    "family": "joint_rf",
+    "trait": "stomatasize",
+    "group": "chr1",
+    "mean_abs": 0.3205528735407618,
+    "signed_mean": 0.20568231619880742
+  },
+  {
+    "fold": 4,
+    "family": "joint_rf",
+    "trait": "stomatasize",
+    "group": "chr2",
+    "mean_abs": 0.488367041669061,
+    "signed_mean": 0.26567452900456234
+  },
+  {
+    "fold": 4,
+    "family": "joint_rf",
+    "trait": "stomatasize",
+    "group": "chr3",
+    "mean_abs": 1.0409686720243765,
+    "signed_mean": 0.809685696326727
+  },
+  {
+    "fold": 4,
+    "family": "joint_rf",
+    "trait": "stomatasize",
+    "group": "chr4",
+    "mean_abs": 0.35447228045547813,
+    "signed_mean": 0.239601892059881
+  },
+  {
+    "fold": 4,
+    "family": "joint_rf",
+    "trait": "stomatasize",
+    "group": "chr5",
+    "mean_abs": 0.5480812958460098,
+    "signed_mean": 0.3820282780609881
+  },
+  {
+    "fold": 4,
+    "family": "joint_rf",
+    "trait": "signed_joint",
+    "group": "chr1",
+    "mean_abs": 0.028716796675662588,
+    "signed_mean": -0.018310322024659202
+  },
+  {
+    "fold": 4,
+    "family": "joint_rf",
+    "trait": "signed_joint",
+    "group": "chr2",
+    "mean_abs": 0.02664480579107363,
+    "signed_mean": -0.010435862575437159
+  },
+  {
+    "fold": 4,
+    "family": "joint_rf",
+    "trait": "signed_joint",
+    "group": "chr3",
+    "mean_abs": 0.025182305207705737,
+    "signed_mean": -0.011694407355622329
+  },
+  {
+    "fold": 4,
+    "family": "joint_rf",
+    "trait": "signed_joint",
+    "group": "chr4",
+    "mean_abs": 0.013350891607314664,
+    "signed_mean": -0.0002265516960817829
+  },
+  {
+    "fold": 4,
+    "family": "joint_rf",
+    "trait": "signed_joint",
+    "group": "chr5",
+    "mean_abs": 0.020257878168465044,
+    "signed_mean": 0.0010271098064661202
+  },
+  {
+    "fold": 4,
+    "family": "kan",
+    "trait": "delta_13C",
+    "group": "chr1",
+    "mean_abs": 0.18150547390150143,
+    "signed_mean": -0.09017179462283414
+  },
+  {
+    "fold": 4,
+    "family": "kan",
+    "trait": "delta_13C",
+    "group": "chr2",
+    "mean_abs": 0.19101469844654803,
+    "signed_mean": -0.021366043954508827
+  },
+  {
+    "fold": 4,
+    "family": "kan",
+    "trait": "delta_13C",
+    "group": "chr3",
+    "mean_abs": 0.13176417313832048,
+    "signed_mean": -0.01717929852829345
+  },
+  {
+    "fold": 4,
+    "family": "kan",
+    "trait": "delta_13C",
+    "group": "chr4",
+    "mean_abs": 0.10510577574382748,
+    "signed_mean": 0.030176865678606224
+  },
+  {
+    "fold": 4,
+    "family": "kan",
+    "trait": "delta_13C",
+    "group": "chr5",
+    "mean_abs": 0.1503130013770763,
+    "signed_mean": 0.04368786670745833
+  },
+  {
+    "fold": 4,
+    "family": "kan",
+    "trait": "stomata_density",
+    "group": "chr1",
+    "mean_abs": 3.2667006408304586,
+    "signed_mean": -1.5283505418953884
+  },
+  {
+    "fold": 4,
+    "family": "kan",
+    "trait": "stomata_density",
+    "group": "chr2",
+    "mean_abs": 3.6779717169042185,
+    "signed_mean": -1.955766427840436
+  },
+  {
+    "fold": 4,
+    "family": "kan",
+    "trait": "stomata_density",
+    "group": "chr3",
+    "mean_abs": 5.855242941500158,
+    "signed_mean": -3.2626741348583117
+  },
+  {
+    "fold": 4,
+    "family": "kan",
+    "trait": "stomata_density",
+    "group": "chr4",
+    "mean_abs": 3.327275394946776,
+    "signed_mean": -1.0091124664071462
+  },
+  {
+    "fold": 4,
+    "family": "kan",
+    "trait": "stomata_density",
+    "group": "chr5",
+    "mean_abs": 5.00109806950944,
+    "signed_mean": -2.8448678676647656
+  },
+  {
+    "fold": 4,
+    "family": "kan",
+    "trait": "stomatasize",
+    "group": "chr1",
+    "mean_abs": 1.387266801874659,
+    "signed_mean": 0.3594945348145511
+  },
+  {
+    "fold": 4,
+    "family": "kan",
+    "trait": "stomatasize",
+    "group": "chr2",
+    "mean_abs": 1.7874285051900543,
+    "signed_mean": 0.7918510528094477
+  },
+  {
+    "fold": 4,
+    "family": "kan",
+    "trait": "stomatasize",
+    "group": "chr3",
+    "mean_abs": 2.1426447680032656,
+    "signed_mean": 0.7822587218141785
+  },
+  {
+    "fold": 4,
+    "family": "kan",
+    "trait": "stomatasize",
+    "group": "chr4",
+    "mean_abs": 2.200970646894873,
+    "signed_mean": 1.259434987726956
+  },
+  {
+    "fold": 4,
+    "family": "kan",
+    "trait": "stomatasize",
+    "group": "chr5",
+    "mean_abs": 1.852960582430034,
+    "signed_mean": 1.345727974543253
+  },
+  {
+    "fold": 4,
+    "family": "kan",
+    "trait": "signed_joint",
+    "group": "chr1",
+    "mean_abs": 0.09923289161542896,
+    "signed_mean": -0.03129855299488467
+  },
+  {
+    "fold": 4,
+    "family": "kan",
+    "trait": "signed_joint",
+    "group": "chr2",
+    "mean_abs": 0.07471221346154223,
+    "signed_mean": 0.002340621671830726
+  },
+  {
+    "fold": 4,
+    "family": "kan",
+    "trait": "signed_joint",
+    "group": "chr3",
+    "mean_abs": 0.08486049325865273,
+    "signed_mean": -0.01733478910942521
+  },
+  {
+    "fold": 4,
+    "family": "kan",
+    "trait": "signed_joint",
+    "group": "chr4",
+    "mean_abs": 0.11903531503576963,
+    "signed_mean": 0.054320620351669444
+  },
+  {
+    "fold": 4,
+    "family": "kan",
+    "trait": "signed_joint",
+    "group": "chr5",
+    "mean_abs": 0.07905046508065619,
+    "signed_mean": 0.033689534485927826
+  },
+  {
+    "fold": 5,
+    "family": "separate_rf",
+    "trait": "delta_13C",
+    "group": "chr1",
+    "mean_abs": 0.06834865448341228,
+    "signed_mean": -0.032502112666245336
+  },
+  {
+    "fold": 5,
+    "family": "separate_rf",
+    "trait": "delta_13C",
+    "group": "chr2",
+    "mean_abs": 0.12470338611073367,
+    "signed_mean": -0.08717719045179086
+  },
+  {
+    "fold": 5,
+    "family": "separate_rf",
+    "trait": "delta_13C",
+    "group": "chr3",
+    "mean_abs": 0.1411751657956455,
+    "signed_mean": 0.004254607633189657
+  },
+  {
+    "fold": 5,
+    "family": "separate_rf",
+    "trait": "delta_13C",
+    "group": "chr4",
+    "mean_abs": 0.16226803472185883,
+    "signed_mean": -0.070258533538127
+  },
+  {
+    "fold": 5,
+    "family": "separate_rf",
+    "trait": "delta_13C",
+    "group": "chr5",
+    "mean_abs": 0.13166717345004553,
+    "signed_mean": -0.08388244036874128
+  },
+  {
+    "fold": 5,
+    "family": "separate_rf",
+    "trait": "stomata_density",
+    "group": "chr1",
+    "mean_abs": 1.8296664946575394,
+    "signed_mean": -1.134107047345392
+  },
+  {
+    "fold": 5,
+    "family": "separate_rf",
+    "trait": "stomata_density",
+    "group": "chr2",
+    "mean_abs": 1.214482571342171,
+    "signed_mean": -0.39443206609814785
+  },
+  {
+    "fold": 5,
+    "family": "separate_rf",
+    "trait": "stomata_density",
+    "group": "chr3",
+    "mean_abs": 1.4781609681409573,
+    "signed_mean": -0.819771695156829
+  },
+  {
+    "fold": 5,
+    "family": "separate_rf",
+    "trait": "stomata_density",
+    "group": "chr4",
+    "mean_abs": 0.8836481156502566,
+    "signed_mean": -0.31656520231768626
+  },
+  {
+    "fold": 5,
+    "family": "separate_rf",
+    "trait": "stomata_density",
+    "group": "chr5",
+    "mean_abs": 2.8717551203004645,
+    "signed_mean": -0.1958736943563374
+  },
+  {
+    "fold": 5,
+    "family": "separate_rf",
+    "trait": "stomatasize",
+    "group": "chr1",
+    "mean_abs": 0.28535292077702934,
+    "signed_mean": 0.19240546372617812
+  },
+  {
+    "fold": 5,
+    "family": "separate_rf",
+    "trait": "stomatasize",
+    "group": "chr2",
+    "mean_abs": 0.34788986398608546,
+    "signed_mean": -0.04249022020553397
+  },
+  {
+    "fold": 5,
+    "family": "separate_rf",
+    "trait": "stomatasize",
+    "group": "chr3",
+    "mean_abs": 0.6310551762091423,
+    "signed_mean": -0.11446872894782328
+  },
+  {
+    "fold": 5,
+    "family": "separate_rf",
+    "trait": "stomatasize",
+    "group": "chr4",
+    "mean_abs": 0.20862911058569594,
+    "signed_mean": -0.0040069333428260105
+  },
+  {
+    "fold": 5,
+    "family": "separate_rf",
+    "trait": "stomatasize",
+    "group": "chr5",
+    "mean_abs": 0.34301592608148246,
+    "signed_mean": 0.10823611622267491
+  },
+  {
+    "fold": 5,
+    "family": "separate_rf",
+    "trait": "signed_joint",
+    "group": "chr1",
+    "mean_abs": 0.03116245228809084,
+    "signed_mean": -0.0166678608807586
+  },
+  {
+    "fold": 5,
+    "family": "separate_rf",
+    "trait": "signed_joint",
+    "group": "chr2",
+    "mean_abs": 0.03939690289762387,
+    "signed_mean": -0.03218636507570346
+  },
+  {
+    "fold": 5,
+    "family": "separate_rf",
+    "trait": "signed_joint",
+    "group": "chr3",
+    "mean_abs": 0.03740445909802101,
+    "signed_mean": -0.017414041295031567
+  },
+  {
+    "fold": 5,
+    "family": "separate_rf",
+    "trait": "signed_joint",
+    "group": "chr4",
+    "mean_abs": 0.04429157660886479,
+    "signed_mean": -0.024372636263559705
+  },
+  {
+    "fold": 5,
+    "family": "separate_rf",
+    "trait": "signed_joint",
+    "group": "chr5",
+    "mean_abs": 0.052285427040736666,
+    "signed_mean": -0.020491032566363743
+  },
+  {
+    "fold": 5,
+    "family": "joint_rf",
+    "trait": "delta_13C",
+    "group": "chr1",
+    "mean_abs": 0.05228738060858016,
+    "signed_mean": -0.023583034436396925
+  },
+  {
+    "fold": 5,
+    "family": "joint_rf",
+    "trait": "delta_13C",
+    "group": "chr2",
+    "mean_abs": 0.11412271572115253,
+    "signed_mean": -0.07839137382499711
+  },
+  {
+    "fold": 5,
+    "family": "joint_rf",
+    "trait": "delta_13C",
+    "group": "chr3",
+    "mean_abs": 0.12633091131629742,
+    "signed_mean": -0.005815557556993072
+  },
+  {
+    "fold": 5,
+    "family": "joint_rf",
+    "trait": "delta_13C",
+    "group": "chr4",
+    "mean_abs": 0.11532292341386098,
+    "signed_mean": -0.04761776399901553
+  },
+  {
+    "fold": 5,
+    "family": "joint_rf",
+    "trait": "delta_13C",
+    "group": "chr5",
+    "mean_abs": 0.12022449369297196,
+    "signed_mean": -0.07442759337393387
+  },
+  {
+    "fold": 5,
+    "family": "joint_rf",
+    "trait": "stomata_density",
+    "group": "chr1",
+    "mean_abs": 1.0620849097106277,
+    "signed_mean": -0.5805944760615617
+  },
+  {
+    "fold": 5,
+    "family": "joint_rf",
+    "trait": "stomata_density",
+    "group": "chr2",
+    "mean_abs": 1.039886673371948,
+    "signed_mean": -0.213317658061764
+  },
+  {
+    "fold": 5,
+    "family": "joint_rf",
+    "trait": "stomata_density",
+    "group": "chr3",
+    "mean_abs": 1.4243086495847175,
+    "signed_mean": -0.5588872032691614
+  },
+  {
+    "fold": 5,
+    "family": "joint_rf",
+    "trait": "stomata_density",
+    "group": "chr4",
+    "mean_abs": 1.000248457260972,
+    "signed_mean": -0.38905271421547905
+  },
+  {
+    "fold": 5,
+    "family": "joint_rf",
+    "trait": "stomata_density",
+    "group": "chr5",
+    "mean_abs": 2.36004601265787,
+    "signed_mean": -0.368315936701488
+  },
+  {
+    "fold": 5,
+    "family": "joint_rf",
+    "trait": "stomatasize",
+    "group": "chr1",
+    "mean_abs": 0.2117923072049158,
+    "signed_mean": 0.13517665900145578
+  },
+  {
+    "fold": 5,
+    "family": "joint_rf",
+    "trait": "stomatasize",
+    "group": "chr2",
+    "mean_abs": 0.3056123486488661,
+    "signed_mean": 0.009596409752695668
+  },
+  {
+    "fold": 5,
+    "family": "joint_rf",
+    "trait": "stomatasize",
+    "group": "chr3",
+    "mean_abs": 0.5228524386259868,
+    "signed_mean": 0.004085591095296916
+  },
+  {
+    "fold": 5,
+    "family": "joint_rf",
+    "trait": "stomatasize",
+    "group": "chr4",
+    "mean_abs": 0.24146353042137422,
+    "signed_mean": 0.03129780545213912
+  },
+  {
+    "fold": 5,
+    "family": "joint_rf",
+    "trait": "stomatasize",
+    "group": "chr5",
+    "mean_abs": 0.46188553011345274,
+    "signed_mean": 0.17100296264653306
+  },
+  {
+    "fold": 5,
+    "family": "joint_rf",
+    "trait": "signed_joint",
+    "group": "chr1",
+    "mean_abs": 0.01650253792650008,
+    "signed_mean": -0.008559681857438143
+  },
+  {
+    "fold": 5,
+    "family": "joint_rf",
+    "trait": "signed_joint",
+    "group": "chr2",
+    "mean_abs": 0.0312528860446739,
+    "signed_mean": -0.024302932435765444
+  },
+  {
+    "fold": 5,
+    "family": "joint_rf",
+    "trait": "signed_joint",
+    "group": "chr3",
+    "mean_abs": 0.031733201320162135,
+    "signed_mean": -0.010059652362370683
+  },
+  {
+    "fold": 5,
+    "family": "joint_rf",
+    "trait": "signed_joint",
+    "group": "chr4",
+    "mean_abs": 0.03034068788766289,
+    "signed_mean": -0.017487158467179787
+  },
+  {
+    "fold": 5,
+    "family": "joint_rf",
+    "trait": "signed_joint",
+    "group": "chr5",
+    "mean_abs": 0.03739566453724505,
+    "signed_mean": -0.0173657366992579
+  },
+  {
+    "fold": 5,
+    "family": "kan",
+    "trait": "delta_13C",
+    "group": "chr1",
+    "mean_abs": 0.13437761061276285,
+    "signed_mean": -0.04389970285661577
+  },
+  {
+    "fold": 5,
+    "family": "kan",
+    "trait": "delta_13C",
+    "group": "chr2",
+    "mean_abs": 0.21129358161985523,
+    "signed_mean": -0.1153169982430514
+  },
+  {
+    "fold": 5,
+    "family": "kan",
+    "trait": "delta_13C",
+    "group": "chr3",
+    "mean_abs": 0.16566693912220032,
+    "signed_mean": 0.04340508733381761
+  },
+  {
+    "fold": 5,
+    "family": "kan",
+    "trait": "delta_13C",
+    "group": "chr4",
+    "mean_abs": 0.1450020601106693,
+    "signed_mean": -0.07244164099948229
+  },
+  {
+    "fold": 5,
+    "family": "kan",
+    "trait": "delta_13C",
+    "group": "chr5",
+    "mean_abs": 0.17906850971868002,
+    "signed_mean": -0.08649956377813293
+  },
+  {
+    "fold": 5,
+    "family": "kan",
+    "trait": "stomata_density",
+    "group": "chr1",
+    "mean_abs": 0.5860142588733478,
+    "signed_mean": -0.2202754939198494
+  },
+  {
+    "fold": 5,
+    "family": "kan",
+    "trait": "stomata_density",
+    "group": "chr2",
+    "mean_abs": 0.4448681595896257,
+    "signed_mean": 0.007240551196013346
+  },
+  {
+    "fold": 5,
+    "family": "kan",
+    "trait": "stomata_density",
+    "group": "chr3",
+    "mean_abs": 0.7707224613921275,
+    "signed_mean": 0.28586781710255066
+  },
+  {
+    "fold": 5,
+    "family": "kan",
+    "trait": "stomata_density",
+    "group": "chr4",
+    "mean_abs": 0.5722198407503944,
+    "signed_mean": 0.2589701250390098
+  },
+  {
+    "fold": 5,
+    "family": "kan",
+    "trait": "stomata_density",
+    "group": "chr5",
+    "mean_abs": 1.2448576231329318,
+    "signed_mean": -0.21655178434554917
+  },
+  {
+    "fold": 5,
+    "family": "kan",
+    "trait": "stomatasize",
+    "group": "chr1",
+    "mean_abs": 0.0707620729204764,
+    "signed_mean": 0.0028032598453113415
+  },
+  {
+    "fold": 5,
+    "family": "kan",
+    "trait": "stomatasize",
+    "group": "chr2",
+    "mean_abs": 0.10810096812486295,
+    "signed_mean": -0.02849061788050274
+  },
+  {
+    "fold": 5,
+    "family": "kan",
+    "trait": "stomatasize",
+    "group": "chr3",
+    "mean_abs": 0.15573610732337162,
+    "signed_mean": -0.03018935737870758
+  },
+  {
+    "fold": 5,
+    "family": "kan",
+    "trait": "stomatasize",
+    "group": "chr4",
+    "mean_abs": 0.1272950334658907,
+    "signed_mean": 0.001385746587309561
+  },
+  {
+    "fold": 5,
+    "family": "kan",
+    "trait": "stomatasize",
+    "group": "chr5",
+    "mean_abs": 0.18350919559393297,
+    "signed_mean": 0.11546374220048725
+  },
+  {
+    "fold": 5,
+    "family": "kan",
+    "trait": "signed_joint",
+    "group": "chr1",
+    "mean_abs": 0.04170423075752358,
+    "signed_mean": -0.01530616385616691
+  },
+  {
+    "fold": 5,
+    "family": "kan",
+    "trait": "signed_joint",
+    "group": "chr2",
+    "mean_abs": 0.061037108548895457,
+    "signed_mean": -0.032947111198429656
+  },
+  {
+    "fold": 5,
+    "family": "kan",
+    "trait": "signed_joint",
+    "group": "chr3",
+    "mean_abs": 0.05660185907972399,
+    "signed_mean": 0.0147877844091459
+  },
+  {
+    "fold": 5,
+    "family": "kan",
+    "trait": "signed_joint",
+    "group": "chr4",
+    "mean_abs": 0.03906526185953625,
+    "signed_mean": -0.015761706640421907
+  },
+  {
+    "fold": 5,
+    "family": "kan",
+    "trait": "signed_joint",
+    "group": "chr5",
+    "mean_abs": 0.0598821393499336,
+    "signed_mean": -0.021159472203492652
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "run_fingerprint": "43aaab212dbd243bbc226c7cce7e52e966ebbe41e95259c40482a77aa0f3bd62",
+  "artifacts": {
+    "delta_13C.pt": "2ddf0e3157a3170ebb4c0504d6dcdf48356301bb2cfb17517d4785ecb4714a8c",
+    "stomata_density.pt": "e697fa97e3f78551fd164a9f17b91f73a291fffe4e3796d48814c63acb7e7b77",
+    "stomatasize.pt": "08e462ab3bd30ff23f7dc00f364fcc14394af3d85879d91cd5a185a875c98475",
+    "training.json": "364c1e713b96ba25e0c88d1770c374999a5d8cd07202bc25c1572dfe7a3d22f8",
+    "preprocessing.json": "c1c1ca9318925d9819fe30a1683cc5b7d42e979b1b32303157043ed3f637f559",
+    "evaluation.npz": "d22a328816b0577258314dd5115b4d8f18eae7f1f3beb978bb43c7d55234f3b4",
+    "metrics.json": "9442a1a0cd76c353a8970279c33013d17bd2071443d2f184dc7b61972adb9947"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "run_fingerprint": "43aaab212dbd243bbc226c7cce7e52e966ebbe41e95259c40482a77aa0f3bd62",
+  "artifacts": {
+    "models.joblib": "091ec86ddce56374e5a4a907675a8b797b1a0e1abcd5a0d3d61aac422884d930",
+    "preprocessing.json": "05d1fe7eb36006482c50d22dab6cdb9fe2c3e377758094e6d9ff386c13cb680e",
+    "evaluation.npz": "0d37bb1929c48989a48b0c1b9e5ca6d7658b6212e4130d4f08ce2059d021b09b",
+    "metrics.json": "493a7de9155b413b4813108f5f237a72dfffed9d921fc4001e4db3b71b3fa2ea"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "fold": 2,
+  "family": "separate_rf",
+  "traits": {
+    "delta_13C": {
+      "r2": 0.19818164629247648,
+      "rmse": 0.9557124100278404,
+      "n": 62
+    },
+    "stomata_density": {
+      "r2": 0.11903560709463457,
+      "rmse": 17.969041380443254,
+      "n": 62
+    },
+    "stomatasize": {
+      "r2": 0.02417516535306119,
+      "rmse": 6.128137959002711,
+      "n": 62
+    }
+  },
+  "mean_trait_r2": 0.11379747291339075,
+  "baseline": {
+    "delta_13C": {
+      "r2": -0.006283401564268543,
+      "rmse": 1.0706545905975098,
+      "n": 62
+    },
+    "stomata_density": {
+      "r2": -0.11850740890003153,
+      "rmse": 20.247208901654133,
+      "n": 62
+    },
+    "stomatasize": {
+      "r2": -0.04471452815616117,
+      "rmse": 6.340761492180421,
+      "n": 62
+    }
+  },
+  "fit_seconds": 2.770778493024409,
+  "explanation_seconds": 2.3696615899680182,
+  "efficiency_error": 3.552713678800501e-15,
+  "explanation_count": 62,
+  "background_count": 20,
+  "coalition_count": 32,
+  "attribution_units": "native phenotype units; joint game in training-standardized units"
+}

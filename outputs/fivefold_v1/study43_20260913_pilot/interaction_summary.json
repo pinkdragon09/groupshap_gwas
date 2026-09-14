@@ -1,0 +1,962 @@
+[
+  {
+    "family": "joint_rf",
+    "trait": "delta_13C",
+    "pair": "chr1 x chr2",
+    "mean_abs": 0.028857317398029193,
+    "fold_sd": 0.010294707671638575,
+    "completed_folds": 5
+  },
+  {
+    "family": "joint_rf",
+    "trait": "delta_13C",
+    "pair": "chr1 x chr3",
+    "mean_abs": 0.027445536196026226,
+    "fold_sd": 0.011094151898182981,
+    "completed_folds": 5
+  },
+  {
+    "family": "joint_rf",
+    "trait": "delta_13C",
+    "pair": "chr1 x chr4",
+    "mean_abs": 0.01683643295097107,
+    "fold_sd": 0.0037752796703034927,
+    "completed_folds": 5
+  },
+  {
+    "family": "joint_rf",
+    "trait": "delta_13C",
+    "pair": "chr1 x chr5",
+    "mean_abs": 0.03326946947666792,
+    "fold_sd": 0.012113855496323659,
+    "completed_folds": 5
+  },
+  {
+    "family": "joint_rf",
+    "trait": "delta_13C",
+    "pair": "chr2 x chr3",
+    "mean_abs": 0.032387342047895444,
+    "fold_sd": 0.014123371881103386,
+    "completed_folds": 5
+  },
+  {
+    "family": "joint_rf",
+    "trait": "delta_13C",
+    "pair": "chr2 x chr4",
+    "mean_abs": 0.019413473896628685,
+    "fold_sd": 0.0054011191240630205,
+    "completed_folds": 5
+  },
+  {
+    "family": "joint_rf",
+    "trait": "delta_13C",
+    "pair": "chr2 x chr5",
+    "mean_abs": 0.03232329614905528,
+    "fold_sd": 0.007230945855948509,
+    "completed_folds": 5
+  },
+  {
+    "family": "joint_rf",
+    "trait": "delta_13C",
+    "pair": "chr3 x chr4",
+    "mean_abs": 0.025833116777639838,
+    "fold_sd": 0.0043842978422970495,
+    "completed_folds": 5
+  },
+  {
+    "family": "joint_rf",
+    "trait": "delta_13C",
+    "pair": "chr3 x chr5",
+    "mean_abs": 0.03613804893576174,
+    "fold_sd": 0.005941728973673926,
+    "completed_folds": 5
+  },
+  {
+    "family": "joint_rf",
+    "trait": "delta_13C",
+    "pair": "chr4 x chr5",
+    "mean_abs": 0.03306303525908389,
+    "fold_sd": 0.01321067121918851,
+    "completed_folds": 5
+  },
+  {
+    "family": "joint_rf",
+    "trait": "signed_joint",
+    "pair": "chr1 x chr2",
+    "mean_abs": 0.007570974238424101,
+    "fold_sd": 0.0033542920015868487,
+    "completed_folds": 5
+  },
+  {
+    "family": "joint_rf",
+    "trait": "signed_joint",
+    "pair": "chr1 x chr3",
+    "mean_abs": 0.009720865884490868,
+    "fold_sd": 0.0038845228023220778,
+    "completed_folds": 5
+  },
+  {
+    "family": "joint_rf",
+    "trait": "signed_joint",
+    "pair": "chr1 x chr4",
+    "mean_abs": 0.005718439026390944,
+    "fold_sd": 0.0016531071598760358,
+    "completed_folds": 5
+  },
+  {
+    "family": "joint_rf",
+    "trait": "signed_joint",
+    "pair": "chr1 x chr5",
+    "mean_abs": 0.008923597196242677,
+    "fold_sd": 0.0012511331567004302,
+    "completed_folds": 5
+  },
+  {
+    "family": "joint_rf",
+    "trait": "signed_joint",
+    "pair": "chr2 x chr3",
+    "mean_abs": 0.009519289231779625,
+    "fold_sd": 0.004107621055815727,
+    "completed_folds": 5
+  },
+  {
+    "family": "joint_rf",
+    "trait": "signed_joint",
+    "pair": "chr2 x chr4",
+    "mean_abs": 0.00669834658336056,
+    "fold_sd": 0.0026098613481677596,
+    "completed_folds": 5
+  },
+  {
+    "family": "joint_rf",
+    "trait": "signed_joint",
+    "pair": "chr2 x chr5",
+    "mean_abs": 0.009334287504328385,
+    "fold_sd": 0.0011243977299890053,
+    "completed_folds": 5
+  },
+  {
+    "family": "joint_rf",
+    "trait": "signed_joint",
+    "pair": "chr3 x chr4",
+    "mean_abs": 0.007821440045567314,
+    "fold_sd": 0.0020360733118018237,
+    "completed_folds": 5
+  },
+  {
+    "family": "joint_rf",
+    "trait": "signed_joint",
+    "pair": "chr3 x chr5",
+    "mean_abs": 0.011723052584773543,
+    "fold_sd": 0.0017137486018836575,
+    "completed_folds": 5
+  },
+  {
+    "family": "joint_rf",
+    "trait": "signed_joint",
+    "pair": "chr4 x chr5",
+    "mean_abs": 0.009196195583290328,
+    "fold_sd": 0.0038666989840084455,
+    "completed_folds": 5
+  },
+  {
+    "family": "joint_rf",
+    "trait": "stomata_density",
+    "pair": "chr1 x chr2",
+    "mean_abs": 0.322904865010361,
+    "fold_sd": 0.08224882399853028,
+    "completed_folds": 5
+  },
+  {
+    "family": "joint_rf",
+    "trait": "stomata_density",
+    "pair": "chr1 x chr3",
+    "mean_abs": 0.44681492608596163,
+    "fold_sd": 0.173907412982496,
+    "completed_folds": 5
+  },
+  {
+    "family": "joint_rf",
+    "trait": "stomata_density",
+    "pair": "chr1 x chr4",
+    "mean_abs": 0.2621441711953397,
+    "fold_sd": 0.10150735012497689,
+    "completed_folds": 5
+  },
+  {
+    "family": "joint_rf",
+    "trait": "stomata_density",
+    "pair": "chr1 x chr5",
+    "mean_abs": 0.4001752329313811,
+    "fold_sd": 0.09383418976502822,
+    "completed_folds": 5
+  },
+  {
+    "family": "joint_rf",
+    "trait": "stomata_density",
+    "pair": "chr2 x chr3",
+    "mean_abs": 0.5623365736827559,
+    "fold_sd": 0.18387716154719375,
+    "completed_folds": 5
+  },
+  {
+    "family": "joint_rf",
+    "trait": "stomata_density",
+    "pair": "chr2 x chr4",
+    "mean_abs": 0.35136045431483887,
+    "fold_sd": 0.05630117124186359,
+    "completed_folds": 5
+  },
+  {
+    "family": "joint_rf",
+    "trait": "stomata_density",
+    "pair": "chr2 x chr5",
+    "mean_abs": 0.5102041964126243,
+    "fold_sd": 0.06216667725833352,
+    "completed_folds": 5
+  },
+  {
+    "family": "joint_rf",
+    "trait": "stomata_density",
+    "pair": "chr3 x chr4",
+    "mean_abs": 0.446062621825285,
+    "fold_sd": 0.1772256016471529,
+    "completed_folds": 5
+  },
+  {
+    "family": "joint_rf",
+    "trait": "stomata_density",
+    "pair": "chr3 x chr5",
+    "mean_abs": 0.5827315626504822,
+    "fold_sd": 0.15569955558444665,
+    "completed_folds": 5
+  },
+  {
+    "family": "joint_rf",
+    "trait": "stomata_density",
+    "pair": "chr4 x chr5",
+    "mean_abs": 0.42619891191255876,
+    "fold_sd": 0.1415216113748763,
+    "completed_folds": 5
+  },
+  {
+    "family": "joint_rf",
+    "trait": "stomatasize",
+    "pair": "chr1 x chr2",
+    "mean_abs": 0.11733761798643547,
+    "fold_sd": 0.03822969623890396,
+    "completed_folds": 5
+  },
+  {
+    "family": "joint_rf",
+    "trait": "stomatasize",
+    "pair": "chr1 x chr3",
+    "mean_abs": 0.13329143953667769,
+    "fold_sd": 0.06815344972356548,
+    "completed_folds": 5
+  },
+  {
+    "family": "joint_rf",
+    "trait": "stomatasize",
+    "pair": "chr1 x chr4",
+    "mean_abs": 0.0791794330064341,
+    "fold_sd": 0.04062185646466759,
+    "completed_folds": 5
+  },
+  {
+    "family": "joint_rf",
+    "trait": "stomatasize",
+    "pair": "chr1 x chr5",
+    "mean_abs": 0.14326664030542574,
+    "fold_sd": 0.044344489716861175,
+    "completed_folds": 5
+  },
+  {
+    "family": "joint_rf",
+    "trait": "stomatasize",
+    "pair": "chr2 x chr3",
+    "mean_abs": 0.17497146961006768,
+    "fold_sd": 0.05055438505782251,
+    "completed_folds": 5
+  },
+  {
+    "family": "joint_rf",
+    "trait": "stomatasize",
+    "pair": "chr2 x chr4",
+    "mean_abs": 0.1138153989586371,
+    "fold_sd": 0.031072370011625088,
+    "completed_folds": 5
+  },
+  {
+    "family": "joint_rf",
+    "trait": "stomatasize",
+    "pair": "chr2 x chr5",
+    "mean_abs": 0.19164205206036963,
+    "fold_sd": 0.04827231867247333,
+    "completed_folds": 5
+  },
+  {
+    "family": "joint_rf",
+    "trait": "stomatasize",
+    "pair": "chr3 x chr4",
+    "mean_abs": 0.14791656331444103,
+    "fold_sd": 0.055005533374154834,
+    "completed_folds": 5
+  },
+  {
+    "family": "joint_rf",
+    "trait": "stomatasize",
+    "pair": "chr3 x chr5",
+    "mean_abs": 0.17093517826517307,
+    "fold_sd": 0.046105729868434295,
+    "completed_folds": 5
+  },
+  {
+    "family": "joint_rf",
+    "trait": "stomatasize",
+    "pair": "chr4 x chr5",
+    "mean_abs": 0.14471085095106384,
+    "fold_sd": 0.07765163415726249,
+    "completed_folds": 5
+  },
+  {
+    "family": "kan",
+    "trait": "delta_13C",
+    "pair": "chr1 x chr2",
+    "mean_abs": 0.01853160733723459,
+    "fold_sd": 0.019454998613858864,
+    "completed_folds": 5
+  },
+  {
+    "family": "kan",
+    "trait": "delta_13C",
+    "pair": "chr1 x chr3",
+    "mean_abs": 0.014286853540033678,
+    "fold_sd": 0.011639957939970642,
+    "completed_folds": 5
+  },
+  {
+    "family": "kan",
+    "trait": "delta_13C",
+    "pair": "chr1 x chr4",
+    "mean_abs": 0.01634928044192443,
+    "fold_sd": 0.01631004365522365,
+    "completed_folds": 5
+  },
+  {
+    "family": "kan",
+    "trait": "delta_13C",
+    "pair": "chr1 x chr5",
+    "mean_abs": 0.014742130274999838,
+    "fold_sd": 0.017464569176170133,
+    "completed_folds": 5
+  },
+  {
+    "family": "kan",
+    "trait": "delta_13C",
+    "pair": "chr2 x chr3",
+    "mean_abs": 0.012414294362482486,
+    "fold_sd": 0.00894784161225682,
+    "completed_folds": 5
+  },
+  {
+    "family": "kan",
+    "trait": "delta_13C",
+    "pair": "chr2 x chr4",
+    "mean_abs": 0.01460709875521778,
+    "fold_sd": 0.008944463838862604,
+    "completed_folds": 5
+  },
+  {
+    "family": "kan",
+    "trait": "delta_13C",
+    "pair": "chr2 x chr5",
+    "mean_abs": 0.016856350479604574,
+    "fold_sd": 0.01892853033735622,
+    "completed_folds": 5
+  },
+  {
+    "family": "kan",
+    "trait": "delta_13C",
+    "pair": "chr3 x chr4",
+    "mean_abs": 0.011914612486087042,
+    "fold_sd": 0.008135601627061931,
+    "completed_folds": 5
+  },
+  {
+    "family": "kan",
+    "trait": "delta_13C",
+    "pair": "chr3 x chr5",
+    "mean_abs": 0.011042542331594834,
+    "fold_sd": 0.008295599774992739,
+    "completed_folds": 5
+  },
+  {
+    "family": "kan",
+    "trait": "delta_13C",
+    "pair": "chr4 x chr5",
+    "mean_abs": 0.012879747734884145,
+    "fold_sd": 0.012702570561240377,
+    "completed_folds": 5
+  },
+  {
+    "family": "kan",
+    "trait": "signed_joint",
+    "pair": "chr1 x chr2",
+    "mean_abs": 0.01587905806310077,
+    "fold_sd": 0.020743886983077185,
+    "completed_folds": 5
+  },
+  {
+    "family": "kan",
+    "trait": "signed_joint",
+    "pair": "chr1 x chr3",
+    "mean_abs": 0.01580272952442579,
+    "fold_sd": 0.020133182445492892,
+    "completed_folds": 5
+  },
+  {
+    "family": "kan",
+    "trait": "signed_joint",
+    "pair": "chr1 x chr4",
+    "mean_abs": 0.016543875558550743,
+    "fold_sd": 0.020702736535351107,
+    "completed_folds": 5
+  },
+  {
+    "family": "kan",
+    "trait": "signed_joint",
+    "pair": "chr1 x chr5",
+    "mean_abs": 0.014254838351869536,
+    "fold_sd": 0.018554482698975427,
+    "completed_folds": 5
+  },
+  {
+    "family": "kan",
+    "trait": "signed_joint",
+    "pair": "chr2 x chr3",
+    "mean_abs": 0.016259246913260493,
+    "fold_sd": 0.018788242860650756,
+    "completed_folds": 5
+  },
+  {
+    "family": "kan",
+    "trait": "signed_joint",
+    "pair": "chr2 x chr4",
+    "mean_abs": 0.012733505914285856,
+    "fold_sd": 0.013284409400365866,
+    "completed_folds": 5
+  },
+  {
+    "family": "kan",
+    "trait": "signed_joint",
+    "pair": "chr2 x chr5",
+    "mean_abs": 0.01897915282219104,
+    "fold_sd": 0.022902123770218597,
+    "completed_folds": 5
+  },
+  {
+    "family": "kan",
+    "trait": "signed_joint",
+    "pair": "chr3 x chr4",
+    "mean_abs": 0.016935912353369713,
+    "fold_sd": 0.020284838865866937,
+    "completed_folds": 5
+  },
+  {
+    "family": "kan",
+    "trait": "signed_joint",
+    "pair": "chr3 x chr5",
+    "mean_abs": 0.01521474111496023,
+    "fold_sd": 0.01902454514830827,
+    "completed_folds": 5
+  },
+  {
+    "family": "kan",
+    "trait": "signed_joint",
+    "pair": "chr4 x chr5",
+    "mean_abs": 0.014957609774432026,
+    "fold_sd": 0.017841843213479612,
+    "completed_folds": 5
+  },
+  {
+    "family": "kan",
+    "trait": "stomata_density",
+    "pair": "chr1 x chr2",
+    "mean_abs": 0.27799780957226483,
+    "fold_sd": 0.4567198287125462,
+    "completed_folds": 5
+  },
+  {
+    "family": "kan",
+    "trait": "stomata_density",
+    "pair": "chr1 x chr3",
+    "mean_abs": 0.2702676657675395,
+    "fold_sd": 0.4198489232894655,
+    "completed_folds": 5
+  },
+  {
+    "family": "kan",
+    "trait": "stomata_density",
+    "pair": "chr1 x chr4",
+    "mean_abs": 0.2520413471222431,
+    "fold_sd": 0.3797310206037141,
+    "completed_folds": 5
+  },
+  {
+    "family": "kan",
+    "trait": "stomata_density",
+    "pair": "chr1 x chr5",
+    "mean_abs": 0.32777548133963175,
+    "fold_sd": 0.5480203594335658,
+    "completed_folds": 5
+  },
+  {
+    "family": "kan",
+    "trait": "stomata_density",
+    "pair": "chr2 x chr3",
+    "mean_abs": 0.29683325435569197,
+    "fold_sd": 0.46645046955689184,
+    "completed_folds": 5
+  },
+  {
+    "family": "kan",
+    "trait": "stomata_density",
+    "pair": "chr2 x chr4",
+    "mean_abs": 0.21992980013922042,
+    "fold_sd": 0.3261479594871546,
+    "completed_folds": 5
+  },
+  {
+    "family": "kan",
+    "trait": "stomata_density",
+    "pair": "chr2 x chr5",
+    "mean_abs": 0.3019941097175603,
+    "fold_sd": 0.4924175182711488,
+    "completed_folds": 5
+  },
+  {
+    "family": "kan",
+    "trait": "stomata_density",
+    "pair": "chr3 x chr4",
+    "mean_abs": 0.24197025765409416,
+    "fold_sd": 0.33114178349963086,
+    "completed_folds": 5
+  },
+  {
+    "family": "kan",
+    "trait": "stomata_density",
+    "pair": "chr3 x chr5",
+    "mean_abs": 0.3427431101685779,
+    "fold_sd": 0.5788360664297507,
+    "completed_folds": 5
+  },
+  {
+    "family": "kan",
+    "trait": "stomata_density",
+    "pair": "chr4 x chr5",
+    "mean_abs": 0.2938272770801316,
+    "fold_sd": 0.48618122760014293,
+    "completed_folds": 5
+  },
+  {
+    "family": "kan",
+    "trait": "stomatasize",
+    "pair": "chr1 x chr2",
+    "mean_abs": 0.27546503612411105,
+    "fold_sd": 0.41986862745510584,
+    "completed_folds": 5
+  },
+  {
+    "family": "kan",
+    "trait": "stomatasize",
+    "pair": "chr1 x chr3",
+    "mean_abs": 0.27820783853983133,
+    "fold_sd": 0.40256629177103903,
+    "completed_folds": 5
+  },
+  {
+    "family": "kan",
+    "trait": "stomatasize",
+    "pair": "chr1 x chr4",
+    "mean_abs": 0.295272990649794,
+    "fold_sd": 0.4279319060757894,
+    "completed_folds": 5
+  },
+  {
+    "family": "kan",
+    "trait": "stomatasize",
+    "pair": "chr1 x chr5",
+    "mean_abs": 0.23849255708018852,
+    "fold_sd": 0.322641542055903,
+    "completed_folds": 5
+  },
+  {
+    "family": "kan",
+    "trait": "stomatasize",
+    "pair": "chr2 x chr3",
+    "mean_abs": 0.2846285304905497,
+    "fold_sd": 0.38608228282688245,
+    "completed_folds": 5
+  },
+  {
+    "family": "kan",
+    "trait": "stomatasize",
+    "pair": "chr2 x chr4",
+    "mean_abs": 0.22184192213510645,
+    "fold_sd": 0.2832477333896797,
+    "completed_folds": 5
+  },
+  {
+    "family": "kan",
+    "trait": "stomatasize",
+    "pair": "chr2 x chr5",
+    "mean_abs": 0.2980474193281,
+    "fold_sd": 0.41347675790750266,
+    "completed_folds": 5
+  },
+  {
+    "family": "kan",
+    "trait": "stomatasize",
+    "pair": "chr3 x chr4",
+    "mean_abs": 0.30401160312614384,
+    "fold_sd": 0.4126167024004118,
+    "completed_folds": 5
+  },
+  {
+    "family": "kan",
+    "trait": "stomatasize",
+    "pair": "chr3 x chr5",
+    "mean_abs": 0.24466018191182998,
+    "fold_sd": 0.33267838841406006,
+    "completed_folds": 5
+  },
+  {
+    "family": "kan",
+    "trait": "stomatasize",
+    "pair": "chr4 x chr5",
+    "mean_abs": 0.24397332949770506,
+    "fold_sd": 0.326336878319472,
+    "completed_folds": 5
+  },
+  {
+    "family": "separate_rf",
+    "trait": "delta_13C",
+    "pair": "chr1 x chr2",
+    "mean_abs": 0.04372012915121763,
+    "fold_sd": 0.015108909501566419,
+    "completed_folds": 5
+  },
+  {
+    "family": "separate_rf",
+    "trait": "delta_13C",
+    "pair": "chr1 x chr3",
+    "mean_abs": 0.026894883713722152,
+    "fold_sd": 0.011635741353314103,
+    "completed_folds": 5
+  },
+  {
+    "family": "separate_rf",
+    "trait": "delta_13C",
+    "pair": "chr1 x chr4",
+    "mean_abs": 0.02870304716398548,
+    "fold_sd": 0.010715791398727843,
+    "completed_folds": 5
+  },
+  {
+    "family": "separate_rf",
+    "trait": "delta_13C",
+    "pair": "chr1 x chr5",
+    "mean_abs": 0.037301061377536186,
+    "fold_sd": 0.013957473971478136,
+    "completed_folds": 5
+  },
+  {
+    "family": "separate_rf",
+    "trait": "delta_13C",
+    "pair": "chr2 x chr3",
+    "mean_abs": 0.030432255897557447,
+    "fold_sd": 0.010265338685506102,
+    "completed_folds": 5
+  },
+  {
+    "family": "separate_rf",
+    "trait": "delta_13C",
+    "pair": "chr2 x chr4",
+    "mean_abs": 0.030593826943095113,
+    "fold_sd": 0.006774146588569439,
+    "completed_folds": 5
+  },
+  {
+    "family": "separate_rf",
+    "trait": "delta_13C",
+    "pair": "chr2 x chr5",
+    "mean_abs": 0.035635472653756675,
+    "fold_sd": 0.008627140980292049,
+    "completed_folds": 5
+  },
+  {
+    "family": "separate_rf",
+    "trait": "delta_13C",
+    "pair": "chr3 x chr4",
+    "mean_abs": 0.02515591513437628,
+    "fold_sd": 0.013173934879935015,
+    "completed_folds": 5
+  },
+  {
+    "family": "separate_rf",
+    "trait": "delta_13C",
+    "pair": "chr3 x chr5",
+    "mean_abs": 0.03136897085042593,
+    "fold_sd": 0.010611634020001485,
+    "completed_folds": 5
+  },
+  {
+    "family": "separate_rf",
+    "trait": "delta_13C",
+    "pair": "chr4 x chr5",
+    "mean_abs": 0.0267155020821113,
+    "fold_sd": 0.0066906886281446155,
+    "completed_folds": 5
+  },
+  {
+    "family": "separate_rf",
+    "trait": "signed_joint",
+    "pair": "chr1 x chr2",
+    "mean_abs": 0.013027546248266936,
+    "fold_sd": 0.003194814914003745,
+    "completed_folds": 5
+  },
+  {
+    "family": "separate_rf",
+    "trait": "signed_joint",
+    "pair": "chr1 x chr3",
+    "mean_abs": 0.01423294781305832,
+    "fold_sd": 0.004961723426514257,
+    "completed_folds": 5
+  },
+  {
+    "family": "separate_rf",
+    "trait": "signed_joint",
+    "pair": "chr1 x chr4",
+    "mean_abs": 0.010041556624368,
+    "fold_sd": 0.0024234224811355335,
+    "completed_folds": 5
+  },
+  {
+    "family": "separate_rf",
+    "trait": "signed_joint",
+    "pair": "chr1 x chr5",
+    "mean_abs": 0.013189138707989495,
+    "fold_sd": 0.0023689132991097173,
+    "completed_folds": 5
+  },
+  {
+    "family": "separate_rf",
+    "trait": "signed_joint",
+    "pair": "chr2 x chr3",
+    "mean_abs": 0.013322041098913568,
+    "fold_sd": 0.0035049096949602903,
+    "completed_folds": 5
+  },
+  {
+    "family": "separate_rf",
+    "trait": "signed_joint",
+    "pair": "chr2 x chr4",
+    "mean_abs": 0.011149395824033802,
+    "fold_sd": 0.0023890138781224586,
+    "completed_folds": 5
+  },
+  {
+    "family": "separate_rf",
+    "trait": "signed_joint",
+    "pair": "chr2 x chr5",
+    "mean_abs": 0.014619037871762325,
+    "fold_sd": 0.000985680067282771,
+    "completed_folds": 5
+  },
+  {
+    "family": "separate_rf",
+    "trait": "signed_joint",
+    "pair": "chr3 x chr4",
+    "mean_abs": 0.01179849048628967,
+    "fold_sd": 0.002783510204933743,
+    "completed_folds": 5
+  },
+  {
+    "family": "separate_rf",
+    "trait": "signed_joint",
+    "pair": "chr3 x chr5",
+    "mean_abs": 0.017867656579455094,
+    "fold_sd": 0.0061240126877728784,
+    "completed_folds": 5
+  },
+  {
+    "family": "separate_rf",
+    "trait": "signed_joint",
+    "pair": "chr4 x chr5",
+    "mean_abs": 0.01040997286078129,
+    "fold_sd": 0.0023242535478320025,
+    "completed_folds": 5
+  },
+  {
+    "family": "separate_rf",
+    "trait": "stomata_density",
+    "pair": "chr1 x chr2",
+    "mean_abs": 0.39993056822494866,
+    "fold_sd": 0.11794635195854748,
+    "completed_folds": 5
+  },
+  {
+    "family": "separate_rf",
+    "trait": "stomata_density",
+    "pair": "chr1 x chr3",
+    "mean_abs": 0.5759195378849545,
+    "fold_sd": 0.32888377574853733,
+    "completed_folds": 5
+  },
+  {
+    "family": "separate_rf",
+    "trait": "stomata_density",
+    "pair": "chr1 x chr4",
+    "mean_abs": 0.2956120848247756,
+    "fold_sd": 0.0667233107402807,
+    "completed_folds": 5
+  },
+  {
+    "family": "separate_rf",
+    "trait": "stomata_density",
+    "pair": "chr1 x chr5",
+    "mean_abs": 0.4723622817408543,
+    "fold_sd": 0.10808742534394482,
+    "completed_folds": 5
+  },
+  {
+    "family": "separate_rf",
+    "trait": "stomata_density",
+    "pair": "chr2 x chr3",
+    "mean_abs": 0.5934837154320376,
+    "fold_sd": 0.29704200402000475,
+    "completed_folds": 5
+  },
+  {
+    "family": "separate_rf",
+    "trait": "stomata_density",
+    "pair": "chr2 x chr4",
+    "mean_abs": 0.3757115586095897,
+    "fold_sd": 0.05380056066797818,
+    "completed_folds": 5
+  },
+  {
+    "family": "separate_rf",
+    "trait": "stomata_density",
+    "pair": "chr2 x chr5",
+    "mean_abs": 0.5934677958686903,
+    "fold_sd": 0.15964979573063207,
+    "completed_folds": 5
+  },
+  {
+    "family": "separate_rf",
+    "trait": "stomata_density",
+    "pair": "chr3 x chr4",
+    "mean_abs": 0.4462877035836047,
+    "fold_sd": 0.1476558371349987,
+    "completed_folds": 5
+  },
+  {
+    "family": "separate_rf",
+    "trait": "stomata_density",
+    "pair": "chr3 x chr5",
+    "mean_abs": 0.8357016087082295,
+    "fold_sd": 0.4617117110828772,
+    "completed_folds": 5
+  },
+  {
+    "family": "separate_rf",
+    "trait": "stomata_density",
+    "pair": "chr4 x chr5",
+    "mean_abs": 0.5061421289846728,
+    "fold_sd": 0.1339970351412633,
+    "completed_folds": 5
+  },
+  {
+    "family": "separate_rf",
+    "trait": "stomatasize",
+    "pair": "chr1 x chr2",
+    "mean_abs": 0.13429968531804146,
+    "fold_sd": 0.03777993756047838,
+    "completed_folds": 5
+  },
+  {
+    "family": "separate_rf",
+    "trait": "stomatasize",
+    "pair": "chr1 x chr3",
+    "mean_abs": 0.17058814144110315,
+    "fold_sd": 0.07312872587608465,
+    "completed_folds": 5
+  },
+  {
+    "family": "separate_rf",
+    "trait": "stomatasize",
+    "pair": "chr1 x chr4",
+    "mean_abs": 0.09232485428374626,
+    "fold_sd": 0.029133635578259674,
+    "completed_folds": 5
+  },
+  {
+    "family": "separate_rf",
+    "trait": "stomatasize",
+    "pair": "chr1 x chr5",
+    "mean_abs": 0.15053698003148816,
+    "fold_sd": 0.0444238637736784,
+    "completed_folds": 5
+  },
+  {
+    "family": "separate_rf",
+    "trait": "stomatasize",
+    "pair": "chr2 x chr3",
+    "mean_abs": 0.2192845949826617,
+    "fold_sd": 0.10612867130009936,
+    "completed_folds": 5
+  },
+  {
+    "family": "separate_rf",
+    "trait": "stomatasize",
+    "pair": "chr2 x chr4",
+    "mean_abs": 0.10088158595650884,
+    "fold_sd": 0.027901926749606634,
+    "completed_folds": 5
+  },
+  {
+    "family": "separate_rf",
+    "trait": "stomatasize",
+    "pair": "chr2 x chr5",
+    "mean_abs": 0.17433699272999773,
+    "fold_sd": 0.04565907701901444,
+    "completed_folds": 5
+  },
+  {
+    "family": "separate_rf",
+    "trait": "stomatasize",
+    "pair": "chr3 x chr4",
+    "mean_abs": 0.18038987001537038,
+    "fold_sd": 0.08236560190574818,
+    "completed_folds": 5
+  },
+  {
+    "family": "separate_rf",
+    "trait": "stomatasize",
+    "pair": "chr3 x chr5",
+    "mean_abs": 0.21827477376001903,
+    "fold_sd": 0.06813659518705968,
+    "completed_folds": 5
+  },
+  {
+    "family": "separate_rf",
+    "trait": "stomatasize",
+    "pair": "chr4 x chr5",
+    "mean_abs": 0.16399548975101794,
+    "fold_sd": 0.05776077417237249,
+    "completed_folds": 5
+  }
+]

@@ -1,0 +1,84 @@
+{
+  "passed": true,
+  "checked_families": 15,
+  "selected_marker_training_variance_checked": true,
+  "outer_and_inner_scaling_checked": true,
+  "source_hashes_checked": true,
+  "results": [
+    {
+      "fold": 1,
+      "family": "separate_rf",
+      "checkpoint_prediction_max_error": 0.0
+    },
+    {
+      "fold": 1,
+      "family": "joint_rf",
+      "checkpoint_prediction_max_error": 0.0
+    },
+    {
+      "fold": 1,
+      "family": "kan",
+      "checkpoint_prediction_max_error": 0.0
+    },
+    {
+      "fold": 2,
+      "family": "separate_rf",
+      "checkpoint_prediction_max_error": 0.0
+    },
+    {
+      "fold": 2,
+      "family": "joint_rf",
+      "checkpoint_prediction_max_error": 0.0
+    },
+    {
+      "fold": 2,
+      "family": "kan",
+      "checkpoint_prediction_max_error": 0.0
+    },
+    {
+      "fold": 3,
+      "family": "separate_rf",
+      "checkpoint_prediction_max_error": 0.0
+    },
+    {
+      "fold": 3,
+      "family": "joint_rf",
+      "checkpoint_prediction_max_error": 0.0
+    },
+    {
+      "fold": 3,
+      "family": "kan",
+      "checkpoint_prediction_max_error": 0.0
+    },
+    {
+      "fold": 4,
+      "family": "separate_rf",
+      "checkpoint_prediction_max_error": 0.0
+    },
+    {
+      "fold": 4,
+      "family": "joint_rf",
+      "checkpoint_prediction_max_error": 0.0
+    },
+    {
+      "fold": 4,
+      "family": "kan",
+      "checkpoint_prediction_max_error": 0.0
+    },
+    {
+      "fold": 5,
+      "family": "separate_rf",
+      "checkpoint_prediction_max_error": 0.0
+    },
+    {
+      "fold": 5,
+      "family": "joint_rf",
+      "checkpoint_prediction_max_error": 0.0
+    },
+    {
+      "fold": 5,
+      "family": "kan",
+      "checkpoint_prediction_max_error": 0.0
+    }
+  ]
+}

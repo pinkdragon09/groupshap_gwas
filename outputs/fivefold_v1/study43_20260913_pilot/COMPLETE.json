@@ -1,0 +1,18 @@
+{
+  "run_fingerprint": "43aaab212dbd243bbc226c7cce7e52e966ebbe41e95259c40482a77aa0f3bd62",
+  "artifacts": {
+    "PREPARED.json": "5d8d4c7a487daf0d1934d847219df37172a9acda58684c6aa37c2d2140e21e65",
+    "fold_1/COMPLETE.json": "a5c78f8ee9d809ff0838090159edb3630cf2aedc7a9e47931ff17af97c249edd",
+    "fold_2/COMPLETE.json": "712bed11cf0d9492eda730364d0878f9cdffce5f49f385e4beb2bfc9fa37310c",
+    "fold_3/COMPLETE.json": "88395c8457216c8d248e314a7d9414e01086054de115c103df8cee22fd03614c",
+    "fold_4/COMPLETE.json": "655fe2362d33617314dc849b1139d30f462a1ba68d902cbbcb7f9c0640789235",
+    "fold_5/COMPLETE.json": "a8b270765fedf04f772c0971de94e748a4436b913ca69b53df73c86f7a9cc3ee",
+    "model_summary.json": "ff0ec4282b504a001977aa36ac9c299d0e944c267fc661f86a24761dcba56c7e",
+    "metrics_by_fold.json": "01f3caa47ad5f6ef872eab0c91c6324f069522c895f4155d91ef2acbfaaf5081",
+    "paired_differences.json": "c76c5cba59cfb72f7543f760bd599b6be72ab3625fb6fc935ed9e9a2aebb49f5",
+    "attribution_summary.json": "6ee3ac5a72bfbc097649ab379beed8683ed3626a48eaeb955610c6e45251f41a",
+    "interaction_summary.json": "23fae536d41bab94fadac3b4d39752504638416b3b7520d9e647b113eba9ce1f",
+    "selection_frequency.json": "a2dc495d75d397b6025ee68b8e818c108ffa0d600fbc4ef74d026b7af2b9a619",
+    "REPORT.md": "8a7f3eb9233243d886cdab8e2892785c5e4c978897f6765e87a5cda4ba72c3a6"
+  }
+}

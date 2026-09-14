@@ -1,0 +1,317 @@
+[
+  {
+    "fold": 1,
+    "trait": "delta_13C",
+    "comparison": "joint_rf minus separate_rf",
+    "r2_difference": -0.016473249748398144,
+    "rmse_difference": 0.011214691488674156
+  },
+  {
+    "fold": 1,
+    "trait": "delta_13C",
+    "comparison": "kan minus separate_rf",
+    "r2_difference": -0.17433637042489847,
+    "rmse_difference": 0.11381996124540561
+  },
+  {
+    "fold": 1,
+    "trait": "delta_13C",
+    "comparison": "kan minus joint_rf",
+    "r2_difference": -0.15786312067650032,
+    "rmse_difference": 0.10260526975673145
+  },
+  {
+    "fold": 1,
+    "trait": "stomata_density",
+    "comparison": "joint_rf minus separate_rf",
+    "r2_difference": -0.013352992718904666,
+    "rmse_difference": 0.14219500509620175
+  },
+  {
+    "fold": 1,
+    "trait": "stomata_density",
+    "comparison": "kan minus separate_rf",
+    "r2_difference": 0.03683768038648472,
+    "rmse_difference": -0.3971958567023606
+  },
+  {
+    "fold": 1,
+    "trait": "stomata_density",
+    "comparison": "kan minus joint_rf",
+    "r2_difference": 0.05019067310538938,
+    "rmse_difference": -0.5393908617985623
+  },
+  {
+    "fold": 1,
+    "trait": "stomatasize",
+    "comparison": "joint_rf minus separate_rf",
+    "r2_difference": 0.003579249180822308,
+    "rmse_difference": -0.011911065182192537
+  },
+  {
+    "fold": 1,
+    "trait": "stomatasize",
+    "comparison": "kan minus separate_rf",
+    "r2_difference": -0.2692582148501371,
+    "rmse_difference": 0.8413074170266004
+  },
+  {
+    "fold": 1,
+    "trait": "stomatasize",
+    "comparison": "kan minus joint_rf",
+    "r2_difference": -0.27283746403095943,
+    "rmse_difference": 0.8532184822087929
+  },
+  {
+    "fold": 2,
+    "trait": "delta_13C",
+    "comparison": "joint_rf minus separate_rf",
+    "r2_difference": -0.011542189530182934,
+    "rmse_difference": 0.006854170269995019
+  },
+  {
+    "fold": 2,
+    "trait": "delta_13C",
+    "comparison": "kan minus separate_rf",
+    "r2_difference": -0.09088850989243147,
+    "rmse_difference": 0.052712733964782266
+  },
+  {
+    "fold": 2,
+    "trait": "delta_13C",
+    "comparison": "kan minus joint_rf",
+    "r2_difference": -0.07934632036224853,
+    "rmse_difference": 0.04585856369478725
+  },
+  {
+    "fold": 2,
+    "trait": "stomata_density",
+    "comparison": "joint_rf minus separate_rf",
+    "r2_difference": -0.04884723882847808,
+    "rmse_difference": 0.4914483713523694
+  },
+  {
+    "fold": 2,
+    "trait": "stomata_density",
+    "comparison": "kan minus separate_rf",
+    "r2_difference": -0.21231004688222055,
+    "rmse_difference": 2.048481264212281
+  },
+  {
+    "fold": 2,
+    "trait": "stomata_density",
+    "comparison": "kan minus joint_rf",
+    "r2_difference": -0.16346280805374247,
+    "rmse_difference": 1.5570328928599118
+  },
+  {
+    "fold": 2,
+    "trait": "stomatasize",
+    "comparison": "joint_rf minus separate_rf",
+    "r2_difference": 0.011295635319626962,
+    "rmse_difference": -0.03557129007004889
+  },
+  {
+    "fold": 2,
+    "trait": "stomatasize",
+    "comparison": "kan minus separate_rf",
+    "r2_difference": -0.04387478698763003,
+    "rmse_difference": 0.1362512024670508
+  },
+  {
+    "fold": 2,
+    "trait": "stomatasize",
+    "comparison": "kan minus joint_rf",
+    "r2_difference": -0.055170422307256994,
+    "rmse_difference": 0.1718224925370997
+  },
+  {
+    "fold": 3,
+    "trait": "delta_13C",
+    "comparison": "joint_rf minus separate_rf",
+    "r2_difference": 0.04837036384053772,
+    "rmse_difference": -0.031863239898376916
+  },
+  {
+    "fold": 3,
+    "trait": "delta_13C",
+    "comparison": "kan minus separate_rf",
+    "r2_difference": 0.010410224984932714,
+    "rmse_difference": -0.006793798468806678
+  },
+  {
+    "fold": 3,
+    "trait": "delta_13C",
+    "comparison": "kan minus joint_rf",
+    "r2_difference": -0.03796013885560501,
+    "rmse_difference": 0.02506944142957024
+  },
+  {
+    "fold": 3,
+    "trait": "stomata_density",
+    "comparison": "joint_rf minus separate_rf",
+    "r2_difference": 0.029407132567192962,
+    "rmse_difference": -0.3346730430722502
+  },
+  {
+    "fold": 3,
+    "trait": "stomata_density",
+    "comparison": "kan minus separate_rf",
+    "r2_difference": 0.002398073703449688,
+    "rmse_difference": -0.027118637277428803
+  },
+  {
+    "fold": 3,
+    "trait": "stomata_density",
+    "comparison": "kan minus joint_rf",
+    "r2_difference": -0.027009058863743274,
+    "rmse_difference": 0.3075544057948214
+  },
+  {
+    "fold": 3,
+    "trait": "stomatasize",
+    "comparison": "joint_rf minus separate_rf",
+    "r2_difference": -0.004455451066253335,
+    "rmse_difference": 0.01355667686315698
+  },
+  {
+    "fold": 3,
+    "trait": "stomatasize",
+    "comparison": "kan minus separate_rf",
+    "r2_difference": -0.059061654856061185,
+    "rmse_difference": 0.17745184438837303
+  },
+  {
+    "fold": 3,
+    "trait": "stomatasize",
+    "comparison": "kan minus joint_rf",
+    "r2_difference": -0.05460620378980785,
+    "rmse_difference": 0.16389516752521605
+  },
+  {
+    "fold": 4,
+    "trait": "delta_13C",
+    "comparison": "joint_rf minus separate_rf",
+    "r2_difference": 0.015674371821013944,
+    "rmse_difference": -0.009808902922019191
+  },
+  {
+    "fold": 4,
+    "trait": "delta_13C",
+    "comparison": "kan minus separate_rf",
+    "r2_difference": 0.027140701286038404,
+    "rmse_difference": -0.017040816299737305
+  },
+  {
+    "fold": 4,
+    "trait": "delta_13C",
+    "comparison": "kan minus joint_rf",
+    "r2_difference": 0.01146632946502446,
+    "rmse_difference": -0.007231913377718113
+  },
+  {
+    "fold": 4,
+    "trait": "stomata_density",
+    "comparison": "joint_rf minus separate_rf",
+    "r2_difference": 0.018939103040498395,
+    "rmse_difference": -0.1912145923323152
+  },
+  {
+    "fold": 4,
+    "trait": "stomata_density",
+    "comparison": "kan minus separate_rf",
+    "r2_difference": -0.05529240205726493,
+    "rmse_difference": 0.548356065595641
+  },
+  {
+    "fold": 4,
+    "trait": "stomata_density",
+    "comparison": "kan minus joint_rf",
+    "r2_difference": -0.07423150509776333,
+    "rmse_difference": 0.7395706579279562
+  },
+  {
+    "fold": 4,
+    "trait": "stomatasize",
+    "comparison": "joint_rf minus separate_rf",
+    "r2_difference": -0.011797799678906928,
+    "rmse_difference": 0.038175161665951585
+  },
+  {
+    "fold": 4,
+    "trait": "stomatasize",
+    "comparison": "kan minus separate_rf",
+    "r2_difference": -0.713259121321993,
+    "rmse_difference": 2.012246468650744
+  },
+  {
+    "fold": 4,
+    "trait": "stomatasize",
+    "comparison": "kan minus joint_rf",
+    "r2_difference": -0.701461321643086,
+    "rmse_difference": 1.9740713069847926
+  },
+  {
+    "fold": 5,
+    "trait": "delta_13C",
+    "comparison": "joint_rf minus separate_rf",
+    "r2_difference": 0.012424929130770423,
+    "rmse_difference": -0.007111685637506859
+  },
+  {
+    "fold": 5,
+    "trait": "delta_13C",
+    "comparison": "kan minus separate_rf",
+    "r2_difference": -0.055939414062584625,
+    "rmse_difference": 0.031437725152477114
+  },
+  {
+    "fold": 5,
+    "trait": "delta_13C",
+    "comparison": "kan minus joint_rf",
+    "r2_difference": -0.06836434319335505,
+    "rmse_difference": 0.03854941078998397
+  },
+  {
+    "fold": 5,
+    "trait": "stomata_density",
+    "comparison": "joint_rf minus separate_rf",
+    "r2_difference": 0.003327409523420588,
+    "rmse_difference": -0.034287089479040134
+  },
+  {
+    "fold": 5,
+    "trait": "stomata_density",
+    "comparison": "kan minus separate_rf",
+    "r2_difference": -0.013091856991070627,
+    "rmse_difference": 0.1343190441760811
+  },
+  {
+    "fold": 5,
+    "trait": "stomata_density",
+    "comparison": "kan minus joint_rf",
+    "r2_difference": -0.016419266514491215,
+    "rmse_difference": 0.16860613365512123
+  },
+  {
+    "fold": 5,
+    "trait": "stomatasize",
+    "comparison": "joint_rf minus separate_rf",
+    "r2_difference": 0.018765514865417776,
+    "rmse_difference": -0.07367971062563772
+  },
+  {
+    "fold": 5,
+    "trait": "stomatasize",
+    "comparison": "kan minus separate_rf",
+    "r2_difference": -0.0580047875229972,
+    "rmse_difference": 0.22331228289015836
+  },
+  {
+    "fold": 5,
+    "trait": "stomatasize",
+    "comparison": "kan minus joint_rf",
+    "r2_difference": -0.07677030238841498,
+    "rmse_difference": 0.2969919935157961
+  }
+]

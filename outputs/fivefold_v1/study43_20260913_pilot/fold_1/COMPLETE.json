@@ -1,0 +1,9 @@
+{
+  "run_fingerprint": "43aaab212dbd243bbc226c7cce7e52e966ebbe41e95259c40482a77aa0f3bd62",
+  "artifacts": {
+    "shared.json": "f0835d7b4d513fb9698549f5addcbe33e7d45d50090db23c58f825c044f62620",
+    "separate_rf/COMPLETE.json": "d7adbc2c9a4eb9fe33ac82c2a623e5d73eb5919f3754ed945d96aa06b20d1b3b",
+    "joint_rf/COMPLETE.json": "cf0026c094a8b6008b7b58399bf401457a0386f3f4442c1989f0aae192af9eb2",
+    "kan/COMPLETE.json": "f6a532e8bff6644a87e211ad895e45c39efff8992bd25a7523e47132ea988194"
+  }
+}

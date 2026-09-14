@@ -1,0 +1,362 @@
+[
+  {
+    "fold": 1,
+    "family": "separate_rf",
+    "trait": "delta_13C",
+    "r2": 0.12670475917864576,
+    "rmse": 1.194628465533236,
+    "n": 62
+  },
+  {
+    "fold": 1,
+    "family": "separate_rf",
+    "trait": "stomata_density",
+    "r2": -0.01683956280807708,
+    "rmse": 21.72736013120156,
+    "n": 62
+  },
+  {
+    "fold": 1,
+    "family": "separate_rf",
+    "trait": "stomatasize",
+    "r2": 0.012959265654287067,
+    "rmse": 6.56340929812768,
+    "n": 62
+  },
+  {
+    "fold": 1,
+    "family": "joint_rf",
+    "trait": "delta_13C",
+    "r2": 0.11023150943024762,
+    "rmse": 1.2058431570219101,
+    "n": 62
+  },
+  {
+    "fold": 1,
+    "family": "joint_rf",
+    "trait": "stomata_density",
+    "r2": -0.030192555526981746,
+    "rmse": 21.869555136297762,
+    "n": 62
+  },
+  {
+    "fold": 1,
+    "family": "joint_rf",
+    "trait": "stomatasize",
+    "r2": 0.016538514835109375,
+    "rmse": 6.551498232945487,
+    "n": 62
+  },
+  {
+    "fold": 1,
+    "family": "kan",
+    "trait": "delta_13C",
+    "r2": -0.0476316112462527,
+    "rmse": 1.3084484267786416,
+    "n": 62
+  },
+  {
+    "fold": 1,
+    "family": "kan",
+    "trait": "stomata_density",
+    "r2": 0.019998117578407637,
+    "rmse": 21.3301642744992,
+    "n": 62
+  },
+  {
+    "fold": 1,
+    "family": "kan",
+    "trait": "stomatasize",
+    "r2": -0.25629894919585006,
+    "rmse": 7.40471671515428,
+    "n": 62
+  },
+  {
+    "fold": 2,
+    "family": "separate_rf",
+    "trait": "delta_13C",
+    "r2": 0.19818164629247648,
+    "rmse": 0.9557124100278404,
+    "n": 62
+  },
+  {
+    "fold": 2,
+    "family": "separate_rf",
+    "trait": "stomata_density",
+    "r2": 0.11903560709463457,
+    "rmse": 17.969041380443254,
+    "n": 62
+  },
+  {
+    "fold": 2,
+    "family": "separate_rf",
+    "trait": "stomatasize",
+    "r2": 0.02417516535306119,
+    "rmse": 6.128137959002711,
+    "n": 62
+  },
+  {
+    "fold": 2,
+    "family": "joint_rf",
+    "trait": "delta_13C",
+    "r2": 0.18663945676229354,
+    "rmse": 0.9625665802978354,
+    "n": 62
+  },
+  {
+    "fold": 2,
+    "family": "joint_rf",
+    "trait": "stomata_density",
+    "r2": 0.07018836826615649,
+    "rmse": 18.460489751795624,
+    "n": 62
+  },
+  {
+    "fold": 2,
+    "family": "joint_rf",
+    "trait": "stomatasize",
+    "r2": 0.03547080067268815,
+    "rmse": 6.092566668932662,
+    "n": 62
+  },
+  {
+    "fold": 2,
+    "family": "kan",
+    "trait": "delta_13C",
+    "r2": 0.10729313640004501,
+    "rmse": 1.0084251439926226,
+    "n": 62
+  },
+  {
+    "fold": 2,
+    "family": "kan",
+    "trait": "stomata_density",
+    "r2": -0.09327443978758598,
+    "rmse": 20.017522644655536,
+    "n": 62
+  },
+  {
+    "fold": 2,
+    "family": "kan",
+    "trait": "stomatasize",
+    "r2": -0.019699621634568842,
+    "rmse": 6.2643891614697615,
+    "n": 62
+  },
+  {
+    "fold": 3,
+    "family": "separate_rf",
+    "trait": "delta_13C",
+    "r2": -0.03780208166291099,
+    "rmse": 1.3511508918965895,
+    "n": 62
+  },
+  {
+    "fold": 3,
+    "family": "separate_rf",
+    "trait": "stomata_density",
+    "r2": -0.07342218474722118,
+    "rmse": 24.26404127498012,
+    "n": 62
+  },
+  {
+    "fold": 3,
+    "family": "separate_rf",
+    "trait": "stomatasize",
+    "r2": -0.05696534471349923,
+    "rmse": 6.438864132248684,
+    "n": 62
+  },
+  {
+    "fold": 3,
+    "family": "joint_rf",
+    "trait": "delta_13C",
+    "r2": 0.010568282177626731,
+    "rmse": 1.3192876519982126,
+    "n": 62
+  },
+  {
+    "fold": 3,
+    "family": "joint_rf",
+    "trait": "stomata_density",
+    "r2": -0.044015052180028214,
+    "rmse": 23.92936823190787,
+    "n": 62
+  },
+  {
+    "fold": 3,
+    "family": "joint_rf",
+    "trait": "stomatasize",
+    "r2": -0.06142079577975257,
+    "rmse": 6.452420809111841,
+    "n": 62
+  },
+  {
+    "fold": 3,
+    "family": "kan",
+    "trait": "delta_13C",
+    "r2": -0.027391856677978277,
+    "rmse": 1.3443570934277829,
+    "n": 62
+  },
+  {
+    "fold": 3,
+    "family": "kan",
+    "trait": "stomata_density",
+    "r2": -0.07102411104377149,
+    "rmse": 24.23692263770269,
+    "n": 62
+  },
+  {
+    "fold": 3,
+    "family": "kan",
+    "trait": "stomatasize",
+    "r2": -0.11602699956956042,
+    "rmse": 6.616315976637057,
+    "n": 62
+  },
+  {
+    "fold": 4,
+    "family": "separate_rf",
+    "trait": "delta_13C",
+    "r2": 0.11878317758957813,
+    "rmse": 1.0979911419002912,
+    "n": 62
+  },
+  {
+    "fold": 4,
+    "family": "separate_rf",
+    "trait": "stomata_density",
+    "r2": -0.02467561358093673,
+    "rmse": 20.594781974307402,
+    "n": 62
+  },
+  {
+    "fold": 4,
+    "family": "separate_rf",
+    "trait": "stomatasize",
+    "r2": -0.03197564795460961,
+    "rmse": 6.6975392055623555,
+    "n": 62
+  },
+  {
+    "fold": 4,
+    "family": "joint_rf",
+    "trait": "delta_13C",
+    "r2": 0.13445754941059207,
+    "rmse": 1.088182238978272,
+    "n": 62
+  },
+  {
+    "fold": 4,
+    "family": "joint_rf",
+    "trait": "stomata_density",
+    "r2": -0.005736510540438333,
+    "rmse": 20.403567381975087,
+    "n": 62
+  },
+  {
+    "fold": 4,
+    "family": "joint_rf",
+    "trait": "stomatasize",
+    "r2": -0.04377344763351654,
+    "rmse": 6.735714367228307,
+    "n": 62
+  },
+  {
+    "fold": 4,
+    "family": "kan",
+    "trait": "delta_13C",
+    "r2": 0.14592387887561653,
+    "rmse": 1.080950325600554,
+    "n": 62
+  },
+  {
+    "fold": 4,
+    "family": "kan",
+    "trait": "stomata_density",
+    "r2": -0.07996801563820166,
+    "rmse": 21.143138039903043,
+    "n": 62
+  },
+  {
+    "fold": 4,
+    "family": "kan",
+    "trait": "stomatasize",
+    "r2": -0.7452347692766026,
+    "rmse": 8.7097856742131,
+    "n": 62
+  },
+  {
+    "fold": 5,
+    "family": "separate_rf",
+    "trait": "delta_13C",
+    "r2": 0.08183498726581084,
+    "rmse": 1.0474965408156443,
+    "n": 62
+  },
+  {
+    "fold": 5,
+    "family": "separate_rf",
+    "trait": "stomata_density",
+    "r2": 0.05943172808490793,
+    "rmse": 19.366898607866442,
+    "n": 62
+  },
+  {
+    "fold": 5,
+    "family": "separate_rf",
+    "trait": "stomatasize",
+    "r2": 0.03820200185637468,
+    "rmse": 7.5156622754844,
+    "n": 62
+  },
+  {
+    "fold": 5,
+    "family": "joint_rf",
+    "trait": "delta_13C",
+    "r2": 0.09425991639658127,
+    "rmse": 1.0403848551781374,
+    "n": 62
+  },
+  {
+    "fold": 5,
+    "family": "joint_rf",
+    "trait": "stomata_density",
+    "r2": 0.06275913760832852,
+    "rmse": 19.332611518387402,
+    "n": 62
+  },
+  {
+    "fold": 5,
+    "family": "joint_rf",
+    "trait": "stomatasize",
+    "r2": 0.056967516721792455,
+    "rmse": 7.441982564858762,
+    "n": 62
+  },
+  {
+    "fold": 5,
+    "family": "kan",
+    "trait": "delta_13C",
+    "r2": 0.02589557320322622,
+    "rmse": 1.0789342659681214,
+    "n": 62
+  },
+  {
+    "fold": 5,
+    "family": "kan",
+    "trait": "stomata_density",
+    "r2": 0.046339871093837304,
+    "rmse": 19.501217652042524,
+    "n": 62
+  },
+  {
+    "fold": 5,
+    "family": "kan",
+    "trait": "stomatasize",
+    "r2": -0.019802785666622524,
+    "rmse": 7.738974558374558,
+    "n": 62
+  }
+]
