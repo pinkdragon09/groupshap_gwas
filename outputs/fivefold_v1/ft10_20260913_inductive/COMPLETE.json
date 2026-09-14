@@ -1,0 +1,21 @@
+{
+  "run_fingerprint": "c2fc0bf1f37f4812f23d4b886ed974bc3a5340257b5314c7746de1751315d9ed",
+  "artifacts": {
+    "PREPARED.json": "43c5e1a874037c28650c3c268574fa75d0d931a7fc54859c4a683d24714f5465",
+    "REPORT.md": "bbf97f03cefa9ae400786674c746b5e14b74cdd277e3c9f6fdbc60e6fc65af6d",
+    "model_summary.json": "03aa85113df6819cd97b08a9b97cf7f7bac67bccc4eac0b3902fec407c991e0b",
+    "metrics_by_fold_seed.json": "539d8a1e0c8f7f4a6349e910dfc3672a471588bdc4dfbdbfd7606462018ef9b0",
+    "baseline_metrics.json": "ba557b72064092a9b35548b4c79c431feec25ad810cbe2fb31a24f3969efb5a6",
+    "attribution_by_fold_seed.json": "3e5b68a68a8b78064aa6d6f6ddb5d2de77ed97cf2017680fd6562ac48052b0f3",
+    "interaction_by_fold_seed.json": "88e54d3936f118e80b3fc2fe4002213bc9e72fa2c98487c2fdd0cc9f5bb7928a",
+    "gpi_by_fold_seed.json": "dd5421562a94fcb232021e0e2575a3ff22047f60654f67589c07a0e16429c32b",
+    "snp_ranks_ale_by_fold_seed.json": "458033e1adf23765fbd7dc6a71dee5d7a8d36f73246e4bbb5d8a32673e096da9",
+    "paired_differences.json": "45f2bfc8575453b506be95880add2c62ac69655a62583f3b00438b20a57ef2c4",
+    "selection_frequency.json": "c5fcbffb922b49e2af90c52c3a4ac8ed03646b48437117f74c96216e526fa15a",
+    "fold_1/COMPLETE.json": "bcff9cfdabda9ea4346fc7e4b8c2b6d50b3663b714f8e1952d1d3d70a5af2877",
+    "fold_2/COMPLETE.json": "39b12c5846f2cb83b97be844b6c9feb5ae68d2f08668353c16a7dfb506546289",
+    "fold_3/COMPLETE.json": "d20ae0c211bd69437a17ec887e14f9066b04518d213872e1986dff4748d6325b",
+    "fold_4/COMPLETE.json": "3b97cc90f399f192ab3009ecdfe0342ffba6c78f35d5c199a9e064fd6d3c48bb",
+    "fold_5/COMPLETE.json": "18f569440dca3b3d3cca0f0a023445ccf5ac4adfddf738f175f754bb800a8f49"
+  }
+}

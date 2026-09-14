@@ -1,0 +1,10 @@
+{
+  "run_fingerprint": "c2fc0bf1f37f4812f23d4b886ed974bc3a5340257b5314c7746de1751315d9ed",
+  "artifacts": {
+    "gene_by_fold_seed.json": "d8465c11b3ca20cc6ac355e06860e8b9824cc1a55b11aa00b681a8bb9f4889a9",
+    "gene_summary.json": "f32d232d3f779507ea4307ff59b3bd5058e0faf8c2da08dd189f07ce95b65eff",
+    "canonical_coverage.json": "2b84db3b76ca4f55656a426015bde1c634ea1b76214614e180c28248a4811d6f",
+    "gene_mc_diagnostics.json": "aa15dea3a2ff752c2f4878a83659d0f1429dbbafdb803e14519e46be2233769a",
+    "gene_summary_provenance.json": "b66e0db66943c6ee0078c84eb16f3fd95dac62ff2792df2391d359e1f5aebb06"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "model": "rf_pc_only",
+  "mean_fold_r2": 0.43738628494897974,
+  "sd_fold_r2": 0.09887208010769981,
+  "mean_seed_pooled_oof_r2": 0.47512248712137145,
+  "pooled_oof_r2_by_seed": [
+    0.4837107134319343,
+    0.47348251239985106,
+    0.46817423553232895
+  ],
+  "completed_models": 15,
+  "checkpoint_reproduction_passed": true
+}

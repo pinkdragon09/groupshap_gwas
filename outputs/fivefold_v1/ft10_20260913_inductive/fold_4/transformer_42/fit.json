@@ -1,0 +1,110 @@
+{
+  "model": "transformer",
+  "seed": 42,
+  "actual_seed": 442,
+  "selected_epochs": 2,
+  "inner_trace": [
+    {
+      "epoch": 1,
+      "training_mse": 1.0599952936172485,
+      "validation_mse": 0.9459826946258545
+    },
+    {
+      "epoch": 2,
+      "training_mse": 0.9630241990089417,
+      "validation_mse": 0.9375572800636292
+    },
+    {
+      "epoch": 3,
+      "training_mse": 0.974448561668396,
+      "validation_mse": 0.9429337978363037
+    },
+    {
+      "epoch": 4,
+      "training_mse": 0.8968713283538818,
+      "validation_mse": 0.9612664580345154
+    },
+    {
+      "epoch": 5,
+      "training_mse": 0.8828962445259094,
+      "validation_mse": 0.989116907119751
+    },
+    {
+      "epoch": 6,
+      "training_mse": 0.8946142196655273,
+      "validation_mse": 1.021477222442627
+    },
+    {
+      "epoch": 7,
+      "training_mse": 0.8964078426361084,
+      "validation_mse": 1.0517325401306152
+    },
+    {
+      "epoch": 8,
+      "training_mse": 0.8993110656738281,
+      "validation_mse": 1.0692622661590576
+    },
+    {
+      "epoch": 9,
+      "training_mse": 0.9006418585777283,
+      "validation_mse": 1.0722219944000244
+    },
+    {
+      "epoch": 10,
+      "training_mse": 0.9053106904029846,
+      "validation_mse": 1.065396785736084
+    },
+    {
+      "epoch": 11,
+      "training_mse": 0.8937457799911499,
+      "validation_mse": 1.050958275794983
+    },
+    {
+      "epoch": 12,
+      "training_mse": 0.8511412739753723,
+      "validation_mse": 1.0305777788162231
+    },
+    {
+      "epoch": 13,
+      "training_mse": 0.8755213022232056,
+      "validation_mse": 1.0098217725753784
+    },
+    {
+      "epoch": 14,
+      "training_mse": 0.8759189248085022,
+      "validation_mse": 0.9896568655967712
+    },
+    {
+      "epoch": 15,
+      "training_mse": 0.855518102645874,
+      "validation_mse": 0.9750769138336182
+    },
+    {
+      "epoch": 16,
+      "training_mse": 0.8578587174415588,
+      "validation_mse": 0.9654516577720642
+    },
+    {
+      "epoch": 17,
+      "training_mse": 0.8481101989746094,
+      "validation_mse": 0.9591376781463623
+    }
+  ],
+  "outer_trace": [
+    {
+      "epoch": 1,
+      "training_mse": 1.0250188112258911
+    },
+    {
+      "epoch": 2,
+      "training_mse": 0.9886936545372009
+    }
+  ],
+  "training_seconds": 4.798667602939531,
+  "explanation_seconds": 80.05981437896844,
+  "metrics": {
+    "r2": -0.28423195425746384,
+    "rmse": 14.614639252103515,
+    "n": 27
+  }
+}

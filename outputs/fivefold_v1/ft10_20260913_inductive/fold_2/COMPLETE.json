@@ -1,0 +1,17 @@
+{
+  "run_fingerprint": "c2fc0bf1f37f4812f23d4b886ed974bc3a5340257b5314c7746de1751315d9ed",
+  "artifacts": {
+    "shared.json": "0e5dbe68b377e2d354ca0f85c29d205699df020db78080325fe0463c2f7a6b6c",
+    "baseline.npz": "f85a37dea18ee8ee738079d84dd4708c44ee892f90e0cec8d69a2e59f26dfc0b",
+    "pc_baseline.joblib": "ca1fe3a7c922515f4c71ed62df2da9b5fc52436c36a31c6b6165ae8aa36d2a87",
+    "rf_42/COMPLETE.json": "ca68078f645c2050401f2cf21f0883bde1f72366104a21bb6d81de1e078fcafb",
+    "transformer_42/COMPLETE.json": "7f65484b89cb627bddce7f3cef9cfcd8cf10b78fbde643b3d8d6f471661c1bcc",
+    "kan_42/COMPLETE.json": "f54dd6962a008fe43fa9480894602bbd449ccb3b942e6a08bdd3beab41acfa7e",
+    "rf_43/COMPLETE.json": "64500eb8bb3f9ccb79a53794287df79a0c6afb65b71f141331c7bc4218f3d8aa",
+    "transformer_43/COMPLETE.json": "ef62b8dfc514c18fe98497f28b378ac6d1bba15a53b9028c3c6ec26aa7ccae3f",
+    "kan_43/COMPLETE.json": "7ae063d8e422cbf23fef89bb4e1b62a8a9e1f09233e362d7bb87a9418c1e5ec4",
+    "rf_44/COMPLETE.json": "d48adfaf6e061ec2e38c338f9fd4c2e884c1a9e4c5655908b69a0b43ca117586",
+    "transformer_44/COMPLETE.json": "2e1c2fcf2aefdcb791ca2d11b614ccf8b0d959e1d0e645fd8f1a38def2f983c2",
+    "kan_44/COMPLETE.json": "fb107d8980db912188b3e59ca8468bbd452693151b248830798c0c17378bb54a"
+  }
+}

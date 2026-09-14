@@ -1,0 +1,15 @@
+{
+  "model": "rf",
+  "seed": 44,
+  "actual_seed": 244,
+  "selected_epochs": 0,
+  "inner_trace": [],
+  "outer_trace": [],
+  "training_seconds": 0.5855917169246823,
+  "explanation_seconds": 4.308817483950406,
+  "metrics": {
+    "r2": 0.4656065848692654,
+    "rmse": 14.082004134202787,
+    "n": 27
+  }
+}
