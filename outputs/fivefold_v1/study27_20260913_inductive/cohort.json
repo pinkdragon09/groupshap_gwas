@@ -1,0 +1,690 @@
+{
+  "sample_ids": [
+    "2057",
+    "2171",
+    "5837",
+    "6040",
+    "6074",
+    "6243",
+    "6897",
+    "6898",
+    "6903",
+    "6907",
+    "6909",
+    "6913",
+    "6915",
+    "6919",
+    "6926",
+    "6931",
+    "6932",
+    "6940",
+    "6943",
+    "6944",
+    "6951",
+    "6956",
+    "6959",
+    "6960",
+    "6961",
+    "6963",
+    "6968",
+    "6973",
+    "6981",
+    "6982",
+    "6987",
+    "7000",
+    "7008",
+    "7026",
+    "7028",
+    "7062",
+    "7102",
+    "7126",
+    "7143",
+    "7147",
+    "7164",
+    "7169",
+    "7192",
+    "7255",
+    "7282",
+    "7306",
+    "7316",
+    "7320",
+    "7337",
+    "7344",
+    "7353",
+    "7378",
+    "7384",
+    "7404",
+    "7418",
+    "7424",
+    "7477",
+    "7514",
+    "7515",
+    "7523",
+    "7525",
+    "8214",
+    "8230",
+    "8233",
+    "8236",
+    "8239",
+    "8240",
+    "8243",
+    "8258",
+    "8284",
+    "8297",
+    "8306",
+    "8311",
+    "8312",
+    "8334",
+    "8354",
+    "8366",
+    "8420",
+    "8422",
+    "9057",
+    "9104"
+  ],
+  "genotype_rows": [
+    88,
+    96,
+    155,
+    189,
+    199,
+    289,
+    314,
+    315,
+    318,
+    320,
+    322,
+    324,
+    325,
+    328,
+    333,
+    336,
+    337,
+    340,
+    341,
+    342,
+    344,
+    345,
+    348,
+    349,
+    350,
+    351,
+    354,
+    358,
+    363,
+    364,
+    367,
+    372,
+    375,
+    379,
+    380,
+    386,
+    398,
+    408,
+    413,
+    414,
+    420,
+    422,
+    427,
+    443,
+    449,
+    455,
+    458,
+    460,
+    467,
+    470,
+    475,
+    483,
+    486,
+    490,
+    496,
+    498,
+    505,
+    506,
+    507,
+    512,
+    513,
+    528,
+    531,
+    533,
+    536,
+    539,
+    540,
+    543,
+    549,
+    553,
+    556,
+    557,
+    559,
+    560,
+    562,
+    567,
+    570,
+    576,
+    577,
+    586,
+    604
+  ],
+  "y": [
+    38.9233,
+    25.0226,
+    40.0759,
+    32.8048,
+    25.693,
+    34.9517,
+    27.1119,
+    37.277,
+    42.3534,
+    38.0437,
+    54.0346,
+    44.6487,
+    44.2109,
+    41.6118,
+    30.4819,
+    54.7389,
+    45.5877,
+    40.4653,
+    30.5954,
+    26.6646,
+    35.8592,
+    40.1138,
+    32.0884,
+    27.1558,
+    39.2491,
+    53.1494,
+    39.2619,
+    40.1551,
+    43.3988,
+    41.6293,
+    29.7647,
+    32.6487,
+    40.2574,
+    29.2958,
+    30.2373,
+    46.6749,
+    41.1314,
+    46.1882,
+    39.8802,
+    41.2074,
+    40.5622,
+    30.4585,
+    34.8495,
+    37.8242,
+    51.438,
+    34.444,
+    40.6877,
+    31.9606,
+    56.0176,
+    35.6628,
+    43.4091,
+    32.2398,
+    34.1401,
+    52.2064,
+    40.6772,
+    32.0318,
+    38.2091,
+    36.7547,
+    39.9714,
+    25.7571,
+    28.4084,
+    38.2888,
+    32.4897,
+    31.8614,
+    34.5013,
+    37.1804,
+    36.0197,
+    38.8416,
+    40.9988,
+    31.3561,
+    33.3519,
+    30.6873,
+    46.3431,
+    38.894,
+    45.9227,
+    33.5203,
+    42.2346,
+    30.3923,
+    44.7877,
+    41.843,
+    36.0876
+  ],
+  "excluded": [
+    {
+      "accession": "149",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "1719",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "1743",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "1850",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "1859",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "1874",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "1967",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "2011",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "206",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "224",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "2290",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "236",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "252",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "262",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "264",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "394",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "4802",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "4879",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "5122",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "5145",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "5175",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "5299",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "5373",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "5444",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "5494",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "5590",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "5628",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "5719",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "5721",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "5722",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "5728",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "5729",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "5736",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "5738",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "5739",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "5742",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "5744",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "5746",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "5752",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "5785",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "5788",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "5805",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "5812",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "5816",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "5817",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "6899",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "6906",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "6928",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "6930",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "6936",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "6946",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "6965",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "6977",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "6978",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "6985",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "6988",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "7015",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "7075",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "7079",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "7080",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "7121",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "7123",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "7139",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "7145",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "7151",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "7166",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "7172",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "7178",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "7201",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "7210",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "7224",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "7262",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "7275",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "7284",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "7291",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "7299",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "7309",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "7331",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "7351",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "7355",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "7379",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "7390",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "7408",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "7498",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "7518",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "7519",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "8215",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "8270",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "8271",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "8275",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "8304",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "8310",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "8314",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "8329",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "8348",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "8430",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "8631",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "8725",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "8787",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "8811",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "9012",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "9077",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "9152",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "9179",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "9302",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "9308",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "9309",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "936",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "96",
+      "reason": "no_genotype"
+    }
+  ],
+  "trait": "Mean(TRL) C"
+}
