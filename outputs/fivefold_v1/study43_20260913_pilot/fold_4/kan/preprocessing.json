@@ -1,0 +1,25 @@
+{
+  "target_mean": [
+    -35.50765519775924,
+    144.52732974910643,
+    110.95926734530128
+  ],
+  "target_sd": [
+    1.1986284142231636,
+    21.38602247232363,
+    6.808812806426217
+  ],
+  "seed": 442,
+  "input_transform": "identity: binary genotypes 0/1",
+  "inner_target_mean": [
+    -35.529181534979806,
+    143.5578002244687,
+    111.18942165321974
+  ],
+  "inner_target_sd": [
+    1.178683313983985,
+    20.87124036438509,
+    6.577118156756211
+  ],
+  "refit": "fresh initialization on all outer-training rows for inner-selected epoch count"
+}
