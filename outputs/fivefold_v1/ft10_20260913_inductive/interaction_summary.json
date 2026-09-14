@@ -1,0 +1,1235 @@
+[
+  {
+    "model": "rf",
+    "pair": "chr1 x chr2",
+    "mean": 0.33823547724934727,
+    "fold_sd": 0.32205304333577334,
+    "fold_means": [
+      0.8805607342409382,
+      0.12368010601680778,
+      0.2018026021405613,
+      0.10508405669678257,
+      0.3800498871516465
+    ],
+    "seed_sd_within_fold": [
+      0.054422097208588094,
+      0.04400559808923541,
+      0.04607294585649124,
+      0.017556017499985768,
+      0.10511564542211452
+    ],
+    "folds_with_selected_features": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "absent_group_policy": "zero contribution when no selected features belong to the group"
+  },
+  {
+    "model": "rf",
+    "pair": "chr1 x chr3",
+    "mean": 0.0726578495758501,
+    "fold_sd": 0.06683655871736902,
+    "fold_means": [
+      0.1447614288928574,
+      0.0761307803464111,
+      0.01047746641540938,
+      0.13191957222457262,
+      0.0
+    ],
+    "seed_sd_within_fold": [
+      0.06607099961259051,
+      0.009921726137772641,
+      0.002353497878726453,
+      0.025797514119029922,
+      0.0
+    ],
+    "folds_with_selected_features": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "absent_group_policy": "zero contribution when no selected features belong to the group"
+  },
+  {
+    "model": "rf",
+    "pair": "chr1 x chr4",
+    "mean": 0.14608789958473675,
+    "fold_sd": 0.17277688243174297,
+    "fold_means": [
+      0.23078818209684596,
+      0.4077924263159991,
+      0.011732217606195102,
+      0.08012667190464366,
+      0.0
+    ],
+    "seed_sd_within_fold": [
+      0.02436480110443699,
+      0.056218576462060695,
+      0.008072888025089157,
+      0.027000639216529235,
+      0.0
+    ],
+    "folds_with_selected_features": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "absent_group_policy": "zero contribution when no selected features belong to the group"
+  },
+  {
+    "model": "rf",
+    "pair": "chr1 x chr5",
+    "mean": 0.2858530435100173,
+    "fold_sd": 0.21099096690737268,
+    "fold_means": [
+      0.3580409083845655,
+      0.057072665700728005,
+      0.2191994579248865,
+      0.6109650768379824,
+      0.18398710870192403
+    ],
+    "seed_sd_within_fold": [
+      0.0360018506533751,
+      0.02710806164130393,
+      0.04528945398566941,
+      0.05477265719947749,
+      0.023219872810486573
+    ],
+    "folds_with_selected_features": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "absent_group_policy": "zero contribution when no selected features belong to the group"
+  },
+  {
+    "model": "rf",
+    "pair": "chr1 x PCs",
+    "mean": 0.15605438042715397,
+    "fold_sd": 0.017629863220338268,
+    "fold_means": [
+      0.13725010086123,
+      0.17961914007988874,
+      0.14429508002620703,
+      0.16881598774181564,
+      0.1502915934266286
+    ],
+    "seed_sd_within_fold": [
+      0.021098071495697767,
+      0.020209976037305788,
+      0.03317352717271421,
+      0.0200580667167457,
+      0.03690936088628339
+    ],
+    "folds_with_selected_features": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "absent_group_policy": "zero contribution when no selected features belong to the group"
+  },
+  {
+    "model": "rf",
+    "pair": "chr2 x chr3",
+    "mean": 0.2104676518004188,
+    "fold_sd": 0.22117955505639053,
+    "fold_means": [
+      0.3388304799670551,
+      0.09398141007583649,
+      0.535173570286521,
+      0.08435279867268158,
+      0.0
+    ],
+    "seed_sd_within_fold": [
+      0.047484150688760614,
+      0.05023480974324153,
+      0.07110922340612162,
+      0.022282559255151147,
+      0.0
+    ],
+    "folds_with_selected_features": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "absent_group_policy": "zero contribution when no selected features belong to the group"
+  },
+  {
+    "model": "rf",
+    "pair": "chr2 x chr4",
+    "mean": 0.4468455669913931,
+    "fold_sd": 0.5756168611352883,
+    "fold_means": [
+      0.9455688759355375,
+      1.1933304059713024,
+      0.025168015443265617,
+      0.0701605376068603,
+      0.0
+    ],
+    "seed_sd_within_fold": [
+      0.07621502956028793,
+      0.06675573290434682,
+      0.01245258590115265,
+      0.021499904775962676,
+      0.0
+    ],
+    "folds_with_selected_features": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "absent_group_policy": "zero contribution when no selected features belong to the group"
+  },
+  {
+    "model": "rf",
+    "pair": "chr2 x chr5",
+    "mean": 0.4918453829527391,
+    "fold_sd": 0.3160885725680684,
+    "fold_means": [
+      0.5279232898172754,
+      0.07935790785708356,
+      0.3813206892051455,
+      0.5145952573834102,
+      0.9560297705007804
+    ],
+    "seed_sd_within_fold": [
+      0.03372161780647318,
+      0.028323182836001836,
+      0.04026559087590384,
+      0.08237992450762588,
+      0.06607505299339671
+    ],
+    "folds_with_selected_features": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "absent_group_policy": "zero contribution when no selected features belong to the group"
+  },
+  {
+    "model": "rf",
+    "pair": "chr2 x PCs",
+    "mean": 0.2386650637262176,
+    "fold_sd": 0.15481483283093828,
+    "fold_means": [
+      0.12475814049705429,
+      0.15468322075356103,
+      0.2947783695471575,
+      0.13257264096722743,
+      0.4865329468660879
+    ],
+    "seed_sd_within_fold": [
+      0.028042508179178062,
+      0.030097218931831753,
+      0.04842144438235667,
+      0.06645640678919806,
+      0.11488979652374127
+    ],
+    "folds_with_selected_features": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "absent_group_policy": "zero contribution when no selected features belong to the group"
+  },
+  {
+    "model": "rf",
+    "pair": "chr3 x chr4",
+    "mean": 0.1265435878166405,
+    "fold_sd": 0.15352744564981194,
+    "fold_means": [
+      0.2607549095093182,
+      0.3224857142565584,
+      0.0009169946155160657,
+      0.04856032070180976,
+      0.0
+    ],
+    "seed_sd_within_fold": [
+      0.017012122621998967,
+      0.036272309503824374,
+      0.00026168550977594097,
+      0.01642108619288198,
+      0.0
+    ],
+    "folds_with_selected_features": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "absent_group_policy": "zero contribution when no selected features belong to the group"
+  },
+  {
+    "model": "rf",
+    "pair": "chr3 x chr5",
+    "mean": 0.12465610941927077,
+    "fold_sd": 0.16509272830147032,
+    "fold_means": [
+      0.11878884728201776,
+      0.038417809454363024,
+      0.056233367910837294,
+      0.4098405224491357,
+      0.0
+    ],
+    "seed_sd_within_fold": [
+      0.0032990892815038995,
+      0.0067073897329178725,
+      0.016060114517698402,
+      0.10789193232466486,
+      0.0
+    ],
+    "folds_with_selected_features": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "absent_group_policy": "zero contribution when no selected features belong to the group"
+  },
+  {
+    "model": "rf",
+    "pair": "chr3 x PCs",
+    "mean": 0.07506426179399721,
+    "fold_sd": 0.05300672296285329,
+    "fold_means": [
+      0.06065146259237822,
+      0.09240012774076806,
+      0.0758235985233379,
+      0.1464461201135019,
+      0.0
+    ],
+    "seed_sd_within_fold": [
+      0.004770821131430766,
+      0.00712606459716491,
+      0.02214749421437796,
+      0.0332140032255227,
+      0.0
+    ],
+    "folds_with_selected_features": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "absent_group_policy": "zero contribution when no selected features belong to the group"
+  },
+  {
+    "model": "rf",
+    "pair": "chr4 x chr5",
+    "mean": 0.104206212059027,
+    "fold_sd": 0.09780150298116255,
+    "fold_means": [
+      0.23189404558720597,
+      0.10127909973479865,
+      0.020180714900610932,
+      0.1676772000725195,
+      0.0
+    ],
+    "seed_sd_within_fold": [
+      0.028922383158121706,
+      0.016818568827132216,
+      0.008040753326959953,
+      0.038225441921847333,
+      0.0
+    ],
+    "folds_with_selected_features": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "absent_group_policy": "zero contribution when no selected features belong to the group"
+  },
+  {
+    "model": "rf",
+    "pair": "chr4 x PCs",
+    "mean": 0.1623305954928924,
+    "fold_sd": 0.2073478035721327,
+    "fold_means": [
+      0.17741053070377555,
+      0.509963881748917,
+      0.014872381843660507,
+      0.10940618316810874,
+      0.0
+    ],
+    "seed_sd_within_fold": [
+      0.0051089150378752475,
+      0.08646174194620068,
+      0.00861481507697918,
+      0.0492037125048208,
+      0.0
+    ],
+    "folds_with_selected_features": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "absent_group_policy": "zero contribution when no selected features belong to the group"
+  },
+  {
+    "model": "rf",
+    "pair": "chr5 x PCs",
+    "mean": 0.2156839258585954,
+    "fold_sd": 0.15426809179562842,
+    "fold_means": [
+      0.0868133168694298,
+      0.06236483080977906,
+      0.4221861186053906,
+      0.3227112869511081,
+      0.1843440760572693
+    ],
+    "seed_sd_within_fold": [
+      0.02485052346002163,
+      0.006137665253358033,
+      0.04194519659002932,
+      0.0054092951985728,
+      0.02554156222468585
+    ],
+    "folds_with_selected_features": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "absent_group_policy": "zero contribution when no selected features belong to the group"
+  },
+  {
+    "model": "transformer",
+    "pair": "chr1 x chr2",
+    "mean": 0.4437037297042418,
+    "fold_sd": 0.5900204335134577,
+    "fold_means": [
+      0.05587649124011219,
+      1.22558356659621,
+      0.0021519037498440013,
+      0.0012697432040428296,
+      0.9336369437309999
+    ],
+    "seed_sd_within_fold": [
+      0.014119670101492484,
+      0.09540582135923704,
+      0.0019498413922711636,
+      0.0006391533845143582,
+      0.8027632070508685
+    ],
+    "folds_with_selected_features": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "absent_group_policy": "zero contribution when no selected features belong to the group"
+  },
+  {
+    "model": "transformer",
+    "pair": "chr1 x chr3",
+    "mean": 0.08303162355499547,
+    "fold_sd": 0.1765184408025405,
+    "fold_means": [
+      0.013313720760226523,
+      0.39864973397222886,
+      0.0005194095053862968,
+      0.0026752535371356093,
+      0.0
+    ],
+    "seed_sd_within_fold": [
+      0.0017266747871147832,
+      0.03219130842950864,
+      0.00047545865292421535,
+      0.0013650790151293168,
+      0.0
+    ],
+    "folds_with_selected_features": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "absent_group_policy": "zero contribution when no selected features belong to the group"
+  },
+  {
+    "model": "transformer",
+    "pair": "chr1 x chr4",
+    "mean": 0.3132186985733723,
+    "fold_sd": 0.6912678224181222,
+    "fold_means": [
+      0.015229082645603678,
+      1.5497425658114805,
+      0.0005752249669126847,
+      0.0005466194428643233,
+      0.0
+    ],
+    "seed_sd_within_fold": [
+      0.0056516079334640555,
+      0.07253525173602751,
+      0.0005114343381433232,
+      0.0002960314212912255,
+      0.0
+    ],
+    "folds_with_selected_features": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "absent_group_policy": "zero contribution when no selected features belong to the group"
+  },
+  {
+    "model": "transformer",
+    "pair": "chr1 x chr5",
+    "mean": 0.14644097625241492,
+    "fold_sd": 0.14792276057293868,
+    "fold_means": [
+      0.09102797799080432,
+      0.36175211430776627,
+      0.024496207869358636,
+      0.021388067720446696,
+      0.23354051337369872
+    ],
+    "seed_sd_within_fold": [
+      0.018365392774312303,
+      0.026970069358305003,
+      0.022306214033230742,
+      0.01313604006246763,
+      0.1900793869133765
+    ],
+    "folds_with_selected_features": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "absent_group_policy": "zero contribution when no selected features belong to the group"
+  },
+  {
+    "model": "transformer",
+    "pair": "chr1 x PCs",
+    "mean": 0.009729113405377753,
+    "fold_sd": 0.008415310502449666,
+    "fold_means": [
+      0.006982554708277651,
+      0.022526647339269786,
+      0.0032128888237340516,
+      0.0023385303611453277,
+      0.013584945794461957
+    ],
+    "seed_sd_within_fold": [
+      0.002349926003040701,
+      0.0026496097037576522,
+      0.001419254468087213,
+      0.0007649216886356403,
+      0.012019026146062792
+    ],
+    "folds_with_selected_features": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "absent_group_policy": "zero contribution when no selected features belong to the group"
+  },
+  {
+    "model": "transformer",
+    "pair": "chr2 x chr3",
+    "mean": 0.1101330428356149,
+    "fold_sd": 0.21677154296023934,
+    "fold_means": [
+      0.04883921064165519,
+      0.4961896783045148,
+      0.0034070333618458023,
+      0.002229291870058691,
+      0.0
+    ],
+    "seed_sd_within_fold": [
+      0.01736239454077553,
+      0.04668684747096078,
+      0.0029142687146972083,
+      0.0011090569645350295,
+      0.0
+    ],
+    "folds_with_selected_features": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "absent_group_policy": "zero contribution when no selected features belong to the group"
+  },
+  {
+    "model": "transformer",
+    "pair": "chr2 x chr4",
+    "mean": 0.32991911169856153,
+    "fold_sd": 0.7054206536483475,
+    "fold_means": [
+      0.05718682021434466,
+      1.5910483559765665,
+      0.0009690791232908029,
+      0.00039130317860532933,
+      0.0
+    ],
+    "seed_sd_within_fold": [
+      0.0260364062399234,
+      0.11486164369596732,
+      0.0008650658150071348,
+      0.00019305280663404236,
+      0.0
+    ],
+    "folds_with_selected_features": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "absent_group_policy": "zero contribution when no selected features belong to the group"
+  },
+  {
+    "model": "transformer",
+    "pair": "chr2 x chr5",
+    "mean": 0.46287825876403116,
+    "fold_sd": 0.68713321571387,
+    "fold_means": [
+      0.284064625651786,
+      0.3417564294108115,
+      0.014711573419541915,
+      0.011919750305001689,
+      1.6619389150330146
+    ],
+    "seed_sd_within_fold": [
+      0.07713129105349326,
+      0.03832537501287827,
+      0.012649525850096266,
+      0.0059531814389918265,
+      1.3308997810796044
+    ],
+    "folds_with_selected_features": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "absent_group_policy": "zero contribution when no selected features belong to the group"
+  },
+  {
+    "model": "transformer",
+    "pair": "chr2 x PCs",
+    "mean": 0.023927227423621394,
+    "fold_sd": 0.025646641740417482,
+    "fold_means": [
+      0.015161278414656589,
+      0.02836141606402309,
+      0.007449756998988452,
+      0.002343735931705702,
+      0.06631994970873312
+    ],
+    "seed_sd_within_fold": [
+      0.00978077759061844,
+      0.0018228657108729064,
+      0.0042762262821184945,
+      0.0009304345366604176,
+      0.04141882209192525
+    ],
+    "folds_with_selected_features": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "absent_group_policy": "zero contribution when no selected features belong to the group"
+  },
+  {
+    "model": "transformer",
+    "pair": "chr3 x chr4",
+    "mean": 0.11979852701109536,
+    "fold_sd": 0.253509186468551,
+    "fold_means": [
+      0.025136209705303853,
+      0.5728818502386309,
+      0.00021562929914461008,
+      0.000758945812397494,
+      0.0
+    ],
+    "seed_sd_within_fold": [
+      0.008992354151212908,
+      0.050024186967032806,
+      0.0001935990792330331,
+      0.00037587607110324783,
+      0.0
+    ],
+    "folds_with_selected_features": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "absent_group_policy": "zero contribution when no selected features belong to the group"
+  },
+  {
+    "model": "transformer",
+    "pair": "chr3 x chr5",
+    "mean": 0.048989581454197885,
+    "fold_sd": 0.06145726784121614,
+    "fold_means": [
+      0.07233502035364556,
+      0.1460375167798046,
+      0.0034022940403950924,
+      0.02317307609714421,
+      0.0
+    ],
+    "seed_sd_within_fold": [
+      0.02007721451338721,
+      0.02580358505677208,
+      0.002834311486855056,
+      0.012490270590272762,
+      0.0
+    ],
+    "folds_with_selected_features": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "absent_group_policy": "zero contribution when no selected features belong to the group"
+  },
+  {
+    "model": "transformer",
+    "pair": "chr3 x PCs",
+    "mean": 0.0045129047164111724,
+    "fold_sd": 0.004038052950849163,
+    "fold_means": [
+      0.006368515587183414,
+      0.010500952103897267,
+      0.0029189938788735117,
+      0.0027760620121016696,
+      0.0
+    ],
+    "seed_sd_within_fold": [
+      0.002844630548832728,
+      0.0012879554582378718,
+      0.00160089088046973,
+      0.000925009896443648,
+      0.0
+    ],
+    "folds_with_selected_features": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "absent_group_policy": "zero contribution when no selected features belong to the group"
+  },
+  {
+    "model": "transformer",
+    "pair": "chr4 x chr5",
+    "mean": 0.0799927856884119,
+    "fold_sd": 0.1399263103939372,
+    "fold_means": [
+      0.06651028127968238,
+      0.3253540336864032,
+      0.00388925821410081,
+      0.004210355261873064,
+      0.0
+    ],
+    "seed_sd_within_fold": [
+      0.018972821526276214,
+      0.022636612069492756,
+      0.003442818842673296,
+      0.002223200933779405,
+      0.0
+    ],
+    "folds_with_selected_features": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "absent_group_policy": "zero contribution when no selected features belong to the group"
+  },
+  {
+    "model": "transformer",
+    "pair": "chr4 x PCs",
+    "mean": 0.016491642816718954,
+    "fold_sd": 0.03124076329378823,
+    "fold_means": [
+      0.008967493222283136,
+      0.0719879671464854,
+      0.0007444578130987957,
+      0.0007582959017274452,
+      0.0
+    ],
+    "seed_sd_within_fold": [
+      0.004013868314187709,
+      0.032437673784468754,
+      0.0004285635435560469,
+      0.00025652161709782456,
+      0.0
+    ],
+    "folds_with_selected_features": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "absent_group_policy": "zero contribution when no selected features belong to the group"
+  },
+  {
+    "model": "transformer",
+    "pair": "chr5 x PCs",
+    "mean": 0.030100614285702477,
+    "fold_sd": 0.015243327551489496,
+    "fold_means": [
+      0.028667082563716282,
+      0.012325975525209006,
+      0.02175372766701171,
+      0.03487447022578152,
+      0.052881815446793844
+    ],
+    "seed_sd_within_fold": [
+      0.011313871349866876,
+      0.0027993953375677863,
+      0.011024083866204844,
+      0.014916862795724217,
+      0.028438976814500645
+    ],
+    "folds_with_selected_features": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "absent_group_policy": "zero contribution when no selected features belong to the group"
+  },
+  {
+    "model": "kan",
+    "pair": "chr1 x chr2",
+    "mean": 0.04429160406525822,
+    "fold_sd": 0.03744675201417731,
+    "fold_means": [
+      0.05233466115113344,
+      0.020476490080164292,
+      0.014297074328856435,
+      0.028250454651092587,
+      0.10609934011504434
+    ],
+    "seed_sd_within_fold": [
+      0.014386821741218938,
+      0.010486744079596832,
+      0.011464268079142016,
+      0.023664233451206,
+      0.0521838978601399
+    ],
+    "folds_with_selected_features": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "absent_group_policy": "zero contribution when no selected features belong to the group"
+  },
+  {
+    "model": "kan",
+    "pair": "chr1 x chr3",
+    "mean": 0.017654993143438692,
+    "fold_sd": 0.019524619435410024,
+    "fold_means": [
+      0.031353499180764674,
+      0.008042313718963663,
+      0.003933108405250064,
+      0.044946044412215065,
+      0.0
+    ],
+    "seed_sd_within_fold": [
+      0.021003125615553182,
+      0.00161908566977327,
+      0.001978984297187995,
+      0.04120294252239752,
+      0.0
+    ],
+    "folds_with_selected_features": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "absent_group_policy": "zero contribution when no selected features belong to the group"
+  },
+  {
+    "model": "kan",
+    "pair": "chr1 x chr4",
+    "mean": 0.01857169221232036,
+    "fold_sd": 0.013838243814015376,
+    "fold_means": [
+      0.030792722851615117,
+      0.028509799996884216,
+      0.007653119671879773,
+      0.025902818541222717,
+      0.0
+    ],
+    "seed_sd_within_fold": [
+      0.006982680119039139,
+      0.004301039910082659,
+      0.0034127380846549612,
+      0.02065801537592583,
+      0.0
+    ],
+    "folds_with_selected_features": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "absent_group_policy": "zero contribution when no selected features belong to the group"
+  },
+  {
+    "model": "kan",
+    "pair": "chr1 x chr5",
+    "mean": 0.08054301602733584,
+    "fold_sd": 0.05709916707757057,
+    "fold_means": [
+      0.11018730963222105,
+      0.013197768128293319,
+      0.13073629729106073,
+      0.12444512452333145,
+      0.024148580561772614
+    ],
+    "seed_sd_within_fold": [
+      0.068173348762157,
+      0.004217331350673941,
+      0.06570958271695342,
+      0.08049661227065392,
+      0.016466944940268718
+    ],
+    "folds_with_selected_features": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "absent_group_policy": "zero contribution when no selected features belong to the group"
+  },
+  {
+    "model": "kan",
+    "pair": "chr1 x PCs",
+    "mean": 0.006333820830924059,
+    "fold_sd": 0.006232614248636964,
+    "fold_means": [
+      0.001600121112832618,
+      0.0020459611255641847,
+      0.001961183790476114,
+      0.011332969789326464,
+      0.014728868336420916
+    ],
+    "seed_sd_within_fold": [
+      0.000144523138715048,
+      0.00036898685298361486,
+      0.0006883876130382054,
+      0.010880225438697367,
+      0.020494087671925204
+    ],
+    "folds_with_selected_features": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "absent_group_policy": "zero contribution when no selected features belong to the group"
+  },
+  {
+    "model": "kan",
+    "pair": "chr2 x chr3",
+    "mean": 0.01608744706488652,
+    "fold_sd": 0.017778477131673413,
+    "fold_means": [
+      0.04521786521213527,
+      0.010378061569257623,
+      0.00544132907240556,
+      0.019399979470634144,
+      0.0
+    ],
+    "seed_sd_within_fold": [
+      0.016279150864755152,
+      0.0045363980491469535,
+      0.002589589503593113,
+      0.013506576819920107,
+      0.0
+    ],
+    "folds_with_selected_features": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "absent_group_policy": "zero contribution when no selected features belong to the group"
+  },
+  {
+    "model": "kan",
+    "pair": "chr2 x chr4",
+    "mean": 0.029297536378682577,
+    "fold_sd": 0.04210274010848721,
+    "fold_means": [
+      0.10237920689584747,
+      0.027313225214663537,
+      0.005776880341927876,
+      0.011018369440973981,
+      0.0
+    ],
+    "seed_sd_within_fold": [
+      0.04793411734906282,
+      0.007777005364746402,
+      0.001619226491969224,
+      0.005996629139032588,
+      0.0
+    ],
+    "folds_with_selected_features": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "absent_group_policy": "zero contribution when no selected features belong to the group"
+  },
+  {
+    "model": "kan",
+    "pair": "chr2 x chr5",
+    "mean": 0.17365211381825846,
+    "fold_sd": 0.17297984938007768,
+    "fold_means": [
+      0.281831960032967,
+      0.008425989861660668,
+      0.061724939744102425,
+      0.09400192127720493,
+      0.4222757581753572
+    ],
+    "seed_sd_within_fold": [
+      0.13933724325589222,
+      0.002094871869344522,
+      0.013742291837258622,
+      0.06379539188049571,
+      0.041326765156696435
+    ],
+    "folds_with_selected_features": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "absent_group_policy": "zero contribution when no selected features belong to the group"
+  },
+  {
+    "model": "kan",
+    "pair": "chr2 x PCs",
+    "mean": 0.018152611638097057,
+    "fold_sd": 0.030868008190759955,
+    "fold_means": [
+      0.005159181943079961,
+      0.0019027208106563278,
+      0.0018034711767399255,
+      0.00876331037728473,
+      0.07313437388272435
+    ],
+    "seed_sd_within_fold": [
+      0.0007990625539928259,
+      0.0007532072282689786,
+      0.00034001586415950366,
+      0.008700956988042293,
+      0.04675643518217302
+    ],
+    "folds_with_selected_features": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "absent_group_policy": "zero contribution when no selected features belong to the group"
+  },
+  {
+    "model": "kan",
+    "pair": "chr3 x chr4",
+    "mean": 0.018655532125636563,
+    "fold_sd": 0.023648016182411115,
+    "fold_means": [
+      0.058105759208371875,
+      0.013641803598215888,
+      0.0012018784843572004,
+      0.020328219337237826,
+      0.0
+    ],
+    "seed_sd_within_fold": [
+      0.034593983811571104,
+      0.003404384150211378,
+      0.0009922504724924723,
+      0.01669848426065094,
+      0.0
+    ],
+    "folds_with_selected_features": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "absent_group_policy": "zero contribution when no selected features belong to the group"
+  },
+  {
+    "model": "kan",
+    "pair": "chr3 x chr5",
+    "mean": 0.06377887988923309,
+    "fold_sd": 0.07597022005851904,
+    "fold_means": [
+      0.15061423108278335,
+      0.007681995154859261,
+      0.017908868342859888,
+      0.14268930486566297,
+      0.0
+    ],
+    "seed_sd_within_fold": [
+      0.14747582023269187,
+      0.0058830537676424575,
+      0.007053905845393003,
+      0.08496450625426226,
+      0.0
+    ],
+    "folds_with_selected_features": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "absent_group_policy": "zero contribution when no selected features belong to the group"
+  },
+  {
+    "model": "kan",
+    "pair": "chr3 x PCs",
+    "mean": 0.0023256525338297253,
+    "fold_sd": 0.0030910947067805472,
+    "fold_means": [
+      0.001995362227571506,
+      0.0010917287105594003,
+      0.0008344823149997183,
+      0.0077066894160180005,
+      0.0
+    ],
+    "seed_sd_within_fold": [
+      0.0006218888281140665,
+      8.150829786465379e-05,
+      0.0007971161749567569,
+      0.006236581515468307,
+      0.0
+    ],
+    "folds_with_selected_features": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "absent_group_policy": "zero contribution when no selected features belong to the group"
+  },
+  {
+    "model": "kan",
+    "pair": "chr4 x chr5",
+    "mean": 0.04817061464368607,
+    "fold_sd": 0.06358417472451969,
+    "fold_means": [
+      0.15549466265634063,
+      0.012572466981406072,
+      0.01654006463203682,
+      0.05624587894864682,
+      0.0
+    ],
+    "seed_sd_within_fold": [
+      0.06781671669690918,
+      0.00422731452332991,
+      0.007870972060230304,
+      0.03557818859518502,
+      0.0
+    ],
+    "folds_with_selected_features": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "absent_group_policy": "zero contribution when no selected features belong to the group"
+  },
+  {
+    "model": "kan",
+    "pair": "chr4 x PCs",
+    "mean": 0.003076824218798592,
+    "fold_sd": 0.002677241886160193,
+    "fold_means": [
+      0.004240766866954917,
+      0.005490949157192826,
+      0.00038742568664138524,
+      0.005264979383203833,
+      0.0
+    ],
+    "seed_sd_within_fold": [
+      0.0010168960428477078,
+      0.002350935365377349,
+      0.0002159939858570911,
+      0.0020687098417577947,
+      0.0
+    ],
+    "folds_with_selected_features": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "absent_group_policy": "zero contribution when no selected features belong to the group"
+  },
+  {
+    "model": "kan",
+    "pair": "chr5 x PCs",
+    "mean": 0.010634802948520785,
+    "fold_sd": 0.010226447605748356,
+    "fold_means": [
+      0.0068366739262103945,
+      0.0020925051461205507,
+      0.008182133367149813,
+      0.028411400477125075,
+      0.0076513018259980895
+    ],
+    "seed_sd_within_fold": [
+      0.001301446835756263,
+      0.0007448144800754058,
+      0.0024957143496903552,
+      0.017686727897928925,
+      0.0016662455988243003
+    ],
+    "folds_with_selected_features": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "absent_group_policy": "zero contribution when no selected features belong to the group"
+  }
+]

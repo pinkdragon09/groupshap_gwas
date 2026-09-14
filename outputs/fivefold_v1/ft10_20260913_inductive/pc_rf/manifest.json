@@ -1,0 +1,15 @@
+{
+  "parent_fingerprint": "c2fc0bf1f37f4812f23d4b886ed974bc3a5340257b5314c7746de1751315d9ed",
+  "source_sha256": "8a613e9c099a2014c8e3be24ebe28ab815710ea29a57fb5a9ad30191ff76713e",
+  "model": "PC-only RF with the same forest hyperparameters and seeds as the full RF",
+  "forest": {
+    "trees": 200,
+    "max_features": "sqrt",
+    "min_samples_leaf": 2
+  },
+  "seeds": [
+    42,
+    43,
+    44
+  ]
+}

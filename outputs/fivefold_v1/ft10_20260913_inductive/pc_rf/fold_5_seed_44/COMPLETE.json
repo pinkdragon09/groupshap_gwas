@@ -1,0 +1,7 @@
+{
+  "run_fingerprint": "5243a72eea7c9359de748580e50652e135d152000aa554c000bc0f2558ebd4f4",
+  "artifacts": {
+    "model.joblib": "ef5dae5016141503b8e3e134937681c91dab2544edcb3261170dcde6e731f45f",
+    "evaluation.npz": "d46e58506339984c8970944e4c53bf9ae35ebd64d1933d89e75419c70e412946"
+  }
+}

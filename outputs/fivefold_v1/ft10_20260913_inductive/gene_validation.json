@@ -1,0 +1,279 @@
+{
+  "passed": true,
+  "checked_models": 45,
+  "annotations_and_coverage_checked": true,
+  "mc_efficiency_and_se_checked": true,
+  "first_group_permutation_reproduced": true,
+  "results": [
+    {
+      "fold": 1,
+      "model": "rf",
+      "seed": 42,
+      "max_efficiency_error": 3.552713678800501e-15
+    },
+    {
+      "fold": 1,
+      "model": "rf",
+      "seed": 43,
+      "max_efficiency_error": 3.552713678800501e-15
+    },
+    {
+      "fold": 1,
+      "model": "rf",
+      "seed": 44,
+      "max_efficiency_error": 4.440892098500626e-15
+    },
+    {
+      "fold": 1,
+      "model": "transformer",
+      "seed": 42,
+      "max_efficiency_error": 3.814697265625e-06
+    },
+    {
+      "fold": 1,
+      "model": "transformer",
+      "seed": 43,
+      "max_efficiency_error": 7.152557373046875e-07
+    },
+    {
+      "fold": 1,
+      "model": "transformer",
+      "seed": 44,
+      "max_efficiency_error": 3.814697265625e-06
+    },
+    {
+      "fold": 1,
+      "model": "kan",
+      "seed": 42,
+      "max_efficiency_error": 4.5299530029296875e-06
+    },
+    {
+      "fold": 1,
+      "model": "kan",
+      "seed": 43,
+      "max_efficiency_error": 1.430511474609375e-06
+    },
+    {
+      "fold": 1,
+      "model": "kan",
+      "seed": 44,
+      "max_efficiency_error": 4.291534423828125e-06
+    },
+    {
+      "fold": 2,
+      "model": "rf",
+      "seed": 42,
+      "max_efficiency_error": 1.0658141036401503e-14
+    },
+    {
+      "fold": 2,
+      "model": "rf",
+      "seed": 43,
+      "max_efficiency_error": 1.0658141036401503e-14
+    },
+    {
+      "fold": 2,
+      "model": "rf",
+      "seed": 44,
+      "max_efficiency_error": 3.552713678800501e-15
+    },
+    {
+      "fold": 2,
+      "model": "transformer",
+      "seed": 42,
+      "max_efficiency_error": 1.9073486328125e-06
+    },
+    {
+      "fold": 2,
+      "model": "transformer",
+      "seed": 43,
+      "max_efficiency_error": 7.152557373046875e-07
+    },
+    {
+      "fold": 2,
+      "model": "transformer",
+      "seed": 44,
+      "max_efficiency_error": 2.384185791015625e-06
+    },
+    {
+      "fold": 2,
+      "model": "kan",
+      "seed": 42,
+      "max_efficiency_error": 1.430511474609375e-06
+    },
+    {
+      "fold": 2,
+      "model": "kan",
+      "seed": 43,
+      "max_efficiency_error": 3.337860107421875e-06
+    },
+    {
+      "fold": 2,
+      "model": "kan",
+      "seed": 44,
+      "max_efficiency_error": 3.337860107421875e-06
+    },
+    {
+      "fold": 3,
+      "model": "rf",
+      "seed": 42,
+      "max_efficiency_error": 3.552713678800501e-15
+    },
+    {
+      "fold": 3,
+      "model": "rf",
+      "seed": 43,
+      "max_efficiency_error": 7.105427357601002e-15
+    },
+    {
+      "fold": 3,
+      "model": "rf",
+      "seed": 44,
+      "max_efficiency_error": 7.105427357601002e-15
+    },
+    {
+      "fold": 3,
+      "model": "transformer",
+      "seed": 42,
+      "max_efficiency_error": 7.152557373046875e-06
+    },
+    {
+      "fold": 3,
+      "model": "transformer",
+      "seed": 43,
+      "max_efficiency_error": 2.384185791015625e-06
+    },
+    {
+      "fold": 3,
+      "model": "transformer",
+      "seed": 44,
+      "max_efficiency_error": 3.337860107421875e-06
+    },
+    {
+      "fold": 3,
+      "model": "kan",
+      "seed": 42,
+      "max_efficiency_error": 2.6226043701171875e-06
+    },
+    {
+      "fold": 3,
+      "model": "kan",
+      "seed": 43,
+      "max_efficiency_error": 4.291534423828125e-06
+    },
+    {
+      "fold": 3,
+      "model": "kan",
+      "seed": 44,
+      "max_efficiency_error": 4.76837158203125e-06
+    },
+    {
+      "fold": 4,
+      "model": "rf",
+      "seed": 42,
+      "max_efficiency_error": 7.105427357601002e-15
+    },
+    {
+      "fold": 4,
+      "model": "rf",
+      "seed": 43,
+      "max_efficiency_error": 7.105427357601002e-15
+    },
+    {
+      "fold": 4,
+      "model": "rf",
+      "seed": 44,
+      "max_efficiency_error": 5.329070518200751e-15
+    },
+    {
+      "fold": 4,
+      "model": "transformer",
+      "seed": 42,
+      "max_efficiency_error": 2.384185791015625e-06
+    },
+    {
+      "fold": 4,
+      "model": "transformer",
+      "seed": 43,
+      "max_efficiency_error": 1.9073486328125e-06
+    },
+    {
+      "fold": 4,
+      "model": "transformer",
+      "seed": 44,
+      "max_efficiency_error": 9.5367431640625e-07
+    },
+    {
+      "fold": 4,
+      "model": "kan",
+      "seed": 42,
+      "max_efficiency_error": 2.384185791015625e-07
+    },
+    {
+      "fold": 4,
+      "model": "kan",
+      "seed": 43,
+      "max_efficiency_error": 1.430511474609375e-06
+    },
+    {
+      "fold": 4,
+      "model": "kan",
+      "seed": 44,
+      "max_efficiency_error": 7.152557373046875e-07
+    },
+    {
+      "fold": 5,
+      "model": "rf",
+      "seed": 42,
+      "max_efficiency_error": 7.105427357601002e-15
+    },
+    {
+      "fold": 5,
+      "model": "rf",
+      "seed": 43,
+      "max_efficiency_error": 5.329070518200751e-15
+    },
+    {
+      "fold": 5,
+      "model": "rf",
+      "seed": 44,
+      "max_efficiency_error": 3.552713678800501e-15
+    },
+    {
+      "fold": 5,
+      "model": "transformer",
+      "seed": 42,
+      "max_efficiency_error": 6.67572021484375e-06
+    },
+    {
+      "fold": 5,
+      "model": "transformer",
+      "seed": 43,
+      "max_efficiency_error": 1.6689300537109375e-06
+    },
+    {
+      "fold": 5,
+      "model": "transformer",
+      "seed": 44,
+      "max_efficiency_error": 0.0
+    },
+    {
+      "fold": 5,
+      "model": "kan",
+      "seed": 42,
+      "max_efficiency_error": 1.430511474609375e-06
+    },
+    {
+      "fold": 5,
+      "model": "kan",
+      "seed": 43,
+      "max_efficiency_error": 1.1920928955078125e-06
+    },
+    {
+      "fold": 5,
+      "model": "kan",
+      "seed": 44,
+      "max_efficiency_error": 1.9073486328125e-06
+    }
+  ]
+}

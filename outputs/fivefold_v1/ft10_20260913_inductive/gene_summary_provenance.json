@@ -1,0 +1,11 @@
+{
+  "source_sha256": "5431bb8bc8c2026d817f0b0bc45424440c927a322d6578645c0ff09afca6e3dd",
+  "completed_folds": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "uncertainty": "MC SE conditional on the fixed finite background; seed/fold variability kept separate"
+}

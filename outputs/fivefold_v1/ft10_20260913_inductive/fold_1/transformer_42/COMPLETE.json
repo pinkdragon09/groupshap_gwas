@@ -1,0 +1,9 @@
+{
+  "run_fingerprint": "c2fc0bf1f37f4812f23d4b886ed974bc3a5340257b5314c7746de1751315d9ed",
+  "artifacts": {
+    "model.pt": "a5f9ad7c9538fdcc9a28d35e4db41285c6672f0d3f7d39c92fcba979ce5689de",
+    "evaluation.npz": "fd13151c4f6a3d8214cc41cc6cd82ed4d00c241f6a566f199812bccaa4f0d50c",
+    "gene_evaluation.npz": "c53d61b153ffbbaa7f62212b8605d79d2b000650bbf139f01df391889209dee4",
+    "fit.json": "49c6780120a949b47c45dca3dba7a29346d59499e0d6edea8b3a5af373ae5df1"
+  }
+}

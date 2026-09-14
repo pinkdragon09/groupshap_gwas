@@ -1,0 +1,23 @@
+{
+  "run_fingerprint": "5243a72eea7c9359de748580e50652e135d152000aa554c000bc0f2558ebd4f4",
+  "artifacts": {
+    "manifest.json": "6b6e7913a4f29dad569590b813b86826a3db22e9bac9db766e35d5586dd17db9",
+    "metrics.json": "d9f42115a41ea449a7239c15825ec54fdb208c6b54b8b7b156e26584341eb625",
+    "summary.json": "7012e6b3f735d13d146d6de5d68d477703d38d62e2f3d91f28733594cd0bf7d0",
+    "fold_1_seed_42/COMPLETE.json": "c2c937c8e0e3ef0e7dc8d6c339fd06535f549a5ca401d9ca00a8f982fe9c9803",
+    "fold_1_seed_43/COMPLETE.json": "1423979e9789aadc6f95b3c72d1cd813664a1e3d3396a7a5ed910309ae13c2bb",
+    "fold_1_seed_44/COMPLETE.json": "844db8fff8289a27c62aa8ea92fc6a9320b4ae0ade085edc45869e6a0110ced5",
+    "fold_2_seed_42/COMPLETE.json": "56de3cad5f98ced6354a1ba28d034ca1bd1ad6d503ff7bbe964259ed71b5cf38",
+    "fold_2_seed_43/COMPLETE.json": "e2f26ca8b89241db2336b9f819893aa7a2f3a9d728e3c9995d41a869f2996ef8",
+    "fold_2_seed_44/COMPLETE.json": "941426aa1da23c564c24ae047482ac046cd04ec5eae2223481fce57ffce5bde0",
+    "fold_3_seed_42/COMPLETE.json": "c81a66ca22cfcaee7a4e7865015d01b16664a0ea0363b50dd8ff0c34e02cb583",
+    "fold_3_seed_43/COMPLETE.json": "dc4acd0bbfb516822e47ccd40e429ebe1c024e0256e1f244f9d8e4861214d4fa",
+    "fold_3_seed_44/COMPLETE.json": "211c5f1326d9fbc6de2bb3f4e19dd5d7e9cf3f5d54f68b042eb0c5755c0308c9",
+    "fold_4_seed_42/COMPLETE.json": "b9f114b3e941367d7e893df504b5595f6cffb918daf62f227fca4bf3ab8941c0",
+    "fold_4_seed_43/COMPLETE.json": "e64cac2956c9bac97a69b64a9a9e41f6d7932f6e9d7ffd27943c558d6be0d08c",
+    "fold_4_seed_44/COMPLETE.json": "2cf3387475fccf0e47c1bffefeb2b5ccd2f1a7baeb2ee72e55412e2319e85ecf",
+    "fold_5_seed_42/COMPLETE.json": "3f7297e69e54c86f10a6005df13520a6d3e72d8d7015de3b2988d804fd3a02c9",
+    "fold_5_seed_43/COMPLETE.json": "6fd56e04da7e97e985bca227ace3f9edd3eb5bed8dfc2eab6a68a1b0e42b6480",
+    "fold_5_seed_44/COMPLETE.json": "f38c05c1f099406068eecf07d5d8a05944e1223546318888edb6c15f5fd893b0"
+  }
+}

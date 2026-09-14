@@ -1,0 +1,101 @@
+{
+  "model": "kan",
+  "seed": 43,
+  "actual_seed": 343,
+  "selected_epochs": 1,
+  "inner_trace": [
+    {
+      "epoch": 1,
+      "training_mse": 0.9901453852653503,
+      "validation_mse": 1.274894118309021
+    },
+    {
+      "epoch": 2,
+      "training_mse": 0.9362614750862122,
+      "validation_mse": 1.2870573997497559
+    },
+    {
+      "epoch": 3,
+      "training_mse": 0.888225793838501,
+      "validation_mse": 1.302368402481079
+    },
+    {
+      "epoch": 4,
+      "training_mse": 0.8460933566093445,
+      "validation_mse": 1.320194125175476
+    },
+    {
+      "epoch": 5,
+      "training_mse": 0.8093236684799194,
+      "validation_mse": 1.3395917415618896
+    },
+    {
+      "epoch": 6,
+      "training_mse": 0.7767173647880554,
+      "validation_mse": 1.3595138788223267
+    },
+    {
+      "epoch": 7,
+      "training_mse": 0.7469398975372314,
+      "validation_mse": 1.3789185285568237
+    },
+    {
+      "epoch": 8,
+      "training_mse": 0.7191030979156494,
+      "validation_mse": 1.396985650062561
+    },
+    {
+      "epoch": 9,
+      "training_mse": 0.6926918625831604,
+      "validation_mse": 1.4130994081497192
+    },
+    {
+      "epoch": 10,
+      "training_mse": 0.6675373911857605,
+      "validation_mse": 1.4266566038131714
+    },
+    {
+      "epoch": 11,
+      "training_mse": 0.6436008214950562,
+      "validation_mse": 1.4371124505996704
+    },
+    {
+      "epoch": 12,
+      "training_mse": 0.6208609938621521,
+      "validation_mse": 1.444014072418213
+    },
+    {
+      "epoch": 13,
+      "training_mse": 0.5992892980575562,
+      "validation_mse": 1.4471039772033691
+    },
+    {
+      "epoch": 14,
+      "training_mse": 0.5788681507110596,
+      "validation_mse": 1.446382999420166
+    },
+    {
+      "epoch": 15,
+      "training_mse": 0.559630274772644,
+      "validation_mse": 1.4422303438186646
+    },
+    {
+      "epoch": 16,
+      "training_mse": 0.5417229533195496,
+      "validation_mse": 1.4352701902389526
+    }
+  ],
+  "outer_trace": [
+    {
+      "epoch": 1,
+      "training_mse": 0.9777950644493103
+    }
+  ],
+  "training_seconds": 0.11116150696761906,
+  "explanation_seconds": 11.110449579078704,
+  "metrics": {
+    "r2": 0.019644384406546145,
+    "rmse": 18.476587905242496,
+    "n": 27
+  }
+}

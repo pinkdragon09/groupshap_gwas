@@ -1,0 +1,182 @@
+{
+  "model": "transformer",
+  "seed": 42,
+  "actual_seed": 142,
+  "selected_epochs": 10,
+  "inner_trace": [
+    {
+      "epoch": 1,
+      "training_mse": 1.0768225193023682,
+      "validation_mse": 1.1737103462219238
+    },
+    {
+      "epoch": 2,
+      "training_mse": 0.9920650124549866,
+      "validation_mse": 1.16309654712677
+    },
+    {
+      "epoch": 3,
+      "training_mse": 0.9193205833435059,
+      "validation_mse": 1.1627811193466187
+    },
+    {
+      "epoch": 4,
+      "training_mse": 0.8377975821495056,
+      "validation_mse": 1.1611839532852173
+    },
+    {
+      "epoch": 5,
+      "training_mse": 0.8191237449645996,
+      "validation_mse": 1.1540769338607788
+    },
+    {
+      "epoch": 6,
+      "training_mse": 0.7603968381881714,
+      "validation_mse": 1.1422449350357056
+    },
+    {
+      "epoch": 7,
+      "training_mse": 0.6727876663208008,
+      "validation_mse": 1.1293131113052368
+    },
+    {
+      "epoch": 8,
+      "training_mse": 0.6343205571174622,
+      "validation_mse": 1.118401050567627
+    },
+    {
+      "epoch": 9,
+      "training_mse": 0.6171017289161682,
+      "validation_mse": 1.1121519804000854
+    },
+    {
+      "epoch": 10,
+      "training_mse": 0.5738561153411865,
+      "validation_mse": 1.1104182004928589
+    },
+    {
+      "epoch": 11,
+      "training_mse": 0.5466893911361694,
+      "validation_mse": 1.1108571290969849
+    },
+    {
+      "epoch": 12,
+      "training_mse": 0.4877799153327942,
+      "validation_mse": 1.1127047538757324
+    },
+    {
+      "epoch": 13,
+      "training_mse": 0.4893757104873657,
+      "validation_mse": 1.1157671213150024
+    },
+    {
+      "epoch": 14,
+      "training_mse": 0.46144241094589233,
+      "validation_mse": 1.1214773654937744
+    },
+    {
+      "epoch": 15,
+      "training_mse": 0.4106590449810028,
+      "validation_mse": 1.1309841871261597
+    },
+    {
+      "epoch": 16,
+      "training_mse": 0.4092760384082794,
+      "validation_mse": 1.142971158027649
+    },
+    {
+      "epoch": 17,
+      "training_mse": 0.3595913052558899,
+      "validation_mse": 1.156022310256958
+    },
+    {
+      "epoch": 18,
+      "training_mse": 0.3731802999973297,
+      "validation_mse": 1.1714539527893066
+    },
+    {
+      "epoch": 19,
+      "training_mse": 0.3421013355255127,
+      "validation_mse": 1.1898908615112305
+    },
+    {
+      "epoch": 20,
+      "training_mse": 0.3680952787399292,
+      "validation_mse": 1.2120524644851685
+    },
+    {
+      "epoch": 21,
+      "training_mse": 0.3579351305961609,
+      "validation_mse": 1.2351678609848022
+    },
+    {
+      "epoch": 22,
+      "training_mse": 0.32425928115844727,
+      "validation_mse": 1.260644793510437
+    },
+    {
+      "epoch": 23,
+      "training_mse": 0.36996203660964966,
+      "validation_mse": 1.2853209972381592
+    },
+    {
+      "epoch": 24,
+      "training_mse": 0.3375813364982605,
+      "validation_mse": 1.3083546161651611
+    },
+    {
+      "epoch": 25,
+      "training_mse": 0.31309497356414795,
+      "validation_mse": 1.3330479860305786
+    }
+  ],
+  "outer_trace": [
+    {
+      "epoch": 1,
+      "training_mse": 1.096002459526062
+    },
+    {
+      "epoch": 2,
+      "training_mse": 0.9994069337844849
+    },
+    {
+      "epoch": 3,
+      "training_mse": 0.9423440098762512
+    },
+    {
+      "epoch": 4,
+      "training_mse": 0.9137091636657715
+    },
+    {
+      "epoch": 5,
+      "training_mse": 0.8980101943016052
+    },
+    {
+      "epoch": 6,
+      "training_mse": 0.8420102000236511
+    },
+    {
+      "epoch": 7,
+      "training_mse": 0.8294411301612854
+    },
+    {
+      "epoch": 8,
+      "training_mse": 0.8017609715461731
+    },
+    {
+      "epoch": 9,
+      "training_mse": 0.773221492767334
+    },
+    {
+      "epoch": 10,
+      "training_mse": 0.7573795318603516
+    }
+  ],
+  "training_seconds": 8.957047172007151,
+  "explanation_seconds": 50.66171558899805,
+  "metrics": {
+    "r2": 0.24342596159799612,
+    "rmse": 13.86732300360199,
+    "n": 27
+  }
+}
