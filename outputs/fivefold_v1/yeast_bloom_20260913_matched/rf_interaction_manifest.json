@@ -1,0 +1,8 @@
+{
+  "parent_fingerprint": "ab5c5ce6183c331ddc01deff9203b9841e7737f3374324c800577d5c63415d0c",
+  "kan_protocol_fingerprint": "699e14fd0fbdf11d557ad52bfa07e7416438f4d882a0b5e8889cb1a81314cf2c",
+  "source_sha256": "cafa7dc76a54a21f561a5ee59fd591604d03eac45ad7b947b1d89a2f904fdae4",
+  "engine": "loky across pairs; RF n_jobs=1",
+  "jobs": 4,
+  "fingerprint": "ec155498f6b11a136d4d153feafe83a3085f8ba9036f92cf302dffb566fb949c"
+}

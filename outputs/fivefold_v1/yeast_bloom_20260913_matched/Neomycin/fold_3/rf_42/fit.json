@@ -1,0 +1,16 @@
+{
+  "trait": "Neomycin",
+  "fold": 3,
+  "family": "rf",
+  "seed": 42,
+  "actual_seed": 342,
+  "selected_epochs": 0,
+  "inner_trace": [],
+  "outer_trace": [],
+  "seconds": 0.6046422420768067,
+  "metrics": {
+    "r2": 0.3282627877679428,
+    "rmse": 5.214665849536392,
+    "n": 201
+  }
+}

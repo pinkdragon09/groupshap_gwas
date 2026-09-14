@@ -1,0 +1,16 @@
+{
+  "trait": "Lactate",
+  "fold": 3,
+  "family": "rf",
+  "seed": 43,
+  "actual_seed": 343,
+  "selected_epochs": 0,
+  "inner_trace": [],
+  "outer_trace": [],
+  "seconds": 0.6645929710939527,
+  "metrics": {
+    "r2": 0.3701991972177433,
+    "rmse": 1.0298626897567051,
+    "n": 195
+  }
+}

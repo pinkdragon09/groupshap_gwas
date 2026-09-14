@@ -1,0 +1,82 @@
+[
+  {
+    "trait": "Neomycin",
+    "fold": 1,
+    "model": "training_mean",
+    "r2": -0.0028932706540021336,
+    "rmse": 5.636746228646726,
+    "n": 201
+  },
+  {
+    "trait": "Neomycin",
+    "fold": 2,
+    "model": "training_mean",
+    "r2": -5.669185942758226e-05,
+    "rmse": 5.956715435804703,
+    "n": 201
+  },
+  {
+    "trait": "Neomycin",
+    "fold": 3,
+    "model": "training_mean",
+    "r2": -0.0002764561679104993,
+    "rmse": 6.3633645488737764,
+    "n": 201
+  },
+  {
+    "trait": "Neomycin",
+    "fold": 4,
+    "model": "training_mean",
+    "r2": -0.0007636489300406613,
+    "rmse": 5.786910997920586,
+    "n": 201
+  },
+  {
+    "trait": "Neomycin",
+    "fold": 5,
+    "model": "training_mean",
+    "r2": -0.008852507840247714,
+    "rmse": 6.546654966928245,
+    "n": 201
+  },
+  {
+    "trait": "Lactate",
+    "fold": 1,
+    "model": "training_mean",
+    "r2": -0.011622910125198116,
+    "rmse": 1.3607439628476823,
+    "n": 195
+  },
+  {
+    "trait": "Lactate",
+    "fold": 2,
+    "model": "training_mean",
+    "r2": -0.0005539099154321381,
+    "rmse": 1.353585873701433,
+    "n": 195
+  },
+  {
+    "trait": "Lactate",
+    "fold": 3,
+    "model": "training_mean",
+    "r2": -3.618264110549774e-05,
+    "rmse": 1.2977336815893563,
+    "n": 195
+  },
+  {
+    "trait": "Lactate",
+    "fold": 4,
+    "model": "training_mean",
+    "r2": -0.011909287998730811,
+    "rmse": 1.344838712369119,
+    "n": 194
+  },
+  {
+    "trait": "Lactate",
+    "fold": 5,
+    "model": "training_mean",
+    "r2": -0.000896813203131952,
+    "rmse": 1.312358177451821,
+    "n": 194
+  }
+]

@@ -1,0 +1,20 @@
+{
+  "run_fingerprint": "ab5c5ce6183c331ddc01deff9203b9841e7737f3374324c800577d5c63415d0c",
+  "artifacts": {
+    "REPORT.md": "eeb004c119cf8f80a2b19b47246e8eec179762a41aab7cb6ab06f5b845c102c5",
+    "model_summary.json": "d5960a81d90760120a87e9ff455ad94e745cc0e3d7f489c602f930fd085a0245",
+    "metrics_by_fold_seed.json": "5690d7397d45bd14dbdd52c58a247f0a20f443c53d1849334c9aac62bb585e5b",
+    "Neomycin/PREPARED.json": "e4cee13cf0fece15fa9a8146277d52b5c22904a56bf7791d2ba927f0da4e0b10",
+    "Lactate/PREPARED.json": "04ea57f7aa8d1babf4838eead52d49a51a44db1bf6ffffd6d30bef3d10d8060f",
+    "Neomycin/fold_1/COMPLETE.json": "f96e317cf2cc669813722fda4e71107944980e6195db3d23b28623964e3cc3bf",
+    "Neomycin/fold_2/COMPLETE.json": "5a63078617bda53b5e2d7812f74568b3c81e8bf8b598532fc6fa8430d28ae46e",
+    "Neomycin/fold_3/COMPLETE.json": "9d0019cb5ff4c601af0784751c98993b5fe9aed141f05c6589ce7b60dbd18e09",
+    "Neomycin/fold_4/COMPLETE.json": "fcc5a20701f267540f5ee8a2c66e730eea6fde46faf98a7c5fcf8c8ef969d657",
+    "Neomycin/fold_5/COMPLETE.json": "967490fdf3d902da3cb536dd0a1279f353c3de6d99719d8e7051576235890785",
+    "Lactate/fold_1/COMPLETE.json": "2397b26dde31363007ff0e59cd332b3e4e0c8ae25e96aee872cdd6a36744b010",
+    "Lactate/fold_2/COMPLETE.json": "30b9f3a3b0a49a468a2a0a5c83ac8e0547d7675cf811e2570829727e3e89e475",
+    "Lactate/fold_3/COMPLETE.json": "cbb2ebdf0725ccfa7e8c1284cbd586ae787b8cd1b02579063dbecac5228f1c4e",
+    "Lactate/fold_4/COMPLETE.json": "29e865b098bcbc68e35ecec1eda872e4f7d123c9f4e3cb20d71fe00e501f362b",
+    "Lactate/fold_5/COMPLETE.json": "7b70ad9072ad4fca7e234c3d826ee2838e5466b0253e3a6f16ab74e2b6252507"
+  }
+}

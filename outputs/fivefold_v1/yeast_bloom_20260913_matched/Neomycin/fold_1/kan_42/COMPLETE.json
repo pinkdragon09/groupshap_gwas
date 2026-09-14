@@ -1,0 +1,8 @@
+{
+  "run_fingerprint": "ab5c5ce6183c331ddc01deff9203b9841e7737f3374324c800577d5c63415d0c",
+  "artifacts": {
+    "model.pt": "22eb0221dfe9487c22be476eaf6fa88c64a1b03efb5826d81fb38dd48af0f458",
+    "evaluation.npz": "3e66ddefd06df6c6271cc0b90018e0d720e922ae8b2e571b3a47e593eb243a92",
+    "fit.json": "f1bbfeb0e9d699db00db5d2daff722868ab95aa9c4bf28e754bd63b17a9d0f5c"
+  }
+}

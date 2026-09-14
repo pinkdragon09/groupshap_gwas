@@ -1,0 +1,8 @@
+{
+  "source_sha256": "aee28152de5efbc7f2eaa01f8bbda7e0de7ccce858a0c9d5f9c9637ba4b13d57",
+  "prediction_fingerprint": "ab5c5ce6183c331ddc01deff9203b9841e7737f3374324c800577d5c63415d0c",
+  "mapping_distance_bp": 50000,
+  "fingerprint": "3d755a9ccfd6b2ed5ad5bf4c22294781ee3c8310f21e4e5aff14c93fcb13fda5",
+  "baseline_trait_folds": 10,
+  "model_trait_folds": 10
+}

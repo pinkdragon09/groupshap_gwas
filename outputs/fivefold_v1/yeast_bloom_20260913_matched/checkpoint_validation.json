@@ -1,0 +1,430 @@
+{
+  "passed": true,
+  "checked_models": 60,
+  "full_fivefold_complete": true,
+  "input_and_source_hashes_checked": true,
+  "fold_local_selection_and_reference_mapping_checked": true,
+  "split_target_scale_and_interaction_membership_checked": true,
+  "results": [
+    {
+      "trait": "Neomycin",
+      "fold": 1,
+      "family": "rf",
+      "seed": 42,
+      "max_prediction_error": 0.0
+    },
+    {
+      "trait": "Neomycin",
+      "fold": 1,
+      "family": "rf",
+      "seed": 43,
+      "max_prediction_error": 0.0
+    },
+    {
+      "trait": "Neomycin",
+      "fold": 1,
+      "family": "rf",
+      "seed": 44,
+      "max_prediction_error": 0.0
+    },
+    {
+      "trait": "Neomycin",
+      "fold": 1,
+      "family": "kan",
+      "seed": 42,
+      "max_prediction_error": 0.0
+    },
+    {
+      "trait": "Neomycin",
+      "fold": 1,
+      "family": "kan",
+      "seed": 43,
+      "max_prediction_error": 0.0
+    },
+    {
+      "trait": "Neomycin",
+      "fold": 1,
+      "family": "kan",
+      "seed": 44,
+      "max_prediction_error": 0.0
+    },
+    {
+      "trait": "Neomycin",
+      "fold": 2,
+      "family": "rf",
+      "seed": 42,
+      "max_prediction_error": 0.0
+    },
+    {
+      "trait": "Neomycin",
+      "fold": 2,
+      "family": "rf",
+      "seed": 43,
+      "max_prediction_error": 0.0
+    },
+    {
+      "trait": "Neomycin",
+      "fold": 2,
+      "family": "rf",
+      "seed": 44,
+      "max_prediction_error": 0.0
+    },
+    {
+      "trait": "Neomycin",
+      "fold": 2,
+      "family": "kan",
+      "seed": 42,
+      "max_prediction_error": 0.0
+    },
+    {
+      "trait": "Neomycin",
+      "fold": 2,
+      "family": "kan",
+      "seed": 43,
+      "max_prediction_error": 0.0
+    },
+    {
+      "trait": "Neomycin",
+      "fold": 2,
+      "family": "kan",
+      "seed": 44,
+      "max_prediction_error": 0.0
+    },
+    {
+      "trait": "Neomycin",
+      "fold": 3,
+      "family": "rf",
+      "seed": 42,
+      "max_prediction_error": 0.0
+    },
+    {
+      "trait": "Neomycin",
+      "fold": 3,
+      "family": "rf",
+      "seed": 43,
+      "max_prediction_error": 0.0
+    },
+    {
+      "trait": "Neomycin",
+      "fold": 3,
+      "family": "rf",
+      "seed": 44,
+      "max_prediction_error": 0.0
+    },
+    {
+      "trait": "Neomycin",
+      "fold": 3,
+      "family": "kan",
+      "seed": 42,
+      "max_prediction_error": 0.0
+    },
+    {
+      "trait": "Neomycin",
+      "fold": 3,
+      "family": "kan",
+      "seed": 43,
+      "max_prediction_error": 0.0
+    },
+    {
+      "trait": "Neomycin",
+      "fold": 3,
+      "family": "kan",
+      "seed": 44,
+      "max_prediction_error": 0.0
+    },
+    {
+      "trait": "Neomycin",
+      "fold": 4,
+      "family": "rf",
+      "seed": 42,
+      "max_prediction_error": 0.0
+    },
+    {
+      "trait": "Neomycin",
+      "fold": 4,
+      "family": "rf",
+      "seed": 43,
+      "max_prediction_error": 0.0
+    },
+    {
+      "trait": "Neomycin",
+      "fold": 4,
+      "family": "rf",
+      "seed": 44,
+      "max_prediction_error": 0.0
+    },
+    {
+      "trait": "Neomycin",
+      "fold": 4,
+      "family": "kan",
+      "seed": 42,
+      "max_prediction_error": 0.0
+    },
+    {
+      "trait": "Neomycin",
+      "fold": 4,
+      "family": "kan",
+      "seed": 43,
+      "max_prediction_error": 0.0
+    },
+    {
+      "trait": "Neomycin",
+      "fold": 4,
+      "family": "kan",
+      "seed": 44,
+      "max_prediction_error": 0.0
+    },
+    {
+      "trait": "Neomycin",
+      "fold": 5,
+      "family": "rf",
+      "seed": 42,
+      "max_prediction_error": 0.0
+    },
+    {
+      "trait": "Neomycin",
+      "fold": 5,
+      "family": "rf",
+      "seed": 43,
+      "max_prediction_error": 0.0
+    },
+    {
+      "trait": "Neomycin",
+      "fold": 5,
+      "family": "rf",
+      "seed": 44,
+      "max_prediction_error": 0.0
+    },
+    {
+      "trait": "Neomycin",
+      "fold": 5,
+      "family": "kan",
+      "seed": 42,
+      "max_prediction_error": 0.0
+    },
+    {
+      "trait": "Neomycin",
+      "fold": 5,
+      "family": "kan",
+      "seed": 43,
+      "max_prediction_error": 0.0
+    },
+    {
+      "trait": "Neomycin",
+      "fold": 5,
+      "family": "kan",
+      "seed": 44,
+      "max_prediction_error": 0.0
+    },
+    {
+      "trait": "Lactate",
+      "fold": 1,
+      "family": "rf",
+      "seed": 42,
+      "max_prediction_error": 0.0
+    },
+    {
+      "trait": "Lactate",
+      "fold": 1,
+      "family": "rf",
+      "seed": 43,
+      "max_prediction_error": 0.0
+    },
+    {
+      "trait": "Lactate",
+      "fold": 1,
+      "family": "rf",
+      "seed": 44,
+      "max_prediction_error": 0.0
+    },
+    {
+      "trait": "Lactate",
+      "fold": 1,
+      "family": "kan",
+      "seed": 42,
+      "max_prediction_error": 0.0
+    },
+    {
+      "trait": "Lactate",
+      "fold": 1,
+      "family": "kan",
+      "seed": 43,
+      "max_prediction_error": 0.0
+    },
+    {
+      "trait": "Lactate",
+      "fold": 1,
+      "family": "kan",
+      "seed": 44,
+      "max_prediction_error": 0.0
+    },
+    {
+      "trait": "Lactate",
+      "fold": 2,
+      "family": "rf",
+      "seed": 42,
+      "max_prediction_error": 0.0
+    },
+    {
+      "trait": "Lactate",
+      "fold": 2,
+      "family": "rf",
+      "seed": 43,
+      "max_prediction_error": 0.0
+    },
+    {
+      "trait": "Lactate",
+      "fold": 2,
+      "family": "rf",
+      "seed": 44,
+      "max_prediction_error": 0.0
+    },
+    {
+      "trait": "Lactate",
+      "fold": 2,
+      "family": "kan",
+      "seed": 42,
+      "max_prediction_error": 0.0
+    },
+    {
+      "trait": "Lactate",
+      "fold": 2,
+      "family": "kan",
+      "seed": 43,
+      "max_prediction_error": 0.0
+    },
+    {
+      "trait": "Lactate",
+      "fold": 2,
+      "family": "kan",
+      "seed": 44,
+      "max_prediction_error": 0.0
+    },
+    {
+      "trait": "Lactate",
+      "fold": 3,
+      "family": "rf",
+      "seed": 42,
+      "max_prediction_error": 0.0
+    },
+    {
+      "trait": "Lactate",
+      "fold": 3,
+      "family": "rf",
+      "seed": 43,
+      "max_prediction_error": 0.0
+    },
+    {
+      "trait": "Lactate",
+      "fold": 3,
+      "family": "rf",
+      "seed": 44,
+      "max_prediction_error": 0.0
+    },
+    {
+      "trait": "Lactate",
+      "fold": 3,
+      "family": "kan",
+      "seed": 42,
+      "max_prediction_error": 0.0
+    },
+    {
+      "trait": "Lactate",
+      "fold": 3,
+      "family": "kan",
+      "seed": 43,
+      "max_prediction_error": 0.0
+    },
+    {
+      "trait": "Lactate",
+      "fold": 3,
+      "family": "kan",
+      "seed": 44,
+      "max_prediction_error": 0.0
+    },
+    {
+      "trait": "Lactate",
+      "fold": 4,
+      "family": "rf",
+      "seed": 42,
+      "max_prediction_error": 0.0
+    },
+    {
+      "trait": "Lactate",
+      "fold": 4,
+      "family": "rf",
+      "seed": 43,
+      "max_prediction_error": 0.0
+    },
+    {
+      "trait": "Lactate",
+      "fold": 4,
+      "family": "rf",
+      "seed": 44,
+      "max_prediction_error": 0.0
+    },
+    {
+      "trait": "Lactate",
+      "fold": 4,
+      "family": "kan",
+      "seed": 42,
+      "max_prediction_error": 0.0
+    },
+    {
+      "trait": "Lactate",
+      "fold": 4,
+      "family": "kan",
+      "seed": 43,
+      "max_prediction_error": 0.0
+    },
+    {
+      "trait": "Lactate",
+      "fold": 4,
+      "family": "kan",
+      "seed": 44,
+      "max_prediction_error": 0.0
+    },
+    {
+      "trait": "Lactate",
+      "fold": 5,
+      "family": "rf",
+      "seed": 42,
+      "max_prediction_error": 0.0
+    },
+    {
+      "trait": "Lactate",
+      "fold": 5,
+      "family": "rf",
+      "seed": 43,
+      "max_prediction_error": 0.0
+    },
+    {
+      "trait": "Lactate",
+      "fold": 5,
+      "family": "rf",
+      "seed": 44,
+      "max_prediction_error": 0.0
+    },
+    {
+      "trait": "Lactate",
+      "fold": 5,
+      "family": "kan",
+      "seed": 42,
+      "max_prediction_error": 0.0
+    },
+    {
+      "trait": "Lactate",
+      "fold": 5,
+      "family": "kan",
+      "seed": 43,
+      "max_prediction_error": 0.0
+    },
+    {
+      "trait": "Lactate",
+      "fold": 5,
+      "family": "kan",
+      "seed": 44,
+      "max_prediction_error": 0.0
+    }
+  ]
+}

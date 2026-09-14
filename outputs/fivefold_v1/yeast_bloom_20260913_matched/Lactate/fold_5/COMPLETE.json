@@ -1,0 +1,13 @@
+{
+  "run_fingerprint": "ab5c5ce6183c331ddc01deff9203b9841e7737f3374324c800577d5c63415d0c",
+  "artifacts": {
+    "shared.json": "8adf8c56686f7e34089df6c46673dbd3303f4daada37a6e46e715afc39b815ad",
+    "baseline.npz": "087806620dec6890bf6130c755b3af00acc8a4acac200bf2ab0e81d0ee2ec432",
+    "rf_42/COMPLETE.json": "4ef70261fb214726069a5e68d34126f97010828566edecb4020e664f7986c057",
+    "kan_42/COMPLETE.json": "584cb7c064bfca1b92216161f70d966a41aba788b29601782094dc6abac323d1",
+    "rf_43/COMPLETE.json": "22c2b2f8cba473f6d1abf6a091f9019dbfec993460220b1a6a3c2911cca102ec",
+    "kan_43/COMPLETE.json": "0c1003660a4f217ee40065b3b07f9215efdc01e4557cf7c1254bafdf1a62fd86",
+    "rf_44/COMPLETE.json": "4b8f2e99f1cfd29ea4af6710ae00e89d59987013995e62ad01aed6af16c32c16",
+    "kan_44/COMPLETE.json": "7934dc0c5b5ff9474518c111626e614f15f1b1fb5386fb931a02fec2e04b9815"
+  }
+}
