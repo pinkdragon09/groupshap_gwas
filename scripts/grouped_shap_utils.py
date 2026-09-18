@@ -506,9 +506,10 @@ def conditional_permutation_importance(
     random_state: int = 42,
 ) -> pd.DataFrame:
     """
-    Conditional Permutation Importance (CPI) for grouped features.
+    Group Permutation Importance (GPI), retaining the historical function name.
 
-    For each group, permute only that group's columns (leaving all others fixed)
+    For each group, jointly permute that group's columns across rows, without
+    conditioning on the other groups (leaving their columns fixed),
     and measure the drop in R².  Repeating n_repeats times gives a stable
     mean and standard deviation.
 
