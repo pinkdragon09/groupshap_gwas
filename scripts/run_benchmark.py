@@ -183,7 +183,10 @@ def _score_cpi(
     n_repeats: int = 5,
 ) -> np.ndarray:
     """
-    Score each block with mean R² drop from conditional permutation importance.
+    Score each block with mean R² drop from group permutation importance (GPI).
+
+    The helper name and stored cpi key are historical: permutation is joint
+    within the block, without conditioning on the remaining blocks.
     """
     col_names = list(X_df.columns)
     group_cols = [[col_names[i] for i in blk] for blk in block_ids]
