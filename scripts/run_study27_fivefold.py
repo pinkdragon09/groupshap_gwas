@@ -256,19 +256,11 @@ def diagnostics(predict, x, y, groups, seed, repeats=5):
             batches.append(z)
     pred = predict(np.concatenate(batches)).reshape(len(groups)+200, repeats, len(x))
     importance = np.mean((pred-y)**2, axis=2)-base
-    batches = []
-    for j in range(200):
-        low, high = x.copy(), x.copy()
-        low[:, j], high[:, j] = -1, 1
-        batches.extend([low, high])
-    pred = predict(np.concatenate(batches)).reshape(200, 2, len(x))
-    effects = (pred[:, 1]-pred[:, 0]).T
-    delta = effects.mean(axis=0)
-    p = ((x[:, :200]+1)/2).mean(axis=0)
+    from xai_gwas.attribution.ale import binary_ale
     return dict(group_permutation_delta_mse=np.array(importance[:len(groups)]),
         snp_permutation_delta_mse=np.array(importance[len(groups):]),
-        permutation_rows=permutations, binary_ale_local_difference=effects,
-        binary_ale_levels=np.column_stack([-p*delta, (1-p)*delta]), test_allele_frequency=p)
+        permutation_rows=permutations, **binary_ale(predict, x, 200))
+
 
 
 def run_fold(out, cohort, s, panels, config, signature):

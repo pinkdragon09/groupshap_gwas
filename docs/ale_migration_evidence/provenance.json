@@ -1,0 +1,9 @@
+{
+  "PyALE": "1.2.0",
+  "numpy": "1.26.4",
+  "pandas": "3.0.2",
+  "scikit-learn": "1.8.0",
+  "legacy_source_commit": "293d22074db0c35a4cc32ed603b102faa1843328",
+  "historical_sha256": "d5dd207719c68c713bd2fcbb5b85a7670fa572f5037359c43a1ff2d04d664a5d",
+  "max_historical_reproduction_difference": 6.661338147750939e-16
+}
