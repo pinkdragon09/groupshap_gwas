@@ -1,0 +1,16 @@
+[
+  {
+    "trait": "Neomycin",
+    "fold": 1,
+    "method": "rf",
+    "spearman_interaction": 0.8230270587577152,
+    "mean_abs_interaction_train": 0.0007386188691103453,
+    "mean_abs_interaction_heldout": 0.0007012819270403096,
+    "n_eval_train": 20,
+    "n_eval_heldout": 20,
+    "top10_overlap": 0.6,
+    "top25_overlap": 0.68,
+    "top50_overlap": 0.74,
+    "top100_overlap": 0.8
+  }
+]

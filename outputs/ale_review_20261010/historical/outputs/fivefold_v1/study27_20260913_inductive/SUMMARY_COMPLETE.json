@@ -1,0 +1,11 @@
+{
+  "run_fingerprint": "add67c6806e81289570c1d09a5ae4812d2281f00e206b0849ec9539bfc9fa288",
+  "artifacts": {
+    "attribution_summary.json": "aca56307839a1b66066d96890e36d9ca1f6ee007b14d04697dc389d4c4b80ad8",
+    "interaction_summary.json": "db344d52c76a04009299c107afd1ee6aabf3df786972c0c86216fed6326f434a",
+    "gpi_summary.json": "7f69bbb358f455c8e3252ee5c723e38e4cab16152680e7d7887e4e97680f67d9",
+    "snp_selection_ale_summary.json": "b1b6bafc21a54de6f73042a47fe46ae9a75b9c6045ed7f25647f97aa07264b39",
+    "baseline_summary.json": "0ef59c0b35c9769eaa7e42f5197f5b4097667d7c536637b8ab61206c952630e7",
+    "summary_provenance.json": "021e82599cbcddfdd92bf928240848dc26191cc9869c79be80df3b0e2a230b45"
+  }
+}

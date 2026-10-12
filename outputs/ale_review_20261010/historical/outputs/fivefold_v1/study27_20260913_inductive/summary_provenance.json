@@ -1,0 +1,6 @@
+{
+  "source_sha256": "8f6eb81fbbc5a18685105eb5ca9260777bbb19cf11075e9a456193605f9cef80",
+  "input_completion_sha256": "ed8e80c3153f7399092bcaba59131ca3abc4b3da1e8b50435971f7f3c1c27a13",
+  "aggregation": "seeds averaged within folds; five fold means and sample SDs",
+  "conditional_marker_statistics": "only folds selecting that marker; coverage saved explicitly"
+}

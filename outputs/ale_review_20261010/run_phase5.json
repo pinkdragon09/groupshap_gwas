@@ -1,0 +1,6 @@
+{
+  "PyALE": "1.2.0",
+  "numpy": "1.26.4",
+  "pandas": "3.0.2",
+  "source_sha256": "36e0a40ae5836143992d0394d04cb2569e4bc18df4998e426237bafacc97e532"
+}

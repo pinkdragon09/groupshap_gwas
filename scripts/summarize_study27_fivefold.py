@@ -8,6 +8,20 @@ import numpy as np
 from fivefold_common import check_receipt, digest, save_receipt, write_json
 
 
+def supported_ale_contrast(rows):
+    """Average seeds only when every row has both observed test genotypes.
+
+    Historical raw levels include counterfactual predictions at absent states.
+    Those are retained for provenance, but never enter the empirical ALE mean.
+    """
+    if not rows or not all(0 < r['test_allele_frequency'] < 1 for r in rows):
+        return None
+    values = [r['ale_levels'][1] - r['ale_levels'][0] for r in rows]
+    if not np.isfinite(values).all():
+        raise ValueError('Nonfinite ALE in a supported fold')
+    return float(np.mean(values))
+
+
 def summarize(out):
     manifest = json.loads((out/'manifest.json').read_text())
     signature = manifest['fingerprint']
@@ -55,15 +69,18 @@ def summarize(out):
                 if len(rr) != len(seeds):
                     raise ValueError('Incomplete seed coverage for a selected marker')
                 scores.append(np.mean([np.mean(r['delta_mse']) for r in rr]))
-                contrasts.append(np.mean([r['ale_levels'][1]-r['ale_levels'][0] for r in rr]))
-                if all(0 < r['test_allele_frequency'] < 1 for r in rr):
+                contrast = supported_ale_contrast(rr)
+                if contrast is not None:
+                    contrasts.append(contrast)
                     supported.append(fold)
             snps.append(dict(model=model, feature=feature, snp_index=rows[0]['snp_index'],
                 folds_selected=folds, selection_frequency=len(folds)/5,
                 conditional_mean_delta_mse=np.mean(scores),
                 conditional_fold_sd_delta_mse=np.std(scores,ddof=1) if len(folds)>1 else None,
-                conditional_mean_binary_ale_contrast=np.mean(contrasts),
+                conditional_mean_binary_ale_contrast=np.mean(contrasts) if contrasts else None,
                 folds_with_both_test_alleles=supported,
+                ale_supported_fold_count=len(supported),
+                ale_aggregation_policy='seeds averaged within folds; only selected folds with both test genotypes; null if none',
                 missing_fold_policy='not selected; excluded from conditional means'))
     baselines = []
     for model in ['pc_only','training_mean']:
@@ -85,7 +102,7 @@ def summarize(out):
     write_json(out/'summary_provenance.json', dict(source_sha256=digest(Path(__file__)),
         input_completion_sha256=digest(out/'COMPLETE.json'),
         aggregation='seeds averaged within folds; five fold means and sample SDs',
-        conditional_marker_statistics='only folds selecting that marker; coverage saved explicitly'))
+        conditional_marker_statistics='permutation: selected folds; ALE: selected folds with both test genotypes; null if none'))
     save_receipt(out, 'SUMMARY_COMPLETE.json', signature, files+['summary_provenance.json'])
     print(f'Saved fold summaries for {len(snps)} model/locus combinations and both baselines.')
 

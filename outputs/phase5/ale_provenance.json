@@ -1,0 +1,13 @@
+{
+  "PyALE": "1.2.0",
+  "estimator": "adjacent-state pooled discrete ALE",
+  "n_rows": 81,
+  "population": "all 81 rows; model fitted on fold 1 training rows; descriptive, not held-out",
+  "genotype_codes": [
+    0,
+    1
+  ],
+  "historical_sha256": "d5dd207719c68c713bd2fcbb5b85a7670fa572f5037359c43a1ff2d04d664a5d",
+  "result_sha256": "d3dd6e480b510148e7ce10aa0ca78c3d5888ef87d803652df01bd1329f6d2665",
+  "refresh_source_sha256": "36e0a40ae5836143992d0394d04cb2569e4bc18df4998e426237bafacc97e532"
+}

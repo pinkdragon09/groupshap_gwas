@@ -1,0 +1,60 @@
+trait	annotation_type	pathway_id	pathway_name	unique_supported_gene_pairs
+Lactate	go_biological_process	GO:0001403	invasive growth in response to glucose limitation	2
+Lactate	go_biological_process	GO:0006259	DNA metabolic process	1
+Lactate	go_biological_process	GO:0006325	chromatin organization	1
+Lactate	go_biological_process	GO:0006417	regulation of translation	1
+Lactate	go_biological_process	GO:0006810	transport	3
+Lactate	go_biological_process	GO:0006869	lipid transport	1
+Lactate	go_biological_process	GO:0006950	response to stress	1
+Lactate	go_biological_process	GO:0007010	cytoskeleton organization	2
+Lactate	go_biological_process	GO:0007124	pseudohyphal growth	1
+Lactate	go_biological_process	GO:0007165	signal transduction	1
+Lactate	go_biological_process	GO:0009056	catabolic process	1
+Lactate	go_biological_process	GO:0022607	cellular component assembly	2
+Lactate	go_biological_process	GO:0030163	protein catabolic process	1
+Lactate	go_biological_process	GO:0040007	growth	2
+Lactate	go_biological_process	GO:0042592	homeostatic process	1
+Lactate	go_biological_process	GO:0042594	response to starvation	1
+Lactate	go_biological_process	GO:0043934	sporulation	1
+Lactate	go_biological_process	GO:0048646	anatomical structure formation involved in morphogenesis	1
+Lactate	go_biological_process	GO:0048856	anatomical structure development	1
+Lactate	go_biological_process	GO:0051052	regulation of DNA metabolic process	1
+Lactate	go_biological_process	GO:0061024	membrane organization	1
+Lactate	go_biological_process	GO:0070647	protein modification by small protein conjugation or removal	1
+Lactate	go_biological_process	GO:0071554	cell wall organization or biogenesis	1
+Neomycin	go_biological_process	GO:0006399	tRNA metabolic process	3
+Neomycin	go_biological_process	GO:0006401	RNA catabolic process	1
+Neomycin	go_biological_process	GO:0006629	lipid metabolic process	5
+Neomycin	go_biological_process	GO:0006810	transport	4
+Neomycin	go_biological_process	GO:0006811	monoatomic ion transport	1
+Neomycin	go_biological_process	GO:0006869	lipid transport	1
+Neomycin	go_biological_process	GO:0006887	exocytosis	1
+Neomycin	go_biological_process	GO:0006897	endocytosis	3
+Neomycin	go_biological_process	GO:0006950	response to stress	6
+Neomycin	go_biological_process	GO:0006970	response to osmotic stress	2
+Neomycin	go_biological_process	GO:0006974	DNA damage response	2
+Neomycin	go_biological_process	GO:0007005	mitochondrion organization	1
+Neomycin	go_biological_process	GO:0007009	plasma membrane organization	2
+Neomycin	go_biological_process	GO:0007010	cytoskeleton organization	2
+Neomycin	go_biological_process	GO:0007124	pseudohyphal growth	2
+Neomycin	go_biological_process	GO:0007165	signal transduction	3
+Neomycin	go_biological_process	GO:0008033	tRNA processing	3
+Neomycin	go_biological_process	GO:0009056	catabolic process	3
+Neomycin	go_biological_process	GO:0009058	biosynthetic process	8
+Neomycin	go_biological_process	GO:0009408	response to heat	1
+Neomycin	go_biological_process	GO:0009451	RNA modification	3
+Neomycin	go_biological_process	GO:0016192	vesicle-mediated transport	3
+Neomycin	go_biological_process	GO:0022607	cellular component assembly	2
+Neomycin	go_biological_process	GO:0030163	protein catabolic process	2
+Neomycin	go_biological_process	GO:0034655	nucleobase-containing compound catabolic process	1
+Neomycin	go_biological_process	GO:0040007	growth	2
+Neomycin	go_biological_process	GO:0042594	response to starvation	4
+Neomycin	go_biological_process	GO:0044281	small molecule metabolic process	3
+Neomycin	go_biological_process	GO:0051726	regulation of cell cycle	2
+Neomycin	go_biological_process	GO:0055085	transmembrane transport	1
+Neomycin	go_biological_process	GO:0061024	membrane organization	3
+Neomycin	go_biological_process	GO:0065003	protein-containing complex assembly	2
+Neomycin	go_biological_process	GO:0071554	cell wall organization or biogenesis	1
+Neomycin	metabolic_pathway	SGD_METABOLIC_NAME_SHA256:14a6ba07fc2926f4	ergosterol biosynthesis	3
+Neomycin	metabolic_pathway	SGD_METABOLIC_NAME_SHA256:209bfdfc110dcf6b	superpathway of ergosterol biosynthesis I	3
+Neomycin	metabolic_pathway	SGD_METABOLIC_NAME_SHA256:e72a7abbd6c8b094	ergosterol biosynthesis I	3

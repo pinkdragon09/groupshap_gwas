@@ -1,0 +1,16 @@
+[
+  {
+    "trait": "Lactate",
+    "fold": 4,
+    "method": "kan",
+    "spearman_interaction": 0.9307974176216438,
+    "mean_abs_interaction_train": 0.0004185697915039111,
+    "mean_abs_interaction_heldout": 0.0004374655151611798,
+    "n_eval_train": 20,
+    "n_eval_heldout": 20,
+    "top10_overlap": 0.8,
+    "top25_overlap": 0.72,
+    "top50_overlap": 0.72,
+    "top100_overlap": 0.75
+  }
+]

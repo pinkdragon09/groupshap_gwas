@@ -44,7 +44,9 @@ def ale_effect(model, X, feature_col, n_bins=20, *, feature_type="auto"):
 def binary_ale(predict, x, n_features, *, low=-1, high=1):
     """Batched binary specialization, retaining per-row contrasts for fivefold.
 
-    Equivalent to discrete PyALE where both states occur. For monomorphic
+    Equivalent to discrete PyALE (and centered marginal PDP) for binary
+    features where both states occur. This does not enforce LD support.
+    For monomorphic
     columns, retains the historical counterfactual contrast at the absent
     state; this is not an empirically supported ALE curve.
     Predictions must already be in the desired outcome units.
@@ -64,4 +66,8 @@ def binary_ale(predict, x, n_features, *, low=-1, high=1):
     p = ((x[:, :n_features] - low) / (high - low)).mean(axis=0)
     return dict(binary_ale_local_difference=effects,
                 binary_ale_levels=np.column_stack([-p * delta, (1 - p) * delta]),
+                binary_ale_supported=(p > 0) & (p < 1),
+                binary_ale_state_counts=np.column_stack([
+                    (x[:, :n_features] == low).sum(axis=0),
+                    (x[:, :n_features] == high).sum(axis=0)]),
                 test_allele_frequency=p)

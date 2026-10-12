@@ -71,7 +71,8 @@ def summarize(out):
     lines+=['', '## Interpretation', '',
         'Assess predictive value against the matched PC-only baseline as well as absolute R2. This run changes SNP screening, PCA representation and split ordering relative to the historical analysis, so differences cannot be attributed to a single change.',
         'Gene rankings are conditional on selected features. Held-out permutation importance is marginal, not a fitted conditional-genotype test. Interventional replacement can break LD; no causal or epistasis discovery is established.',
-        'Only chromosome-level interactions are computed; gene-group Shapley values are not gene-gene interaction estimates. Historical results remain unchanged.', '',
+        'Only chromosome-level interactions are computed; gene-group Shapley values are not gene-gene interaction estimates. Original model checkpoints and explanation arrays remain unchanged.',
+        'ALE summaries exclude monomorphic test folds and report null when no selected fold contains both genotypes. Binary ALE equals the centered marginal PDP contrast and does not eliminate LD extrapolation. See ALE_REVIEW.md for the checkpoint audit.', '',
         '`gene_summary.json`, `canonical_coverage.json`, `gene_mc_diagnostics.json`, `paired_vs_pc_baseline.json`, and the panel summaries contain the numerical review evidence. Checkpoint binaries remain local.']
     (out/'REVIEW.md').write_text('\n'.join(lines)+'\n')
     sources=[Path(__file__),Path(__file__).with_name('summarize_study27_fivefold.py'),Path(__file__).with_name('summarize_ft10_genes.py')]
