@@ -1,0 +1,20 @@
+[
+  {
+    "trait": "Neomycin",
+    "fold": 2,
+    "method": "kan",
+    "n_train": 804,
+    "n_heldout": 201,
+    "spearman_group_importance": 0.988235294117647,
+    "top5_group_overlap": 0.8,
+    "mean_abs_phi_train": 0.1612157179984056,
+    "mean_abs_phi_heldout": 0.16787867411173707,
+    "training_r2": 0.7939166757441314,
+    "heldout_r2": 0.5258374872009723,
+    "efficiency_max_abs_error": 6.661338147750939e-16,
+    "efficiency_max_abs_error_train": 6.661338147750939e-16,
+    "efficiency_max_abs_error_heldout": 6.661338147750939e-16,
+    "mc_half_spearman_train": 0.9970588235294118,
+    "mc_half_spearman_heldout": 1.0
+  }
+]

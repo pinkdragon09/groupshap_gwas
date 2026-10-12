@@ -52,7 +52,9 @@ def main():
         tr, _ = next(iter(KFold(n_splits=5, shuffle=True, random_state=42).split(X)))
         model = RandomForestRegressor(n_estimators=500, max_features="sqrt",
             min_samples_leaf=2, random_state=43, n_jobs=1).fit(X.iloc[tr], y.iloc[tr])
-        saved_path = ROOT / "outputs/phase5/ale_results.tsv"
+        saved_path = ROOT / "outputs/ale_review_20261010/historical/outputs/phase5/ale_results.tsv"
+        if not saved_path.exists():
+            saved_path = ROOT / "outputs/phase5/ale_results.tsv"
         meta["historical_sha256"] = hashlib.sha256(saved_path.read_bytes()).hexdigest()
         saved = pd.read_csv(saved_path, sep="\t")
         comparisons = []

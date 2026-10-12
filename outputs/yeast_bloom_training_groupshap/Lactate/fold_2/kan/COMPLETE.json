@@ -1,0 +1,12 @@
+{
+  "fingerprint": "93d82034632985cf3cb9e2cccf4b5991234ee0c0c583d5dc5d576aeaf388b35d",
+  "seconds": 64.05682354300006,
+  "outputs_sha256": {
+    "group_summary_by_fold.json": "439fab4e5bc7fa69081b8f3b8c051d5570e104f73b614a18414a51fe12fa0029",
+    "marker_comparison_by_fold.json": "45887a0f714e0ff4d84601fcf42a4a7675d3d16b2563f2fa629442e558bcfa84",
+    "group_comparison_by_fold.json": "016fe214d009ffc5eeafb59ab6e381c63495cc114a71909a78ac949413fe28c6",
+    "training_marker_interactions.csv": "69f1876c204473036c2058b56e2a6cfba0e8d9b184913f843e2acb9ce1372f29",
+    "group_interactions_by_fold.json": "5f99a7eb1109206d666276dd10ff7ae269a8592ac59041b0e68eab60ecf0c522",
+    "local_explanations.npz": "0a36c343665d7e2ca149ce8676fa3e503a90192ce69a300137f1dbe1e79af989"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "source": "outputs/fivefold_v1/yeast_bloom_20260913_matched",
+  "radii_bp": [
+    0,
+    1000,
+    5000,
+    10000
+  ],
+  "primary_radius_bp": 0,
+  "primary_threshold": "stringent",
+  "permutations": 2000,
+  "seed": 42,
+  "include_dubious": false,
+  "deletion_scope": "nonessential deletion x deletion",
+  "mapping_coordinates": "one-based closed R64-1-1 / SacCer3",
+  "reuse_frozen_ranks": true,
+  "gpu_used": false,
+  "interval_policy": "Explicit closest.additive indexes; linked intervals are separate hypotheses, not interaction confidence intervals.",
+  "input_sha256": {
+    "data/yeast-byxrm/processed/Bloom2015_SuppData3.csv": "0a8387e66c142e62cf4bcf8d88f5a0644aa53021a178095bb9cf39a3da55d09d",
+    "data/yeast-byxrm/processed/Bloom2015_SuppData4_QTLxQTL_interactions.csv": "c422133ed6eb0e591a914e3481eec1bbb2c792b2a6cc03312170401000bebc5c",
+    "data/yeast-deletion-reference/annotation/processed/genes.tsv": "6f66dcd71e7769fe7698c00315b778328a2dba513ff5bc06f32db0f27bf26b51",
+    "data/yeast-deletion-reference/processed/costanzo2016_pairs.tsv": "8e81984cf478c7a702f86ffe7f6e574b00f8e899cb12d66f99553b0384c07a5d",
+    "outputs/fivefold_v1/yeast_bloom_20260913_matched/Lactate/fold_1/interactions/kan.csv": "da0f5a578a8b3d25e7c108e87bae003845601594e40a932187b9d907347452f9",
+    "outputs/fivefold_v1/yeast_bloom_20260913_matched/Lactate/fold_1/interactions/rf.csv": "7edf3d3b1d1b5ab151836590d9a335421b7ab6ef5b2fd4411eb9b9a0297f4f2e",
+    "outputs/fivefold_v1/yeast_bloom_20260913_matched/Lactate/fold_2/interactions/kan.csv": "46b64e00e358aca1ed5d8932e2fbf4a1bdb6ba35d3752f2162266aa4fa3e10f4",
+    "outputs/fivefold_v1/yeast_bloom_20260913_matched/Lactate/fold_2/interactions/rf.csv": "5eeb2520175d407ed5a52b42fbf605301e87ac32f9566bba53826aa1e70856be",
+    "outputs/fivefold_v1/yeast_bloom_20260913_matched/Lactate/fold_3/interactions/kan.csv": "e6a7a0d46c9f4966337b1c0c11c1b1228b4a238ec99a4282b5725f3c35ff9a81",
+    "outputs/fivefold_v1/yeast_bloom_20260913_matched/Lactate/fold_3/interactions/rf.csv": "b5ad2b2fa50e8c83a2ed0b4b5073ed9930c7d48dec52a6177542e38dd1b435dc",
+    "outputs/fivefold_v1/yeast_bloom_20260913_matched/Lactate/fold_4/interactions/kan.csv": "948977decd6f86781144ee4ed24a88a1b205d024ecf34b3c3c9551286b8e62d2",
+    "outputs/fivefold_v1/yeast_bloom_20260913_matched/Lactate/fold_4/interactions/rf.csv": "230f0ef6cc768c7124438d372fc3928487b4a8a0e6593828fbe3a41c04d77917",
+    "outputs/fivefold_v1/yeast_bloom_20260913_matched/Lactate/fold_5/interactions/kan.csv": "2ed542264a46066bc6a85cb8f1c6015172080f3ec8bd52141ec2332090b0f2ae",
+    "outputs/fivefold_v1/yeast_bloom_20260913_matched/Lactate/fold_5/interactions/rf.csv": "422232831fe9b956c45ea9af6a80b659ab1197b5523a11ea50866eba53321a76",
+    "outputs/fivefold_v1/yeast_bloom_20260913_matched/Lactate/selected_features.json": "de7ccd5d924101e713d27d3a5fb4c00c31f539d541dc9c6ce391f09a9604973c",
+    "outputs/fivefold_v1/yeast_bloom_20260913_matched/Neomycin/fold_1/interactions/kan.csv": "b088162bd0d12358ffd14f62977ab3decd241174366b8d12923b2e43b252bcca",
+    "outputs/fivefold_v1/yeast_bloom_20260913_matched/Neomycin/fold_1/interactions/rf.csv": "4ef3f1835a7e9d801050de042612e5469b34c6e0ce915e534edc566f6ced0608",
+    "outputs/fivefold_v1/yeast_bloom_20260913_matched/Neomycin/fold_2/interactions/kan.csv": "30344c8c477c57b8c1ef78be7b0ecd2fbab53fabe75c6767d2f2a44ce1efe9b1",
+    "outputs/fivefold_v1/yeast_bloom_20260913_matched/Neomycin/fold_2/interactions/rf.csv": "cdf211421655c1a79b8e9241cf4fff983163da2c20383f2544aa4285c01faf21",
+    "outputs/fivefold_v1/yeast_bloom_20260913_matched/Neomycin/fold_3/interactions/kan.csv": "c7291da5989f193a0335e7ea12d9d77c924e8f86b7a4d1b18cad0a79b266a566",
+    "outputs/fivefold_v1/yeast_bloom_20260913_matched/Neomycin/fold_3/interactions/rf.csv": "a89d2f1dc9b08f656c12c49ad586cac26ece284b30ab4f9e5ebb29ccbb18e88d",
+    "outputs/fivefold_v1/yeast_bloom_20260913_matched/Neomycin/fold_4/interactions/kan.csv": "af61e8ed65febe619c67712b5a786700a5a303dc579ddaf43e9305d4c6f79b71",
+    "outputs/fivefold_v1/yeast_bloom_20260913_matched/Neomycin/fold_4/interactions/rf.csv": "02f9f3ec2cedf71f75efbe62cb3173e3dc93e2b8b51a8d9f1a951d402cf218c6",
+    "outputs/fivefold_v1/yeast_bloom_20260913_matched/Neomycin/fold_5/interactions/kan.csv": "aa72870020f7e4fddf999a58dd4790855cebcf289d5e5a2225a31d78b133cf67",
+    "outputs/fivefold_v1/yeast_bloom_20260913_matched/Neomycin/fold_5/interactions/rf.csv": "260c89b4575f40d980a5e3a4c33149d9985633ba250c8d6b99ca199ae6218815",
+    "outputs/fivefold_v1/yeast_bloom_20260913_matched/Neomycin/selected_features.json": "4546bfd6ac0282c043033c6f89fcb61e8ea46eb084a831c21e133754779efd15",
+    "data/yeast-deletion-reference/annotation/provenance.json": "a30d3ea9162d580383f37c86d1f23580a93b387b113152c6fd5683e40853d66b",
+    "data/yeast-deletion-reference/annotation/raw/Saccharomyces_cerevisiae.R64-1-1.99.gff3.gz": "609d091022c95026bd5f8be66672f216ad00ed242c3a3b08b83d79fecbe9ab7c",
+    "data/yeast-deletion-reference/MANIFEST.json": "c62866371b50cdd6e9a6d87b6224088482a342fed41dcc8b514f89c755a84673"
+  },
+  "original_inputs_unchanged": true,
+  "deletion_counts": {
+    "all_pairs": 9292252,
+    "valid_pairs": 9292252
+  },
+  "relevant_genes": 4980,
+  "retained_valid_deletion_pairs": 5875517,
+  "code_sha256": {
+    "scripts/run_yeast_deletion_validation.py": "668383678da32ed2abf050b30c4d2742b93dc24daf08f4beda2be8e535f1291d",
+    "scripts/yeast_deletion_evaluation.py": "d715b34ce7342594efdf8a05150287b97922b9c9d33ddb6b5c9d93d89c0fec2b"
+  },
+  "report_script_sha256": "8ce2048ed1fe912e3c949fce8117355af68c20bc3a88c79a9000fde0eb8c0632"
+}

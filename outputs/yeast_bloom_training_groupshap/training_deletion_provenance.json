@@ -1,0 +1,40 @@
+{
+  "built_utc": "2026-10-10T23:23:26.213785+00:00",
+  "completed_fold_model_comparisons": 20,
+  "expected_fold_model_comparisons": 20,
+  "complete": true,
+  "mapping": "direct overlap, frozen non-dubious gene annotation",
+  "threshold": "stringent",
+  "support": "any frozen candidate gene pair supported; unassayed SNP pairs remain missing, not negative",
+  "interpretation": "Descriptive paired ranks, not a null/enrichment test; no new p or q values.",
+  "interaction_evaluation": "20 training versus historical 20 held-out samples; same frozen models/panels/external evidence",
+  "source_sha256": "68977b14de623674b1fdd8dec45da4479eebfe5b7c3eb9e853766733eceb2385",
+  "input_sha256": {
+    "outputs/history/yeast/yeast_bloom_deletion_validation/ranked_annotations_0bp.tsv.gz": "73f08f4b3efa4e7add089cfd3d9dfc935dc9543a019dc9f59f2562698b7d42b6",
+    "outputs/history/yeast/yeast_bloom_deletion_validation/support_by_fold.tsv": "109e740fa678c293e57a99c6edd18dd359f9f5eec41a5f4767a266597abb691b",
+    "outputs/yeast_bloom_training_heldout/Lactate/fold_1/kan/training_marker_interactions.csv": "f891ad87866187da5b7ab91961678e472b1203395ac42afe721b027eb579be82",
+    "outputs/yeast_bloom_training_heldout/Lactate/fold_1/rf/training_marker_interactions.csv": "479f6196dc1b81af489015e7393f91a5e0120fa8fad775bdae72fe309bcab292",
+    "outputs/yeast_bloom_training_heldout/Lactate/fold_2/kan/training_marker_interactions.csv": "69f1876c204473036c2058b56e2a6cfba0e8d9b184913f843e2acb9ce1372f29",
+    "outputs/yeast_bloom_training_heldout/Lactate/fold_2/rf/training_marker_interactions.csv": "7c7b5bbcc92cf6f1732512371f90eb7fc1d05713f6e0d8b65bd64a55e929234f",
+    "outputs/yeast_bloom_training_heldout/Lactate/fold_3/kan/training_marker_interactions.csv": "929a7e04ac1042e45ea36e82db0e5c317c93b34f1e3b4548a91f7b7ad81b6753",
+    "outputs/yeast_bloom_training_heldout/Lactate/fold_3/rf/training_marker_interactions.csv": "e3fbe0889d5f1097f505ef5df027e16ba2a80d9828c4d033daf5f084cd876641",
+    "outputs/yeast_bloom_training_heldout/Lactate/fold_4/kan/training_marker_interactions.csv": "6989968cb0fdf92f052470ef86ad424d5b00d11d421112bcf3c38316e4520ffc",
+    "outputs/yeast_bloom_training_heldout/Lactate/fold_4/rf/training_marker_interactions.csv": "78e1d8bb326cd7e206f19d43aa3bd028b571aa8042ab7d6bfd30834a793c573a",
+    "outputs/yeast_bloom_training_heldout/Lactate/fold_5/kan/training_marker_interactions.csv": "17738a5d751f75b40e7bd852e7562673f1afeddd1b5ed62584b821e73afc0bfc",
+    "outputs/yeast_bloom_training_heldout/Lactate/fold_5/rf/training_marker_interactions.csv": "4a1d49b9e23c97810d4325007f443a5699f45bbb9f428b2dba7f1b285afe5ab8",
+    "outputs/yeast_bloom_training_heldout/Neomycin/fold_1/kan/training_marker_interactions.csv": "fa6269d65cc18cdbd1310fc74306cbd88324191bcb132c6c4d756e1325e27b4d",
+    "outputs/yeast_bloom_training_heldout/Neomycin/fold_1/rf/training_marker_interactions.csv": "f247b4721c8f8fb3bbebb066ea3f826ca911772725c0bc01081799fa00463cf2",
+    "outputs/yeast_bloom_training_heldout/Neomycin/fold_2/kan/training_marker_interactions.csv": "7236058a258255eb8d69be1cc7cb66916408f4d20db3fbe0cfd2c975c173720b",
+    "outputs/yeast_bloom_training_heldout/Neomycin/fold_2/rf/training_marker_interactions.csv": "30b3ffe88d63d668ad0dee65953f9d897b4faad7ca62c61844f8c5f0716fdf5b",
+    "outputs/yeast_bloom_training_heldout/Neomycin/fold_3/kan/training_marker_interactions.csv": "8a19d2321c038559cd021ddb7ebce12a7b5441a431310286437c6e1118af7131",
+    "outputs/yeast_bloom_training_heldout/Neomycin/fold_3/rf/training_marker_interactions.csv": "3b9a01f8bee563cb0bb16679cb3aac4c29de38b2903e8271f884ab287a10b94f",
+    "outputs/yeast_bloom_training_heldout/Neomycin/fold_4/kan/training_marker_interactions.csv": "9aaafc308ecc9bd41e382f2a5e22efd759fc6c3738e0bbd663a9a8f55ca6c97c",
+    "outputs/yeast_bloom_training_heldout/Neomycin/fold_4/rf/training_marker_interactions.csv": "e41d0b79646d451c72fb4d07a459b2f26f737c2cb2fe64b5adcb6db09ef72aef",
+    "outputs/yeast_bloom_training_heldout/Neomycin/fold_5/kan/training_marker_interactions.csv": "299c73253c54aa866b46d69885c55c141941206ebc4d306d3371f165ca89d275",
+    "outputs/yeast_bloom_training_heldout/Neomycin/fold_5/rf/training_marker_interactions.csv": "ced0d0839973f1e1eb6986861ebe53f1529029e3fbd53f963dba11ec95077286"
+  },
+  "output_sha256": {
+    "training_deletion_support_by_fold.tsv": "a636e3ac41e9df6d9762c93348b85c8a7c7d09b845ebc047d2572164e4b40191",
+    "training_deletion_support_summary.tsv": "738bb1d38b0326c15746e49887ae813275e63bb6a8f5551a340a3253f1b51cc5"
+  }
+}

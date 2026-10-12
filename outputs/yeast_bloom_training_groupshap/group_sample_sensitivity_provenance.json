@@ -1,0 +1,175 @@
+{
+  "status": "complete",
+  "built_at_utc": "2026-10-10T23:23:24.724629+00:00",
+  "models": 20,
+  "expected_models": 20,
+  "completed_models": [
+    {
+      "trait": "Neomycin",
+      "fold": 1,
+      "method": "rf"
+    },
+    {
+      "trait": "Neomycin",
+      "fold": 1,
+      "method": "kan"
+    },
+    {
+      "trait": "Neomycin",
+      "fold": 2,
+      "method": "rf"
+    },
+    {
+      "trait": "Neomycin",
+      "fold": 2,
+      "method": "kan"
+    },
+    {
+      "trait": "Neomycin",
+      "fold": 3,
+      "method": "rf"
+    },
+    {
+      "trait": "Neomycin",
+      "fold": 3,
+      "method": "kan"
+    },
+    {
+      "trait": "Neomycin",
+      "fold": 4,
+      "method": "rf"
+    },
+    {
+      "trait": "Neomycin",
+      "fold": 4,
+      "method": "kan"
+    },
+    {
+      "trait": "Neomycin",
+      "fold": 5,
+      "method": "rf"
+    },
+    {
+      "trait": "Neomycin",
+      "fold": 5,
+      "method": "kan"
+    },
+    {
+      "trait": "Lactate",
+      "fold": 1,
+      "method": "rf"
+    },
+    {
+      "trait": "Lactate",
+      "fold": 1,
+      "method": "kan"
+    },
+    {
+      "trait": "Lactate",
+      "fold": 2,
+      "method": "rf"
+    },
+    {
+      "trait": "Lactate",
+      "fold": 2,
+      "method": "kan"
+    },
+    {
+      "trait": "Lactate",
+      "fold": 3,
+      "method": "rf"
+    },
+    {
+      "trait": "Lactate",
+      "fold": 3,
+      "method": "kan"
+    },
+    {
+      "trait": "Lactate",
+      "fold": 4,
+      "method": "rf"
+    },
+    {
+      "trait": "Lactate",
+      "fold": 4,
+      "method": "kan"
+    },
+    {
+      "trait": "Lactate",
+      "fold": 5,
+      "method": "rf"
+    },
+    {
+      "trait": "Lactate",
+      "fold": 5,
+      "method": "kan"
+    }
+  ],
+  "explanation_source": "Exact saved local GroupSHAP rows; no recomputation or new Monte Carlo draws",
+  "importance": "Mean absolute local phi by saved chromosome group, in fold training-target SD",
+  "subset_selection": "One fixed 20-row training subset excluding background and one fixed historical held-out subset per fold",
+  "interpretation": "Descriptive single-subset sensitivity. Shared-row estimates are dependent. Fold SD is descriptive, not a confidence interval; folds share training samples. No significance test or stability guarantee.",
+  "tie_policy": "Stable saved group order; top5 denominator min(5, number of groups)",
+  "undefined_spearman": "Missing when either importance vector is constant",
+  "input_sha256": {
+    "outputs/yeast_bloom_training_heldout/manifest.json": "43acd3cd28343624d7595d83796594d1122e5440b762d66cf9922705ae12961a",
+    "outputs/yeast_bloom_training_heldout/Neomycin/fold_1/rf/COMPLETE.json": "18de1d5091e66b0051f025e0120bce78bb4f57b1b006b5dc80e377a26ca645ba",
+    "outputs/yeast_bloom_training_heldout/Neomycin/fold_1/design.json": "bbe8b97eae385ecf9de271aa42716a708ca64da038b002125cae41e7fa5025f0",
+    "outputs/yeast_bloom_training_heldout/Neomycin/fold_1/rf/local_explanations.npz": "9db8a8ec296c21174989db9c9dadeffbec7a0c14a9b1c31db696c0b1218f1798",
+    "outputs/yeast_bloom_training_heldout/Neomycin/fold_1/kan/COMPLETE.json": "11a0d862b5bd964a5d38c90f26279f1ef4045ee8e3bc7fb2eb0ac4e9675a3c9d",
+    "outputs/yeast_bloom_training_heldout/Neomycin/fold_1/kan/local_explanations.npz": "23f701a0048bfff04d09b350aa60512aac3ff647023cb3e3a8270b954ec2ff64",
+    "outputs/yeast_bloom_training_heldout/Neomycin/fold_2/rf/COMPLETE.json": "9a2b9a57706b6ef09f789475ed1145b76ff3903119255493581e638e53542b3f",
+    "outputs/yeast_bloom_training_heldout/Neomycin/fold_2/design.json": "e266f62e914842c46b0f11df2f5a557566f791f2863e9e88b62b514b9b670a3e",
+    "outputs/yeast_bloom_training_heldout/Neomycin/fold_2/rf/local_explanations.npz": "437be2de64962597eb7f175ffc726741098e525c7fdda39a76d41089c2b86f70",
+    "outputs/yeast_bloom_training_heldout/Neomycin/fold_2/kan/COMPLETE.json": "ac3f1d2b94885f9a8216fcbbf7353cdf37002b16849430327da244dc83680d33",
+    "outputs/yeast_bloom_training_heldout/Neomycin/fold_2/kan/local_explanations.npz": "808047491555f320586b19071d70c48653415bad608f9faf74788f6f9b09de93",
+    "outputs/yeast_bloom_training_heldout/Neomycin/fold_3/rf/COMPLETE.json": "789353f20dd20da3cd3c5f30b51aeb56423596d84ef292f214ccee2544e6922d",
+    "outputs/yeast_bloom_training_heldout/Neomycin/fold_3/design.json": "3eb893a0ce7141a31c08ada4a947493ebcfe08050dbe35fee9f26f6a6e0770fe",
+    "outputs/yeast_bloom_training_heldout/Neomycin/fold_3/rf/local_explanations.npz": "19a07a48a9acf5f722ab8c29ebe9d8bb2b850af1244cfd04a5e5a94b51fa669f",
+    "outputs/yeast_bloom_training_heldout/Neomycin/fold_3/kan/COMPLETE.json": "a470aa49fb2a75c5f04a1a0bf8828c867cff2b26de6f49251db3a94b0c60d9be",
+    "outputs/yeast_bloom_training_heldout/Neomycin/fold_3/kan/local_explanations.npz": "990d8230d7e14c544b699ce8c045a908cf1840f07ad35abd6ce8455df59bac44",
+    "outputs/yeast_bloom_training_heldout/Neomycin/fold_4/rf/COMPLETE.json": "258836d106fd2ee0d22198b3e651e1f590365aca8ba365b6ced450bcf37906e1",
+    "outputs/yeast_bloom_training_heldout/Neomycin/fold_4/design.json": "810f950e27c8006f5f103f9509503f8adee689ef9c915f353c3e2d82dd1e965a",
+    "outputs/yeast_bloom_training_heldout/Neomycin/fold_4/rf/local_explanations.npz": "732c0cfb3747ea54cb35eeb371dc57444b348df808a39681ac99af9dd132e3bc",
+    "outputs/yeast_bloom_training_heldout/Neomycin/fold_4/kan/COMPLETE.json": "eac97c95addd800b35eedea710d9d3b7bfc6fefb9b0cd08c68b366b21f2bdfe2",
+    "outputs/yeast_bloom_training_heldout/Neomycin/fold_4/kan/local_explanations.npz": "f7806ec98667137ae49de57e3df0ebe4790990c1fe98b1f005b75ca56263430c",
+    "outputs/yeast_bloom_training_heldout/Neomycin/fold_5/rf/COMPLETE.json": "be38ae744e102ce62ae2970c90ecd24e4b25de0a67639d70469c893245747faa",
+    "outputs/yeast_bloom_training_heldout/Neomycin/fold_5/design.json": "224f5920bb94cafd5fc31bca9331bd9285663c0260922765884dc333fc464d10",
+    "outputs/yeast_bloom_training_heldout/Neomycin/fold_5/rf/local_explanations.npz": "54042306c0bd919cfc6b34e0fa3a66985940422a9497b2e7be8efa0e97b776e2",
+    "outputs/yeast_bloom_training_heldout/Neomycin/fold_5/kan/COMPLETE.json": "765375ed93ea1291b4e5bb975712f5192c980fb4ef73febf39233492c4595757",
+    "outputs/yeast_bloom_training_heldout/Neomycin/fold_5/kan/local_explanations.npz": "47f80a13a993dd4d939e5ba2f59e38cad3dbd3a9dff38190bc1b246a6735f3a6",
+    "outputs/yeast_bloom_training_heldout/Lactate/fold_1/rf/COMPLETE.json": "db3ec4d3b0e03c089c3b79b97957ec8b1603397db04c33f062b9cd188ec6a168",
+    "outputs/yeast_bloom_training_heldout/Lactate/fold_1/design.json": "ae081027f2810acdab30c0d78bbe0a96942c997991cc81d8da967cd473ff691e",
+    "outputs/yeast_bloom_training_heldout/Lactate/fold_1/rf/local_explanations.npz": "4e66c62ef38025b10d4eaecea30fe77893b2aba98ce43644cee30a3657ed088a",
+    "outputs/yeast_bloom_training_heldout/Lactate/fold_1/kan/COMPLETE.json": "d51063afd9ba9d92790c930db38d975d699fccab9aece11eb3c0b24ba53b231c",
+    "outputs/yeast_bloom_training_heldout/Lactate/fold_1/kan/local_explanations.npz": "ebcea6c2866c0f35d374718d873fbf0eb8832e2d33e0c5013a99d95aa7e83039",
+    "outputs/yeast_bloom_training_heldout/Lactate/fold_2/rf/COMPLETE.json": "6670a87c024dab631baa91a5d4dd915b01cac496725e28d29b28bca7fb66853b",
+    "outputs/yeast_bloom_training_heldout/Lactate/fold_2/design.json": "3e233314088afe2797e52e57f31c9bf0a3078311b1b5470e61741eec7ecb7e17",
+    "outputs/yeast_bloom_training_heldout/Lactate/fold_2/rf/local_explanations.npz": "20a3758f321145a6dfcd1053deac2dcda20f183f9dcbc94f4cea7131c31ca2e4",
+    "outputs/yeast_bloom_training_heldout/Lactate/fold_2/kan/COMPLETE.json": "5ee8e175ec9a84604be9189b167d166f647e53b16648ce5267bb227615b377a9",
+    "outputs/yeast_bloom_training_heldout/Lactate/fold_2/kan/local_explanations.npz": "0a36c343665d7e2ca149ce8676fa3e503a90192ce69a300137f1dbe1e79af989",
+    "outputs/yeast_bloom_training_heldout/Lactate/fold_3/rf/COMPLETE.json": "ee8d0ffa858e2aeb5631b0f47832cb420339faac04f8e6a7f541bf9987efdc09",
+    "outputs/yeast_bloom_training_heldout/Lactate/fold_3/design.json": "90a85eebccf0ddb165035313a670fccd222c0aae6be0029f28edd2abee25cc32",
+    "outputs/yeast_bloom_training_heldout/Lactate/fold_3/rf/local_explanations.npz": "274302a720c0e8dafa48a7cf114465e3a1aab307530f80b43466535c6bca610e",
+    "outputs/yeast_bloom_training_heldout/Lactate/fold_3/kan/COMPLETE.json": "019a22f35557b0fbaa2e86ea3d11ef814bb4a73b5dc61989c8b52f941555c55a",
+    "outputs/yeast_bloom_training_heldout/Lactate/fold_3/kan/local_explanations.npz": "78d7ffcaa5bd4dea9fd645bec160d2fec5d6252be39e65b4f21dcdba9a7a999d",
+    "outputs/yeast_bloom_training_heldout/Lactate/fold_4/rf/COMPLETE.json": "0c9349d0c11aae6e572be73f45238530d1f386e6484a672a22274b2ec247cf75",
+    "outputs/yeast_bloom_training_heldout/Lactate/fold_4/design.json": "b1e6c2b3c700d0ef566e587a3544c55afb8677b92ccf92850e719ce43cfb3898",
+    "outputs/yeast_bloom_training_heldout/Lactate/fold_4/rf/local_explanations.npz": "ad43d3e0c7d9c04855f0191265118d9b2e30e5d34c37651fddd90263a71faefc",
+    "outputs/yeast_bloom_training_heldout/Lactate/fold_4/kan/COMPLETE.json": "d3f2bb3d7321152dad6879c15df710e7eea67b1fbae37928064c368b906c7983",
+    "outputs/yeast_bloom_training_heldout/Lactate/fold_4/kan/local_explanations.npz": "628d05cc80130b7768dfe72707c42fff830f27d3e6269ebd40bcd085e8faff58",
+    "outputs/yeast_bloom_training_heldout/Lactate/fold_5/rf/COMPLETE.json": "e1a3f42f6d0b795252cb7a0c41159599ccb18e8f08ea286432b9144d36f300a9",
+    "outputs/yeast_bloom_training_heldout/Lactate/fold_5/design.json": "671d4705231bf8183b7c2ba048a00439a4d75de22b00518673202b662a99d44f",
+    "outputs/yeast_bloom_training_heldout/Lactate/fold_5/rf/local_explanations.npz": "a86b3d077cffd7efe754fd2f8169547d0551ad921829284a008bb768145eab4e",
+    "outputs/yeast_bloom_training_heldout/Lactate/fold_5/kan/COMPLETE.json": "34da8d1743becfff67ce59e22d24ef74f38187458860a138be731e82f83ac13b",
+    "outputs/yeast_bloom_training_heldout/Lactate/fold_5/kan/local_explanations.npz": "78fd8e7115b02d899d8e36aaf787891485c8816601c8db93d84ddff6961e732c",
+    "outputs/yeast_bloom_training_heldout/COMPLETE.json": "12b73605671e83236c00d18007cb13880e05b19a154ad7da904da094ebf4fc76"
+  },
+  "code_sha256": {
+    "scripts/history/summarize_yeast_group_sample_sensitivity.py": "b28020b997c2c8bdbdcdaaf34d1a41f7348331de2989ef43f22e80a2fd0a6c3d"
+  },
+  "output_sha256": {
+    "group_sample_sensitivity_by_fold.tsv": "95eaec184b1652826ab0d7f15b07afb49362e6da85349fe36d3ae5d45fd81f09",
+    "group_sample_sensitivity_summary.tsv": "f5af791dc371781ba9962a14c9442ad8aec351d3fee6da035446c7d7d965f404"
+  }
+}

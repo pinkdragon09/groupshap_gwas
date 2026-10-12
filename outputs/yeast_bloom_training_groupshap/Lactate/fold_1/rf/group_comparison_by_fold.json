@@ -1,0 +1,20 @@
+[
+  {
+    "trait": "Lactate",
+    "fold": 1,
+    "method": "rf",
+    "n_train": 778,
+    "n_heldout": 195,
+    "spearman_group_importance": 0.9735294117647059,
+    "top5_group_overlap": 1.0,
+    "mean_abs_phi_train": 0.054047228864290385,
+    "mean_abs_phi_heldout": 0.048144713748042654,
+    "training_r2": 0.8452334920389054,
+    "heldout_r2": 0.3444703507655601,
+    "efficiency_max_abs_error": 4.440892098500626e-16,
+    "efficiency_max_abs_error_train": 4.440892098500626e-16,
+    "efficiency_max_abs_error_heldout": 3.3306690738754696e-16,
+    "mc_half_spearman_train": 1.0,
+    "mc_half_spearman_heldout": 1.0
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "status": "complete",
+  "fingerprint": "93d82034632985cf3cb9e2cccf4b5991234ee0c0c583d5dc5d576aeaf388b35d",
+  "models": 20,
+  "original_inputs_unchanged": true,
+  "output_sha256": {
+    "group_comparison_by_fold.tsv": "c1b6c8f5d80f5b1d4f396e929870fa11ec50c9d59cd2c6c727f3027b96f74c7c",
+    "group_summary_by_fold.tsv": "8c66179bfa7f04eb689406a64fcd1b3724c7f1eb8e63f7b8e399f3b49f33f007",
+    "group_interactions_by_fold.tsv": "858dc02b0d944678e0b88aa860a0a3fd4b3aa05635be5f994bd04619cf7f91de",
+    "marker_comparison_by_fold.tsv": "9b37086d51e561feb7f5db3db9d9f32a7a2cb45962c0bf085b447a69a6dfafc0"
+  }
+}

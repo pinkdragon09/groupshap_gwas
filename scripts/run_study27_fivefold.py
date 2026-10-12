@@ -470,8 +470,9 @@ def main():
                             'transformer_mamba_gwas_template.py', 'grouped_shap_utils.py', 'snp_selection.py']
             print('Hashing raw inputs and executable source', flush=True)
             identity = dict(config=config, inputs={str(p):digest(p) for p in [GENO, PHENO]},
-                source={f'scripts/{name}':digest(ROOT/'scripts'/name) for name in source_names},
-                versions={p:importlib.metadata.version(p) for p in ['numpy','h5py','torch','scikit-learn','pykan','joblib']},
+                source={**{f'scripts/{name}':digest(ROOT/'scripts'/name) for name in source_names},
+                        'xai_gwas/attribution/ale.py':digest(ROOT/'xai_gwas/attribution/ale.py')},
+                versions={p:importlib.metadata.version(p) for p in ['numpy','h5py','torch','scikit-learn','pykan','joblib','PyALE']},
                 python=platform.python_version())
             signature = fingerprint(identity)
             if (out/'manifest.json').exists():

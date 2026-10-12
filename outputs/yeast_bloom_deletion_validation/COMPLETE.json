@@ -1,0 +1,22 @@
+{
+  "status": "complete",
+  "original_inputs_unchanged": true,
+  "output_sha256": {
+    "REPORT.md": "93a9e3278065f126929d048541d1acba72a197935efefc82461762a2d60839ad",
+    "coverage.tsv": "2ca2931d7ace65633d25956cd2792776e64bd6c20f0d6e6fa9cab5927118ada5",
+    "evaluation_metadata.json": "bfcad4545240c709242be4347f04826e7f6bca8ea6d3e03b25bfa44c6388da18",
+    "figures/stringent_support.pdf": "3176ce4c259f2146e07035e229d77ac2b15a4bc6bac5a12c4fd40b6323761bde",
+    "figures/stringent_support.png": "71353db3611d3ee62ebf315c7396c9054f41da4dd9f4c754732c09b9aa362255",
+    "marker_gene_maps.tsv": "114c700f73c1885d91e246df87563677a84afee8f13e8d75717e962cffe3faa5",
+    "provenance.json": "2e5b7a8e21b2d8bf7507acf6453df8840d727ac0dd617d21a9b2dadb63c09d1d",
+    "published_reference_annotations.tsv": "dc097f828f99f5a455570e3a4e14ce104a1634b33141b1018dc0ace4366c8edf",
+    "published_reference_summary.tsv": "64a6d98e16e1c66f52ef602509f9bf906e47b240446074d0c743332836e23a75",
+    "ranked_annotations_0bp.tsv.gz": "73f08f4b3efa4e7add089cfd3d9dfc935dc9543a019dc9f59f2562698b7d42b6",
+    "ranked_annotations_10000bp.tsv.gz": "b971aa9453c958331f728a75ade360df78651e32430234b52714af93cf78e636",
+    "ranked_annotations_1000bp.tsv.gz": "68a9374c6e32bd1f0e2817c92ac80d973f5c256addd116d9d624cc222432ae7a",
+    "ranked_annotations_5000bp.tsv.gz": "621d6c32c95276b9951e080c1f42a76288016ac783fb4997f7d31042eb7088a8",
+    "support_by_fold.tsv": "109e740fa678c293e57a99c6edd18dd359f9f5eec41a5f4767a266597abb691b",
+    "support_summary.tsv": "726597a24ac078edd7cd82f455bd45b02060bdf4b6fead66f40c0c79812b1ff2",
+    "supported_top100_candidates.tsv": "5d42d1f4344269c6314f3aa08a2a42392aac09a88f636414a36e48cd2a01e3bb"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "models_checked": 20,
+  "all_heldout_samples_explained_once": true,
+  "source_and_output_checksums_verified": true,
+  "checkpoint_predictions_verified": true,
+  "training_background_only": true,
+  "maximum_efficiency_error_against_reloaded_predictor": 8.881784197001252e-16
+}
