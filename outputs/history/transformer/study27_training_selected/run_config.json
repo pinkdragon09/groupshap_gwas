@@ -1,0 +1,23 @@
+{
+  "outdir": "outputs/history/study27/study27_kan_comparison",
+  "n_pcs": 3,
+  "top_snps": 200,
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "epochs": 100,
+  "patience": 15,
+  "models": [
+    "random_forest",
+    "transformer",
+    "kan"
+  ],
+  "prepare_only": false,
+  "torch_version": "2.11.0+cpu",
+  "source_sha256": "f8f2a91d5fdd77b81140798f0b1eecc39d94b77a0a702d4514aeff505fd5000e",
+  "selection": "genome-wide training-only PC-adjusted marginal GWAS, MAC >= 2",
+  "pcs": "kinship PCs on all matched genotypes, no phenotype used; transductive",
+  "uncertainty": "fold SD is descriptive, not a confidence interval"
+}

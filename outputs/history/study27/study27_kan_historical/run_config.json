@@ -1,0 +1,33 @@
+{
+  "protocol": "historical full-sample preselected panel",
+  "accessions": 81,
+  "snps": 200,
+  "n_pcs": 3,
+  "folds": 5,
+  "split_seed": 42,
+  "model_seed": "42 + one-based fold",
+  "kan_width": [
+    203,
+    4,
+    1
+  ],
+  "grid": 3,
+  "spline_degree": 3,
+  "epochs": 80,
+  "patience": 10,
+  "batch_size": 16,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "preprocessing": "historical Transformer fit-only z-score scaling",
+  "selection_caveat": "all phenotypes entered panel selection; CV conditions on that panel",
+  "panel_sha256": "518065122d159bebc018720202e211ca5b37689514289b79b7eaa2113c0806c6",
+  "source_sha256": "1c9e100db576279b771317e17acb1db8fe290804de70eee4bbc8a0040782e59d",
+  "versions": {
+    "torch": "2.11.0+cpu",
+    "pykan": "0.2.8",
+    "numpy": "1.26.4",
+    "scipy": "1.17.1",
+    "scikit-learn": "1.8.0",
+    "h5py": "3.16.0"
+  }
+}

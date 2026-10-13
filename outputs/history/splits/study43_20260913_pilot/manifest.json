@@ -1,0 +1,56 @@
+{
+  "config": {
+    "schema_version": 1,
+    "study": "Study43_complete_cases",
+    "expected_n": 310,
+    "genotype": "data/1001genomes/genotypes/1001_SNP_MATRIX/imputed_snps_binary.hdf5",
+    "phenotype": "data/arapheno/phenotypes/study_43_values.csv",
+    "split_seed": 42,
+    "model_seed": 42,
+    "validation_fraction": 0.2,
+    "per_chr": 20,
+    "chunk_size": 20000,
+    "epochs": 200,
+    "patience": 30,
+    "rf_trees": 300,
+    "background": 20,
+    "threads": 4,
+    "kan_hidden": 8,
+    "kan_grid": 5,
+    "kan_lr": 0.001,
+    "kan_batch": 64,
+    "evaluation": "all outer-test accessions",
+    "grouping": [
+      "chr1",
+      "chr2",
+      "chr3",
+      "chr4",
+      "chr5"
+    ],
+    "feature_ties": "descending training variance, ascending global SNP index",
+    "refit": "inner-selected epochs; fresh KAN fit on all outer-training rows",
+    "rf_max_features": 0.33,
+    "rf_min_samples_leaf": 5,
+    "kan_input_transform": "identity 0/1"
+  },
+  "inputs": {
+    "data/1001genomes/genotypes/1001_SNP_MATRIX/imputed_snps_binary.hdf5": "f3713e66f017187fb3d30b8d6b854794393ab259e6b5bae4b18ca2cafcbb1862",
+    "data/arapheno/phenotypes/study_43_values.csv": "ac8d8f4ef3befd5181854e85b800bfaafaa79820be4ad414faacd7ec2d49ab66"
+  },
+  "source": {
+    "scripts/run_study43_fivefold.py": "5f83a3aa3c81fe6f1dcfe7937440c736a5b12e3856868d6c251c77e332a47317",
+    "scripts/fivefold_common.py": "9dc7b21408daa03fa05fe222be5ab1a0346e92c8a39019fc360e0f538c1bd77a"
+  },
+  "versions": {
+    "numpy": "1.26.4",
+    "pandas": "3.0.2",
+    "h5py": "3.16.0",
+    "torch": "2.11.0+cpu",
+    "scikit-learn": "1.8.0",
+    "pykan": "0.2.8"
+  },
+  "python": "3.12.3",
+  "fingerprint": "43aaab212dbd243bbc226c7cce7e52e966ebbe41e95259c40482a77aa0f3bd62",
+  "repository_commit": "975ada1b9520859281f00c4c9adabcbdd3f2e6f1",
+  "started_at": "2026-09-13T19:56:11-0400"
+}

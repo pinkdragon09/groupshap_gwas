@@ -1,0 +1,4724 @@
+{
+  "sample_ids": [
+    "5837",
+    "6008",
+    "6009",
+    "6016",
+    "6040",
+    "6042",
+    "6043",
+    "6046",
+    "6064",
+    "6074",
+    "6243",
+    "6897",
+    "6898",
+    "6900",
+    "6901",
+    "6903",
+    "6904",
+    "6907",
+    "6908",
+    "6909",
+    "6911",
+    "6913",
+    "6915",
+    "6917",
+    "6918",
+    "6919",
+    "6920",
+    "6922",
+    "6923",
+    "6924",
+    "6926",
+    "6927",
+    "6929",
+    "6931",
+    "6932",
+    "6933",
+    "6940",
+    "6943",
+    "6944",
+    "6945",
+    "6951",
+    "6956",
+    "6957",
+    "6958",
+    "6959",
+    "6960",
+    "6961",
+    "6963",
+    "6966",
+    "6967",
+    "6968",
+    "6969",
+    "6970",
+    "6971",
+    "6973",
+    "6974",
+    "6975",
+    "6976",
+    "6979",
+    "6981",
+    "6982",
+    "6984",
+    "7000",
+    "7014",
+    "7033",
+    "7062",
+    "7064",
+    "7081",
+    "7094",
+    "7147",
+    "7163",
+    "7231",
+    "7255",
+    "7282",
+    "7296",
+    "7306",
+    "7323",
+    "7346",
+    "7418",
+    "7424",
+    "7460",
+    "7461",
+    "7477",
+    "7514",
+    "7515",
+    "7516",
+    "7517",
+    "7520",
+    "7521",
+    "7523",
+    "7525",
+    "8214",
+    "8222",
+    "8230",
+    "8231",
+    "8233",
+    "8235",
+    "8236",
+    "8237",
+    "8239",
+    "8240",
+    "8241",
+    "8242",
+    "8243",
+    "8247",
+    "8249",
+    "8256",
+    "8258",
+    "8259",
+    "8264",
+    "8283",
+    "8284",
+    "8285",
+    "8290",
+    "8297",
+    "8306",
+    "8311",
+    "8312",
+    "8326",
+    "8334",
+    "8335",
+    "8337",
+    "8343",
+    "8351",
+    "8354",
+    "8365",
+    "8369",
+    "8376",
+    "8387",
+    "8420",
+    "8422",
+    "8424",
+    "8426",
+    "9057",
+    "9058"
+  ],
+  "genotype_rows": [
+    155,
+    168,
+    169,
+    174,
+    189,
+    191,
+    192,
+    193,
+    194,
+    199,
+    289,
+    314,
+    315,
+    316,
+    317,
+    318,
+    319,
+    320,
+    321,
+    322,
+    323,
+    324,
+    325,
+    326,
+    327,
+    328,
+    329,
+    330,
+    331,
+    332,
+    333,
+    334,
+    335,
+    336,
+    337,
+    338,
+    340,
+    341,
+    342,
+    343,
+    344,
+    345,
+    346,
+    347,
+    348,
+    349,
+    350,
+    351,
+    352,
+    353,
+    354,
+    355,
+    356,
+    357,
+    358,
+    359,
+    360,
+    361,
+    362,
+    363,
+    364,
+    365,
+    372,
+    377,
+    382,
+    386,
+    388,
+    394,
+    396,
+    414,
+    419,
+    438,
+    443,
+    449,
+    452,
+    455,
+    462,
+    471,
+    496,
+    498,
+    501,
+    502,
+    505,
+    506,
+    507,
+    508,
+    509,
+    510,
+    511,
+    512,
+    513,
+    528,
+    529,
+    531,
+    532,
+    533,
+    535,
+    536,
+    537,
+    539,
+    540,
+    541,
+    542,
+    543,
+    546,
+    547,
+    548,
+    549,
+    550,
+    551,
+    552,
+    553,
+    554,
+    555,
+    556,
+    557,
+    559,
+    560,
+    561,
+    562,
+    563,
+    564,
+    565,
+    566,
+    567,
+    569,
+    571,
+    572,
+    574,
+    576,
+    577,
+    578,
+    579,
+    586,
+    587
+  ],
+  "y": [
+    57.0,
+    60.0,
+    98.0,
+    75.0,
+    71.0,
+    56.0,
+    90.0,
+    93.0,
+    96.0,
+    91.0,
+    56.0,
+    62.0,
+    41.0,
+    90.0,
+    86.0,
+    57.0,
+    66.0,
+    58.0,
+    49.0,
+    51.0,
+    46.0,
+    99.0,
+    53.0,
+    121.0,
+    108.0,
+    71.0,
+    71.0,
+    48.0,
+    44.0,
+    49.0,
+    49.0,
+    51.0,
+    71.0,
+    46.0,
+    51.0,
+    56.0,
+    49.0,
+    49.0,
+    49.0,
+    55.0,
+    68.0,
+    69.0,
+    84.0,
+    49.0,
+    51.0,
+    47.0,
+    46.0,
+    60.0,
+    53.0,
+    44.0,
+    71.0,
+    70.0,
+    48.0,
+    51.0,
+    53.0,
+    103.0,
+    51.0,
+    56.0,
+    44.0,
+    44.0,
+    49.0,
+    53.0,
+    65.0,
+    92.0,
+    76.0,
+    46.0,
+    79.0,
+    46.0,
+    58.5,
+    71.0,
+    57.0,
+    46.0,
+    46.0,
+    51.0,
+    70.0,
+    60.0,
+    56.0,
+    64.0,
+    63.0,
+    43.0,
+    49.0,
+    61.0,
+    59.0,
+    58.0,
+    49.0,
+    100.0,
+    107.0,
+    60.0,
+    60.0,
+    57.0,
+    46.0,
+    51.0,
+    90.0,
+    97.0,
+    91.0,
+    59.0,
+    60.0,
+    91.0,
+    97.0,
+    52.0,
+    93.0,
+    73.0,
+    120.0,
+    66.0,
+    87.0,
+    81.0,
+    61.0,
+    73.0,
+    73.0,
+    46.0,
+    71.0,
+    61.0,
+    70.0,
+    50.0,
+    73.0,
+    96.0,
+    49.0,
+    66.0,
+    67.0,
+    64.0,
+    104.0,
+    70.0,
+    62.0,
+    78.0,
+    70.0,
+    51.0,
+    76.0,
+    84.0,
+    52.0,
+    56.0,
+    106.0,
+    46.0,
+    49.0,
+    76.0,
+    101.0
+  ],
+  "excluded": [
+    {
+      "accession": "6920",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6924",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6924",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6984",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6924",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6923",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6924",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6924",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6924",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6924",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6924",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6961",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6961",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6961",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6960",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6961",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6961",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6961",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6961",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6961",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6900",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6900",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6900",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6899",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6900",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6900",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6899",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6899",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6899",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6974",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6974",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6973",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6974",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6973",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6973",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6973",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6973",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6973",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6973",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7525",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7524",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7525",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6921",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6921",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6921",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6922",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6922",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6922",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6922",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6922",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6922",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6922",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6957",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6957",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6957",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6958",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6958",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6958",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6958",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6958",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6958",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6009",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6009",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8241",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6940",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6940",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6940",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6942",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6940",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8241",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6940",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8329",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8334",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8334",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8326",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8329",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8329",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8329",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8334",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8213",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6923",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6923",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6923",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6923",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6923",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6922",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6923",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6923",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8213",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6963",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6962",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6962",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6962",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6962",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6962",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6962",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6962",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6962",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6899",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6899",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6898",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6898",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6898",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6898",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6899",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6899",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6898",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6898",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6972",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6972",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6972",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6972",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6972",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6972",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6972",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6973",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7524",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7524",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7523",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7523",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7523",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7523",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7523",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7523",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7524",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7524",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6920",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6920",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6920",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6920",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6921",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6921",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6921",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6921",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6921",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6956",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6956",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6956",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6956",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6956",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6951",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6956",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6956",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6956",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7323",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7323",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7323",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6913",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7296",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6914",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8312",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8310",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8310",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8311",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8311",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8311",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8312",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8312",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8343",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8343",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8351",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8351",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8351",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8353",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8353",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8353",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7525",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7525",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7525",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7524",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6937",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6937",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6937",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6937",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6937",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6937",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7524",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6937",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6939",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6897",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6897",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6897",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6897",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6897",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6897",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6898",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6898",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6980",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6980",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6980",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6980",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6980",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6980",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6980",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6981",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6981",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7518",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7518",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7518",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7518",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7518",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7517",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7517",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7518",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7518",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6919",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6920",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6919",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6919",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6919",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6919",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6983",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6983",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6983",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6984",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6984",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6920",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6920",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6960",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6960",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6959",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6959",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6960",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6960",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6960",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6960",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6960",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8222",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8222",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8230",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8230",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8230",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8231",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8231",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8231",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8314",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8323",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8313",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8313",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8313",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8314",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8314",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8314",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8335",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8335",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8335",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8337",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8337",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8337",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8343",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6939",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6939",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6939",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6939",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6939",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6939",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6939",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6940",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6243",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6709",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6709",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6709",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6243",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6243",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6897",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6979",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6979",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6979",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6979",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6979",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6979",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6978",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6979",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6979",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7517",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7517",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7517",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7517",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7517",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7516",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7516",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7516",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6919",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6985",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6985",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6918",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6918",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6918",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6918",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6918",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6919",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6919",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6959",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6959",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6959",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6958",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6958",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6959",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6959",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6959",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8233",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8233",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8233",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8235",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8235",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8235",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8236",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6905",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6905",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6905",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6905",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6905",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6905",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6911",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8297",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8297",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8297",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8297",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8296",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8296",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8296",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8296",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6911",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6911",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8369",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8369",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8369",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8366",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8365",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8365",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8374",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8374",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6046",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6046",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6064",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6046",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6064",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6074",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6064",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6074",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6074",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6904",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6905",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6978",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6904",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6978",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6904",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6977",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6904",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6978",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6904",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6918",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6918",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6917",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6917",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6918",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6917",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6917",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6917",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6985",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8214",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8214",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8214",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8214",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8214",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8214",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8214",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8214",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8215",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6930",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6930",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6930",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7520",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6930",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6931",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6931",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6931",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6931",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6931",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7520",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7521",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7519",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7519",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7519",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7518",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6932",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7519",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8258",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6951",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8256",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6946",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8254",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6951",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8300",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8300",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8300",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8306",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8306",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8306",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8310",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8357",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8365",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8354",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8354",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8354",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8354",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8357",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8357",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8357",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6046",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6046",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6046",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6046",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6046",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6043",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6043",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6043",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6906",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6906",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6977",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6977",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6905",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6977",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6977",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6976",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6976",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6977",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6976",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6917",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6917",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6916",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6916",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6916",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6916",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6916",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6916",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6916",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7033",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7033",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7033",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7081",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7081",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7081",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8222",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8215",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8215",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8215",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8215",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8215",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8215",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8215",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6931",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6931",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6931",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7519",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6932",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7519",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6932",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6932",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6932",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7519",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7519",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6984",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6984",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6984",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8275",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8283",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8283",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8275",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8274",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8275",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8283",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8388",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8388",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8387",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8388",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8388",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8387",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8387",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8387",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6985",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6984",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6984",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6043",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6043",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6042",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6042",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6042",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6043",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6043",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6043",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6985",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6985",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "5837",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6928",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "5837",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8213",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6901",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6901",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6901",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "5837",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6901",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6901",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6900",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6901",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6900",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8213",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "5837",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "5837",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6983",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6983",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6982",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6982",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6982",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6982",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6982",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6983",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6983",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6970",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6970",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6969",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6969",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6970",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6970",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6970",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6970",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6970",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6915",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7275",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6915",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6915",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6915",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6915",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6916",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7296",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8245",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8247",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8243",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8245",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8245",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8242",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8243",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8243",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6933",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6933",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6933",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6932",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6933",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6932",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6932",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6933",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6933",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8239",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6009",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6009",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6909",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7520",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6908",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6908",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6908",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6008",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8237",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6909",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6909",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6985",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8290",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8290",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8285",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8285",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8285",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8284",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8284",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8290",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8378",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8378",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8378",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8376",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8376",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8376",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8374",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6903",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6901",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6903",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6903",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6903",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6903",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6903",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6903",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6903",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6009",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6016",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6016",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6016",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6040",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6982",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6982",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6981",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6981",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6981",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6981",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6981",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6982",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6981",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6971",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6971",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6971",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6971",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6971",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6970",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6971",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6971",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6971",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6914",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6914",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6914",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6914",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6914",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7296",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6914",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6914",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7418",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8254",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8254",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8249",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8249",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8249",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8247",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8247",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6936",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6936",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6933",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6933",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6936",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6936",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6936",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6936",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6936",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8270",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8270",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8265",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8265",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8265",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8270",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8266",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8266",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6908",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6909",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6909",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6009",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6008",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6008",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6009",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6009",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8412",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8412",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8412",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8411",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8420",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8412",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8412",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8420",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8420",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6968",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6967",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6967",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6967",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6968",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6968",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6968",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6968",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7438",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7438",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7438",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7438",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7438",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7438",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7438",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7514",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7514",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7514",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7514",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7514",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7515",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7515",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7515",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7515",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6926",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6926",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6926",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6926",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6926",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6926",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6926",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6926",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6942",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6942",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8236",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6942",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6942",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6943",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6943",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6943",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6943",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8240",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6040",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6040",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8237",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8236",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6942",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8239",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8239",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8274",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8274",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8271",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8271",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8274",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8270",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8271",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6910",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6910",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6910",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6910",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6909",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6909",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6909",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6910",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6910",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8395",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8395",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8395",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8389",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8389",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8389",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8411",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8411",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6969",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6969",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6969",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6968",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6968",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6968",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6969",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6969",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6969",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7514",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7514",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7461",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7461",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7514",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7438",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7461",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7515",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7515",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7515",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7516",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7516",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7516",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7515",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7516",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7516",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6928",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6928",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6927",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6927",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6927",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6927",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6927",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6927",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6927",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6927",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6940",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8241",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8240",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6940",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8240",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6942",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6942",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8242",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8242",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6974",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6911",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6913",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6913",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6913",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6913",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6975",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6974",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6915",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6915",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6915",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "9058",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8430",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8430",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "9057",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8430",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "9057",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "9057",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "9058",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "5837",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6907",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6906",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6906",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6906",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6906",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6907",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6906",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6906",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6928",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8426",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8426",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8424",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8424",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8424",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8424",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8424",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8426",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6928",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6966",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6966",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6966",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6965",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6965",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6965",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6965",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6965",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7522",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6928",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6928",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7526",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6929",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8213",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8213",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "5837",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "5837",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6929",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8213",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8213",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6928",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6945",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6945",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6945",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6945",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6944",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6944",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6944",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6944",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6945",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6945",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "9058",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "100000",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6908",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6908",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6907",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6907",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6908",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6908",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6907",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6907",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6907",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6907",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8424",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8424",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8422",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8423",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8422",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8423",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8424",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8423",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6966",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6966",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6966",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6966",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6967",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6966",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6967",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6967",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6967",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6967",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6929",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7526",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6930",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7526",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6929",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6929",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6929",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6930",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6930",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7526",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7526",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6944",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6943",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6943",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6943",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6944",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6943",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6944",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6944",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6978",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6904",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6904",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6978",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6904",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6978",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6978",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6988",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7000",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6988",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6988",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6988",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6985",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6917",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7526",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6929",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7526",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7526",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6929",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7525",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7525",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6963",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6963",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6963",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6963",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6963",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6963",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6963",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6964",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6964",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6976",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6911",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6911",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6911",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6910",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6910",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6975",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6975",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6975",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6975",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6976",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6976",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6976",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6976",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7522",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7522",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7522",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7522",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7522",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7522",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7523",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7523",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6951",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8258",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8258",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6951",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6951",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8256",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6951",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8256",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6951",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8254",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7520",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6930",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7520",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7520",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7520",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7520",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6937",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6965",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6964",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6964",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6964",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6964",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6964",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6964",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6965",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6965",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6913",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6913",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6975",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6975",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6911",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6974",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6974",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6975",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6913",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6977",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7521",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7521",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7521",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7521",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7521",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7521",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7521",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "7522",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6946",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6946",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6946",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6946",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6946",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6946",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6946",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6945",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6945",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8259",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8259",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8259",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8264",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8264",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8264",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8265",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8264",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "6977",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8325",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8323",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8323",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8326",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8325",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8325",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "8326",
+      "reason": "missing_or_nonfinite_phenotype"
+    },
+    {
+      "accession": "100000",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "6709",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "6899",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "6905",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "6906",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "6910",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "6914",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "6916",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "6921",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "6928",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "6930",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "6936",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "6937",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "6939",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "6942",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "6946",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "6962",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "6964",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "6965",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "6972",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "6977",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "6978",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "6980",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "6983",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "6985",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "6988",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "7123",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "7275",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "7438",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "7518",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "7519",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "7522",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "7524",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "7526",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "8213",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "8215",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "8245",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "8254",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "8265",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "8266",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "8270",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "8271",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "8274",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "8275",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "8296",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "8300",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "8310",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "8313",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "8314",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "8323",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "8325",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "8329",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "8353",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "8374",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "8378",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "8388",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "8389",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "8395",
+      "reason": "no_genotype"
+    },
+    {
+      "accession": "8423",
+      "reason": "no_genotype"
+    }
+  ],
+  "trait": "FT10"
+}
