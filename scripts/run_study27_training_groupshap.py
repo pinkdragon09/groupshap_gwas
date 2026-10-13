@@ -23,11 +23,11 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import KFold
 from threadpoolctl import threadpool_limits
 
-import run_phase5 as loader
+import study27_fixed_panel as source
 from study27_kan_historical import fit_kan
 from fivefold_common import digest, exact_group_game, regression_metrics, write_json, write_npz
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = source.ROOT
 
 
 def compare(a, b, k=3):
@@ -160,25 +160,22 @@ def report(out):
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--outdir',type=Path,default=ROOT/'outputs/study27_training_groupshap_20261010')
+    parser.add_argument('--outdir',type=Path,
+                        default=ROOT/'outputs/arapheno_study27/training_heldout_rerun')
     args=parser.parse_args()
     out=args.outdir.resolve()
     if out.exists() and any(out.iterdir()):
         raise SystemExit('Choose a fresh output directory; existing results are protected.')
     out.mkdir(parents=True,exist_ok=True)
-    history=ROOT/'outputs/study27_kan_historical'
-    rf_history=ROOT/'outputs/study27_fixed_pc_baseline'
-    input_paths=[Path(__file__),Path(loader.__file__),ROOT/'scripts/fivefold_common.py',
-        ROOT/'scripts/study27_kan_historical.py',ROOT/'scripts/study27_kan_comparison.py',
-        ROOT/'scripts/transformer_mamba_gwas_template.py',ROOT/'scripts/snp_selection.py',
-        loader.BASELINE_HITS,loader.PHENO_ZIP,loader.KINSHIP_H5]
+    history=ROOT/'outputs/arapheno_study27/fixed_panel_kan'
+    rf_history=ROOT/'outputs/arapheno_study27/pc_only'
+    input_paths=[Path(__file__),Path(source.__file__),source.PANEL,source.FEATURE_METADATA,
+        ROOT/'scripts/fivefold_common.py',ROOT/'scripts/study27_kan_historical.py']
     input_paths += [history/n for n in ['run_config.json','feature_meta.tsv','splits.tsv',
         'predictions.tsv','cv_metrics.tsv','group_shap.tsv','group_interactions.tsv','training_trace.tsv']]
     input_paths += [rf_history/n for n in ['provenance.json','feature_meta.tsv','splits.json','predictions.tsv']]
     inputs_hash={str(p.relative_to(ROOT)):digest(p) for p in input_paths}
-    # The large genotype source is represented by file metadata plus the extracted
-    # matrix hash; the saved exact matrix is independently checkpoint-verifiable.
-    Xdf,ys,meta=loader.load_arabidopsis_matrix()
+    Xdf,ys,meta,frozen_ids=source.load_fixed_panel()
     Xrf,y=Xdf.to_numpy(),ys.to_numpy()
     Xkan,ykan=Xrf.astype(np.float32),y.astype(np.float32)
     assert Xrf.shape==(81,203) and np.isfinite(Xrf).all() and np.isfinite(y).all()
@@ -194,14 +191,7 @@ def main():
     for row in saved_splits.itertuples():
         ids[row.row]=row.accession
     assert len(set(ids))==81
-    # Verify accession/phenotype ordering independently against the original loader.
-    from full_baseline_gwas import load_phenotype
-    import h5py
-    ymap,_=load_phenotype(loader.PHENO_ZIP,'27/study_27_values.csv','Mean(TRL) C')
-    with h5py.File(loader.GENO_H5) as handle:
-        all_ids=[a.decode() if isinstance(a,bytes) else str(a) for a in handle['accessions'][:]]
-    np.testing.assert_array_equal(ids,[a for a in all_ids if a in ymap])
-    np.testing.assert_allclose(y,[ymap[a] for a in ids],rtol=0,atol=1e-12)
+    np.testing.assert_array_equal(ids, frozen_ids)
     chroms=meta.loc[meta.feature_type=='snp','chromosome'].to_numpy()
     labels=sorted(set(chroms))+['PCs']
     groups=[np.flatnonzero(chroms==c) for c in labels[:-1]]+[np.arange(200,203)]
@@ -212,8 +202,8 @@ def main():
         checkpoint_policy='reconstruct missing fits; require historical numerical parity; save new checkpoints',
         backgrounds=8,background_seed='9000 + fold',coalitions=64,group_labels=labels,
         groups=[g.tolist() for g in groups],units='native Mean(TRL) C',
-        input_sha256=inputs_hash,genotype_source=dict(path=str(loader.GENO_H5),
-            size=loader.GENO_H5.stat().st_size,mtime_ns=loader.GENO_H5.stat().st_mtime_ns),
+        input_sha256=inputs_hash,frozen_panel=dict(path=str(source.PANEL.relative_to(ROOT)),
+            sha256=digest(source.PANEL),feature_metadata_sha256=digest(source.FEATURE_METADATA)),
         versions={n:importlib.metadata.version(n) for n in ['numpy','scipy','torch','pykan','scikit-learn','h5py','joblib']},
         device='CPU; exact small six-player game'))
     kan_pred=pd.read_csv(history/'predictions.tsv',sep='\t')

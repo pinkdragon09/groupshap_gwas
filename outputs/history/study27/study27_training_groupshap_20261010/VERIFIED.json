@@ -1,0 +1,81 @@
+{
+  "passed": true,
+  "models": 10,
+  "source_and_artifact_hashes_passed": true,
+  "grouping_and_membership_passed": true,
+  "heldout_coverage_passed": true,
+  "checks": [
+    {
+      "fold": 1,
+      "model": "rf",
+      "all_coalitions_recomputed": true,
+      "saved_predictions_reproduced": true,
+      "efficiency_error": 3.552713678800501e-15
+    },
+    {
+      "fold": 1,
+      "model": "kan",
+      "all_coalitions_recomputed": true,
+      "saved_predictions_reproduced": true,
+      "efficiency_error": 8.079414328676648e-07
+    },
+    {
+      "fold": 2,
+      "model": "rf",
+      "all_coalitions_recomputed": true,
+      "saved_predictions_reproduced": true,
+      "efficiency_error": 1.7763568394002505e-15
+    },
+    {
+      "fold": 2,
+      "model": "kan",
+      "all_coalitions_recomputed": true,
+      "saved_predictions_reproduced": true,
+      "efficiency_error": 7.012858986854553e-07
+    },
+    {
+      "fold": 3,
+      "model": "rf",
+      "all_coalitions_recomputed": true,
+      "saved_predictions_reproduced": true,
+      "efficiency_error": 1.7763568394002505e-15
+    },
+    {
+      "fold": 3,
+      "model": "kan",
+      "all_coalitions_recomputed": true,
+      "saved_predictions_reproduced": true,
+      "efficiency_error": 7.948838174343109e-07
+    },
+    {
+      "fold": 4,
+      "model": "rf",
+      "all_coalitions_recomputed": true,
+      "saved_predictions_reproduced": true,
+      "efficiency_error": 1.7763568394002505e-15
+    },
+    {
+      "fold": 4,
+      "model": "kan",
+      "all_coalitions_recomputed": true,
+      "saved_predictions_reproduced": true,
+      "efficiency_error": 4.444736987352371e-07
+    },
+    {
+      "fold": 5,
+      "model": "rf",
+      "all_coalitions_recomputed": true,
+      "saved_predictions_reproduced": true,
+      "efficiency_error": 1.7763568394002505e-15
+    },
+    {
+      "fold": 5,
+      "model": "kan",
+      "all_coalitions_recomputed": true,
+      "saved_predictions_reproduced": true,
+      "efficiency_error": 6.919726729393005e-07
+    }
+  ],
+  "verifier_source_sha256": "e139458b127bb743676da979e5b463cbc252eceefcf211dc2bcdf2d32a4baae3",
+  "completion_receipt_sha256": "664af9445086e0dab576da27dc56d9d560488d565ee960d826c43c2f510704e1"
+}

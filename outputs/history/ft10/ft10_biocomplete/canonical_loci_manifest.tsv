@@ -1,0 +1,6 @@
+gene_id	symbol	chrom	start	end	strand	note	window_bp	window_start	window_end	n_snps_kept
+AT5G10140	FLC	Chr5	3173382	3179448	-	K-box region and MADS-box transcription factor family protein	50000	3123382	3229448	1138
+AT4G00650	FRI	Chr4	268901	271503	+	FRIGIDA-like protein	50000	218901	321503	1583
+AT1G65480	FT	Chr1	24331373	24333999	+	PEBP (phosphatidylethanolamine-binding protein) family protein	50000	24281373	24383999	2831
+AT5G57380	VIN3	Chr5	23246395	23249504	-	Fibronectin type III domain-containing protein	50000	23196395	23299504	1356
+AT5G45830	DOG1	Chr5	18589418	18591506	-	delay of germination 1	50000	18539418	18641506	3003

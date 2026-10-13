@@ -1,0 +1,135 @@
+{
+  "models": 10,
+  "historical_reference_checks": [
+    {
+      "reference": "outputs/history/study27/study27_fixed_pc_baseline/predictions.tsv",
+      "max_absolute_error": 7.105427357601002e-15,
+      "tolerance": 1e-10
+    },
+    {
+      "reference": "outputs/history/study27/study27_kan_historical/predictions.tsv",
+      "max_absolute_error": 3.814697265625e-06,
+      "tolerance": 1e-05
+    },
+    {
+      "reference": "outputs/history/study27/study27_kan_historical/training_trace.tsv",
+      "max_absolute_error": 3.5762786865234375e-07,
+      "tolerance": 1e-06
+    },
+    {
+      "reference": "outputs/history/study27/study27_kan_historical/group_shap.tsv",
+      "max_absolute_error": 5.656415051902286e-07,
+      "tolerance": 1e-05
+    },
+    {
+      "reference": "outputs/history/study27/study27_kan_historical/group_interactions.tsv",
+      "max_absolute_error": 5.344267907103628e-07,
+      "tolerance": 1e-05
+    },
+    {
+      "reference": "outputs/history/study27/study27_fixed_pc_baseline/predictions.tsv",
+      "max_absolute_error": 7.105427357601002e-15,
+      "tolerance": 1e-10
+    },
+    {
+      "reference": "outputs/history/study27/study27_kan_historical/predictions.tsv",
+      "max_absolute_error": 3.814697265625e-06,
+      "tolerance": 1e-05
+    },
+    {
+      "reference": "outputs/history/study27/study27_kan_historical/training_trace.tsv",
+      "max_absolute_error": 1.192092894952701e-07,
+      "tolerance": 1e-06
+    },
+    {
+      "reference": "outputs/history/study27/study27_kan_historical/group_shap.tsv",
+      "max_absolute_error": 1.7584534361958504e-07,
+      "tolerance": 1e-05
+    },
+    {
+      "reference": "outputs/history/study27/study27_kan_historical/group_interactions.tsv",
+      "max_absolute_error": 2.8167869459139183e-07,
+      "tolerance": 1e-05
+    },
+    {
+      "reference": "outputs/history/study27/study27_fixed_pc_baseline/predictions.tsv",
+      "max_absolute_error": 7.105427357601002e-15,
+      "tolerance": 1e-10
+    },
+    {
+      "reference": "outputs/history/study27/study27_kan_historical/predictions.tsv",
+      "max_absolute_error": 7.105427357601002e-15,
+      "tolerance": 1e-05
+    },
+    {
+      "reference": "outputs/history/study27/study27_kan_historical/training_trace.tsv",
+      "max_absolute_error": 8.326672684688674e-17,
+      "tolerance": 1e-06
+    },
+    {
+      "reference": "outputs/history/study27/study27_kan_historical/group_shap.tsv",
+      "max_absolute_error": 2.220446049250313e-16,
+      "tolerance": 1e-05
+    },
+    {
+      "reference": "outputs/history/study27/study27_kan_historical/group_interactions.tsv",
+      "max_absolute_error": 8.326672684688674e-17,
+      "tolerance": 1e-05
+    },
+    {
+      "reference": "outputs/history/study27/study27_fixed_pc_baseline/predictions.tsv",
+      "max_absolute_error": 1.4210854715202004e-14,
+      "tolerance": 1e-10
+    },
+    {
+      "reference": "outputs/history/study27/study27_kan_historical/predictions.tsv",
+      "max_absolute_error": 7.105427357601002e-15,
+      "tolerance": 1e-05
+    },
+    {
+      "reference": "outputs/history/study27/study27_kan_historical/training_trace.tsv",
+      "max_absolute_error": 1.1920928955078125e-07,
+      "tolerance": 1e-06
+    },
+    {
+      "reference": "outputs/history/study27/study27_kan_historical/group_shap.tsv",
+      "max_absolute_error": 9.944778867065907e-08,
+      "tolerance": 1e-05
+    },
+    {
+      "reference": "outputs/history/study27/study27_kan_historical/group_interactions.tsv",
+      "max_absolute_error": 2.4637412825503913e-07,
+      "tolerance": 1e-05
+    },
+    {
+      "reference": "outputs/history/study27/study27_fixed_pc_baseline/predictions.tsv",
+      "max_absolute_error": 1.4210854715202004e-14,
+      "tolerance": 1e-10
+    },
+    {
+      "reference": "outputs/history/study27/study27_kan_historical/predictions.tsv",
+      "max_absolute_error": 3.814697272730427e-06,
+      "tolerance": 1e-05
+    },
+    {
+      "reference": "outputs/history/study27/study27_kan_historical/training_trace.tsv",
+      "max_absolute_error": 7.45058059414827e-08,
+      "tolerance": 1e-06
+    },
+    {
+      "reference": "outputs/history/study27/study27_kan_historical/group_shap.tsv",
+      "max_absolute_error": 3.24369466286889e-07,
+      "tolerance": 1e-05
+    },
+    {
+      "reference": "outputs/history/study27/study27_kan_historical/group_interactions.tsv",
+      "max_absolute_error": 6.755451523133768e-07,
+      "tolerance": 1e-05
+    }
+  ],
+  "max_local_efficiency_error": 8.079414328676648e-07,
+  "group_partition_passed": true,
+  "background_fit_only": true,
+  "heldout_coverage_per_model": 81,
+  "validation_separate_from_actual_fitting": true
+}

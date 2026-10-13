@@ -272,17 +272,35 @@ def run_scenario1_stability() -> pd.DataFrame:
     df = pd.DataFrame(phi_records)
     df.to_csv(OUTDIR / "scenario1_stability_fitted.csv", index=False)
 
+    # Strip plot of 15 individual seeds + tight boxplot overlay; auto-scaled
+    # y-axis. Visualises causal/null separation per seed (was [0,1.1] boxplot
+    # which compressed real variation; this style matches Figure 1 right
+    # panel for consistency with the oracle run).
     fig, ax = plt.subplots(figsize=FIGSIZE)
-    colors = ["#1f77b4", "#1f77b4", "#aec7e8", "#aec7e8"]
-    labels = ["G0 (causal)", "G1 (causal)", "G2 (null)", "G3 (null)"]
-    bp = ax.boxplot([df[f"G{k}"].values for k in range(m)], patch_artist=True, widths=0.5)
-    for patch, color in zip(bp["boxes"], colors):
-        patch.set_facecolor(color)
-    ax.set_xticklabels(labels, rotation=12)
-    ax.set_ylabel("Mean |φ_k|")
-    ax.set_title(f"Scenario 1 — Additive Sparse: Stability (σ=0.5, {N_STABILITY_SEEDS} seeds, fitted RF)")
+    colors = ["#d62728", "#ff7f0e", "#7f7f7f", "#7f7f7f"]
+    labels = [r"$G_0$" + "\n(causal, $\\beta=2$)", r"$G_1$" + "\n(causal, $\\beta=1.5$)",
+              r"$G_2$" + "\n(null)", r"$G_3$" + "\n(null)"]
+    rng_jitter = np.random.default_rng(42)
+    for i in range(m):
+        vals = df[f"G{i}"].values
+        jitter = rng_jitter.uniform(-0.12, 0.12, len(vals))
+        ax.scatter(np.full(len(vals), i) + jitter, vals,
+                   s=55, alpha=0.75, color=colors[i],
+                   edgecolor="black", linewidth=0.5)
+        ax.boxplot([vals], positions=[i], widths=0.35, patch_artist=True,
+                   boxprops=dict(facecolor=colors[i], alpha=0.20),
+                   medianprops=dict(color="black", linewidth=1.4),
+                   whiskerprops=dict(color="black"),
+                   capprops=dict(color="black"),
+                   showfliers=False)
+    ax.set_xticks(range(m))
+    ax.set_xticklabels(labels, fontsize=8)
+    ax.set_ylabel(r"$|\hat\phi_k|$  (grouped Shapley)")
+    ax.set_ylim(0, max(df.values.flatten()) * 1.12)
+    ax.set_title(f"Scenario 1 — Additive Sparse: Stability ($\\sigma=0.5$, {N_STABILITY_SEEDS} seeds, fitted RF)")
+    ax.grid(True, axis="y", alpha=0.3)
     fig.tight_layout()
-    fig.savefig(OUTDIR / "scenario1_stability_fitted.png", dpi=150)
+    fig.savefig(OUTDIR / "scenario1_stability_fitted.png", dpi=150, bbox_inches="tight")
     plt.close(fig)
     print(f"  Scenario 1 stability saved ({N_STABILITY_SEEDS} seeds)")
     return df
@@ -338,15 +356,27 @@ def run_scenario3_recovery() -> pd.DataFrame:
     df = pd.DataFrame(rows)
     df.to_csv(OUTDIR / "scenario3_recovery_fitted.csv", index=False)
 
+    # Same-axis dual-line plot with shaded separation gap; mirrors Fig 1
+    # left's recovery-curve style. Both quantities are in the same Shapley
+    # interaction units, so a single y-axis is appropriate.
     fig, ax = plt.subplots(figsize=FIGSIZE)
-    ax.plot(df["b_01"], df["I_01"],    "s-", color="#2ca02c", label="|I₀₁| (epistatic pair)")
-    ax.plot(df["b_01"], df["null_max"],"^--", color="#d62728", label="max|I_null| (non-epistatic pairs)")
-    ax.set_xlabel("Interaction strength b₀₁")
-    ax.set_ylabel("Grouped Shapley Interaction Index")
-    ax.set_title("Scenario 3 — Pairwise Epistasis: Recovery (fitted RF)")
-    ax.legend()
+    ax.fill_between(df["b_01"], df["null_max"], df["I_01"], alpha=0.15,
+                    color="#1f77b4", label="separation gap (ratio $\\approx 2$--$3\\times$)")
+    ax.plot(df["b_01"], df["I_01"], "s-", color="#d62728", linewidth=1.8,
+            markersize=7, label=r"$|I_{01}|$  (true epistatic pair)")
+    ax.plot(df["b_01"], df["null_max"], "o--", color="#7f7f7f", linewidth=1.8,
+            markersize=6, label=r"$\max_{(j,k) \neq (0,1)} |I_{jk}|$  (null pairs)")
+    ax.set_xlabel(r"Interaction strength $b$")
+    ax.set_ylabel(r"$|I_{jk}|$  (Shapley pairwise interaction)")
+    ax.set_xscale("log")
+    ax.set_xticks([0.02, 0.05, 0.1, 0.2, 0.5, 1.0])
+    ax.set_xticklabels(["0.02", "0.05", "0.1", "0.2", "0.5", "1.0"])
+    ax.set_ylim(0, max(df["I_01"].max(), df["null_max"].max()) * 1.15)
+    ax.set_title("Scenario 3 — Pairwise Epistasis: Recovery vs. $b$ (fitted RF)")
+    ax.legend(loc="lower right", fontsize=8)
+    ax.grid(True, alpha=0.3)
     fig.tight_layout()
-    fig.savefig(OUTDIR / "scenario3_recovery_fitted.png", dpi=150)
+    fig.savefig(OUTDIR / "scenario3_recovery_fitted.png", dpi=150, bbox_inches="tight")
     plt.close(fig)
     print(f"  Scenario 3 recovery saved  (b ∈ [{b_values[0]}, {b_values[-1]}])")
     return df
@@ -385,16 +415,35 @@ def run_scenario3_stability() -> pd.DataFrame:
     df = pd.DataFrame({"I_01": I01_list, "I_02": I02_list, "I_12": I12_list})
     df.to_csv(OUTDIR / "scenario3_stability_fitted.csv", index=False)
 
+    # Strip plot of 15 individual seeds + tight boxplot overlay; auto-scaled
+    # y-axis. Visualises I_01 (epistatic) separation from I_02, I_12 (null
+    # pairs); style matches Figure 1 right + Scenario 1 stability for
+    # consistency with the oracle run.
+    cols = ["I_01", "I_02", "I_12"]
+    labels = ["$I_{01}$\n(epistatic pair)", "$I_{02}$\n(null pair)", "$I_{12}$\n(null pair)"]
+    colors = ["#d62728", "#7f7f7f", "#7f7f7f"]
+    rng_jitter = np.random.default_rng(42)
     fig, ax = plt.subplots(figsize=FIGSIZE)
-    bp = ax.boxplot([df["I_01"].values, df["I_02"].values, df["I_12"].values],
-                    patch_artist=True, widths=0.5)
-    for patch, color in zip(bp["boxes"], ["#2ca02c", "#d62728", "#d62728"]):
-        patch.set_facecolor(color)
-    ax.set_xticklabels(["I₀₁ (epistatic)", "I₀₂ (null)", "I₁₂ (null)"])
-    ax.set_ylabel("Grouped Shapley Interaction Index")
-    ax.set_title(f"Scenario 3 — Pairwise Epistasis: Stability (b=0.3, {N_STABILITY_SEEDS} seeds, fitted RF)")
+    for i, (col, c) in enumerate(zip(cols, colors)):
+        vals = df[col].values
+        jitter = rng_jitter.uniform(-0.12, 0.12, len(vals))
+        ax.scatter(np.full(len(vals), i) + jitter, vals,
+                   s=55, alpha=0.75, color=c,
+                   edgecolor="black", linewidth=0.5)
+        ax.boxplot([vals], positions=[i], widths=0.35, patch_artist=True,
+                   boxprops=dict(facecolor=c, alpha=0.20),
+                   medianprops=dict(color="black", linewidth=1.4),
+                   whiskerprops=dict(color="black"),
+                   capprops=dict(color="black"),
+                   showfliers=False)
+    ax.set_xticks(range(3))
+    ax.set_xticklabels(labels, fontsize=9)
+    ax.set_ylabel(r"$|I_{jk}|$  (Shapley pairwise interaction)")
+    ax.set_ylim(0, max(df.values.flatten()) * 1.12)
+    ax.set_title(f"Scenario 3 — Pairwise Epistasis: 15 seeds at $b=0.3$ (fitted RF)")
+    ax.grid(True, axis="y", alpha=0.3)
     fig.tight_layout()
-    fig.savefig(OUTDIR / "scenario3_stability_fitted.png", dpi=150)
+    fig.savefig(OUTDIR / "scenario3_stability_fitted.png", dpi=150, bbox_inches="tight")
     plt.close(fig)
     print(f"  Scenario 3 stability saved ({N_STABILITY_SEEDS} seeds)")
     return df
@@ -517,19 +566,38 @@ def run_scenario5_stability() -> pd.DataFrame:
     df = pd.DataFrame({"phi_causal_frac": phi_frac_list})
     df.to_csv(OUTDIR / "scenario5_stability_fitted.csv", index=False)
 
+    # Auto-scaled y-axis: the fitted-RF data is tightly clustered near 1.0
+    # (sd ~ 3e-4); a [0, 1.1] axis makes the variation invisible and the
+    # plot indistinguishable from the oracle-tautology version. Strip plot
+    # of individual seeds + tight boxplot overlay reveals real spread.
+    vals = df["phi_causal_frac"].values
+    rng = np.random.default_rng(0)
+    jitter = rng.uniform(-0.04, 0.04, len(vals))
+
     fig, ax = plt.subplots(figsize=FIGSIZE)
-    bp = ax.boxplot([df["phi_causal_frac"].values], patch_artist=True, widths=0.4)
-    bp["boxes"][0].set_facecolor("#1f77b4")
-    ax.axhline(1.0, ls="--", color="green", lw=0.9, label="Perfect isolation (=1.0)")
-    ax.axhline(0.5, ls="--", color="gray",  lw=0.9, label="Uninformative (=0.5)")
-    ax.set_xticks([1])
+    ax.scatter(jitter, vals, s=60, alpha=0.7, color="#1f77b4",
+               edgecolor="black", linewidth=0.5,
+               label=f"{N_STABILITY_SEEDS} seeds (sd = {vals.std(ddof=1):.1e})")
+    bp = ax.boxplot([vals], positions=[0], widths=0.25, patch_artist=True,
+                    boxprops=dict(facecolor="#1f77b4", alpha=0.25),
+                    medianprops=dict(color="black", linewidth=1.5),
+                    whiskerprops=dict(color="black"),
+                    capprops=dict(color="black"),
+                    showfliers=False)
+    ax.axhline(1.0, ls="--", color="green", lw=0.9, alpha=0.7,
+               label="Perfect isolation (=1.0)")
+    y_min = vals.min() - 3e-4
+    y_max = 1.0005
+    ax.set_ylim(y_min, y_max)
+    ax.set_xlim(-0.5, 0.5)
+    ax.set_xticks([0])
     ax.set_xticklabels(["φ_causal / (φ_causal + φ_proxy)"])
-    ax.set_ylabel("Fraction")
-    ax.set_ylim(0, 1.1)
+    ax.set_ylabel("Causal-group attribution fraction")
     ax.set_title(f"Scenario 5 — LD Proxy-Causal: Stability (ρ=0.8, {N_STABILITY_SEEDS} seeds, fitted RF)")
-    ax.legend()
+    ax.legend(loc="lower right", fontsize=8)
+    ax.grid(True, axis="y", alpha=0.3)
     fig.tight_layout()
-    fig.savefig(OUTDIR / "scenario5_stability_fitted.png", dpi=150)
+    fig.savefig(OUTDIR / "scenario5_stability_fitted.png", dpi=150, bbox_inches="tight")
     plt.close(fig)
     print(f"  Scenario 5 stability saved ({N_STABILITY_SEEDS} seeds)")
     return df

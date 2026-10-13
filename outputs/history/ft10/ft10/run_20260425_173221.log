@@ -1,0 +1,2 @@
+  File "scripts/run_ft10_nonlinear.py", line 3
+SyntaxError: Non-ASCII character '\xe2' in file scripts/run_ft10_nonlinear.py on line 4, but no encoding declared; see http://python.org/dev/peps/pep-0263/ for details

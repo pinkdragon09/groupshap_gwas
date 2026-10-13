@@ -1,0 +1,4 @@
+scenario,name,shap_snr_min,shap_snr_max,phi_causal_mean,phi_null_mean,I01_max,null_max_max,stability_I01_mean,stability_null_mean,phi_causal_frac_at_rho08,stability_phi_frac_mean,stability_phi_frac_std
+1,additive_sparse,2809499999.9999995,2809499999.9999995,2.6993999999999994,0.0,,,,,,,
+3,pairwise_epistasis,,,,,1.9969999999999999,2.4868995751603505e-15,0.7111599999999997,1.3781568479013609e-15,,,
+5,ld_proxy_causal,,,,,,,,,1.0,1.0,0.0

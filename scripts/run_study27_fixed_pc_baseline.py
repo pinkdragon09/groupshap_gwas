@@ -1,4 +1,4 @@
-"""Matched PC-only RF comparison conditional on the historical fixed SNP panel."""
+"""Matched PC-only RF comparison on the frozen Study 27 fixed SNP panel."""
 import argparse
 import hashlib
 import importlib.metadata
@@ -12,15 +12,16 @@ from sklearn.metrics import r2_score, mean_squared_error
 from sklearn.model_selection import KFold
 from threadpoolctl import threadpool_limits
 
-import run_phase5 as source
+import study27_fixed_panel as source
 
 
 def run(out):
-    X, y, meta = source.load_arabidopsis_matrix()
+    X, y, meta, _ = source.load_fixed_panel()
     pcs = meta.loc[meta.feature_type == 'covariate', 'feature'].tolist()
-    saved_path = source.REPO_ROOT / 'outputs/random_forest_gwas_full/cv_metrics.tsv'
+    archive = source.ROOT / 'outputs/arapheno_study27'
+    saved_path = archive / 'fixed_panel_rf/cv_metrics.tsv'
     saved = pd.read_csv(saved_path, sep='\t').sort_values('fold')
-    reproduction_path = source.REPO_ROOT / 'outputs/study27_kan_historical/rf_reproduction.tsv'
+    reproduction_path = archive / 'fixed_panel_kan/rf_reproduction.tsv'
     reproduced = pd.read_csv(reproduction_path, sep='\t').sort_values('fold')
     assert len(X) == 81 and len(pcs) == 3
     records, predictions, splits = [], [], []
@@ -53,8 +54,10 @@ def run(out):
         mean_paired_r2_difference=float(paired.difference.mean()),
         sd_paired_r2_difference=float(paired.difference.std(ddof=1)))
     provenance = dict(source_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
-        loader_sha256=hashlib.sha256(Path(source.__file__).read_bytes()).hexdigest(),
-        historical_metrics_sha256=hashlib.sha256(saved_path.read_bytes()).hexdigest(),
+        fixed_panel_loader_sha256=hashlib.sha256(Path(source.__file__).read_bytes()).hexdigest(),
+        fixed_panel_sha256=hashlib.sha256(source.PANEL.read_bytes()).hexdigest(),
+        feature_metadata_sha256=hashlib.sha256(source.FEATURE_METADATA.read_bytes()).hexdigest(),
+        archived_rf_metrics_sha256=hashlib.sha256(saved_path.read_bytes()).hexdigest(),
         prior_reproduction_sha256=hashlib.sha256(reproduction_path.read_bytes()).hexdigest(),
         matrix_sha256=hashlib.sha256(X.to_numpy().tobytes()).hexdigest(),
         phenotype_sha256=hashlib.sha256(y.to_numpy().tobytes()).hexdigest(),
@@ -73,5 +76,9 @@ def run(out):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--outdir',type=Path,default=source.REPO_ROOT/'outputs/study27_fixed_pc_baseline')
-    run(parser.parse_args().outdir)
+    parser.add_argument('--outdir',type=Path,
+                        default=source.ROOT/'outputs/arapheno_study27/pc_only_rerun')
+    target = parser.parse_args().outdir
+    if target.exists() and any(target.iterdir()):
+        raise SystemExit('Choose a fresh output directory; saved report artifacts are protected.')
+    run(target)

@@ -1,0 +1,77 @@
+{
+  "config": {
+    "study": "Study27_Mean_TRL_C",
+    "schema_version": 1,
+    "genotype": "data/1001genomes/genotypes/1001_SNP_MATRIX/imputed_snps_binary.hdf5",
+    "phenotype": "data/arapheno/database.zip",
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "split_seed": 42,
+    "validation_fraction": 0.2,
+    "threads": 4,
+    "epochs": 100,
+    "patience": 15,
+    "background": 8,
+    "permutations": 5,
+    "top_snps": 200,
+    "n_pcs": 3,
+    "pc_policy": "training-centered unscaled binary genome-wide PCA; project held-out rows",
+    "selection": "PC-adjusted marginal association, training MAC>=2; ties by global SNP index",
+    "rf": {
+      "trees": 500,
+      "max_features": "sqrt",
+      "min_samples_leaf": 2
+    },
+    "transformer": {
+      "width": 32,
+      "heads": 4,
+      "layers": 1,
+      "dropout": 0.1
+    },
+    "kan": {
+      "width": [
+        203,
+        4,
+        1
+      ],
+      "grid": 3,
+      "spline_degree": 3,
+      "symbolic": false,
+      "fixed_grid": true
+    },
+    "neural_optimizer": {
+      "name": "AdamW",
+      "lr": 0.001,
+      "weight_decay": 0.001,
+      "grad_clip": 1,
+      "batch": "full",
+      "refit": "fresh fit for inner-selected epochs"
+    }
+  },
+  "inputs": {
+    "data/1001genomes/genotypes/1001_SNP_MATRIX/imputed_snps_binary.hdf5": "f3713e66f017187fb3d30b8d6b854794393ab259e6b5bae4b18ca2cafcbb1862",
+    "data/arapheno/database.zip": "b065b72768a2a0d03fce672191911934e7d081a68b07984e8a6542017df08666"
+  },
+  "source": {
+    "scripts/run_study27_fivefold.py": "2f4e278c22aeb7dd03281a6729f2540c54bb36925d99511296df3d4f7c98f96f",
+    "scripts/fivefold_common.py": "9dc7b21408daa03fa05fe222be5ab1a0346e92c8a39019fc360e0f538c1bd77a",
+    "scripts/transformer_mamba_gwas_template.py": "cb0b9cdf68d4cab0deffa5ed11537a703059c2589193f0804e09e79ddc3bec30",
+    "scripts/grouped_shap_utils.py": "b3d4212ebec25d28046726b37b07add9d5af229409854c0c3c7b60f775619d88",
+    "scripts/snp_selection.py": "ca0587cc0437f4c83cdf72b55e9e26e0225b91588860bb1d5e730fc1e603ccf8"
+  },
+  "versions": {
+    "numpy": "1.26.4",
+    "h5py": "3.16.0",
+    "torch": "2.11.0+cpu",
+    "scikit-learn": "1.8.0",
+    "pykan": "0.2.8",
+    "joblib": "1.5.3"
+  },
+  "python": "3.12.3",
+  "fingerprint": "a818c8c7c41223193ac818e2a210fb67715f3a7fed669b88b27bbc8bb0da6522",
+  "repository_commit": "00a54a62589ed2e84553831951df489b09e0bcaa",
+  "started_at": "2026-09-13T20:28:33-0400"
+}

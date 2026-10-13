@@ -1,0 +1,157 @@
+Loading FT10 phenotype …
+  194 accessions with FT10 values
+Aligning with 1001 Genomes HDF5 …
+  Matched 135 accessions  mean FT10=66.0 sd=18.7
+Computing kinship PCs …
+Loading top-200 GWAS SNPs …
+  200 SNPs from 5 chromosomes
+Extracting SNP genotype matrix …
+
+── FLC / FRI locus check ──────────────────────────────────────────
+  SNPs ±500kb of FLC (Chr5:3,173,132): 0
+  SNPs ±500kb of FRI (Chr4:270,148): 0
+  ** PREFILTER PARADOX: neither FLC nor FRI is represented in the top-200 GWAS panel **
+
+Training RandomForest (5-fold CV) …
+  Fold 1: R²=0.7459  RMSE=8.04
+  Fold 2: R²=0.7473  RMSE=9.68
+  Fold 3: R²=0.6429  RMSE=11.15
+  Fold 4: R²=0.5824  RMSE=8.33
+  Fold 5: R²=0.5234  RMSE=15.55
+  Mean CV R²=0.6484  RMSE=10.55
+
+  Spearman ρ (GWAS rank vs RF-SHAP rank): 0.7839  p=7.422e-43
+
+Building gene-window grouping (Araport11 GFF, ±25 kb) …
+  Loaded 33056 genes on 5 chromosomes
+  200 SNP→gene assignments  (86 gene windows)
+Training full RF on all data for grouped Shapley …
+  Full-data R² (in-sample): 0.7937
+
+Grouped Shapley + CPI on 86 gene-window groups …
+  Grouped Shapley: 86 groups, 3 eval pts, 15 MC samples …
+  CPI …
+  Done in 777s
+
+Saving outputs …
+# FT10 Nonlinear ML Pipeline — Summary
+
+## Experimental setup
+- Phenotype: FT10 (AraPheno Study 1)
+- N accessions matched: 135
+- Feature panel: top-200 GWAS SNPs (from study1_ft10_top_hits.tsv)
+- Model: RandomForestRegressor (200 trees, 5-fold CV, random_state=42)
+- Grouping: gene-window ±25kb (Araport11)
+
+## RF cross-validation performance
+- Mean CV R²:  0.6484
+- Mean CV RMSE: 10.55 days
+- Full-data R² (in-sample): 0.7937
+
+## CV metrics by fold
+  - Fold 1: R²=0.7459  RMSE=8.037  (n_train=108, n_test=27)
+  - Fold 2: R²=0.7473  RMSE=9.683  (n_train=108, n_test=27)
+  - Fold 3: R²=0.6429  RMSE=11.152  (n_train=108, n_test=27)
+  - Fold 4: R²=0.5824  RMSE=8.333  (n_train=108, n_test=27)
+  - Fold 5: R²=0.5234  RMSE=15.550  (n_train=108, n_test=27)
+
+## Known causal loci in feature panel
+- FLC (AT5G10140, Chr5:3,173,132): NOT in panel (no SNP within ±500kb)
+- FRI (AT4G00650, Chr4:270,148): NOT in panel (no SNP within ±500kb)
+
+## Top GWAS hits (linear, PC-adjusted)
+| Rank | SNP | Chrom | Position | −log₁₀p | SHAP rank |
+|------|-----|-------|----------|---------|-----------|
+| 1 | Chr5_8608364 | Chr5 | 8,608,364 | 10.88 | 84 |
+| 2 | Chr5_8690719 | Chr5 | 8,690,719 | 10.88 | 79 |
+| 3 | Chr5_8705246 | Chr5 | 8,705,246 | 10.88 | 77 |
+| 4 | Chr2_9337465 | Chr2 | 9,337,465 | 10.50 | 8 |
+| 5 | Chr1_30316068 | Chr1 | 30,316,068 | 10.21 | 88 |
+| 6 | Chr1_30320397 | Chr1 | 30,320,397 | 10.21 | 64 |
+| 7 | Chr1_30326049 | Chr1 | 30,326,049 | 10.21 | 70 |
+| 8 | Chr1_30326426 | Chr1 | 30,326,426 | 10.21 | 73 |
+| 9 | Chr1_30331339 | Chr1 | 30,331,339 | 10.21 | 69 |
+| 10 | Chr1_30333627 | Chr1 | 30,333,627 | 10.21 | 68 |
+
+## Top RF-SHAP hits
+| SHAP rank | SNP | Chrom | Position | mean|SHAP| | GWAS rank |
+|-----------|-----|-------|----------|------------|-----------|
+| 1 | Chr2_9581436 | Chr2 | 9,581,436 | 1.6439 | 20 |
+| 2 | Chr2_9584590 | Chr2 | 9,584,590 | 1.0218 | 71 |
+| 3 | Chr2_9583668 | Chr2 | 9,583,668 | 0.8835 | 75 |
+| 4 | Chr2_9580858 | Chr2 | 9,580,858 | 0.8293 | 93 |
+| 5 | Chr4_2409556 | Chr4 | 2,409,556 | 0.7693 | 67 |
+| 6 | Chr1_8283371 | Chr1 | 8,283,371 | 0.4048 | 19 |
+| 7 | Chr3_19657018 | Chr3 | 19,657,018 | 0.3956 | 64 |
+| 8 | Chr2_9337465 | Chr2 | 9,337,465 | 0.2967 | 4 |
+| 9 | Chr1_8283533 | Chr1 | 8,283,533 | 0.2911 | 49 |
+| 10 | Chr2_9300651 | Chr2 | 9,300,651 | 0.1942 | 15 |
+
+## Spearman ρ (GWAS rank vs RF-SHAP rank, n=200 SNPs)
+  ρ = 0.7839   p = 7.422e-43
+
+## Top gene-window grouped Shapley
+| Rank | Gene window | mean|φ| | sd|φ| |
+|------|-------------|---------|-------|
+| 1 | AT2G22540 | 5.9447 | 1.0367 |
+| 2 | AT2G21870 | 1.8265 | 1.2365 |
+| 3 | AT1G23340 | 1.0202 | 0.2298 |
+| 4 | AT5G24920 | 1.0140 | 0.3366 |
+| 5 | AT5G03845 | 0.8985 | 0.4216 |
+| 6 | AT2G21860 | 0.8006 | 0.6210 |
+| 7 | AT2G22530 | 0.7944 | 0.2741 |
+| 8 | AT4G35280 | 0.7314 | 1.0343 |
+| 9 | AT2G21900 | 0.6640 | 0.0304 |
+| 10 | AT2G21810 | 0.5188 | 0.3701 |
+
+## Top gene-window CPI
+| Rank | Gene window | CPI mean | CPI sd |
+|------|-------------|----------|--------|
+| 1 | AT2G22540 | 0.2948 | 0.0341 |
+| 2 | AT4G04745 | 0.0232 | 0.0063 |
+| 3 | AT1G23340 | 0.0208 | 0.0044 |
+| 4 | AT5G03845 | 0.0170 | 0.0043 |
+| 5 | AT2G21870 | 0.0156 | 0.0055 |
+| 6 | AT5G24920 | 0.0144 | 0.0026 |
+| 7 | AT1G69500 | 0.0073 | 0.0019 |
+| 8 | AT4G35280 | 0.0071 | 0.0035 |
+| 9 | AT1G69480 | 0.0071 | 0.0019 |
+| 10 | AT2G22530 | 0.0059 | 0.0016 |
+
+## FLC/FRI in grouped Shapley ranking
+- FLC (AT5G10140): not in panel (GWAS prefilter excluded region)
+- FRI (AT4G00650): not in panel (GWAS prefilter excluded region)
+
+## FLC/FRI in CPI ranking
+- FLC (AT5G10140): not in panel (GWAS prefilter excluded region)
+- FRI (AT4G00650): not in panel (GWAS prefilter excluded region)
+
+## LD passenger analysis
+Among the top-5 SNPs by GWAS p-value vs RF-SHAP importance:
+- Shared (both top-5): 0 — none
+- GWAS top-5 only: 5 — Chr1_30316068, Chr2_9337465, Chr5_8608364, Chr5_8690719, Chr5_8705246
+- SHAP top-5 only: 5 — Chr2_9580858, Chr2_9581436, Chr2_9583668, Chr2_9584590, Chr4_2409556
+
+Rank discordance (|GWAS rank − SHAP rank| > 50):
+  Chr3_13085083 (Chr3:13,085,083): GWAS rank 27, SHAP rank 158, diff 131
+  Chr4_16817229 (Chr4:16,817,229): GWAS rank 21, SHAP rank 126, diff 105
+  Chr2_9580858 (Chr2:9,580,858): GWAS rank 93, SHAP rank 4, diff 89
+  Chr5_8608364 (Chr5:8,608,364): GWAS rank 1, SHAP rank 84, diff 83
+  Chr1_30316068 (Chr1:30,316,068): GWAS rank 5, SHAP rank 88, diff 83
+
+## Files
+| File | Description |
+|------|-------------|
+| cv_metrics.tsv | CV R²/RMSE per fold |
+| per_snp_shap.tsv | GWAS + SHAP ranks for all 200 SNPs |
+| gene_window_shapley.tsv | Grouped Shapley summary per gene window |
+| gene_window_cpi.tsv | CPI per gene window |
+| gene_window_manifest.tsv | SNP→gene window assignments |
+| top10_gwas.tsv / top10_shap.tsv | Top-10 by each method |
+| top10_gene_window.tsv / top10_cpi.tsv | Top-10 gene windows |
+
+Total runtime: 782s
+
+
+✓  All outputs written to outputs/ft10/
+   Total elapsed: 782s

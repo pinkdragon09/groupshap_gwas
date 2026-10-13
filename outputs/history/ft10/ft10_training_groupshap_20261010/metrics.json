@@ -1,0 +1,152 @@
+[
+  {
+    "fold": 1,
+    "seed": 42,
+    "train_r2": 0.8010020939004706,
+    "test_r2": 0.531536147554317,
+    "train_rmse": 8.600236889169087,
+    "test_rmse": 10.912015066215275,
+    "gene_efficiency_error": 7.105427357601002e-15,
+    "chromosome_efficiency_error": 7.105427357601002e-15
+  },
+  {
+    "fold": 1,
+    "seed": 43,
+    "train_r2": 0.8100495951556038,
+    "test_r2": 0.5205750962926563,
+    "train_rmse": 8.40245648955777,
+    "test_rmse": 11.038935836389728,
+    "gene_efficiency_error": 1.4210854715202004e-14,
+    "chromosome_efficiency_error": 7.105427357601002e-15
+  },
+  {
+    "fold": 1,
+    "seed": 44,
+    "train_r2": 0.801635206598618,
+    "test_r2": 0.5109828323043308,
+    "train_rmse": 8.586545144995025,
+    "test_rmse": 11.148821627928209,
+    "gene_efficiency_error": 7.105427357601002e-15,
+    "chromosome_efficiency_error": 1.0658141036401503e-14
+  },
+  {
+    "fold": 2,
+    "seed": 42,
+    "train_r2": 0.7602131533530512,
+    "test_r2": 0.49510262161273166,
+    "train_rmse": 9.078694795777254,
+    "test_rmse": 13.687857532790398,
+    "gene_efficiency_error": 1.4210854715202004e-14,
+    "chromosome_efficiency_error": 7.105427357601002e-15
+  },
+  {
+    "fold": 2,
+    "seed": 43,
+    "train_r2": 0.7478603926087926,
+    "test_r2": 0.45801522198542466,
+    "train_rmse": 9.309605422727968,
+    "test_rmse": 14.181672864970851,
+    "gene_efficiency_error": 1.4210854715202004e-14,
+    "chromosome_efficiency_error": 7.105427357601002e-15
+  },
+  {
+    "fold": 2,
+    "seed": 44,
+    "train_r2": 0.7597387433006692,
+    "test_r2": 0.4656065848692654,
+    "train_rmse": 9.087671301189777,
+    "test_rmse": 14.082004134202787,
+    "gene_efficiency_error": 7.105427357601002e-15,
+    "chromosome_efficiency_error": 7.105427357601002e-15
+  },
+  {
+    "fold": 3,
+    "seed": 42,
+    "train_r2": 0.8230602056995091,
+    "test_r2": 0.4696357475390187,
+    "train_rmse": 7.870089852027239,
+    "test_rmse": 13.589925445901118,
+    "gene_efficiency_error": 1.0658141036401503e-14,
+    "chromosome_efficiency_error": 7.105427357601002e-15
+  },
+  {
+    "fold": 3,
+    "seed": 43,
+    "train_r2": 0.8336460611098797,
+    "test_r2": 0.46261766836925633,
+    "train_rmse": 7.631035534486363,
+    "test_rmse": 13.679544729389436,
+    "gene_efficiency_error": 7.105427357601002e-15,
+    "chromosome_efficiency_error": 7.105427357601002e-15
+  },
+  {
+    "fold": 3,
+    "seed": 44,
+    "train_r2": 0.8327259329158849,
+    "test_r2": 0.46649043664394063,
+    "train_rmse": 7.652110624350937,
+    "test_rmse": 13.630163219995767,
+    "gene_efficiency_error": 7.105427357601002e-15,
+    "chromosome_efficiency_error": 1.4210854715202004e-14
+  },
+  {
+    "fold": 4,
+    "seed": 42,
+    "train_r2": 0.8488649066664116,
+    "test_r2": 0.25256506546764246,
+    "train_rmse": 7.606094132122948,
+    "test_rmse": 11.14944013692438,
+    "gene_efficiency_error": 7.105427357601002e-15,
+    "chromosome_efficiency_error": 7.105427357601002e-15
+  },
+  {
+    "fold": 4,
+    "seed": 43,
+    "train_r2": 0.8449447366406834,
+    "test_r2": 0.24561555761250065,
+    "train_rmse": 7.704106772127756,
+    "test_rmse": 11.20115289804173,
+    "gene_efficiency_error": 1.4210854715202004e-14,
+    "chromosome_efficiency_error": 7.105427357601002e-15
+  },
+  {
+    "fold": 4,
+    "seed": 44,
+    "train_r2": 0.8343894942455959,
+    "test_r2": 0.24136284871094704,
+    "train_rmse": 7.962014759858818,
+    "test_rmse": 11.232680786684083,
+    "gene_efficiency_error": 7.105427357601002e-15,
+    "chromosome_efficiency_error": 7.105427357601002e-15
+  },
+  {
+    "fold": 5,
+    "seed": 42,
+    "train_r2": 0.7179210378414163,
+    "test_r2": 0.2700369362490933,
+    "train_rmse": 9.105091774251832,
+    "test_rmse": 19.244547750526948,
+    "gene_efficiency_error": 7.105427357601002e-15,
+    "chromosome_efficiency_error": 7.105427357601002e-15
+  },
+  {
+    "fold": 5,
+    "seed": 43,
+    "train_r2": 0.7121322756160462,
+    "test_r2": 0.28493033293568515,
+    "train_rmse": 9.198043653854816,
+    "test_rmse": 19.047213281697086,
+    "gene_efficiency_error": 7.105427357601002e-15,
+    "chromosome_efficiency_error": 7.105427357601002e-15
+  },
+  {
+    "fold": 5,
+    "seed": 44,
+    "train_r2": 0.7158384345877629,
+    "test_r2": 0.26038511987910307,
+    "train_rmse": 9.138641639731475,
+    "test_rmse": 19.371358873617353,
+    "gene_efficiency_error": 7.105427357601002e-15,
+    "chromosome_efficiency_error": 7.105427357601002e-15
+  }
+]

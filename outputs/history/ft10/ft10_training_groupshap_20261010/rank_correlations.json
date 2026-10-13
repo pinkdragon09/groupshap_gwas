@@ -1,0 +1,182 @@
+[
+  {
+    "fold": 1,
+    "seed": 42,
+    "level": "gene",
+    "rank_correlation": 0.9791679102250342
+  },
+  {
+    "fold": 1,
+    "seed": 42,
+    "level": "chromosome",
+    "rank_correlation": 0.8285714285714287
+  },
+  {
+    "fold": 1,
+    "seed": 43,
+    "level": "gene",
+    "rank_correlation": 0.9804834377797673
+  },
+  {
+    "fold": 1,
+    "seed": 43,
+    "level": "chromosome",
+    "rank_correlation": 0.942857142857143
+  },
+  {
+    "fold": 1,
+    "seed": 44,
+    "level": "gene",
+    "rank_correlation": 0.9855061647311703
+  },
+  {
+    "fold": 1,
+    "seed": 44,
+    "level": "chromosome",
+    "rank_correlation": 0.942857142857143
+  },
+  {
+    "fold": 2,
+    "seed": 42,
+    "level": "gene",
+    "rank_correlation": 0.9589558027461292
+  },
+  {
+    "fold": 2,
+    "seed": 42,
+    "level": "chromosome",
+    "rank_correlation": 0.942857142857143
+  },
+  {
+    "fold": 2,
+    "seed": 43,
+    "level": "gene",
+    "rank_correlation": 0.9580301845981868
+  },
+  {
+    "fold": 2,
+    "seed": 43,
+    "level": "chromosome",
+    "rank_correlation": 0.942857142857143
+  },
+  {
+    "fold": 2,
+    "seed": 44,
+    "level": "gene",
+    "rank_correlation": 0.9490396812307226
+  },
+  {
+    "fold": 2,
+    "seed": 44,
+    "level": "chromosome",
+    "rank_correlation": 1.0
+  },
+  {
+    "fold": 3,
+    "seed": 42,
+    "level": "gene",
+    "rank_correlation": 0.9676567792067259
+  },
+  {
+    "fold": 3,
+    "seed": 42,
+    "level": "chromosome",
+    "rank_correlation": 0.942857142857143
+  },
+  {
+    "fold": 3,
+    "seed": 43,
+    "level": "gene",
+    "rank_correlation": 0.9741528662655451
+  },
+  {
+    "fold": 3,
+    "seed": 43,
+    "level": "chromosome",
+    "rank_correlation": 0.8285714285714287
+  },
+  {
+    "fold": 3,
+    "seed": 44,
+    "level": "gene",
+    "rank_correlation": 0.9711676236236231
+  },
+  {
+    "fold": 3,
+    "seed": 44,
+    "level": "chromosome",
+    "rank_correlation": 0.942857142857143
+  },
+  {
+    "fold": 4,
+    "seed": 42,
+    "level": "gene",
+    "rank_correlation": 0.7972757359390086
+  },
+  {
+    "fold": 4,
+    "seed": 42,
+    "level": "chromosome",
+    "rank_correlation": 0.942857142857143
+  },
+  {
+    "fold": 4,
+    "seed": 43,
+    "level": "gene",
+    "rank_correlation": 0.7876943009968428
+  },
+  {
+    "fold": 4,
+    "seed": 43,
+    "level": "chromosome",
+    "rank_correlation": 1.0
+  },
+  {
+    "fold": 4,
+    "seed": 44,
+    "level": "gene",
+    "rank_correlation": 0.7853665732208102
+  },
+  {
+    "fold": 4,
+    "seed": 44,
+    "level": "chromosome",
+    "rank_correlation": 0.942857142857143
+  },
+  {
+    "fold": 5,
+    "seed": 42,
+    "level": "gene",
+    "rank_correlation": 0.9731682146542827
+  },
+  {
+    "fold": 5,
+    "seed": 42,
+    "level": "chromosome",
+    "rank_correlation": 0.7999999999999999
+  },
+  {
+    "fold": 5,
+    "seed": 43,
+    "level": "gene",
+    "rank_correlation": 0.9422084623323013
+  },
+  {
+    "fold": 5,
+    "seed": 43,
+    "level": "chromosome",
+    "rank_correlation": 1.0
+  },
+  {
+    "fold": 5,
+    "seed": 44,
+    "level": "gene",
+    "rank_correlation": 0.9690402476780186
+  },
+  {
+    "fold": 5,
+    "seed": 44,
+    "level": "chromosome",
+    "rank_correlation": 1.0
+  }
+]

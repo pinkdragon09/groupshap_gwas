@@ -1,0 +1,2 @@
+n_accessions,n_snps,n_traits,mean_r2_joint_kan,top_chr_kan,top_phi_kan,elapsed_s
+310,100,3,0.013254712025324505,chr3,0.07109589322732064,2026.5153763107955

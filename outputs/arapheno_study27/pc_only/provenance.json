@@ -1,0 +1,27 @@
+{
+  "source_sha256": "f812f01b6a132a5056c6e63ede8dc4f1a79cf3f48000882933d47d7bd736d93b",
+  "loader_sha256": "0bb8d4378bc43180feb141dedb93e6338e854210590eb1a902b6fe9efb34e509",
+  "historical_metrics_sha256": "85b8b8a1d8fe4038e59bc24292b47d5db2b8be3310e1cd3642186ea423e1999f",
+  "prior_reproduction_sha256": "5145bfb5a35cc41862114f48f5844d4e99fc2ef4457f110ad689b2586f94c7ff",
+  "matrix_sha256": "90a0ceaa99df5c98d5aee7b5613dc6b2549b6efc43cb5ab430cd0cbf8529969c",
+  "phenotype_sha256": "406ff710024cd9df175187573e6a04020d81172f7f86cd1619b6a4378566bcfc",
+  "sklearn": "1.8.0",
+  "forest": {
+    "n_estimators": 500,
+    "max_features": "sqrt",
+    "min_samples_leaf": 2
+  },
+  "split_seed": 42,
+  "model_seeds": [
+    43,
+    44,
+    45,
+    46,
+    47
+  ],
+  "pc_columns": [
+    "pc1",
+    "pc2",
+    "pc3"
+  ]
+}

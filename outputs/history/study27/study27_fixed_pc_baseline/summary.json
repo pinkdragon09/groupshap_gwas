@@ -1,0 +1,22 @@
+{
+  "n": 81,
+  "n_snps": 200,
+  "n_pcs": 3,
+  "design": "Fixed full-phenotype-selected SNP panel; original full-cohort kinship PCs; same folds and RF settings in both arms.",
+  "interpretation": "Conditional descriptive comparison; phenotype-informed panel selection is not independently validated.",
+  "prior_rf_reproduction_passed": true,
+  "historical_reported_mean_r2": 0.558704955066195,
+  "max_absolute_difference_from_historical_r2": 0.0070325753025055615,
+  "models": {
+    "pc_only": {
+      "mean_fold_r2": -0.08216550315043274,
+      "sd_fold_r2": 0.5709017640002535
+    },
+    "snps_plus_pcs": {
+      "mean_fold_r2": 0.559697710162584,
+      "sd_fold_r2": 0.18395837095598502
+    }
+  },
+  "mean_paired_r2_difference": 0.6418632133130168,
+  "sd_paired_r2_difference": 0.6567228307963606
+}
