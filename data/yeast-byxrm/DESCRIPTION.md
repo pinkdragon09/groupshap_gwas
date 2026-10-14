@@ -1,5 +1,7 @@
 # Yeast BYxRM (Bloom et al. 2013, 2015)
 
+> Files described here are not redistributed in this archive. Fetch them with `scripts/download_data.sh`; see `data/README.md` for sources, citation and terms.
+
 ## Overview
 
 Genotype, phenotype, and published QTL × QTL interaction tables from

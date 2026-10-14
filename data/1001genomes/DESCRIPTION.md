@@ -1,5 +1,7 @@
 # Dataset: 1001 Genomes — Arabidopsis thaliana Natural Accessions
 
+> Files described here are not redistributed in this archive. Fetch them with `scripts/download_data.sh`; see `data/README.md` for sources, citation and terms.
+
 ## Overview
 Whole-genome sequencing data from 1,001 natural accessions of *Arabidopsis thaliana*. Provides the genotype backbone for GWAS and population genomics studies in this plant model organism.
 

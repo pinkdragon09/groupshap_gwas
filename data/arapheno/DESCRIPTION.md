@@ -1,5 +1,7 @@
 # Dataset: AraPheno — Arabidopsis thaliana Phenotype Catalog
 
+> Files described here are not redistributed in this archive. Fetch them with `scripts/download_data.sh`; see `data/README.md` for sources, citation and terms. Note: the export is now placed at `bulk/database.zip` (and linked at `database.zip`); per-study CSVs for Studies 1 and 43 are extracted into `phenotypes/`.
+
 ## Overview
 Community phenotype repository for *Arabidopsis thaliana*, aggregating 537 phenotypes from 30 published GWAS/QTL studies across 7,425 accessions. Serves as the primary phenotype resource for GWAS analyses paired with 1001 Genomes genotype data.
 
