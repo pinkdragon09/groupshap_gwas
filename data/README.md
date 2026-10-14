@@ -30,6 +30,17 @@ The digest covers the float32 panel, phenotypes, accessions, SNP indices and fea
 which rebuild bit-for-bit. The float64 PC columns can differ at the 1e-15 level between
 LAPACK builds, so they are checked by tolerance rather than digest.
 
+## Derived Arabidopsis fold panels under `outputs/` (rebuilt, not tracked)
+
+The five-fold runners freeze each run's genotype panels in a `panels.npz` next to its
+`cohort.json`, `splits.json` and `selected_features.json`. The Arabidopsis ones
+(`outputs/arapheno_study1_ft10/`, `outputs/arapheno_study43/`, the four
+`outputs/history/study27/study27_kan_comparison*/` runs and
+`outputs/history/transformer/study27_training_selected/`) are subsets of 1001 Genomes
+genotypes and are not redistributed. The corresponding runner recreates a panel from the
+downloaded inputs and the frozen cohort, split and feature files when it is pointed at that
+output directory; the yeast `panels.npz` files (Bloom data) remain tracked.
+
 ## 1. 1001 Genomes imputed SNP matrix and kinship (*Arabidopsis thaliana*)
 
 - **Files:** `1001genomes/genotypes/1001_SNP_MATRIX/kinship_ibs_mac5.hdf5` (9.8 MB, IBS kinship, MAC >= 5) and `imputed_snps_binary.hdf5` (919 MB, binary imputed genotypes for 1,135 accessions). Both come from one tarball, `1001_SNP_MATRIX.tar.gz` (332 MB).
