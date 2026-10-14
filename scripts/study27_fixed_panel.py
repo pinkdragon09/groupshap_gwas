@@ -1,9 +1,9 @@
 """Load the frozen Study 27 fixed panel used by the Study 27 analyses.
 
-The archive includes the 81-accession, 200-SNP plus three-PC matrix so that
-fixed-panel RF/KAN analyses can be rerun without the 919 MB genome-wide HDF5
-matrix. ``X``/``y`` preserve the float64 values used by RF; ``X_kan``/``y_kan``
-preserve the float32 values used by the saved KAN fits.
+The 81-accession, 200-SNP plus three-PC matrix is a derived subset of 1001 Genomes
+data and is not distributed; create it with ``scripts/build_study27_fixed_panel.py``
+after ``scripts/download_data.sh``. ``X``/``y`` hold the float64 values used by RF;
+``X_kan``/``y_kan`` hold the float32 values used by the saved KAN fits.
 """
 from __future__ import annotations
 
@@ -24,6 +24,8 @@ def digest(path: Path) -> str:
 
 def load_fixed_panel(*, kan_dtype: bool = False):
     """Return ``X, y, feature metadata, accessions`` for the frozen panel."""
+    if not PANEL.exists():
+        raise FileNotFoundError(f"{PANEL} is not distributed; run scripts/build_study27_fixed_panel.py")
     with np.load(PANEL, allow_pickle=False) as saved:
         x_key, y_key = ("X_kan", "y_kan") if kan_dtype else ("X", "y")
         names = saved["feature_names"].astype(str)

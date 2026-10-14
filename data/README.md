@@ -12,7 +12,23 @@ What *is* tracked under `data/`:
 |---|---|
 | `*/DESCRIPTION.md`, `yeast-byxrm/MANIFEST.tsv` | Written for this project: dataset notes, retrieval records, checksums |
 | `arapheno/metadata/accession_harmonization_manual.csv` | Written for this project: three manual accession-name fixes |
-| `processed/arapheno_study27/` | Derived for this project: the frozen 81-accession by 203-feature Study 27 panel (200 SNPs plus three kinship PCs), its feature table, and the top-hit list used to select it |
+| `processed/arapheno_study27/feature_metadata.tsv`, `study27_mean_trl_top_hits.tsv` | Derived for this project: the feature table of the frozen Study 27 panel and the top-hit list used to select its 200 SNPs |
+
+## Derived Study 27 panel (rebuilt, not tracked)
+
+`processed/arapheno_study27/fixed_panel.npz`, the frozen 81-accession by 203-feature matrix
+(200 SNPs plus three kinship PCs, with the Study 27 "Mean(TRL) C" phenotype) used by
+`scripts/run_study27_fixed_pc_baseline.py` and `scripts/run_study27_training_groupshap.py`,
+is a derived subset of 1001 Genomes genotypes and is therefore not redistributed either.
+Rebuild it after `scripts/download_data.sh` (which must extract the genotype matrix):
+
+```bash
+python scripts/build_study27_fixed_panel.py --expect-digest 6c60311dd0a02463ed71c691a6a90b02346fd4d55ec06d90260701d951522f62
+```
+
+The digest covers the float32 panel, phenotypes, accessions, SNP indices and feature names,
+which rebuild bit-for-bit. The float64 PC columns can differ at the 1e-15 level between
+LAPACK builds, so they are checked by tolerance rather than digest.
 
 ## 1. 1001 Genomes imputed SNP matrix and kinship (*Arabidopsis thaliana*)
 
@@ -20,7 +36,7 @@ What *is* tracked under `data/`:
 - **Source:** <https://1001genomes.org/data/GMI-MPI/releases/v3.1/SNP_matrix_imputed_hdf5/1001_SNP_MATRIX.tar.gz>. The release ships `md5sum.txt` (kinship `d15c69f64c29be8a5caecbce19107eae`, SNP matrix `6857bf13f35d3e36d555958ef33d7b77`).
 - **Citation:** 1001 Genomes Consortium. 1,135 Genomes Reveal the Global Pattern of Polymorphism in *Arabidopsis thaliana*. *Cell* 166, 481-491 (2016). doi:10.1016/j.cell.2016.05.063.
 - **Terms:** The project's [Data Usage Policy](https://1001genomes.org/policy/) allows free download and use, asks users to acknowledge that the sequence data were produced by the Weigel laboratory at the Max Planck Institute and to cite the primary paper, and states that during the pre-publication waiting period the data "should not be redistributed or repackaged without permission". The genome-wide analysis has since been published, but the files are still not copied into this archive; fetch them from the source.
-- **Used by:** the fixed Study 27 runners need neither file (the frozen panel is tracked). Fresh genome-wide reruns of the Study 1 (FT10), Study 27 and Study 43 analyses need both. `--kinship-only` skips extracting the 919 MB matrix.
+- **Used by:** rebuilding the Study 27 fixed panel and fresh genome-wide reruns of the Study 1 (FT10), Study 27 and Study 43 analyses need both files. `--kinship-only` skips extracting the 919 MB matrix.
 
 ## 2. AraPheno phenotypes (Studies 1, 27 and 43)
 
