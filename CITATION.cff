@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use GroupSHAP-GWAS, please cite it using this metadata."
+type: software
+title: "GroupSHAP-GWAS"
+authors:
+  - family-names: "Qin"
+    given-names: "Helen"
+repository-code: "https://github.com/pinkdragon09/groupshap_gwas"
+url: "https://github.com/pinkdragon09/groupshap_gwas"
+license: MIT
+preferred-citation:
+  type: software
+  title: "GroupSHAP-GWAS"
+  authors:
+    - family-names: "Qin"
+      given-names: "Helen"
+  year: 2026
+  publisher:
+    name: "GitHub"
+  url: "https://github.com/pinkdragon09/groupshap_gwas"

@@ -41,6 +41,24 @@ Study 27 panel is rebuilt from those inputs rather than distributed.
 Stored scientific outputs are preserved as evidence of their recorded runs.
 Archive assembly does not rerun or independently validate all reported analyses.
 
+## Citation
+
+If you use this codebase, please cite:
+
+Qin, Helen. (2026). *GroupSHAP-GWAS* [Computer software]. GitHub. https://github.com/pinkdragon09/groupshap_gwas
+
+```bibtex
+@software{qin2026groupshapgwas,
+  author = {Qin, Helen},
+  title = {GroupSHAP-GWAS},
+  year = {2026},
+  publisher = {GitHub},
+  url = {https://github.com/pinkdragon09/groupshap_gwas}
+}
+```
+
+Machine-readable citation metadata is available in [CITATION.cff](CITATION.cff).
+
 ## License
 
 The code, documentation and project-generated result files in this repository are
