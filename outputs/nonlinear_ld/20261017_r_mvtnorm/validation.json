@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "fits": 2800,
+  "method_records": 5600,
+  "maximum_shapley_efficiency_error": 8.88178419700125e-16,
+  "checks": ["frozen runner source and configuration", "unique settings and expected counts", "training/test and explanation-sample separation", "raw score recovery and fraction consistency", "Shapley aggregation and efficiency", "first replicate per setting regenerated; GWAS recomputed", "emitted CSV and summary recovery means/SDs"],
+  "reporter_md5": "2238842fc4301c0cecc9418cc35b5439"
+}

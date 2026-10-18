@@ -1,0 +1,57 @@
+"scenario","strength","rho_between","method","recovery_at_k_mean_R","recovery_at_k_mean_Python","mean_recovery_difference_R_minus_Python","independent_monte_carlo_se"
+4,0,0,"Linear GWAS",1,1,0,0
+4,0,0,"RF + interventional groupSHAP",1,1,0,0
+4,0,0.6,"Linear GWAS",1,1,0,0
+4,0,0.6,"RF + interventional groupSHAP",1,1,0,0
+4,0,0.9,"Linear GWAS",0.882,0.868,0.014,0.0161595579497495
+4,0,0.9,"RF + interventional groupSHAP",0.992,0.99,0.002,0.00589127072091163
+4,0,0.99,"Linear GWAS",0.658,0.658,3.33066907387547e-16,0.014380120958736
+4,0,0.99,"RF + interventional groupSHAP",0.888,0.892,-0.00399999999999989,0.016994354380443
+4,0.5,0,"Linear GWAS",1,1,0,0
+4,0.5,0,"RF + interventional groupSHAP",1,1,0,0
+4,0.5,0.6,"Linear GWAS",0.962,0.97,-0.00800000000000023,0.0106628781150761
+4,0.5,0.6,"RF + interventional groupSHAP",1,0.998,0.002,0.002
+4,0.5,0.9,"Linear GWAS",0.794,0.8,-0.00599999999999978,0.0171635036803637
+4,0.5,0.9,"RF + interventional groupSHAP",1,0.998,0.002,0.002
+4,0.5,0.99,"Linear GWAS",0.618,0.634,-0.0159999999999999,0.0124397538057421
+4,0.5,0.99,"RF + interventional groupSHAP",0.978,0.97,0.00800000000000001,0.00954309735205017
+4,1,0,"Linear GWAS",0.494,0.522,-0.0279999999999999,0.0238429203011051
+4,1,0,"RF + interventional groupSHAP",1,0.996,0.004,0.004
+4,1,0.6,"Linear GWAS",0.506,0.52,-0.014,0.0221026073693864
+4,1,0.6,"RF + interventional groupSHAP",0.998,0.998,0,0.00282842712474619
+4,1,0.9,"Linear GWAS",0.508,0.514,-0.00599999999999989,0.0200353223436545
+4,1,0.9,"RF + interventional groupSHAP",0.998,0.992,0.00600000000000012,0.00441759567130713
+4,1,0.99,"Linear GWAS",0.482,0.492,-0.00999999999999995,0.0167005715743232
+4,1,0.99,"RF + interventional groupSHAP",0.92,0.91,0.01,0.0154069379622863
+5,0,0,"Linear GWAS",1,1,0,0
+5,0,0,"RF + interventional groupSHAP",1,1,0,0
+5,0,0.6,"Linear GWAS",1,1,0,0
+5,0,0.6,"RF + interventional groupSHAP",1,1,0,0
+5,0,0.9,"Linear GWAS",1,1,0,0
+5,0,0.9,"RF + interventional groupSHAP",1,1,0,0
+5,0,0.99,"Linear GWAS",1,1,0,0
+5,0,0.99,"RF + interventional groupSHAP",1,1,0,0
+5,0.5,0,"Linear GWAS",0.565,0.55,0.0149999999999999,0.0226468273247885
+5,0.5,0,"RF + interventional groupSHAP",1,1,0,0
+5,0.5,0.6,"Linear GWAS",0.5,0.5,0,0
+5,0.5,0.6,"RF + interventional groupSHAP",1,1,0,0
+5,0.5,0.9,"Linear GWAS",0.5,0.5,0,0
+5,0.5,0.9,"RF + interventional groupSHAP",1,1,0,0
+5,0.5,0.99,"Linear GWAS",0.5,0.5,0,0
+5,0.5,0.99,"RF + interventional groupSHAP",0.99,0.99,0,0.00994936676326182
+5,1,0,"Linear GWAS",0.585,0.555,0.0299999999999999,0.0245669565379058
+5,1,0,"RF + interventional groupSHAP",1,1,0,0
+5,1,0.6,"Linear GWAS",0.51,0.5,0.01,0.00703526470681448
+5,1,0.6,"RF + interventional groupSHAP",1,1,0,0
+5,1,0.9,"Linear GWAS",0.5,0.5,0,0
+5,1,0.9,"RF + interventional groupSHAP",1,1,0,0
+5,1,0.99,"Linear GWAS",0.5,0.5,0,0
+5,1,0.99,"RF + interventional groupSHAP",0.99,0.985,0.005,0.0110896256916001
+5,2,0,"Linear GWAS",0.585,0.53,0.0549999999999999,0.0255000495147073
+5,2,0,"RF + interventional groupSHAP",1,0.995,0.005,0.005
+5,2,0.6,"Linear GWAS",0.54,0.51,0.03,0.0196689777789464
+5,2,0.6,"RF + interventional groupSHAP",1,1,0,0
+5,2,0.9,"Linear GWAS",0.52,0.495,0.025,0.0131329641541713
+5,2,0.9,"RF + interventional groupSHAP",1,1,0,0
+5,2,0.99,"Linear GWAS",0.495,0.495,0,0.00707106781186548
+5,2,0.99,"RF + interventional groupSHAP",0.98,0.96,0.02,0.0168174993036504
