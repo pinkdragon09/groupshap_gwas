@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "fits": 10500,
+  "method_records": 21000,
+  "reused_fits": 6935,
+  "newly_computed_fits": 3565,
+  "original_baseline_records_retained_byte_identically": 2800,
+  "additional_fits_relative_to_original_baseline": 7700,
+  "per_within": {
+    "0.6": {
+      "status": "PASS",
+      "fits": 3500,
+      "method_records": 7000,
+      "maximum_shapley_efficiency_error": 8.88178419700125e-16,
+      "checks": ["frozen runner source and configuration", "unique settings and expected counts", "training/test and explanation-sample separation", "raw score recovery and fraction consistency", "Shapley aggregation and efficiency", "first replicate per setting regenerated; GWAS recomputed"]
+    },
+    "0.9": {
+      "status": "PASS",
+      "fits": 3500,
+      "method_records": 7000,
+      "maximum_shapley_efficiency_error": 2.36477504245158e-14,
+      "checks": ["frozen runner source and configuration", "unique settings and expected counts", "training/test and explanation-sample separation", "raw score recovery and fraction consistency", "Shapley aggregation and efficiency", "first replicate per setting regenerated; GWAS recomputed"]
+    },
+    "0.99": {
+      "status": "PASS",
+      "fits": 3500,
+      "method_records": 7000,
+      "maximum_shapley_efficiency_error": 6.30606677987089e-14,
+      "checks": ["frozen runner source and configuration", "unique settings and expected counts", "training/test and explanation-sample separation", "raw score recovery and fraction consistency", "Shapley aggregation and efficiency", "first replicate per setting regenerated; GWAS recomputed"]
+    }
+  },
+  "checks": ["all original per-record audits for each within-block coefficient", "combined CSV/summary counts, means and SDs", "reused record MD5 hashes match original and copied files"],
+  "reporter_md5": "80f975f18398267090aecbea300c96b1"
+}

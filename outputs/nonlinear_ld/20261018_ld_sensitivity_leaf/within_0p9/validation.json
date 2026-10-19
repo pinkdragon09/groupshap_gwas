@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "fits": 3500,
+  "method_records": 7000,
+  "maximum_shapley_efficiency_error": 2.3648e-14,
+  "checks": ["frozen runner source and configuration", "unique settings and expected counts", "training/test and explanation-sample separation", "raw score recovery and fraction consistency", "Shapley aggregation and efficiency", "first replicate per setting regenerated; GWAS recomputed"]
+}

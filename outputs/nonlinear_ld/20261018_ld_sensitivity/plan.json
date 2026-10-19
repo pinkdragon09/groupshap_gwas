@@ -1,0 +1,8 @@
+{
+  "reps": 100,
+  "within": [0.6, 0.9, 0.99],
+  "rhos": [0, 0.3, 0.6, 0.9, 0.99],
+  "reuse": "outputs/nonlinear_ld/20261017_r_mvtnorm",
+  "runner_md5": "4f38f5a9f7729fe439bd7d79a8703269",
+  "orchestrator_md5": "3a27a571c98c28f5e656f425f5084224"
+}

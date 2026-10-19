@@ -1,0 +1,40 @@
+{
+  "reps": 100,
+  "n": 1000,
+  "trees": 100,
+  "within": 0.99,
+  "h2": 0.5,
+  "background": 16,
+  "evaluation": 32,
+  "paths": 16,
+  "rhos": [0, 0.3, 0.6, 0.9, 0.99],
+  "dominance_fractions": [0, 0.5, 1],
+  "interaction_strengths": [0, 0.5, 1, 2],
+  "maf_mode": "balanced",
+  "seed_base": 2026101800,
+  "methods": ["Linear GWAS", "RF + interventional groupSHAP"],
+  "rf_settings": {
+    "mtry": 200,
+    "min_node_size": 1,
+    "min_bucket": 5,
+    "replace": true,
+    "sample_fraction": 1,
+    "splitrule": "variance"
+  },
+  "source_md5": "4f38f5a9f7729fe439bd7d79a8703269",
+  "versions": {
+    "R": "R version 4.3.3 (2024-02-29)",
+    "mvtnorm": "1.4.2",
+    "ranger": "0.18.0",
+    "jsonlite": "1.7.1"
+  },
+  "backend": {
+    "name": "tree-leaf evaluation of the unchanged grouped game",
+    "source_md5": {
+      "/media/auxDrive3/sts_sandbox/scripts/run_nonlinear_ld.R": "4f38f5a9f7729fe439bd7d79a8703269",
+      "scripts/nonlinear_ld_leaf_shap.R": "ae44eb74a23dc1d3a7af7f55a81babe9",
+      "scripts/nonlinear_ld_leaf_shap.c": "baaffa1ff6a15405db47cfbfb6aa8e58",
+      "scripts/run_nonlinear_ld_sensitivity_fast.R": "df1cfd96185c35b07adea3b2ede613c5"
+    }
+  }
+}

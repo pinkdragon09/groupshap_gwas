@@ -1,0 +1,16 @@
+{
+  "reps": 100,
+  "within": [0.6, 0.9, 0.99],
+  "rhos": [0, 0.3, 0.6, 0.9, 0.99],
+  "reuse": "outputs/nonlinear_ld/20261018_ld_sensitivity",
+  "runner_md5": "4f38f5a9f7729fe439bd7d79a8703269",
+  "backend": {
+    "name": "tree-leaf evaluation of the unchanged grouped game",
+    "source_md5": {
+      "/media/auxDrive3/sts_sandbox/scripts/run_nonlinear_ld.R": "4f38f5a9f7729fe439bd7d79a8703269",
+      "scripts/nonlinear_ld_leaf_shap.R": "ae44eb74a23dc1d3a7af7f55a81babe9",
+      "scripts/nonlinear_ld_leaf_shap.c": "baaffa1ff6a15405db47cfbfb6aa8e58",
+      "scripts/run_nonlinear_ld_sensitivity_fast.R": "df1cfd96185c35b07adea3b2ede613c5"
+    }
+  }
+}
