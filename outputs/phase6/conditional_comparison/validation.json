@@ -1,0 +1,9 @@
+{
+  "efficiency_check": "passed",
+  "independence_check": "passed",
+  "conditional_sampler_standardized_error_checks": "passed",
+  "reference": "known population Gaussian distribution, zero mean",
+  "evaluation": "2000 individuals per setting; seed 42 sweep and seeds 0-14 sensitivity",
+  "primary": "exact conditional expectations; Monte Carlo sampling is a numerical cross-check",
+  "limitation": "known continuous Gaussian predictor; no RF fitting or discrete-genotype conditional estimation"
+}
